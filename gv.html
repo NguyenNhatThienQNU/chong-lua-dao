@@ -190,19 +190,18 @@ details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 .followup{margin:14px auto 0;display:flex;flex-direction:column;gap:8px;max-width:620px}
 
 /* hotspots */
-.hs{cursor:pointer;-webkit-tap-highlight-color:transparent;border-radius:4px;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background .2s}
+.hs{cursor:inherit;outline:none;-webkit-tap-highlight-color:transparent;border-radius:4px;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background .2s}
 .hs.block{display:block}
 .hs.face{display:inline-block;border-radius:50%;position:relative}
 .hs.face.found::after{position:absolute;top:2px;right:2px;margin:0}
-.hs:hover,.hs:focus-visible{background:var(--warn-soft);outline:2px dashed var(--warn);outline-offset:1px}
 .hint .hs:not(.found){outline:2px dashed var(--warn);outline-offset:1px}
 .hs.found{background:var(--danger-soft);box-shadow:inset 0 -2px 0 var(--danger)}
 .hs.found::after{content:attr(data-n);display:inline-grid;place-items:center;width:1.35em;height:1.35em;margin-left:.3em;border-radius:50%;background:var(--danger);color:var(--panel);font:800 .7rem var(--f-body);vertical-align:.12em}
 .hs.missed{outline:2px dashed var(--danger);outline-offset:1px}
-.alarm .hs:hover,.alarm .hs:focus-visible,.alarm .hs.found{background:var(--alarm-hl);outline-color:var(--alarm-ink)}
+.alarm .hs.found{background:var(--alarm-hl);outline-color:var(--alarm-ink)}
 .alarm .hs.found{box-shadow:inset 0 -3px 0 var(--alarm-ink)}
 .alarm .hs.found::after{background:var(--alarm-ink);color:var(--alarm)}
-.video .hs:hover,.video .hs:focus-visible,.video .hs.found{background:var(--alarm-hl);outline-color:var(--alarm-ink)}
+.video .hs.found{background:var(--alarm-hl);outline-color:var(--alarm-ink)}
 .video .hs.found{box-shadow:inset 0 -3px 0 var(--alarm-ink)}
 
 /* warm-up stage */
@@ -492,7 +491,7 @@ kbd{font-family:var(--f-mono);font-size:.78em;padding:.05em .4em;border-radius:5
    ENDPOINT: đường link Ứng dụng web của Google Apps Script, dạng https://script.google.com/macros/s/.../exec
    LOP: mã lớp hoặc phiên dạy, ví dụ 11ANH1
    MODE: gv (bản giáo viên) hoặc hs (bản học sinh) */
-var CONFIG={ENDPOINT:'',LOP:'',MODE:'gv',HS_URL:'/'};
+var CONFIG={ENDPOINT:'https://script.google.com/macros/s/AKfycbyNMckjMB_w2D2TWX8aAb8UtkzLp0d8FgIO277Lpp1m8f0toR1SYSRoJZjVxIRZQWy0cg/exec',LOP:'',MODE:'gv',HS_URL:'/'};
 var $=function(s,r){return (r||document).querySelector(s);};
 var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));};
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
@@ -542,7 +541,7 @@ var MODS=[
 var NOTES={
  warm:['Phát mỗi HS một thẻ 2 mặt (xanh = THẬT, đỏ = LỪA) hoặc cho giơ tay trái/phải.','Bấm Bắt đầu (hoặc phím Space): tin nhắn hiện 5 giây kèm tiếng tích tắc. Hết giờ, cả lớp giơ thẻ cùng lúc.','Bấm Đáp án, đọc nhanh 1–2 dấu hiệu rồi bấm Tiếp.','Sau tin thứ 5, bấm Tiếp để “lật bài”. Hỏi câu của SGK Hoạt động 1, mời 2–3 HS kể chuyện thật.','Hỏi “Nếu được chơi lại, em làm gì khác?”, gom ý HS rồi bấm Hiện bộ giáp 3 lớp.'],
  link:['GV soi 2 link mẫu trên màn chiếu (các nút Thử nhanh). Nhấn mạnh cách đọc tên miền từ dấu “/” đầu tiên ngược về trái.','HS làm thử thách 8 link theo cặp trên máy (khoảng 3 phút), giơ tay báo điểm.','Chốt: tên miền thật là thứ kẻ gian không giả được; ổ khóa https không có nghĩa là an toàn.','Mở mục Theo dõi (thanh trên cùng) để xem link nào nhiều HS sai, rồi chữa ngay link đó bằng máy soi.'],
- 'case':['Chia 8 nhóm, mỗi hồ sơ 01–04 giao cho 2 nhóm. Hồ sơ 05 (Deepfake) GV làm mẫu.','6 phút: nhóm chạm vào chi tiết đáng ngờ để gom bằng chứng, dùng công cụ kiểm chứng, nộp Báo cáo sự cố.','Mỗi hồ sơ mời 1 nhóm lên thao tác trên màn chiếu (1 phút), nhóm còn lại phản biện, bổ sung bằng chứng bị sót.','Hồ sơ 05: GV hỏi chatbot AI ngay trên màn chiếu, cả lớp đối chiếu với bằng chứng và chỉ ra điều AI không kiểm chứng được.','Chốt bảng 4 dạng lừa đảo ở phần 5.','Mục Theo dõi cho biết điểm báo cáo của từng nhóm ở từng hồ sơ: mời nhóm điểm thấp lên trình bày để cả lớp cùng sửa, nhóm điểm cao bổ sung.'],
+ 'case':['Chia lớp 4 nhóm, mỗi nhóm 2 bàn ghép lại, 1 máy. Nhóm 1–4 lần lượt nhận hồ sơ 01–04. Hồ sơ 05 (Deepfake) GV làm mẫu.','6 phút: nhóm chạm vào chi tiết đáng ngờ để gom bằng chứng, dùng công cụ kiểm chứng, nộp Báo cáo sự cố.','Lần lượt 4 nhóm lên thao tác trên màn chiếu (mỗi nhóm 1 phút), các nhóm khác phản biện, bổ sung bằng chứng bị sót.','Hồ sơ 05: GV hỏi chatbot AI ngay trên màn chiếu, cả lớp đối chiếu với bằng chứng và chỉ ra điều AI không kiểm chứng được.','Chốt bảng 4 dạng lừa đảo ở phần 5.','Mục Theo dõi cho biết điểm báo cáo của từng nhóm ở từng hồ sơ: mời nhóm điểm thấp lên trình bày để cả lớp cùng sửa, nhóm điểm cao bổ sung.'],
  filter:['GV chạy bộ lọc mẫu (2 dấu hiệu, ngưỡng 1) để cả lớp thấy nhiều tin thật bị chặn nhầm.','Các nhóm cải tiến bộ lọc trong 4 phút, ghi lại độ chính xác cao nhất.','Mời nhóm cao nhất giải thích lựa chọn, rồi mở mục “Vì sao không bộ lọc nào đạt 100%?”.','Mức cao nhất đạt được với 8 dấu hiệu này là 85% (17/20 tin).','Mục Theo dõi tự xếp hạng độ chính xác cao nhất của từng em.'],
  wrap:['Chiếu bảng chốt kiến thức 4 dạng lừa đảo trong SGK.','HS chọn 1–2 lời hứa, nhập tên, chụp màn hình thẻ thám tử.','Giao nhiệm vụ về nhà, chuẩn bị “triển lãm tin nhắn lừa đảo” cho tiết 2.','Chiếu biểu đồ lời hứa ở mục Theo dõi (bật Ẩn họ tên) để kết thúc tiết bằng dữ liệu của chính lớp.']
 };
@@ -550,19 +549,19 @@ var NOTES={
 var TASKS={
  warm:{hinh:'Cả lớp',tg:'6 phút',sp:'Lựa chọn của em trên thẻ màu',buoc:['Mỗi em cầm 1 thẻ: mặt xanh là THẬT (an toàn), mặt đỏ là LỪA ĐẢO.','Mỗi tin nhắn chỉ hiện 5 giây, đọc thật nhanh.','Hết giờ, khi màn hình hiện “Giơ thẻ!”, cả lớp giơ thẻ cùng lúc, không đổi thẻ sau khi đã giơ.','Nghe thầy cô lật đáp án và giải thích, rồi trả lời câu hỏi: em hoặc người thân đã từng gặp tình huống như vậy chưa?']},
  link:{hinh:'Cặp đôi, mỗi cặp 1 máy',tg:'9 phút (thử thách 3 phút)',sp:'Điểm thử thách x/8, tự gửi cho thầy cô',buoc:['Nhập họ tên và nhóm ở đầu trang (chỉ làm 1 lần).','Đọc khung “Mẹo đọc tên miền” bên trái.','Ở khung Thử thách, đọc đường link rồi bấm vào tên miền thật mà em chọn.','Đọc phần giải thích và hình “soi link”, rồi bấm “Link tiếp theo”.','Làm hết 8 link, giơ tay báo điểm, rồi ghi bài theo màn chiếu của thầy cô.']},
- 'case':{hinh:'Nhóm 4–5 em, mỗi nhóm 1 máy',tg:'15 phút (điều tra 6 phút)',sp:'Báo cáo sự cố (điểm /100) và phần trình bày 1 phút',buoc:['Phân vai: 1 bạn điều khiển máy, 1 bạn thư kí ghi bằng chứng vào vở, 1 bạn trình bày.','Mở đúng hồ sơ thầy cô giao: nhóm 1–2 hồ sơ 01, nhóm 3–4 hồ sơ 02, nhóm 5–6 hồ sơ 03, nhóm 7–8 hồ sơ 04.','Đọc bối cảnh, rồi chạm vào những chi tiết đáng ngờ trên màn hình. Chi tiết hiện số đỏ là đã thu thập được bằng chứng.','Bấm các công cụ kiểm chứng (Kiểm tra ngay!) để xem kết quả.','Điền 3 câu của Báo cáo sự cố và bấm “Nộp báo cáo sự cố”.','Khi được mời, bạn trình bày lên máy chiếu thao tác lại và giải thích cho cả lớp.']},
- casedetail:{hinh:'Nhóm',tg:'6 phút',sp:'Báo cáo sự cố',buoc:['Chạm vào chi tiết đáng ngờ để thu thập bằng chứng (bí quá thì bấm “Gợi ý chỗ cần soi”).','Dùng công cụ kiểm chứng ở cột bên phải.','Trả lời 3 câu của Báo cáo sự cố rồi bấm Nộp.','Thư kí chép các bằng chứng vào vở.']},
+ 'case':{hinh:'4 nhóm, mỗi nhóm 2 bàn ghép lại, 1 máy',tg:'15 phút (điều tra 6 phút)',sp:'Báo cáo sự cố (điểm /100) và phần trình bày 1 phút',buoc:['Phân vai: 1 bạn điều khiển máy, 1 bạn thư kí ghi bằng chứng, 1 bạn trình bày; các bạn còn lại cùng soi màn hình tìm chi tiết đáng ngờ.','Mở đúng hồ sơ của nhóm: nhóm 1 hồ sơ 01, nhóm 2 hồ sơ 02, nhóm 3 hồ sơ 03, nhóm 4 hồ sơ 04.','Đọc bối cảnh, rồi chạm vào những chi tiết đáng ngờ trên màn hình. Chi tiết hiện số đỏ là đã thu thập được bằng chứng.','Bấm các công cụ kiểm chứng (Kiểm tra ngay!) để xem kết quả.','Điền 3 câu của Báo cáo sự cố và bấm “Nộp báo cáo sự cố”.','Bạn trình bày lên máy chiếu thao tác lại, giải thích cho cả lớp (1 phút); nghe nhóm khác bổ sung.']},
+ casedetail:{hinh:'Nhóm',tg:'6 phút',sp:'Báo cáo sự cố',buoc:['Chạm vào chi tiết đáng ngờ để thu thập bằng chứng.','Dùng công cụ kiểm chứng ở cột bên phải.','Trả lời 3 câu của Báo cáo sự cố rồi bấm Nộp.','Thư kí chép các bằng chứng vào vở.']},
  filter:{hinh:'Cặp đôi',tg:'8 phút',sp:'Độ chính xác cao nhất của bộ lọc (tự gửi cho thầy cô)',buoc:['Tích chọn những dấu hiệu em muốn máy dò.','Chọn ngưỡng: máy chặn tin khi có từ bao nhiêu dấu hiệu trở lên.','Bấm “Chạy bộ lọc”, xem các ô đỏ (lọt lưới) và cam (chặn nhầm). Chạm vào ô để xem vì sao.','Sửa lựa chọn, chạy lại để tăng độ chính xác. Ghi lại kết quả cao nhất.','Trả lời: vì sao không bộ lọc nào đạt 100%?']},
- wrap:{hinh:'Cá nhân',tg:'5 phút',sp:'Vở ghi và thẻ thám tử',buoc:['Ghi bài theo màn chiếu của thầy cô (6 dòng cho cả tiết).','Chọn 1–2 lời hứa an toàn số, nhập tên.','Bấm “Gửi lời hứa cho thầy cô” và chụp màn hình thẻ thám tử.','Ghi nhiệm vụ về nhà.']}
+ wrap:{hinh:'Cá nhân',tg:'5 phút',sp:'Vở ghi và thẻ thám tử',buoc:['Ghi bài theo màn chiếu của thầy cô.','Chọn 1–2 lời hứa an toàn số, nhập tên.','Bấm “Gửi lời hứa cho thầy cô” và chụp màn hình thẻ thám tử.','Ghi nhiệm vụ về nhà.']}
 };
 var GHI={
- warm:'<p><b>Bài 9. GIAO TIẾP AN TOÀN TRÊN INTERNET</b></p><p><b>1. Nhận biết và phòng tránh lừa đảo trên không gian số</b></p><p>a) 3 nguyên tắc: <b>Hãy chậm lại!</b> – <b>Kiểm tra ngay!</b> – <b>Dừng lại, không gửi!</b></p>',
- link:'<ul><li>Tên miền thật: cụm ngay trước dấu “/” đầu tiên.</li><li>Link giả: tên miền con mạo danh, chữ bị đánh tráo, có dấu @.</li></ul>',
- 'case':'<p>b) 4 dạng lừa đảo: hỗ trợ kĩ thuật · tin tốt · tin xấu · mạo danh trang mua sắm.</p><p>→ Thấy <b>đòi tiền gấp, bắt giữ bí mật, link lạ</b>: áp dụng 3 nguyên tắc.</p>',
+ warm:'<p><b>Bài 9. GIAO TIẾP AN TOÀN TRÊN INTERNET</b></p><p><b>1. Nhận biết và phòng tránh lừa đảo trên không gian số</b></p><p><b>a) Nguyên tắc phòng tránh</b></p><ul><li>Kẻ lừa đảo nhắm vào tiền, thông tin, tài khoản; đánh vào tâm lí sợ hãi, tham lam, vội vàng.</li><li>3 nguyên tắc: <b>Hãy chậm lại!</b> (bình tĩnh) – <b>Kiểm tra ngay!</b> (xác minh qua kênh chính thống) – <b>Dừng lại, không gửi!</b> (không chuyển tiền, không gửi thông tin).</li></ul>',
+ link:'<ul><li>Tên miền thật: cụm ngay trước dấu “/” đầu tiên (lấy 2 cụm cuối, 3 cụm nếu đuôi .com.vn, .gov.vn).</li><li>Link giả: tên miền con mạo danh, chữ bị đánh tráo, có dấu @, link rút gọn; có https chưa chắc an toàn.</li></ul>',
+ 'case':'<p><b>b) Một số dạng lừa đảo</b></p><ul><li>Hỗ trợ kĩ thuật: báo máy nhiễm virus, bắt gọi tổng đài, cài phần mềm điều khiển từ xa.</li><li>Thông báo tin tốt: trúng thưởng, học bổng nhưng phải nộp phí, gửi CCCD.</li><li>Thông báo tin xấu: giả danh công an, dọa liên quan vụ án, bắt giữ bí mật.</li><li>Mạo danh trang mua sắm: giá rẻ bất thường, tên miền lạ, bắt chuyển khoản trước.</li></ul><p>→ Gặp các dấu hiệu trên: áp dụng 3 nguyên tắc, báo ngay bố mẹ, thầy cô.</p>',
  filter:''
 };
 var NZ={k:null,sc:store.get('notefs',1)};
-function noteContent(k){return k==='all'?GHI.warm+GHI.link+GHI['case']+GHI.filter:(GHI[k]||'');}
+function noteContent(k){return k==='all'?GHI.warm+GHI.link+GHI['case']+GHI.filter:(k==='link'?GHI.warm+GHI.link:(GHI[k]||''));}
 function openNote(k){
  if(S.mode!=='gv')return;
  closeNote(true);NZ.k=k;
@@ -574,7 +573,7 @@ function openNote(k){
 function applyNoteSize(){var o=$('#noteover');if(o)o.style.setProperty('--nz',NZ.sc);}
 function closeNote(silent){var o=$('#noteover');if(!o)return;try{if(document.fullscreenElement===o)document.exitFullscreen();}catch(e){}o.parentNode.removeChild(o);NZ.k=null;}
 function taskBox(k){var t=TASKS[k];if(!t)return '';return '<div class="task"><div class="task-h"><span class="eyebrow">Nhiệm vụ của em</span><span class="task-m"><span>'+icon('people')+t.hinh+'</span><span>'+icon('pause')+t.tg+'</span><span>'+icon('check')+'Sản phẩm: '+t.sp+'</span></span></div><ol>'+t.buoc.map(function(b){return '<li>'+b+'</li>';}).join('')+'</ol></div>';}
-function noteBox(k){if(S.mode!=='gv')return '';var c=k==='all'?GHI.warm+GHI.link+GHI['case']+GHI.filter:GHI[k];if(!c)return '';return '<div class="note"><div class="note-h">'+icon('task')+'<span>'+(k==='all'?'Ghi vào vở · cả tiết (6 dòng)':'Ghi vào vở')+'</span><button type="button" class="note-zoom" data-act="note-zoom" data-k="'+k+'" title="Phóng to toàn màn hình (phím G)">'+icon('full')+'Phóng to <kbd>G</kbd></button></div><div class="note-b">'+c+'</div></div>';}
+function noteBox(k){if(S.mode!=='gv')return '';var c=k==='all'?GHI.warm+GHI.link+GHI['case']+GHI.filter:(k==='link'?GHI.warm+GHI.link:GHI[k]);if(!c)return '';return '<div class="note"><div class="note-h">'+icon('task')+'<span>'+(k==='all'?'Ghi vào vở · cả tiết 1':'Ghi vào vở')+'</span><button type="button" class="note-zoom" data-act="note-zoom" data-k="'+k+'" title="Phóng to toàn màn hình (phím G)">'+icon('full')+'Phóng to <kbd>G</kbd></button></div><div class="note-b">'+c+'</div></div>';}
 
 var WARM=[
  {kind:'sms',from:'MAYXANH BANK',time:'21:04',text:'MAYXANH BANK: Tai khoan cua Quy khach se bi TAM KHOA sau 24h do chua cap nhat sinh trac hoc. Cap nhat ngay tai: mayxanhbank-xacthuc.top',ans:'lua',why:['Ngân hàng không gửi đường link yêu cầu “cập nhật” qua tin nhắn.','Tên miền thật là mayxanhbank-xacthuc.top, không phải mayxanhbank.vn.','Dọa khóa tài khoản để em hoảng.']},
@@ -850,7 +849,7 @@ S.sound=store.get('sound_'+S.mode,S.mode==='gv');
 var timers=[];
 /* ---------- theo dõi kết quả ---------- */
 function qp(k){try{return (new URLSearchParams(location.search)).get(k)||'';}catch(e){return '';}}
-function endpoint(){return String(qp('ep')||store.get('ep','')||CONFIG.ENDPOINT||'/api/ketqua').trim();}
+function endpoint(){return String(qp('ep')||CONFIG.ENDPOINT||store.get('ep','')||'').trim();}
 function lopCode(){return String(qp('lop')||CONFIG.LOP||store.get('lop','')||'').trim();}
 function deviceId(){var d=store.get('may','');if(!d){d=Math.random().toString(36).slice(2,8);store.set('may',d);}return d;}
 function me(){var m=store.get('me',null);return (m&&typeof m==='object')?m:{ten:'',nhom:'',lop:''};}
@@ -876,7 +875,7 @@ function meChip(){var m=me();var lab=m.ten?(m.ten+(m.nhom?' · N'+m.nhom:'')):'C
 function meStatus(){return endpoint()?'Kết quả của em sẽ tự gửi cho thầy cô sau mỗi phần.':'Máy này chưa kết nối bảng theo dõi của thầy cô, kết quả chỉ hiện trên màn hình của em.';}
 function meForm(compact){
  var m=me(),lop=m.lop||lopCode(),fromLink=!!(qp('lop')||CONFIG.LOP);
- var opts='<option value="">Chọn</option>'+[1,2,3,4,5,6,7,8].map(function(n){return '<option value="'+n+'"'+(String(m.nhom)===String(n)?' selected':'')+'>Nhóm '+n+'</option>';}).join('');
+ var opts='<option value="">Chọn</option>'+[1,2,3,4].map(function(n){return '<option value="'+n+'"'+(String(m.nhom)===String(n)?' selected':'')+'>Nhóm '+n+'</option>';}).join('');
  return '<form class="meform" id="meform" autocomplete="off">'+
   '<div class="fld"><label for="me-ten">Họ và tên</label><input class="inp" id="me-ten" maxlength="40" value="'+esc(m.ten)+'" placeholder="vd: Nguyễn Minh Anh"></div>'+
   '<div class="fld fld-s"><label for="me-nhom">Nhóm</label><select id="me-nhom">'+opts+'</select></div>'+
@@ -947,10 +946,10 @@ function sampleRows(){
  var seed=11;function rnd(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646;}
  var rows=[],t0=Date.now()-25*60000,pr=[.96,.8,.68,.42,.74,.86,.62,.3];
  for(var i=1;i<=24;i++){
-  var g=String(Math.ceil(i/3)),ten='HS '+(i<10?'0':'')+i,may='mau'+i,kq='',sc=0;
+  var g=String(Math.ceil(i/6)),ten='HS '+(i<10?'0':'')+i,may='mau'+i,kq='',sc=0;
   for(var j=0;j<8;j++){var ok=rnd()<pr[j];kq+=ok?'1':'0';if(ok)sc++;}
   rows.push({t:t0+i*20000,lop:'MẪU',nhom:g,ten:ten,may:may,hd:'soi-link',diem:sc,toida:8,ct:{kq:kq},id:may+'-l'});
-  if(i%3===1){var no=['01','02','03','04'][(Number(g)-1)%4];rows.push({t:t0+600000+i*15000,lop:'MẪU',nhom:g,ten:ten,may:may,hd:'ho-so-'+no,diem:Math.round(52+rnd()*48),toida:100,ct:{},id:may+'-c'});}
+  if(i%6===1){var no=['01','02','03','04'][(Number(g)-1)%4];rows.push({t:t0+600000+i*15000,lop:'MẪU',nhom:g,ten:ten,may:may,hd:'ho-so-'+no,diem:Math.round(52+rnd()*48),toida:100,ct:{},id:may+'-c'});}
   if(rnd()<.75)rows.push({t:t0+1100000+i*10000,lop:'MẪU',nhom:g,ten:ten,may:may,hd:'may-loc',diem:[65,70,75,80,85][Math.floor(rnd()*5)],toida:100,ct:{},id:may+'-f'});
   if(rnd()<.7){var a=Math.floor(rnd()*6),b=Math.floor(rnd()*6);rows.push({t:t0+1400000+i*8000,lop:'MẪU',nhom:g,ten:ten,may:may,hd:'loi-hua',diem:a===b?1:2,toida:6,ct:{p:a===b?String(a):Math.min(a,b)+','+Math.max(a,b)},id:may+'-p'});}
  }
@@ -1289,7 +1288,7 @@ function twistHTML(){
   '<div class="qbox"><b>SGK · Hoạt động 1.</b> Em hoặc người quen đã từng nhận tin nhắn, cuộc gọi như vậy chưa? Khi đó đã xử lí thế nào?</div>'+
   '<div class="qbox"><b>Câu hỏi của tiết học.</b> Làm thế nào để không bị “hack cảm xúc”? Nếu được chơi lại, em sẽ làm gì khác?</div>'+
   '<div class="row">'+(S.warm.armor?'':'<button class="btn tapebtn big" data-act="armor">Hiện bộ giáp 3 lớp</button>')+'<button class="btn" data-act="warm-restart">Chơi lại từ đầu</button></div>'+
- '</div>'+(S.warm.armor?armorHTML()+noteBox('warm')+'<div class="row"><button class="btn primary big" data-act="go" data-v="link">Sang phần 2: Giải phẫu đường link</button></div>':'')+'</div>';
+ '</div>'+(S.warm.armor?armorHTML()+'<div class="row"><button class="btn primary big" data-act="go" data-v="link">Sang phần 2: Giải phẫu đường link</button></div>':'')+'</div>';
 }
 function armorHTML(){
  return '<div class="stack"><div class="eyebrow">Bộ giáp 3 lớp (SGK mục 1a)</div><div class="armor">'+ARMOR.map(function(a,i){return '<div class="arm '+a.k+'"><div class="arm-ic">'+icon(a.ic)+'</div><span class="mono muted small">Lớp '+(i+1)+'</span><h3>'+a.t+'</h3><p>'+a.d+'</p><div class="small"><b>Thao tác của dân Tin:</b></div><ul>'+a.tin.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul></div>';}).join('')+'</div>'+
@@ -1345,7 +1344,7 @@ function caseList(){
 }
 function hsMaker(c,st){
  return function(id,html,cls){var i=-1;c.ev.forEach(function(e,k){if(e.id===id)i=k;});var f=st.found.indexOf(id)>=0;var miss=st.res&&!f;
-  return '<span role="button" tabindex="0" class="hs'+(cls?' '+cls:'')+(f?' found':'')+(miss?' missed':'')+'" data-act="ev" data-ev="'+id+'"'+(f?' data-n="'+(i+1)+'"':'')+'>'+html+'</span>';};
+  return '<span class="hs'+(cls?' '+cls:'')+(f?' found':'')+(miss?' missed':'')+'" data-act="ev" data-ev="'+id+'"'+(f?' data-n="'+(i+1)+'"':'')+'>'+html+'</span>';};
 }
 function evInner(c,i,got){return '<span class="n">'+(i+1)+'</span><span>'+(got?'<b>'+c.ev[i].t+'.</b> '+c.ev[i].d:'<span class="muted">Chưa tìm thấy</span>')+'</span>';}
 function toolHTML(c,t,st){var open=st.tools.indexOf(t.id)>=0;return '<div id="tw-'+t.id+'"><button type="button" class="tool" data-act="tool" data-t="'+t.id+'" aria-expanded="'+open+'">'+icon(t.ic)+'<span>'+t.l+'</span></button>'+(open?'<div class="toolres"><div class="sim">Kết quả (mô phỏng)</div>'+t.r+'</div>':'')+'</div>';}
@@ -1396,8 +1395,8 @@ function caseDetail(id){
   '<div class="row"><button class="btn" data-act="go" data-v="case">'+icon('back')+'Tất cả hồ sơ</button></div>'+meBanner()+taskBox('casedetail')+
   '<div class="mod-head"><div class="stack" style="gap:6px"><div class="eyebrow">Hồ sơ '+c.no+(c.special?' · Hồ sơ đặc biệt · Tích hợp AI':'')+'</div><h2>'+c.name+'</h2></div><span class="chipst">'+icon('search')+'Bằng chứng <b id="evcount">'+st.found.length+'/'+c.ev.length+'</b></span></div>'+
   '<p class="brief">'+c.brief+'</p>'+
-  '<div class="case-grid"><div class="device-col"><div id="device"'+(st.hint?' class="hint"':'')+'>'+c.dev(h)+'</div>'+
-   '<div class="row"><button class="btn" data-act="hint" aria-pressed="'+st.hint+'">'+(st.hint?'Ẩn gợi ý':'Gợi ý chỗ cần soi')+'</button><span class="muted small">Chạm vào chi tiết đáng ngờ để thu thập bằng chứng.</span></div></div>'+
+  '<div class="case-grid"><div class="device-col"><div id="device"'+(st.hint&&S.mode==='gv'?' class="hint"':'')+'>'+c.dev(h)+'</div>'+
+   '<div class="row"><button class="btn gv-only" data-act="hint" aria-pressed="'+st.hint+'">'+(st.hint?'Ẩn gợi ý':'Gợi ý chỗ cần soi')+'</button><span class="muted small">Chạm vào chi tiết đáng ngờ để thu thập bằng chứng.</span></div></div>'+
    '<div class="stack">'+
     '<div class="card stack"><h3>Bảng bằng chứng</h3><ol class="evlist">'+c.ev.map(function(e,i){var g=st.found.indexOf(e.id)>=0;return '<li class="ev'+(g?' got':'')+'" id="ev-'+c.id+'-'+e.id+'">'+evInner(c,i,g)+'</li>';}).join('')+'</ol></div>'+
     '<div class="card stack"><h3>Công cụ kiểm chứng</h3><p class="muted small">Nguyên tắc 2 · Kiểm tra ngay! Kết quả trong bài là mô phỏng.</p><div class="toolbtns">'+c.tools.map(function(t){return toolHTML(c,t,st);}).join('')+'</div></div>'+
