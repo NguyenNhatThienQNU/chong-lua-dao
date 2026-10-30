@@ -542,7 +542,7 @@ var MODS=[
  {k:'track',n:0,sh:'Theo dõi',t:'Bảng theo dõi kết quả',s:'Dành cho giáo viên',d:'Xem từng học sinh đã làm phần nào, đúng hay chưa, câu nào cả lớp sai nhiều.',gv:true,tool:true}
 ];
 var NOTES={
- warm:['Phát mỗi HS một thẻ 2 mặt (xanh = THẬT, đỏ = LỪA) hoặc cho giơ tay trái/phải.','Bấm Bắt đầu (hoặc phím Space): tin nhắn hiện 5 giây kèm tiếng tích tắc. Hết giờ, cả lớp giơ thẻ cùng lúc.','Bấm Đáp án, đọc nhanh 1–2 dấu hiệu rồi bấm Tiếp.','Sau tin thứ 5, bấm Tiếp để “lật bài”. Hỏi câu của SGK Hoạt động 1, mời 2–3 HS kể chuyện thật.','Hỏi “Nếu được chơi lại, em làm gì khác?”, gom ý HS rồi bấm Hiện bộ giáp 3 lớp.'],
+ warm:['Phát mỗi HS một thẻ 2 mặt (xanh = THẬT, đỏ = LỪA) hoặc cho giơ tay trái/phải.','Bấm Bắt đầu (hoặc phím Space): tin nhắn hiện 5 giây kèm đồng hồ đếm ngược. Hết giờ, cả lớp giơ thẻ cùng lúc.','Bấm Đáp án, đọc nhanh 1–2 dấu hiệu rồi bấm Tiếp.','Sau tin thứ 5, bấm Tiếp để “lật bài”. Hỏi câu của SGK Hoạt động 1, mời 2–3 HS kể chuyện thật.','Hỏi “Nếu được chơi lại, em làm gì khác?”, gom ý HS rồi bấm Hiện bộ giáp 3 lớp.'],
  link:['GV soi 2 link mẫu trên màn chiếu (các nút Thử nhanh). Nhấn mạnh cách đọc tên miền từ dấu “/” đầu tiên ngược về trái.','HS làm thử thách 8 link theo cặp trên máy (khoảng 3 phút), giơ tay báo điểm.','Chốt: tên miền thật là thứ kẻ gian không giả được; ổ khóa https không có nghĩa là an toàn.','Mở mục Theo dõi (thanh trên cùng) để xem link nào nhiều HS sai, rồi chữa ngay link đó bằng máy soi.'],
  'case':['Chia lớp 4 nhóm, mỗi nhóm 2 bàn ghép lại, 1 máy. Nhóm 1–4 lần lượt nhận hồ sơ 01–04. Hồ sơ 05 (Deepfake) GV làm mẫu.','6 phút: nhóm chạm vào chi tiết đáng ngờ để gom bằng chứng, dùng công cụ kiểm chứng, nộp Báo cáo sự cố.','Lần lượt 4 nhóm lên thao tác trên màn chiếu (mỗi nhóm 1 phút), các nhóm khác phản biện, bổ sung bằng chứng bị sót.','Hồ sơ 05: GV hỏi chatbot AI ngay trên màn chiếu, cả lớp đối chiếu với bằng chứng và chỉ ra điều AI không kiểm chứng được.','Chốt bảng 4 dạng lừa đảo ở phần 5.','Mục Theo dõi cho biết điểm báo cáo của từng nhóm ở từng hồ sơ: mời nhóm điểm thấp lên trình bày để cả lớp cùng sửa, nhóm điểm cao bổ sung.'],
  filter:['GV chạy bộ lọc mẫu (2 dấu hiệu, ngưỡng 1) để cả lớp thấy nhiều tin thật bị chặn nhầm.','Các nhóm cải tiến bộ lọc trong 4 phút, ghi lại độ chính xác cao nhất.','Mời nhóm cao nhất giải thích lựa chọn, rồi mở mục “Vì sao không bộ lọc nào đạt 100%?”.','Mức cao nhất đạt được với 8 dấu hiệu này là 85% (17/20 tin).','Mục Theo dõi tự xếp hạng độ chính xác cao nhất của từng em.'],
@@ -1042,10 +1042,17 @@ function downloadHs(){
 var AC=null;
 function ac(){if(!AC){try{AC=new (window.AudioContext||window.webkitAudioContext)();}catch(e){AC=null;}}if(AC&&AC.state==='suspended'){try{AC.resume();}catch(e){}}return AC;}
 function tone(f,d,type,v,delay){if(!S.sound)return;var c=ac();if(!c)return;var t=c.currentTime+(delay||0);var o=c.createOscillator(),g=c.createGain();o.type=type||'sine';o.frequency.setValueAtTime(f,t);g.gain.setValueAtTime(v||.05,t);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+d+.05);}
-function sTick(hot){tone(hot?1320:880,.06,'square',.04);}
-function sBuzz(){tone(196,.55,'sawtooth',.06);tone(147,.55,'sawtooth',.05,.05);}
-function sChime(){tone(660,.14,'sine',.06);tone(880,.14,'sine',.06,.12);tone(1320,.22,'sine',.05,.24);}
-function sPop(){tone(990,.08,'triangle',.05);}
+function sweep(f1,f2,d,v,type,delay){if(!S.sound)return;var c=ac();if(!c)return;var t=c.currentTime+(delay||0);var o=c.createOscillator(),g=c.createGain();o.type=type||'sine';o.frequency.setValueAtTime(f1,t);o.frequency.exponentialRampToValueAtTime(f2,t+d);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(v,t+.03);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+d+.05);}
+function sTick(hot){tone(hot?1320:880,.05,'triangle',.05);}
+function sClock(tac){tone(tac?620:880,.035,'triangle',.09);}
+function sGong(){tone(523,1.4,'sine',.13);tone(784,1.1,'sine',.07,.01);tone(1046,.8,'sine',.04,.02);tone(262,1.2,'triangle',.06);}
+function sStamp(){sweep(160,55,.28,.22,'sine');tone(90,.12,'square',.05);}
+function sWrong(){sweep(330,170,.28,.09,'triangle');}
+function sBuzz(){sWrong();}
+function sChime(){tone(784,.18,'sine',.08);tone(988,.18,'sine',.08,.1);tone(1319,.35,'sine',.07,.2);}
+function sPop(){tone(1319,.12,'sine',.08);tone(1760,.18,'sine',.06,.07);}
+function sWhoosh(){sweep(180,1400,.55,.07,'sawtooth');sweep(240,1700,.55,.05,'sine',.02);}
+function sFanfare(){[523,659,784,1046].forEach(function(f,i){tone(f,.22,'triangle',.08,i*.11);});tone(1046,.6,'sine',.06,.44);}
 
 /* ---------- helpers ---------- */
 function toast(msg){var box=$('#toasts');if(!box){box=document.createElement('div');box.id='toasts';box.setAttribute('role','status');box.setAttribute('aria-live','polite');document.body.appendChild(box);}var t=document.createElement('div');t.className='toast';t.textContent=msg;box.appendChild(t);while(box.children.length>3)box.removeChild(box.firstChild);setTimeout(function(){if(t.parentNode)t.parentNode.removeChild(t);},2700);}
@@ -1150,6 +1157,7 @@ function barHTML(){
   '<nav class="nav" aria-label="Các phần của tiết học">'+mods.map(function(m){return '<button data-act="go" data-v="'+m.k+'"'+(S.view===m.k?' aria-current="page"':'')+(m.tool?' class="navtool"':'')+'>'+(m.tool?icon('chart'):'<span class="num">0'+m.n+'</span>')+m.sh+'</button>';}).join('')+'</nav>'+
   '<div class="tools">'+(S.mode==='hs'?meChip():'')+
    '<span class="seg" role="group" aria-label="Chế độ"><button data-act="mode" data-m="gv" aria-pressed="'+(S.mode==='gv')+'" title="Chế độ giáo viên (màn chiếu)">GV</button><button data-act="mode" data-m="hs" aria-pressed="'+(S.mode==='hs')+'" title="Chế độ học sinh">HS</button></span>'+
+   
    '<button class="ibtn" data-act="sound" aria-label="'+(S.sound?'Tắt âm thanh':'Bật âm thanh')+'" title="Âm thanh (phím M)">'+icon(S.sound?'sound':'mute')+'</button>'+
    '<button class="ibtn" data-act="theme" aria-label="Đổi giao diện sáng/tối" title="Giao diện '+(th==='dark'?'sáng':'tối')+'">'+icon(th==='dark'?'sun':'moon')+'</button>'+
    '<button class="ibtn" data-act="full" aria-label="Toàn màn hình" title="Toàn màn hình (phím F)">'+icon('full')+'</button>'+
@@ -1170,7 +1178,7 @@ VIEWS.home=function(){
    '<div class="row"><button class="btn primary big" data-act="go" data-v="'+(S.mode==='gv'?'warm':'link')+'">'+(S.mode==='gv'?'Bắt đầu tiết học':'Vào nhiệm vụ đầu tiên')+'</button></div>'+
   '</div>'+side+'</div>'+
   '<div class="mods">'+mods.map(function(m){return '<button class="modcard" data-act="go" data-v="'+m.k+'"><span class="n">PHẦN 0'+m.n+'</span><span class="t">'+m.t+'</span><span class="s">'+m.s+'</span><span class="d">'+m.d+'</span></button>';}).join('')+'</div>'+
-  '<p class="muted small gv-only">Ngân hàng Mây Xanh, sàn VèoShop và các tên miền trong bài đều là giả định. Các đường link chỉ để đọc, không bấm được. Phím tắt: Space (bước tiếp theo ở phần 1), F (toàn màn hình), M (âm thanh).</p>'+
+  '<p class="muted small gv-only">Ngân hàng Mây Xanh, sàn VèoShop và các tên miền trong bài đều là giả định. Các đường link chỉ để đọc, không bấm được. Phím tắt: Space (bước tiếp theo ở phần 1), F (toàn màn hình), G (phóng to ghi bài), M (bật/tắt âm thanh).</p>'+
  '</section>';
 };
 function studentLink(){
@@ -1263,16 +1271,18 @@ function drawWarm(){
 }
 function warmStart(){
  var w=S.warm;ac();w.ph='count';drawWarm();
- var total=w.secs*1000,t0=performance.now(),last=w.secs,C=2*Math.PI*52;
- sTick(false);
+ var total=w.secs*1000,t0=performance.now(),last=w.secs,C=2*Math.PI*52,nextBeep=0;
+
  function step(now){
   var left=Math.max(0,total-(now-t0)),sec=Math.ceil(left/1000);
   var fg=$('#ringfg'),num=$('#ringnum');
   if(!fg||S.view!=='warm'){w.raf=0;return;}
   fg.style.strokeDashoffset=String(C*(1-left/total));
   if(left<=2000)fg.classList.add('hot');
-  if(sec!==last){last=sec;if(num)num.textContent=sec;if(sec>0)sTick(sec<=2);}
-  if(left<=0){w.raf=0;sBuzz();w.ph='raise';drawWarm();return;}
+  if(sec!==last){last=sec;if(num)num.textContent=sec;}
+  var el=now-t0;
+  if(left>0&&el>=nextBeep){var hot=left<=2000;sClock(Math.floor(el/(hot?250:500))%2===1);if(hot)tone(1180,.04,'sine',.05);nextBeep=el+(hot?250:500);}
+  if(left<=0){w.raf=0;sGong();w.ph='raise';drawWarm();return;}
   w.raf=requestAnimationFrame(step);
  }
  w.raf=requestAnimationFrame(step);
@@ -1280,8 +1290,8 @@ function warmStart(){
 function warmMain(){
  var w=S.warm;
  if(w.ph==='ready')warmStart();
- else if(w.ph==='raise'){w.ph='reveal';sChime();drawWarm();}
- else if(w.ph==='reveal'){if(w.i<WARM.length-1){w.i++;w.ph='ready';}else{w.ph='twist';}drawWarm();window.scrollTo(0,0);}
+ else if(w.ph==='raise'){w.ph='reveal';if(WARM[w.i].ans==='lua')sStamp();else sChime();drawWarm();}
+ else if(w.ph==='reveal'){if(w.i<WARM.length-1){w.i++;w.ph='ready';}else{w.ph='twist';sWhoosh();}drawWarm();window.scrollTo(0,0);}
 }
 function twistHTML(){
  return '<div class="stack" style="gap:22px"><div class="twist">'+
@@ -1563,7 +1573,7 @@ var ACT={
  'warm-main':function(){warmMain();},
  'warm-secs':function(t){S.warm.secs=parseInt(t.getAttribute('data-n'),10);store.set('secs',S.warm.secs);drawWarm();},
  'warm-restart':function(){S.warm.i=0;S.warm.ph='ready';S.warm.armor=false;drawWarm();},
- armor:function(){S.warm.armor=true;sChime();drawWarm();},
+ armor:function(){S.warm.armor=true;sFanfare();drawWarm();},
  xchip:function(t){var u=t.getAttribute('data-u');var inp=$('#xin');if(inp)inp.value=u;S.link.x=u;$('#xout').innerHTML=xrayHTML(analyze(u));},
  pick:function(t){var L=S.link;if(L.picked!==null)return;L.picked=parseInt(t.getAttribute('data-j'),10);var okp=L.order[L.i][L.picked].ok;L.res[L.i]=okp?1:0;if(okp){L.score++;sChime();}else{sBuzz();}drawChal();},
  next:function(){var L=S.link;L.picked=null;if(L.i<LINKS.length-1)L.i++;else{L.done=true;sendResult('soi-link',L.score,LINKS.length,{kq:LINKS.map(function(_,k){return L.res[k]?1:0;}).join('')});}drawChal();var ch=$('#chal');if(ch&&ch.getBoundingClientRect().top<0&&ch.scrollIntoView)ch.scrollIntoView({block:'start'});},
@@ -1613,6 +1623,7 @@ document.addEventListener('keydown',function(e){
  if(k==='g'||k==='G'){if($('#noteover')){closeNote();return;}var z=$('.note-zoom');if(z)openNote(z.getAttribute('data-k'));else if(S.mode==='gv')toast('Phần này chưa có nội dung ghi bài.');return;}
  if(k==='f'||k==='F'){toggleFull();return;}
  if(k==='m'||k==='M'){toggleSound();return;}
+
  if(S.view==='warm'&&(k===' '||k==='Enter'||k==='ArrowRight')){if(e.target.closest&&e.target.closest('button,a'))return;e.preventDefault();if(S.warm.ph!=='count'&&S.warm.ph!=='twist')warmMain();}
 });
 window.addEventListener('hashchange',function(){var before=S.mode+S.view+S.caseId;parseHash();if(before!==S.mode+S.view+S.caseId)render();});
