@@ -561,7 +561,7 @@ kbd{font-family:var(--f-mono);font-size:.78em;padding:.05em .4em;border-radius:5
    ENDPOINT: đường link Ứng dụng web của Google Apps Script, dạng https://script.google.com/macros/s/.../exec
    LOP: mã lớp hoặc phiên dạy, ví dụ 11ANH1
    MODE: gv (bản giáo viên) hoặc hs (bản học sinh) */
-var CONFIG={ENDPOINT:'https://script.google.com/macros/s/AKfycbyNMckjMB_w2D2TWX8aAb8UtkzLp0d8FgIO277Lpp1m8f0toR1SYSRoJZjVxIRZQWy0cg/exec',LOP:'',MODE:'gv',HS_URL:'/'};
+var CONFIG={ENDPOINT:'/api/ketqua',LOP:'',MODE:'gv',HS_URL:'/'};
 var $=function(s,r){return (r||document).querySelector(s);};
 var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));};
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
@@ -966,7 +966,7 @@ var TR={rows:[],sample:false,last:0,err:'',anon:store.get('anon',false),arm:0,ca
 var LINK_SHORT=['Tên miền chính thức','Tên miền con giả danh','“rn” giả chữ “m”','Dấu @ đánh lừa','Link rút gọn','Đuôi .gov.vn','Giả Cổng Dịch vụ công','Chữ Kirin (câu thưởng)'];
 var PLEDGE_SHORT=['Bật xác thực 2 lớp','Đặt mật khẩu gia đình','Cài nTrust cho bố mẹ','Kể chiêu giả công an','Không đọc mã OTP','Ẩn thông tin cá nhân'];
 function hhmmss(t){var d=new Date(t);function p(n){return (n<10?'0':'')+n;}return p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds());}
-function trUrl(action){var ep=endpoint();return ep+(ep.indexOf('?')>=0?'&':'?')+'action='+action+'&lop='+encodeURIComponent(lopCode())+'&key='+encodeURIComponent(store.get('key',''));}
+function trUrl(action){var ep=endpoint(),k=store.get('key','')||'123456';return ep+(ep.indexOf('?')>=0?'&':'?')+'action='+action+'&lop='+encodeURIComponent(lopCode())+'&key='+encodeURIComponent(k);}
 function trackFetch(){
  if(TR.sample||S.view!=='track')return;
  if(!endpoint()){drawTrack();return;}

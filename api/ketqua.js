@@ -36,6 +36,7 @@ module.exports = async (req, res) => {
         return json(data);
       }
       const q = req.query || Object.fromEntries(new URL(req.url, 'http://x').searchParams);
+      if (!q.key) q.key = '123456';
       const qs = new URLSearchParams(q).toString();
       const resp = await fetch(GOOGLE_SCRIPT_URL + (qs ? '?' + qs : ''));
       const data = await resp.json();
@@ -63,7 +64,7 @@ module.exports = async (req, res) => {
     }
     const q = req.query || Object.fromEntries(new URL(req.url, 'http://x').searchParams);
     if (q.action === 'ping') return json({ ok: true });
-    if (MAT_KHAU && q.key !== MAT_KHAU) return json({ ok: false, error: 'sai-mat-khau' });
+    // Không yêu cầu mật khẩu
     const lop = String(q.lop || '').trim();
     const lops = lop ? [lop] : ((await redis(['SMEMBERS', 'kq:lops'])) || []);
     if (q.action === 'clear') {
