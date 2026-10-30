@@ -1,0 +1,28 @@
+TRIỂN KHAI "TRUNG TÂM CHỐNG LỪA ĐẢO" LÊN VERCEL (khoảng 10 phút)
+
+Thư mục này gồm:
+  index.html      bản Học sinh (HS mở trang chủ)
+  gv.html         bản Giáo viên (màn chiếu + Bảng theo dõi)
+  api/ketqua.js   API lưu kết quả của học sinh
+
+CÁCH 1: QUA GITHUB (không cần cài gì)
+1. Vào github.com > New repository > đặt tên (vd: chong-lua-dao) > Create.
+2. Bấm "uploading an existing file", kéo thả TOÀN BỘ nội dung thư mục này
+   (index.html, gv.html, thư mục api) > Commit changes.
+3. Vào vercel.com > đăng nhập bằng GitHub > Add New... > Project > Import repo vừa tạo > Deploy.
+4. Trong project vừa tạo: tab Storage > Create Database > chọn Upstash (Redis) > gói Free >
+   Connect to project (giữ tên biến mặc định).
+5. Settings > Environment Variables > thêm MAT_KHAU = mật khẩu của bạn > Save.
+6. Deployments > bấm "..." ở bản mới nhất > Redeploy (để nhận Redis và mật khẩu).
+
+CÁCH 2: DÒNG LỆNH (nếu máy có Node.js)
+  Mở cmd trong thư mục này, chạy:  npx vercel --prod
+  Sau đó làm bước 4, 5, 6 như trên.
+
+DÙNG KHI DẠY
+- Giáo viên mở:  https://<tên-project>.vercel.app/gv.html
+  > mục Theo dõi > nhập Mã lớp (vd 11ANH1) và Mật khẩu > Lưu và kết nối.
+- Học sinh mở:   https://<tên-project>.vercel.app  (quét mã QR ở trang chủ bản GV,
+  mã QR tự gắn mã lớp). Phòng máy: gõ địa chỉ này vào trình duyệt.
+- Kiểm tra trước giờ dạy: 1 máy HS làm phần 2, thấy tên hiện ở mục Theo dõi là được.
+  Sau đó bấm "Xóa dữ liệu phiên này".
