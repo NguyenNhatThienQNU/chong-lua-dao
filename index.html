@@ -134,6 +134,11 @@ details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 .modcard .t{font-family:var(--f-display);font-weight:800;font-size:1.6rem;line-height:1.02}
 .modcard .s{font-size:.8rem;font-weight:700;color:var(--warn)}
 .modcard .d{font-size:.9rem;color:var(--muted)}
+.qrover{position:fixed;inset:0;z-index:80;background:#fff;color:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px;cursor:zoom-out}
+.qrover canvas{display:block;image-rendering:pixelated}
+.qo-t{font-family:var(--f-display);font-weight:800;font-size:clamp(1.4rem,3vw,2.4rem);text-align:center}
+.qo-l{font-size:.85rem;color:#444;max-width:92vw;overflow-wrap:anywhere;text-align:center}
+.qo-h{font-size:.8rem;color:#777}
 .qrbox{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 .qrbox canvas{width:168px;height:168px;background:var(--qr-bg);border-radius:12px;padding:8px;flex:none}
 .qrempty{width:168px;height:168px;border-radius:12px;border:2px dashed var(--line);display:grid;place-items:center;text-align:center;font-size:.78rem;color:var(--muted);padding:10px;flex:none}
@@ -244,6 +249,30 @@ details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 .twist{display:flex;flex-direction:column;gap:16px;max-width:980px}
 .twist .lead{font-size:clamp(1.15rem,1.7vw,1.5rem);font-weight:500;max-width:52ch}
 .qbox{padding:.8em 1em;border-radius:12px;background:var(--panel-2);border:1px solid var(--line);font-size:1.05rem}
+.intro{display:flex;flex-direction:column;gap:18px;max-width:1100px}
+.intro-topic{display:inline-block;align-self:flex-start;background:var(--tape);color:var(--tape-ink);font-family:var(--f-display);font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:.3em .8em;border-radius:8px;font-size:clamp(.9rem,1.4vw,1.2rem)}
+.intro-title{font-size:clamp(2.6rem,6.5vw,5.6rem);animation:introIn .6s ease both}
+@keyframes introIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.intro .lead{font-size:clamp(1.1rem,1.7vw,1.45rem);max-width:60ch}
+.intro-plan{border:2px solid var(--ink);border-radius:var(--r);padding:14px 18px;background:var(--panel)}
+.intro-plan ol{list-style:none;padding:0;margin-top:6px;font-size:1.1rem}
+.intro-plan ul{padding-left:1.3rem;margin-top:6px;display:grid;gap:4px}
+.hd-clock{font-size:2rem;font-weight:800;font-variant-numeric:tabular-nums;padding:.1em .5em;border:2px solid var(--ink);border-radius:10px}
+.hd-clock.hot{color:var(--danger);border-color:var(--danger)}
+.hdq{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px}
+.hdq-c{border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;background:var(--panel);display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.hdq-c p{font-size:1.15rem;margin:0}
+.hdq-c.on{border-color:var(--safe)}
+.hdt-h{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:800;font-size:1.2rem}
+.hdo{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:10px}
+.hdo-c{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:10px 14px;background:var(--panel)}
+.hdo-c p{margin:0;font-size:1.12rem}
+.hdo-k{flex:none;width:2em;height:2em;border-radius:50%;display:grid;place-items:center;font-weight:800;border:2px solid var(--ink)}
+.hdo-c.ok{border-color:var(--safe);background:var(--safe-soft)}.hdo-c.ok .hdo-k{background:var(--safe);border-color:var(--safe);color:#fff}
+.hdo-c.no{border-color:var(--danger);background:var(--danger-soft)}.hdo-c.no .hdo-k{background:var(--danger);border-color:var(--danger);color:#fff}
+.hdo-g{margin-top:4px;font-weight:700;animation:introIn .4s ease both}
+.hdq-a{font-size:1.05rem;background:var(--safe-soft);border-radius:10px;padding:.6em .8em;animation:introIn .4s ease both}
+.hdq-l{margin-top:6px;font-family:var(--f-display);font-weight:800;font-size:1.1rem}
 .armor{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 @media (max-width:820px){.armor{grid-template-columns:minmax(0,1fr)}}
 .arm{display:flex;flex-direction:column;gap:8px;border-radius:var(--r);padding:18px;border:1px solid var(--line);background:var(--panel)}
@@ -542,7 +571,7 @@ var MODS=[
  {k:'track',n:0,sh:'Theo dõi',t:'Bảng theo dõi kết quả',s:'Dành cho giáo viên',d:'Xem từng học sinh đã làm phần nào, đúng hay chưa, câu nào cả lớp sai nhiều.',gv:true,tool:true}
 ];
 var NOTES={
- warm:['Phát mỗi HS một thẻ 2 mặt (xanh = THẬT, đỏ = LỪA) hoặc cho giơ tay trái/phải.','Bấm Bắt đầu (hoặc phím Space): tin nhắn hiện 5 giây kèm đồng hồ đếm ngược. Hết giờ, cả lớp giơ thẻ cùng lúc.','Bấm Đáp án, đọc nhanh 1–2 dấu hiệu rồi bấm Tiếp.','Sau tin thứ 5, bấm Tiếp để “lật bài”. Hỏi câu của SGK Hoạt động 1, mời 2–3 HS kể chuyện thật.','Hỏi “Nếu được chơi lại, em làm gì khác?”, gom ý HS rồi bấm Hiện bộ giáp 3 lớp.'],
+ warm:['Phát mỗi HS một thẻ 2 mặt (xanh = THẬT, đỏ = LỪA) hoặc cho giơ tay trái/phải.','Bấm Bắt đầu (hoặc phím Space): tin nhắn hiện 5 giây kèm đồng hồ đếm ngược. Hết giờ, cả lớp giơ thẻ cùng lúc.','Bấm Đáp án, đọc nhanh 1–2 dấu hiệu rồi bấm Tiếp.','Sau tin thứ 5, bấm Tiếp để “lật bài”. Hỏi nhanh: vì sao nhiều bạn chọn sai dù chỉ có 5 giây?','Hỏi “Nếu được chơi lại, em làm gì khác?”, gom ý HS rồi bấm Vào bài học: giới thiệu Bài 9 và nội dung tiết học. Bấm Bắt đầu Hoạt động 1 (SGK): HS đọc 2 tình huống, trao đổi cặp đôi 1 phút, mời 2–3 HS kể; cho cả lớp giơ tay chọn A/B/C/D rồi bấm Hiện đáp án (B, C, D); cuối cùng bấm Chốt kiến thức để hiện bộ giáp 3 lớp.'],
  link:['GV soi 2 link mẫu trên màn chiếu (các nút Thử nhanh). Nhấn mạnh cách đọc tên miền từ dấu “/” đầu tiên ngược về trái.','HS làm thử thách 8 link theo cặp trên máy (khoảng 3 phút), giơ tay báo điểm.','Chốt: tên miền thật là thứ kẻ gian không giả được; ổ khóa https không có nghĩa là an toàn.','Mở mục Theo dõi (thanh trên cùng) để xem link nào nhiều HS sai, rồi chữa ngay link đó bằng máy soi.'],
  'case':['Chia lớp 4 nhóm, mỗi nhóm 2 bàn ghép lại, 1 máy. Nhóm 1–4 lần lượt nhận hồ sơ 01–04. Hồ sơ 05 (Deepfake) GV làm mẫu.','6 phút: nhóm chạm vào chi tiết đáng ngờ để gom bằng chứng, dùng công cụ kiểm chứng, nộp Báo cáo sự cố.','Lần lượt 4 nhóm lên thao tác trên màn chiếu (mỗi nhóm 1 phút), các nhóm khác phản biện, bổ sung bằng chứng bị sót.','Hồ sơ 05: GV hỏi chatbot AI ngay trên màn chiếu, cả lớp đối chiếu với bằng chứng và chỉ ra điều AI không kiểm chứng được.','Chốt bảng 4 dạng lừa đảo ở phần 5.','Mục Theo dõi cho biết điểm báo cáo của từng nhóm ở từng hồ sơ: mời nhóm điểm thấp lên trình bày để cả lớp cùng sửa, nhóm điểm cao bổ sung.'],
  filter:['GV chạy bộ lọc mẫu (2 dấu hiệu, ngưỡng 1) để cả lớp thấy nhiều tin thật bị chặn nhầm.','Các nhóm cải tiến bộ lọc trong 4 phút, ghi lại độ chính xác cao nhất.','Mời nhóm cao nhất giải thích lựa chọn, rồi mở mục “Vì sao không bộ lọc nào đạt 100%?”.','Mức cao nhất đạt được với 8 dấu hiệu này là 85% (17/20 tin).','Mục Theo dõi tự xếp hạng độ chính xác cao nhất của từng em.'],
@@ -550,7 +579,7 @@ var NOTES={
 };
 
 var TASKS={
- warm:{hinh:'Cả lớp',tg:'6 phút',sp:'Lựa chọn của em trên thẻ màu',buoc:['Mỗi em cầm 1 thẻ: mặt xanh là THẬT (an toàn), mặt đỏ là LỪA ĐẢO.','Mỗi tin nhắn chỉ hiện 5 giây, đọc thật nhanh.','Hết giờ, khi màn hình hiện “Giơ thẻ!”, cả lớp giơ thẻ cùng lúc, không đổi thẻ sau khi đã giơ.','Nghe thầy cô lật đáp án và giải thích, rồi trả lời câu hỏi: em hoặc người thân đã từng gặp tình huống như vậy chưa?']},
+ warm:{hinh:'Cả lớp',tg:'6 phút',sp:'Lựa chọn của em trên thẻ màu',buoc:['Mỗi em cầm 1 thẻ: mặt xanh là THẬT (an toàn), mặt đỏ là LỪA ĐẢO.','Mỗi tin nhắn chỉ hiện 5 giây, đọc thật nhanh.','Hết giờ, khi màn hình hiện “Giơ thẻ!”, cả lớp giơ thẻ cùng lúc, không đổi thẻ sau khi đã giơ.','Nghe thầy cô lật đáp án và giải thích vì sao tin đó là thật hay lừa đảo.']},
  link:{hinh:'Cặp đôi, mỗi cặp 1 máy',tg:'9 phút (thử thách 3 phút)',sp:'Điểm thử thách x/8, tự gửi cho thầy cô',buoc:['Nhập họ tên và nhóm ở đầu trang (chỉ làm 1 lần).','Đọc khung “Mẹo đọc tên miền” bên trái.','Ở khung Thử thách, đọc đường link rồi bấm vào tên miền thật mà em chọn.','Đọc phần giải thích và hình “soi link”, rồi bấm “Link tiếp theo”.','Làm hết 8 link, giơ tay báo điểm, rồi ghi bài theo màn chiếu của thầy cô.']},
  'case':{hinh:'4 nhóm, mỗi nhóm 2 bàn ghép lại, 1 máy',tg:'15 phút (điều tra 6 phút)',sp:'Báo cáo sự cố (điểm /100) và phần trình bày 1 phút',buoc:['Phân vai: 1 bạn điều khiển máy, 1 bạn thư kí ghi bằng chứng, 1 bạn trình bày; các bạn còn lại cùng soi màn hình tìm chi tiết đáng ngờ.','Mở đúng hồ sơ của nhóm: nhóm 1 hồ sơ 01, nhóm 2 hồ sơ 02, nhóm 3 hồ sơ 03, nhóm 4 hồ sơ 04.','Đọc bối cảnh, rồi chạm vào những chi tiết đáng ngờ trên màn hình. Chi tiết hiện số đỏ là đã thu thập được bằng chứng. Chỉ có số lượt chạm bằng số bằng chứng cộng 1: được chạm sai 1 lần, nên thảo luận kĩ trước khi chạm.','Bấm các công cụ kiểm chứng (Kiểm tra ngay!) để xem kết quả.','Điền 3 câu của Báo cáo sự cố và bấm “Nộp báo cáo sự cố”.','Bạn trình bày lên máy chiếu thao tác lại, giải thích cho cả lớp (1 phút); nghe nhóm khác bổ sung.']},
  casedetail:{hinh:'Nhóm',tg:'6 phút',sp:'Báo cáo sự cố',buoc:['Chạm vào chi tiết đáng ngờ để thu thập bằng chứng. Chỉ được chạm sai 1 lần, cả nhóm thống nhất rồi mới chạm.','Dùng công cụ kiểm chứng ở cột bên phải.','Trả lời 3 câu của Báo cáo sự cố rồi bấm Nộp.','Thư kí chép các bằng chứng vào vở.']},
@@ -1198,17 +1227,35 @@ function qrPanel(){
   '<div class="stack" style="flex:1 1 220px;gap:8px"><label for="qrbase" class="small muted">Địa chỉ trang bạn đăng bản HS</label>'+
   '<input id="qrbase" class="inp mono small" value="'+esc(store.get('qrbase',''))+'" placeholder="https://…/trung-tam-chong-lua-dao.html" spellcheck="false">'+
   '<div class="code" id="qrout">'+(link?esc(link):'Link cho HS sẽ hiện ở đây, tự gắn mã lớp'+(endpoint()?' và kết nối bảng theo dõi':'')+'.')+'</div>'+
-  '<div class="row"><button class="btn" data-act="qr">Tạo mã QR</button><button class="btn" data-act="copy">Sao chép link</button><button class="btn" data-act="go" data-v="track">'+icon('chart')+'Bảng theo dõi</button></div>'+
-  '<p class="small muted" id="qrmsg">Mã QR mở thẳng chế độ Học sinh. Ở phòng máy, có thể chép file bản HS vào từng máy thay cho mã QR.</p></div></div></div>';
+  '<div class="row"><button class="btn" data-act="qr">Tạo mã QR</button><button class="btn tapebtn" data-act="qr-big" title="Phím Q">'+icon('full')+'Phóng to mã QR (Q)</button><button class="btn" data-act="copy">Sao chép link</button><button class="btn" data-act="go" data-v="track">'+icon('chart')+'Bảng theo dõi</button></div>'+
+  '<p class="small muted" id="qrmsg">Mã QR mở thẳng chế độ Học sinh. Bấm Q (hoặc bấm vào mã) để phóng to toàn màn hình cho HS quét; Q hoặc Esc để đóng. Ở phòng máy, có thể chép file bản HS vào từng máy thay cho mã QR.</p></div></div></div>';
 }
 var qrLoading=false;
+function openQR(){
+ if(S.mode!=='gv')return;
+ var v=studentLink();
+ if(!v){toast('Chưa có link cho học sinh. Nhập địa chỉ trang bản HS rồi bấm Tạo mã QR.');return;}
+ if(!window.QRious){drawQR();var tries=0,iv=setInterval(function(){tries++;if(window.QRious){clearInterval(iv);openQR();}else if(tries>40){clearInterval(iv);toast('Cần Internet để tạo mã QR.');}},150);return;}
+ closeQR();
+ var o=document.createElement('div');o.id='qrover';o.className='qrover';o.setAttribute('role','dialog');o.setAttribute('aria-label','Mã QR phóng to');
+ var lop=lopCode();
+ o.innerHTML='<div class="qo-t">Quét mã để vào app'+(lop?' · Lớp '+esc(lop):'')+'</div><canvas id="qrbig"></canvas><div class="qo-l mono">'+esc(v)+'</div><div class="qo-h">Bấm Q, Esc hoặc bấm vào màn hình để đóng</div>';
+ document.body.appendChild(o);
+ var sz=Math.floor(Math.max(200,Math.min(window.innerWidth*0.92,window.innerHeight-170)));
+ try{new window.QRious({element:$('#qrbig'),value:v,size:sz*(window.devicePixelRatio>1?2:1),level:'M',background:'#ffffff',foreground:'#000000'});}catch(e){}
+ var c=$('#qrbig');if(c){c.style.width=sz+'px';c.style.height=sz+'px';}
+ o.addEventListener('click',function(){closeQR();});
+ try{var p=o.requestFullscreen&&o.requestFullscreen();if(p&&p.catch)p.catch(function(){});}catch(e){}
+ sPop();
+}
+function closeQR(){var o=$('#qrover');if(!o)return;try{if(document.fullscreenElement===o)document.exitFullscreen();}catch(e){}o.parentNode.removeChild(o);}
 function drawQR(){
  var inp=$('#qrbase'),slot=$('#qrslot'),msg=$('#qrmsg'),out=$('#qrout');if(!slot)return;
  if(inp)store.set('qrbase',inp.value.trim());
  var v=studentLink();
  if(out)out.textContent=v||'Nhập địa chỉ trang bạn đăng bản HS rồi bấm Tạo mã QR.';
  if(!v){slot.innerHTML='<div class="qrempty">Nhập địa chỉ trang đăng bản HS rồi bấm Tạo mã QR.</div>';return;}
- if(window.QRious){slot.innerHTML='<canvas id="qrc" width="336" height="336" aria-label="Mã QR chế độ học sinh"></canvas>';try{new window.QRious({element:$('#qrc'),value:v,size:336,level:'M',background:'#ffffff',foreground:'#000000'});}catch(e){slot.innerHTML='<div class="qrempty">Không tạo được mã QR cho đường link này.</div>';}return;}
+ if(window.QRious){slot.innerHTML='<canvas id="qrc" width="336" height="336" aria-label="Mã QR chế độ học sinh, bấm để phóng to" title="Bấm để phóng to (Q)" data-act="qr-big" style="cursor:zoom-in"></canvas>';try{new window.QRious({element:$('#qrc'),value:v,size:336,level:'M',background:'#ffffff',foreground:'#000000'});}catch(e){slot.innerHTML='<div class="qrempty">Không tạo được mã QR cho đường link này.</div>';}return;}
  if(qrLoading)return;qrLoading=true;
  var sc=document.createElement('script');sc.src='https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js';sc.async=true;
  sc.onload=function(){qrLoading=false;drawQR();};
@@ -1247,6 +1294,8 @@ function msgDevice(m){
 function drawWarm(){
  var w=S.warm,box=$('#warm');if(!box)return;
  if(w.ph==='twist'){box.innerHTML=twistHTML();return;}
+ if(w.ph==='intro'){box.innerHTML=introHTML();return;}
+ if(w.ph==='hd1'){box.innerHTML=hd1HTML();return;}
  var m=WARM[w.i];
  var C=2*Math.PI*52;
  var side='';
@@ -1298,11 +1347,46 @@ function twistHTML(){
   '<div class="eyebrow">Lật bài</div>'+
   '<h2>Chiếc đồng hồ 5 giây chính là chiêu số 1 của kẻ lừa đảo</h2>'+
   '<p class="lead">Khi bị ép thời gian, ta phản ứng bằng cảm xúc thay vì suy nghĩ. Kẻ lừa đảo không cần hack máy tính của em. Chúng hack cảm xúc của em: sợ hãi, tham lam, vội vàng, cả niềm tin vào người quen.</p>'+
-  '<div class="qbox"><b>SGK · Hoạt động 1.</b> Em hoặc người quen đã từng nhận tin nhắn, cuộc gọi như vậy chưa? Khi đó đã xử lí thế nào?</div>'+
   '<div class="qbox"><b>Câu hỏi của tiết học.</b> Làm thế nào để không bị “hack cảm xúc”? Nếu được chơi lại, em sẽ làm gì khác?</div>'+
-  '<div class="row">'+(S.warm.armor?'':'<button class="btn tapebtn big" data-act="armor">Hiện bộ giáp 3 lớp</button>')+'<button class="btn" data-act="warm-restart">Chơi lại từ đầu</button></div>'+
- '</div>'+(S.warm.armor?armorHTML()+'<div class="row"><button class="btn primary big" data-act="go" data-v="link">Sang phần 2: Giải phẫu đường link</button></div>':'')+'</div>';
+  '<div class="row"><button class="btn tapebtn big" data-act="warm-intro">Vào bài học</button><button class="btn" data-act="warm-restart">Chơi lại từ đầu</button></div>'+
+ '</div></div>';
 }
+function introHTML(){
+ return '<div class="stack" style="gap:22px"><div class="intro">'+
+  '<div class="intro-topic">Chủ đề 3 · Đạo đức, pháp luật và văn hóa trong môi trường số</div>'+
+  '<h1 class="intro-title">Bài 9<br>Giao tiếp an toàn<br>trên Internet</h1>'+
+  '<p class="lead">Mỗi ngày các em nhận hàng chục tin nhắn, cuộc gọi, đường link. Đa số là thật, nhưng chỉ cần tin nhầm một lần là có thể mất tiền, mất tài khoản, thậm chí gặp nguy hiểm. Kẻ lừa đảo luôn đánh vào cảm xúc. Muốn không bị lừa, các em cần biết <b>nhận ra</b> chiêu trò và biết <b>cách xử lí</b>.</p>'+
+  '<div class="intro-plan"><div class="eyebrow">Tiết học hôm nay</div><ol><li><b>1. Nhận biết và phòng tránh một số dạng lừa đảo trên không gian số</b><ul><li><b>Hoạt động 1:</b> Trao đổi về cách xử lí những tình huống bất thường, rút ra nguyên tắc “bộ giáp 3 lớp” (mục 1a)</li><li><b>Hoạt động 2:</b> Giải phẫu đường link, soi tên miền thật</li><li><b>Hoạt động 3:</b> Phòng điều tra, vận dụng vào 4 dạng lừa đảo (mục 1b)</li><li><b>Luyện tập:</b> Huấn luyện máy lọc lừa đảo</li></ul></li></ol></div>'+
+  '<div class="row"><button class="btn tapebtn big" data-act="hd1">Bắt đầu Hoạt động 1</button><button class="btn" data-act="warm-back">Quay lại phần lật bài</button></div>'+
+ '</div></div>';
+}
+var HD1T=[
+ {t:'Tình huống 1',ic:'phone',d:'Nhận được tin nhắn (qua thư điện tử, điện thoại, mạng xã hội Facebook, Zalo, Tiktok,...) yêu cầu <b>chuyển tiền ngay</b> vào tài khoản số 123 456 789 nếu không muốn gặp những rắc rối liên quan tới bản thân hay với cơ quan luật pháp.'},
+ {t:'Tình huống 2',ic:'link',d:'Nhận được thư điện tử từ <b>địa chỉ lạ</b> yêu cầu mở một tài liệu hoặc một đường link đính kèm và thực hiện theo hướng dẫn đó.'}
+];
+var HD1O=[
+ {k:'A',t:'Thực hiện các yêu cầu để đề phòng câu chuyện trở nên phức tạp.',ok:false,g:'Sai. Làm theo yêu cầu chính là mắc bẫy → trái với Lớp 3: Dừng lại, không gửi!'},
+ {k:'B',t:'Hãy dành thời gian và đặt câu hỏi để tránh bị dồn vào tình huống xấu.',ok:true,g:'Đúng → Lớp 1: Hãy chậm lại!'},
+ {k:'C',t:'Trao đổi với thầy cô giáo, người thân, bạn bè,… để được nghe ý kiến tư vấn.',ok:true,g:'Đúng → Lớp 2: Kiểm tra ngay!'},
+ {k:'D',t:'Tìm cách liên hệ trực tiếp với người gửi để làm rõ.',ok:true,g:'Đúng → Lớp 2: Kiểm tra ngay! (liên hệ qua số, kênh em đã biết, không dùng số trong tin nhắn)'}
+];
+var hdTimer=null,hdLeft=60;
+function hd1HTML(){
+ var shown=!!S.warm.hdAns;
+ return '<div class="stack" style="gap:22px"><div class="intro">'+
+  '<div class="intro-topic">Hoạt động 1 (SGK) · Cặp đôi · 3 phút</div>'+
+  '<h2 class="intro-title" style="font-size:clamp(1.9rem,4.2vw,3.4rem)">Trao đổi về cách xử lí những tình huống bất thường</h2>'+
+  '<div class="task"><div class="task-h"><span class="eyebrow">Nhiệm vụ của em</span></div><ol class="hw"><li>Đọc 2 tình huống dưới đây cùng bạn cùng bàn.</li><li>Trao đổi trong 1 phút: em hoặc người quen đã gặp tình huống tương tự chưa? Đã xử lí như thế nào?</li><li>Trả lời câu hỏi trắc nghiệm: chọn <b>tất cả</b> các cách ứng xử cần thiết, giơ tay theo phương án em chọn.</li><li>Nghe thầy cô chốt đáp án, rồi rút ra nguyên tắc phòng tránh lừa đảo.</li></ol></div>'+
+  '<div class="qbox">Em hoặc người quen đã có khi nào gặp những tình huống tương tự như sau chưa?</div>'+
+  '<div class="hdq">'+HD1T.map(function(x){return '<div class="hdq-c"><span class="hdt-h">'+icon(x.ic)+x.t+'</span><p>'+x.d+'</p></div>';}).join('')+'</div>'+
+  '<div class="qbox">Trong những tình huống ấy, em hoặc người quen đã xử lí như thế nào?</div>'+
+  '<div class="row" style="align-items:center"><span class="hd-clock mono" id="hdclock">'+(hdTimer?Math.floor(hdLeft/60)+':'+('0'+hdLeft%60).slice(-2):'1:00')+'</span><button class="btn" data-act="hd1-timer" id="hdtbtn">'+(hdTimer?'Dừng bấm giờ':'Bấm giờ 1 phút')+'</button></div>'+
+  '<div class="qbox"><b>Câu hỏi.</b> Với các tình huống nêu trong Hoạt động 1, những cách nào sau đây là ứng xử cần thiết để phòng tránh những rủi ro?</div>'+
+  '<div class="hdo">'+HD1O.map(function(o){return '<div class="hdo-c'+(shown?(o.ok?' ok':' no'):'')+'"><span class="hdo-k">'+o.k+'</span><div><p>'+o.t+'</p>'+(shown?'<div class="hdo-g">'+o.g+'</div>':'')+'</div></div>';}).join('')+'</div>'+
+  '<div class="row">'+(shown?'':'<button class="btn" data-act="hd1-ans">Hiện đáp án</button>')+(S.warm.armor?'':'<button class="btn tapebtn big" data-act="armor">Chốt kiến thức: bộ giáp 3 lớp</button>')+'<button class="btn" data-act="warm-intro">Quay lại phần giới thiệu bài</button></div>'+
+ '</div>'+(S.warm.armor?armorHTML()+'<div class="row"><button class="btn primary big" data-act="go" data-v="link">Sang Hoạt động 2: Giải phẫu đường link</button></div>':'')+'</div>';
+}
+
 function armorHTML(){
  return '<div class="stack"><div class="eyebrow">Bộ giáp 3 lớp (SGK mục 1a)</div><div class="armor">'+ARMOR.map(function(a,i){return '<div class="arm '+a.k+'"><div class="arm-ic">'+icon(a.ic)+'</div><span class="mono muted small">Lớp '+(i+1)+'</span><h3>'+a.t+'</h3><p>'+a.d+'</p><div class="small"><b>Thao tác của dân Tin:</b></div><ul>'+a.tin.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul></div>';}).join('')+'</div>'+
  '<p class="gold">Google gọi đây là 3 quy tắc vàng: <i>Slow it down</i> (chậm lại) · <i>Spot check</i> (kiểm tra) · <i>Stop! Don’t send</i> (dừng lại, đừng gửi).</p></div>';
@@ -1572,8 +1656,19 @@ var ACT={
  full:function(){toggleFull();},
  'warm-main':function(){warmMain();},
  'warm-secs':function(t){S.warm.secs=parseInt(t.getAttribute('data-n'),10);store.set('secs',S.warm.secs);drawWarm();},
- 'warm-restart':function(){S.warm.i=0;S.warm.ph='ready';S.warm.armor=false;drawWarm();},
- armor:function(){S.warm.armor=true;sFanfare();drawWarm();},
+ 'warm-restart':function(){S.warm.i=0;S.warm.ph='ready';S.warm.armor=false;S.warm.hdAns=false;drawWarm();},
+ 'warm-intro':function(){S.warm.ph='intro';sFanfare();drawWarm();window.scrollTo(0,0);},
+ 'warm-back':function(){S.warm.ph='twist';drawWarm();},
+ hd1:function(){S.warm.ph='hd1';sWhoosh();drawWarm();window.scrollTo(0,0);},
+ 'hd1-ans':function(){S.warm.hdAns=true;sChime();var y=window.scrollY;drawWarm();window.scrollTo(0,y);},
+ 'hd1-timer':function(){
+  if(hdTimer){clearInterval(hdTimer);hdTimer=null;var b0=$('#hdtbtn');if(b0)b0.textContent='Bấm giờ 1 phút';var c0=$('#hdclock');if(c0){c0.textContent='1:00';c0.classList.remove('hot');}return;}
+  hdLeft=60;var b=$('#hdtbtn');if(b)b.textContent='Dừng bấm giờ';sPop();
+  hdTimer=setInterval(function(){hdLeft--;var left=hdLeft;var c=$('#hdclock');if(!c){clearInterval(hdTimer);hdTimer=null;return;}
+   c.textContent=Math.floor(left/60)+':'+('0'+left%60).slice(-2);if(left<=10){c.classList.add('hot');sClock(left%2);}
+   if(left<=0){clearInterval(hdTimer);hdTimer=null;c.textContent='Hết giờ!';sGong();var bb=$('#hdtbtn');if(bb)bb.textContent='Bấm giờ 1 phút';}},1000);
+ },
+ armor:function(){S.warm.armor=true;sChime();drawWarm();},
  xchip:function(t){var u=t.getAttribute('data-u');var inp=$('#xin');if(inp)inp.value=u;S.link.x=u;$('#xout').innerHTML=xrayHTML(analyze(u));},
  pick:function(t){var L=S.link;if(L.picked!==null)return;L.picked=parseInt(t.getAttribute('data-j'),10);var okp=L.order[L.i][L.picked].ok;L.res[L.i]=okp?1:0;if(okp){L.score++;sChime();}else{sBuzz();}drawChal();},
  next:function(){var L=S.link;L.picked=null;if(L.i<LINKS.length-1)L.i++;else{L.done=true;sendResult('soi-link',L.score,LINKS.length,{kq:LINKS.map(function(_,k){return L.res[k]?1:0;}).join('')});}drawChal();var ch=$('#chal');if(ch&&ch.getBoundingClientRect().top<0&&ch.scrollIntoView)ch.scrollIntoView({block:'start'});},
@@ -1584,6 +1679,7 @@ var ACT={
  th:function(t){var F=S.filter;var mx=Math.max(1,F.f.length);F.th=Math.min(mx,Math.max(1,F.th+parseInt(t.getAttribute('data-d'),10)));var o=$('#thv');if(o)o.textContent=F.th;},
  run:function(){runFilter();},
  tile:function(t){var F=S.filter;F.sel=parseInt(t.getAttribute('data-i'),10);$$('.tile.sel').forEach(function(x){x.classList.remove('sel');});t.classList.add('sel');var d=$('#tdetail');if(d)d.innerHTML=tileDetail(F.sel);},
+ 'qr-big':function(){openQR();},
  qr:function(){drawQR();},
  copy:function(){var v=studentLink();if(!v){toast('Chưa có link để sao chép.');return;}try{navigator.clipboard.writeText(v).then(function(){toast('Đã sao chép link cho học sinh.');},function(){toast('Không sao chép được, hãy chọn link và nhấn Ctrl + C.');});}catch(e){toast('Không sao chép được, hãy chọn link và nhấn Ctrl + C.');}},
  'note-zoom':function(t){openNote(t.getAttribute('data-k'));},
@@ -1617,6 +1713,8 @@ document.addEventListener('keydown',function(e){
  if(e.target.closest&&e.target.closest('input,textarea,select'))return;
  if(e.ctrlKey||e.metaKey||e.altKey)return;
  var k=e.key;
+ if(k==='Escape'&&$('#qrover')){closeQR();return;}
+ if(k==='q'||k==='Q'){if($('#qrover'))closeQR();else openQR();return;}
  if(k==='Escape'&&$('#noteover')){closeNote();return;}
  if($('#noteover')&&(k==='+'||k==='=')){ACT['note-size']({getAttribute:function(){return '1';}});return;}
  if($('#noteover')&&k==='-'){ACT['note-size']({getAttribute:function(){return '-1';}});return;}
