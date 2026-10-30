@@ -134,11 +134,21 @@ details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 .modcard .t{font-family:var(--f-display);font-weight:800;font-size:1.6rem;line-height:1.02}
 .modcard .s{font-size:.8rem;font-weight:700;color:var(--warn)}
 .modcard .d{font-size:.9rem;color:var(--muted)}
-.qrover{position:fixed;inset:0;z-index:80;background:#fff;color:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px;cursor:zoom-out}
-.qrover canvas{display:block;image-rendering:pixelated}
-.qo-t{font-family:var(--f-display);font-weight:800;font-size:clamp(1.4rem,3vw,2.4rem);text-align:center}
-.qo-l{font-size:.85rem;color:#444;max-width:92vw;overflow-wrap:anywhere;text-align:center}
-.qo-h{font-size:.8rem;color:#777}
+.qrover{position:fixed;inset:0;z-index:80;background:#fff;color:#0f172a;display:grid;place-items:center;padding:3vmin;cursor:zoom-out}
+.qo-wrap{display:flex;flex-direction:column;align-items:center;gap:2.4vmin;text-align:center}
+.qrover.wide .qo-wrap{flex-direction:row;gap:5vw;text-align:left}
+.qo-code{padding:2.2vmin;border:3px solid #0f172a;border-radius:2.4vmin;background:#fff;line-height:0}
+.qo-code canvas{display:block}
+.qo-side{display:flex;flex-direction:column;gap:2vmin;max-width:min(42vw,640px)}
+.qrover:not(.wide) .qo-side{max-width:90vw;align-items:center}
+.qo-eb{font-family:var(--f-display);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#64748b;font-size:clamp(.8rem,1.5vmin,1.1rem)}
+.qo-t{font-family:var(--f-display);font-weight:800;line-height:.95;font-size:clamp(2rem,7.5vmin,5.6rem);text-transform:uppercase}
+.qrover:not(.wide) .qo-t br{display:none}
+.qo-lop{align-self:flex-start;background:var(--tape);color:var(--tape-ink);font-family:var(--f-display);font-weight:800;font-size:clamp(1.1rem,3.4vmin,2.2rem);padding:.15em .6em;border-radius:10px}
+.qrover:not(.wide) .qo-lop{align-self:center}
+.qo-steps{margin:0;padding-left:1.3em;display:grid;gap:.5em;font-size:clamp(1rem,2.6vmin,1.6rem);text-align:left}
+.qo-l{font-size:clamp(.85rem,2vmin,1.2rem);color:#334155;overflow-wrap:anywhere;background:#f1f5f9;border-radius:10px;padding:.5em .8em}
+.qo-h{font-size:clamp(.75rem,1.5vmin,.95rem);color:#94a3b8}
 .qrbox{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 .qrbox canvas{width:168px;height:168px;background:var(--qr-bg);border-radius:12px;padding:8px;flex:none}
 .qrempty{width:168px;height:168px;border-radius:12px;border:2px dashed var(--line);display:grid;place-items:center;text-align:center;font-size:.78rem;color:var(--muted);padding:10px;flex:none}
@@ -214,6 +224,24 @@ details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 @media (max-width:860px){.stage{grid-template-columns:minmax(0,1fr)}}
 .stage-phone{position:relative}
 .stage .phone .scr{min-height:min(430px,56vh)}
+@media (min-width:861px){.stage{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr)}}
+.stage .phone.big{width:min(100%,760px);border-radius:48px;padding:12px}
+.stage .phone .scr{border-radius:38px;min-height:min(380px,50vh)}
+.stage .phone.big .bub,.stage .phone.big .mail-body{font-size:clamp(1.35rem,2.35vw,2.4rem);line-height:1.35}
+.stage .phone.big .bub{max-width:100%;padding:.55em .75em}
+.stage .mail-from .nm{font-size:clamp(1.1rem,1.6vw,1.6rem)}
+.stage .status{font-size:clamp(.85rem,1.1vw,1.1rem);padding:14px 30px 8px}
+.stage .sig{height:14px}.stage .sig i{width:4px}
+.stage .ahead{padding:12px 22px 16px;gap:14px}
+.stage .avatar{width:clamp(44px,4vw,64px);height:clamp(44px,4vw,64px);font-size:clamp(1rem,1.5vw,1.4rem)}
+.stage .nm{font-size:clamp(1.15rem,1.75vw,1.75rem)}
+.stage .sub{font-size:clamp(.85rem,1.1vw,1.1rem)}
+.stage .daytag{font-size:clamp(.8rem,1vw,1rem)}
+.stage .abody{padding:18px 22px 24px;gap:14px}
+.stage .mail-sub{font-size:clamp(1.25rem,2vw,2rem)}
+.stage .ringbox{width:min(270px,56vw)}
+.stage .lg{font-size:clamp(1rem,1.3vw,1.3rem)}
+.stage .dots span{width:16px;height:16px}
 .veil .scr > :not(.status){filter:blur(12px)}
 .veil-cover{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
 .veil-cover span{background:var(--tape);color:var(--tape-ink);font-family:var(--f-display);font-weight:800;font-size:1.7rem;padding:.15em .7em;border-radius:10px;text-transform:uppercase;letter-spacing:.04em}
@@ -497,6 +525,16 @@ table.dt{min-width:640px}
 .note-zoom{all:unset;cursor:pointer;margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-family:var(--f-body);font-size:.82rem;font-weight:800;letter-spacing:0;text-transform:none;padding:.35em .75em;border-radius:9px;background:var(--tape-ink);color:var(--tape)}
 .note-zoom:focus-visible{outline:3px solid var(--info);outline-offset:2px}
 kbd{font-family:var(--f-mono);font-size:.78em;padding:.05em .4em;border-radius:5px;border:1px solid currentColor;opacity:.85}
+.zoomover{position:fixed;inset:0;z-index:72;background:var(--bg);color:var(--ink);display:flex;flex-direction:column}
+.zo-body{flex:1;overflow:auto;display:grid;place-items:center;padding:16px}
+.zo-fit{margin:auto}
+.zo-fit > [data-zoom]{max-width:none!important}
+.zo-fit .pcard{max-width:none}
+[data-zoom]{position:relative}
+.zbtn{all:unset;position:absolute;top:6px;right:6px;z-index:2;cursor:pointer;display:inline-flex;align-items:center;gap:4px;padding:.25em .55em;border-radius:8px;background:var(--panel);border:1px solid var(--line);font-size:.78rem;font-weight:800;color:var(--muted);opacity:.75}
+.zbtn:hover,.zbtn:focus-visible{opacity:1;color:var(--ink);outline:2px solid var(--tape)}
+.zbtn .ic{width:14px;height:14px}
+.zoomover .zbtn,.mode-hs .zbtn{display:none}
 .noteover{position:fixed;inset:0;z-index:70;background:var(--panel);color:var(--ink);display:flex;flex-direction:column;--nz:1}
 .no-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:calc(10px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px));background:var(--tape);color:var(--tape-ink)}
 .no-t{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:800;font-size:1.5rem;letter-spacing:.04em;text-transform:uppercase}
@@ -575,12 +613,12 @@ var NOTES={
  link:['GV soi 2 link mẫu trên màn chiếu (các nút Thử nhanh). Nhấn mạnh cách đọc tên miền từ dấu “/” đầu tiên ngược về trái.','HS làm thử thách 8 link theo cặp trên máy (khoảng 3 phút), giơ tay báo điểm.','Chốt: tên miền thật là thứ kẻ gian không giả được; ổ khóa https không có nghĩa là an toàn.','Mở mục Theo dõi (thanh trên cùng) để xem link nào nhiều HS sai, rồi chữa ngay link đó bằng máy soi.'],
  'case':['Chia lớp 4 nhóm, mỗi nhóm 2 bàn ghép lại, 1 máy. Nhóm 1–4 lần lượt nhận hồ sơ 01–04. Hồ sơ 05 (Deepfake) GV làm mẫu.','6 phút: nhóm chạm vào chi tiết đáng ngờ để gom bằng chứng, dùng công cụ kiểm chứng, nộp Báo cáo sự cố.','Lần lượt 4 nhóm lên thao tác trên màn chiếu (mỗi nhóm 1 phút), các nhóm khác phản biện, bổ sung bằng chứng bị sót.','Hồ sơ 05: GV hỏi chatbot AI ngay trên màn chiếu, cả lớp đối chiếu với bằng chứng và chỉ ra điều AI không kiểm chứng được.','Chốt bảng 4 dạng lừa đảo ở phần 5.','Mục Theo dõi cho biết điểm báo cáo của từng nhóm ở từng hồ sơ: mời nhóm điểm thấp lên trình bày để cả lớp cùng sửa, nhóm điểm cao bổ sung.'],
  filter:['GV chạy bộ lọc mẫu (2 dấu hiệu, ngưỡng 1) để cả lớp thấy nhiều tin thật bị chặn nhầm.','Các nhóm cải tiến bộ lọc trong 4 phút, ghi lại độ chính xác cao nhất.','Mời nhóm cao nhất giải thích lựa chọn, rồi mở mục “Vì sao không bộ lọc nào đạt 100%?”.','Mức cao nhất đạt được với 8 dấu hiệu này là 85% (17/20 tin).','Mục Theo dõi tự xếp hạng độ chính xác cao nhất của từng em.'],
- wrap:['Chiếu bảng chốt kiến thức 4 dạng lừa đảo trong SGK.','HS chọn 1–2 lời hứa, nhập tên, chụp màn hình thẻ thám tử.','Giao nhiệm vụ về nhà, chuẩn bị “triển lãm tin nhắn lừa đảo” cho tiết 2.','Chiếu biểu đồ lời hứa ở mục Theo dõi (bật Ẩn họ tên) để kết thúc tiết bằng dữ liệu của chính lớp.']
+ wrap:['Chiếu bảng chốt kiến thức 4 dạng lừa đảo trong SGK.','HS chọn 1–2 lời hứa, nhập tên, chụp màn hình thẻ thám tử.','Giao nhiệm vụ về nhà, chuẩn bị “triển lãm tin nhắn lừa đảo” cho tiết 2.','Chiếu biểu đồ lời hứa ở mục Theo dõi (bật Ẩn tên nhóm) để kết thúc tiết bằng dữ liệu của chính lớp.']
 };
 
 var TASKS={
  warm:{hinh:'Cả lớp',tg:'6 phút',sp:'Lựa chọn của em trên thẻ màu',buoc:['Mỗi em cầm 1 thẻ: mặt xanh là THẬT (an toàn), mặt đỏ là LỪA ĐẢO.','Mỗi tin nhắn chỉ hiện 5 giây, đọc thật nhanh.','Hết giờ, khi màn hình hiện “Giơ thẻ!”, cả lớp giơ thẻ cùng lúc, không đổi thẻ sau khi đã giơ.','Nghe thầy cô lật đáp án và giải thích vì sao tin đó là thật hay lừa đảo.']},
- link:{hinh:'Cặp đôi, mỗi cặp 1 máy',tg:'9 phút (thử thách 3 phút)',sp:'Điểm thử thách x/8, tự gửi cho thầy cô',buoc:['Nhập họ tên và nhóm ở đầu trang (chỉ làm 1 lần).','Đọc khung “Mẹo đọc tên miền” bên trái.','Ở khung Thử thách, đọc đường link rồi bấm vào tên miền thật mà em chọn.','Đọc phần giải thích và hình “soi link”, rồi bấm “Link tiếp theo”.','Làm hết 8 link, giơ tay báo điểm, rồi ghi bài theo màn chiếu của thầy cô.']},
+ link:{hinh:'Cặp đôi, mỗi cặp 1 máy',tg:'9 phút (thử thách 3 phút)',sp:'Điểm thử thách x/8, tự gửi cho thầy cô',buoc:['Nhập tên nhóm và chọn số nhóm ở đầu trang (chỉ làm 1 lần).','Đọc khung “Mẹo đọc tên miền” bên trái.','Ở khung Thử thách, đọc đường link rồi bấm vào tên miền thật mà em chọn.','Đọc phần giải thích và hình “soi link”, rồi bấm “Link tiếp theo”.','Làm hết 8 link, giơ tay báo điểm, rồi ghi bài theo màn chiếu của thầy cô.']},
  'case':{hinh:'4 nhóm, mỗi nhóm 2 bàn ghép lại, 1 máy',tg:'15 phút (điều tra 6 phút)',sp:'Báo cáo sự cố (điểm /100) và phần trình bày 1 phút',buoc:['Phân vai: 1 bạn điều khiển máy, 1 bạn thư kí ghi bằng chứng, 1 bạn trình bày; các bạn còn lại cùng soi màn hình tìm chi tiết đáng ngờ.','Mở đúng hồ sơ của nhóm: nhóm 1 hồ sơ 01, nhóm 2 hồ sơ 02, nhóm 3 hồ sơ 03, nhóm 4 hồ sơ 04.','Đọc bối cảnh, rồi chạm vào những chi tiết đáng ngờ trên màn hình. Chi tiết hiện số đỏ là đã thu thập được bằng chứng. Chỉ có số lượt chạm bằng số bằng chứng cộng 1: được chạm sai 1 lần, nên thảo luận kĩ trước khi chạm.','Bấm các công cụ kiểm chứng (Kiểm tra ngay!) để xem kết quả.','Điền 3 câu của Báo cáo sự cố và bấm “Nộp báo cáo sự cố”.','Bạn trình bày lên máy chiếu thao tác lại, giải thích cho cả lớp (1 phút); nghe nhóm khác bổ sung.']},
  casedetail:{hinh:'Nhóm',tg:'6 phút',sp:'Báo cáo sự cố',buoc:['Chạm vào chi tiết đáng ngờ để thu thập bằng chứng. Chỉ được chạm sai 1 lần, cả nhóm thống nhất rồi mới chạm.','Dùng công cụ kiểm chứng ở cột bên phải.','Trả lời 3 câu của Báo cáo sự cố rồi bấm Nộp.','Thư kí chép các bằng chứng vào vở.']},
  filter:{hinh:'Cặp đôi',tg:'8 phút',sp:'Độ chính xác cao nhất của bộ lọc (tự gửi cho thầy cô)',buoc:['Tích chọn những dấu hiệu em muốn máy dò.','Chọn ngưỡng: máy chặn tin khi có từ bao nhiêu dấu hiệu trở lên.','Bấm “Chạy bộ lọc”, xem các ô đỏ (lọt lưới) và cam (chặn nhầm). Chạm vào ô để xem vì sao.','Sửa lựa chọn, chạy lại để tăng độ chính xác. Ghi lại kết quả cao nhất.','Trả lời: vì sao không bộ lọc nào đạt 100%?']},
@@ -909,16 +947,16 @@ function meForm(compact){
  var m=me(),lop=m.lop||lopCode(),fromLink=!!(qp('lop')||CONFIG.LOP);
  var opts='<option value="">Chọn</option>'+[1,2,3,4].map(function(n){return '<option value="'+n+'"'+(String(m.nhom)===String(n)?' selected':'')+'>Nhóm '+n+'</option>';}).join('');
  return '<form class="meform" id="meform" autocomplete="off">'+
-  '<div class="fld"><label for="me-ten">Họ và tên</label><input class="inp" id="me-ten" maxlength="40" value="'+esc(m.ten)+'" placeholder="vd: Nguyễn Minh Anh"></div>'+
+  '<div class="fld"><label for="me-ten">Tên nhóm</label><input class="inp" id="me-ten" maxlength="40" value="'+esc(m.ten)+'" placeholder="vd: Nhóm Thám tử"></div>'+
   '<div class="fld fld-s"><label for="me-nhom">Nhóm</label><select id="me-nhom">'+opts+'</select></div>'+
-  ((compact&&lop)?'':'<div class="fld fld-s"><label for="me-lop">Lớp</label><input class="inp" id="me-lop" maxlength="20" value="'+esc(lop)+'"'+(fromLink?' readonly':'')+' placeholder="vd: 11A1 (hoặc để trống để xem tất cả)"></div>')+
+  ((compact&&lop)?'':'<div class="fld fld-s"><label for="me-lop">Lớp</label><input class="inp" id="me-lop" maxlength="20" value="'+esc(lop)+'"'+(fromLink?' readonly':'')+' placeholder="vd: 11ANH1"></div>')+
   '<button class="btn primary" type="submit">Lưu</button></form>';
 }
 function meBanner(){if(S.mode!=='hs')return '';var m=me();if(m.ten&&m.nhom)return '';return '<div class="mebar"><b>Nhập tên và nhóm trước khi làm bài</b><span class="small muted">'+meStatus()+'</span>'+meForm(true)+'</div>';}
 function saveMe(){
  var te=$('#me-ten'),ne=$('#me-nhom'),le=$('#me-lop');
  var ten=te?te.value.trim():'',nhom=ne?ne.value:'',lop=le?le.value.trim():(me().lop||lopCode());
- if(!ten){toast('Nhập họ và tên của em.');return;}
+ if(!ten){toast('Nhập tên nhóm của em.');return;}
  if(!nhom){toast('Chọn nhóm của em.');return;}
  store.set('me',{ten:ten,nhom:nhom,lop:lop});if(!S.pledge.name)S.pledge.name=ten;
  toast('Đã lưu. Chúc thám tử điều tra tốt!');render();
@@ -928,7 +966,7 @@ var TR={rows:[],sample:false,last:0,err:'',anon:store.get('anon',false),arm:0,ca
 var LINK_SHORT=['Tên miền chính thức','Tên miền con giả danh','“rn” giả chữ “m”','Dấu @ đánh lừa','Link rút gọn','Đuôi .gov.vn','Giả Cổng Dịch vụ công','Chữ Kirin (câu thưởng)'];
 var PLEDGE_SHORT=['Bật xác thực 2 lớp','Đặt mật khẩu gia đình','Cài nTrust cho bố mẹ','Kể chiêu giả công an','Không đọc mã OTP','Ẩn thông tin cá nhân'];
 function hhmmss(t){var d=new Date(t);function p(n){return (n<10?'0':'')+n;}return p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds());}
-function trUrl(action){var ep=endpoint();return ep+(ep.indexOf('?')>=0?'&':'?')+'action='+action+'&lop='+encodeURIComponent(lopCode())+'&key='+encodeURIComponent(store.get('key','')||'123456');}
+function trUrl(action){var ep=endpoint();return ep+(ep.indexOf('?')>=0?'&':'?')+'action='+action+'&lop='+encodeURIComponent(lopCode())+'&key='+encodeURIComponent(store.get('key',''));}
 function trackFetch(){
  if(TR.sample||S.view!=='track')return;
  if(!endpoint()){drawTrack();return;}
@@ -938,7 +976,7 @@ function trackFetch(){
  }).catch(function(){TR.err='mang';drawTrack();});
 }
 function errText(e){
- if(e==='sai-mat-khau')return 'Sai mật khẩu xem kết quả. Kiểm tra lại biến MAT_KHAU trong Settings của Vercel.';
+ if(e==='sai-mat-khau')return 'Máy chủ vẫn đang đòi mật khẩu (bản cũ). Trong Apps Script, sửa dòng MAT_KHAU thành const MAT_KHAU = \'\'; rồi Triển khai → Quản lý việc triển khai → bút chì → Phiên bản mới → Triển khai.';
  if(e==='mang')return 'Không kết nối được tới máy chủ lưu kết quả. Kiểm tra mạng.'+(inFrame?' Khi mở trong Claude, trang không được phép kết nối ra ngoài: hãy mở file HTML trên máy.':'');
  return 'Máy chủ báo lỗi: '+e;
 }
@@ -946,7 +984,7 @@ function saveTrack(){
  var ep=$('#tr-ep'),lp=$('#tr-lop'),k=$('#tr-key');
  if(ep&&!CONFIG.ENDPOINT)store.set('ep',ep.value.trim());
  if(lp)store.set('lop',lp.value.trim());
- store.set('key',(k&&k.value)?k.value:'123456');
+ if(k)store.set('key',k.value);
  TR.sample=false;TR.rows=[];TR.err='';TR.last=0;
  toast(endpoint()?'Đã lưu. Đang kết nối…':'Đã lưu. Còn thiếu đường link Apps Script.');render();
 }
@@ -1012,7 +1050,7 @@ function dashHTML(A){
  var P=list.filter(function(s){return s.pledge;});
  var pc=PLEDGES.map(function(){return 0;});P.forEach(function(s){String(s.pledge).split(',').forEach(function(x){var i=parseInt(x,10);if(i>=0&&i<pc.length)pc[i]++;});});
  function kpi(b,t){return '<div class="kpi"><b>'+b+'</b><span>'+t+'</span></div>';}
- var html='<div class="row" style="justify-content:space-between"><label class="sw" for="tr-anon"><input type="checkbox" id="tr-anon"'+(TR.anon?' checked':'')+'>Ẩn họ tên khi chiếu lên màn hình</label><span class="small muted">'+list.length+' học sinh · '+(TR.sample?'dữ liệu mẫu':'tự cập nhật mỗi 5 giây')+'</span></div>';
+ var html='<div class="row" style="justify-content:space-between"><label class="sw" for="tr-anon"><input type="checkbox" id="tr-anon"'+(TR.anon?' checked':'')+'>Ẩn tên nhóm khi chiếu lên màn hình</label><span class="small muted">'+list.length+' học sinh · '+(TR.sample?'dữ liệu mẫu':'tự cập nhật mỗi 5 giây')+'</span></div>';
  html+='<div class="kpis">'+
   kpi(list.length,'Học sinh đã gửi kết quả')+
   kpi(L.length?lAvg.toFixed(1)+'/8':'–','Soi link: điểm trung bình'+(L.length?' · '+lOk+'/'+L.length+' em đạt từ 5/8':''))+
@@ -1230,6 +1268,36 @@ function qrPanel(){
   '<div class="row"><button class="btn" data-act="qr">Tạo mã QR</button><button class="btn tapebtn" data-act="qr-big" title="Phím Q">'+icon('full')+'Phóng to mã QR (Q)</button><button class="btn" data-act="copy">Sao chép link</button><button class="btn" data-act="go" data-v="track">'+icon('chart')+'Bảng theo dõi</button></div>'+
   '<p class="small muted" id="qrmsg">Mã QR mở thẳng chế độ Học sinh. Bấm Q (hoặc bấm vào mã) để phóng to toàn màn hình cho HS quét; Q hoặc Esc để đóng. Ở phòng máy, có thể chép file bản HS vào từng máy thay cho mã QR.</p></div></div></div>';
 }
+var ZM={i:-1,k:1,ph:null,el:null};
+function zoomList(){return Array.prototype.slice.call(document.querySelectorAll('#main [data-zoom]'));}
+function zoomBtns(){if(S.mode!=='gv')return;zoomList().forEach(function(el,i){if(el.querySelector(':scope > .zbtn'))return;var b=document.createElement('button');b.type='button';b.className='zbtn';b.setAttribute('data-act','zoom');b.setAttribute('data-i',i);b.title='Phóng to toàn màn hình (phím '+(i+1)+')';b.setAttribute('aria-label','Phóng to '+el.getAttribute('data-zoom'));b.innerHTML=icon('full')+'<span>'+(i+1)+'</span>';el.appendChild(b);});}
+function openZoom(i){
+ if(S.mode!=='gv')return;
+ restoreZoom();
+ var all=zoomList();if(!all.length)return;
+ i=(i+all.length)%all.length;
+ var el=all[i];ZM.i=i;ZM.el=el;
+ var ph=document.createComment('zoom');el.parentNode.insertBefore(ph,el);ZM.ph=ph;
+ var o=$('#zoomover');
+ if(!o){o=document.createElement('div');o.id='zoomover';o.className='zoomover';o.setAttribute('role','dialog');document.body.appendChild(o);
+  o.innerHTML='<div class="no-bar"><span class="no-t" id="zo-t"></span><span class="no-tools"><button type="button" data-act="zoom-nav" data-d="-1" title="Khung trước (←)">‹</button><button type="button" data-act="zoom-nav" data-d="1" title="Khung sau (→)">›</button><button type="button" data-act="zoom-size" data-d="-1" title="Nhỏ hơn (−)">A−</button><button type="button" data-act="zoom-size" data-d="1" title="To hơn (+)">A+</button><button type="button" data-act="zoom-close" title="Đóng (Esc)">'+icon('x')+'Đóng</button></span></div><div class="zo-body" id="zo-body"><div class="zo-fit" id="zo-fit"></div></div>';
+  try{var pr=o.requestFullscreen&&o.requestFullscreen();if(pr&&pr.catch)pr.catch(function(){});}catch(e){}
+ }
+ $('#zo-t').textContent=(i+1)+'/'+all.length+' · '+el.getAttribute('data-zoom');
+ ZM.k=1;$('#zo-fit').appendChild(el);fitZoom();sWhoosh();
+}
+function fitZoom(){
+ var el=ZM.el,b=$('#zo-body'),fit=$('#zo-fit');if(!el||!b)return;
+ var dw=+(el.getAttribute('data-zw')||900);
+ fit.style.zoom=1;fit.style.width=dw+'px';
+ var W=b.clientWidth-32,H=b.clientHeight-32,h=fit.scrollHeight||1;
+ var z=Math.min(W/dw,H/h);z=Math.max(.5,Math.min(z,3))*ZM.k;
+ fit.style.zoom=z;
+}
+function restoreZoom(){if(ZM.el&&ZM.ph&&ZM.ph.parentNode){ZM.ph.parentNode.insertBefore(ZM.el,ZM.ph);ZM.ph.parentNode.removeChild(ZM.ph);}ZM.el=null;ZM.ph=null;}
+function closeZoom(){var o=$('#zoomover');restoreZoom();ZM.i=-1;if(!o)return;try{if(document.fullscreenElement===o)document.exitFullscreen();}catch(e){}o.parentNode.removeChild(o);}
+window.addEventListener('resize',function(){if(ZM.el)fitZoom();});
+document.addEventListener('fullscreenchange',function(){if(ZM.el)setTimeout(fitZoom,80);});
 var qrLoading=false;
 function openQR(){
  if(S.mode!=='gv')return;
@@ -1239,15 +1307,25 @@ function openQR(){
  closeQR();
  var o=document.createElement('div');o.id='qrover';o.className='qrover';o.setAttribute('role','dialog');o.setAttribute('aria-label','Mã QR phóng to');
  var lop=lopCode();
- o.innerHTML='<div class="qo-t">Quét mã để vào app'+(lop?' · Lớp '+esc(lop):'')+'</div><canvas id="qrbig"></canvas><div class="qo-l mono">'+esc(v)+'</div><div class="qo-h">Bấm Q, Esc hoặc bấm vào màn hình để đóng</div>';
+ o.innerHTML='<div class="qo-wrap"><div class="qo-code"><canvas id="qrbig"></canvas></div>'+
+  '<div class="qo-side"><div class="qo-eb">Tin học 11 · Bài 9 · Trung tâm chống lừa đảo</div><div class="qo-t">Quét mã <br>để vào app</div>'+(lop?'<div class="qo-lop">Lớp '+esc(lop)+'</div>':'')+
+  '<ol class="qo-steps"><li>Mở camera hoặc Zalo, quét mã QR</li><li>Nhập tên nhóm và chọn số nhóm</li><li>Làm theo “Nhiệm vụ của em”</li></ol>'+
+  '<div class="qo-l mono">'+esc(v.replace(/^https?:\/\//,''))+'</div><div class="qo-h">Q, Esc hoặc bấm vào màn hình để đóng</div></div></div>';
  document.body.appendChild(o);
- var sz=Math.floor(Math.max(200,Math.min(window.innerWidth*0.92,window.innerHeight-170)));
- try{new window.QRious({element:$('#qrbig'),value:v,size:sz*(window.devicePixelRatio>1?2:1),level:'M',background:'#ffffff',foreground:'#000000'});}catch(e){}
- var c=$('#qrbig');if(c){c.style.width=sz+'px';c.style.height=sz+'px';}
+ try{new window.QRious({element:$('#qrbig'),value:v,size:1200,level:'M',padding:0,background:'#ffffff',foreground:'#000000'});}catch(e){}
+ sizeQR();
  o.addEventListener('click',function(){closeQR();});
  try{var p=o.requestFullscreen&&o.requestFullscreen();if(p&&p.catch)p.catch(function(){});}catch(e){}
  sPop();
 }
+function sizeQR(){
+ var o=$('#qrover'),c=$('#qrbig');if(!o||!c)return;
+ var W=window.innerWidth,H=window.innerHeight,wide=W>=H*1.15;
+ o.classList.toggle('wide',wide);
+ var sz=wide?Math.min(H*0.82,W*0.52):Math.min(W*0.86,H*0.6);
+ sz=Math.max(180,Math.floor(sz));c.style.width=sz+'px';c.style.height=sz+'px';
+}
+window.addEventListener('resize',sizeQR);document.addEventListener('fullscreenchange',function(){setTimeout(sizeQR,60);});
 function closeQR(){var o=$('#qrover');if(!o)return;try{if(document.fullscreenElement===o)document.exitFullscreen();}catch(e){}o.parentNode.removeChild(o);}
 function drawQR(){
  var inp=$('#qrbase'),slot=$('#qrslot'),msg=$('#qrmsg'),out=$('#qrout');if(!slot)return;
@@ -1266,17 +1344,16 @@ VIEWS.track=function(){
  var ep=endpoint(),locked=!!CONFIG.ENDPOINT;
  return '<section class="wrap mod">'+
   '<div class="mod-head"><div class="stack" style="gap:6px"><div class="eyebrow">Dành cho giáo viên · tự cập nhật mỗi 5 giây</div><h2>Bảng theo dõi kết quả</h2></div><span class="chipst">'+icon('chart')+'<span id="trstate-t">…</span></span></div>'+
-  '<details class="card" id="trset"'+((ep&&store.get('key','')&&lopCode())?'':' open')+'><summary class="trsum"><b>Kết nối lưu kết quả</b> <span class="small muted">'+(ep?'đã có đường link':'chưa kết nối')+'</span></summary>'+
+  '<details class="card" id="trset"'+((ep&&lopCode())?'':' open')+'><summary class="trsum"><b>Kết nối lưu kết quả</b> <span class="small muted">'+(ep?'đã có đường link':'chưa kết nối')+'</span></summary>'+
    '<form id="trform" class="stack" autocomplete="off" style="margin-top:12px">'+
     '<div class="fld"><label for="tr-ep" class="small"><b>Địa chỉ lưu kết quả (API trên Vercel)</b>'+(locked?' · đã gắn sẵn trong file':'')+'</label><input id="tr-ep" class="inp mono small" value="'+esc(ep)+'"'+(locked?' readonly':'')+' placeholder="https://script.google.com/macros/s/…/exec" spellcheck="false"></div>'+
-    '<div class="row" style="align-items:flex-end"><div class="fld" style="flex:1 1 100%"><label for="tr-lop" class="small"><b>Mã lớp / phiên dạy</b></label><input id="tr-lop" class="inp" value="'+esc(lopCode())+'" placeholder="vd: 11A1 (hoặc để trống để xem tất cả)"></div>'+
-    '<input id="tr-key" type="hidden" value="123456"></div>'+
+    '<div class="row" style="align-items:flex-end"><div class="fld" style="flex:1 1 180px"><label for="tr-lop" class="small"><b>Mã lớp / phiên dạy</b></label><input id="tr-lop" class="inp" value="'+esc(lopCode())+'" placeholder="vd: 11ANH1"></div></div>'+
     '<div class="row"><button class="btn primary" type="submit">Lưu và kết nối</button><button class="btn" type="button" data-act="tr-sample">Xem thử với dữ liệu mẫu</button>'+(inFrame?'':'<button class="btn" type="button" data-act="tr-hsfile">Tải bản HS đã gắn kết nối</button>')+'<button class="btn" type="button" data-act="tr-clear">Xóa dữ liệu phiên này</button></div>'+
-    '<ol class="hw small" hidden><li>Tạo một Google Sheet mới → Tiện ích mở rộng → Apps Script → dán mã trong file Ma_Apps_Script_bang_theo_doi.txt, đổi MAT_KHAU.</li><li>Triển khai → Tùy chọn triển khai mới → Ứng dụng web. Thực thi dưới dạng: Tôi. Người có quyền truy cập: Bất kỳ ai. Bấm Triển khai và cấp quyền.</li><li>Dán đường link kết thúc bằng /exec vào ô trên, nhập mã lớp và mật khẩu rồi bấm Lưu và kết nối.</li><li>Bấm “Tải bản HS đã gắn kết nối” để có file cho học sinh, hoặc dùng mã QR ở trang chủ.</li></ol>'+
+    '<ol class="hw small" hidden><li>Tạo một Google Sheet mới → Tiện ích mở rộng → Apps Script → dán mã trong file Ma_Apps_Script_bang_theo_doi.txt.</li><li>Triển khai → Tùy chọn triển khai mới → Ứng dụng web. Thực thi dưới dạng: Tôi. Người có quyền truy cập: Bất kỳ ai. Bấm Triển khai và cấp quyền.</li><li>Dán đường link kết thúc bằng /exec vào ô trên, nhập mã lớp rồi bấm Lưu và kết nối.</li><li>Bấm “Tải bản HS đã gắn kết nối” để có file cho học sinh, hoặc dùng mã QR ở trang chủ.</li></ol>'+
     (inFrame?'<p class="small muted">Trang đang mở trong Claude nên không được phép kết nối ra ngoài. Hãy mở file HTML trên máy để dùng thật; ở đây chỉ xem thử được dữ liệu mẫu.</p>':'')+
    '</form></details><div id="trk" class="stack" style="gap:clamp(14px,2vw,22px)"></div></section>';
 };
-AFTER.track=function(){store.set('key','123456');drawTrack();trackFetch();timers.push(setInterval(trackFetch,5000));};
+AFTER.track=function(){drawTrack();trackFetch();timers.push(setInterval(trackFetch,5000));};
 
 AFTER.home=function(){if(S.mode==='gv'&&studentLink())drawQR();};
 
@@ -1295,7 +1372,7 @@ function drawWarm(){
  var w=S.warm,box=$('#warm');if(!box)return;
  if(w.ph==='twist'){box.innerHTML=twistHTML();return;}
  if(w.ph==='intro'){box.innerHTML=introHTML();return;}
- if(w.ph==='hd1'){box.innerHTML=hd1HTML();return;}
+ if(w.ph==='hd1'){box.innerHTML=hd1HTML();zoomBtns();return;}
  var m=WARM[w.i];
  var C=2*Math.PI*52;
  var side='';
@@ -1388,7 +1465,7 @@ function hd1HTML(){
 }
 
 function armorHTML(){
- return '<div class="stack"><div class="eyebrow">Bộ giáp 3 lớp (SGK mục 1a)</div><div class="armor">'+ARMOR.map(function(a,i){return '<div class="arm '+a.k+'"><div class="arm-ic">'+icon(a.ic)+'</div><span class="mono muted small">Lớp '+(i+1)+'</span><h3>'+a.t+'</h3><p>'+a.d+'</p><div class="small"><b>Thao tác của dân Tin:</b></div><ul>'+a.tin.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul></div>';}).join('')+'</div>'+
+ return '<div class="stack" data-zoom="Bộ giáp 3 lớp" data-zw="1250"><div class="eyebrow">Bộ giáp 3 lớp (SGK mục 1a)</div><div class="armor">'+ARMOR.map(function(a,i){return '<div class="arm '+a.k+'"><div class="arm-ic">'+icon(a.ic)+'</div><span class="mono muted small">Lớp '+(i+1)+'</span><h3>'+a.t+'</h3><p>'+a.d+'</p><div class="small"><b>Thao tác của dân Tin:</b></div><ul>'+a.tin.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul></div>';}).join('')+'</div>'+
  '<p class="gold">Google gọi đây là 3 quy tắc vàng: <i>Slow it down</i> (chậm lại) · <i>Spot check</i> (kiểm tra) · <i>Stop! Don’t send</i> (dừng lại, đừng gửi).</p></div>';
 }
 
@@ -1607,20 +1684,20 @@ function tileDetail(i){
 
 /* wrap-up */
 VIEWS.wrap=function(){
- return '<section class="wrap mod">'+modHead('wrap')+gvNote('wrap')+meBanner()+taskBox('wrap')+armorHTML()+
- '<div class="stack"><div class="eyebrow">Chốt kiến thức · 4 dạng lừa đảo trong SGK</div><div class="table-wrap"><table><thead><tr><th>Dạng lừa đảo</th><th>Kẻ gian nói gì</th><th>Dấu hiệu nhận biết</th><th>Cách phòng tránh</th></tr></thead><tbody>'+
+ return '<section class="wrap mod">'+modHead('wrap')+gvNote('wrap')+meBanner()+taskBox('wrap')+'<p class="small muted gv-only">Phóng to từng khung cho cả lớp xem: phím <b>1</b> bộ giáp · <b>2</b> bảng 4 dạng lừa đảo · <b>3</b> lời hứa · <b>4</b> thẻ thám tử · <b>5</b> nhiệm vụ về nhà (hoặc bấm nút ⛶ ở góc mỗi khung). Trong khi phóng to: ← → chuyển khung, + − đổi cỡ, Esc đóng.</p>'+armorHTML()+
+ '<div class="stack" data-zoom="4 dạng lừa đảo" data-zw="1150"><div class="eyebrow">Chốt kiến thức · 4 dạng lừa đảo trong SGK</div><div class="table-wrap"><table><thead><tr><th>Dạng lừa đảo</th><th>Kẻ gian nói gì</th><th>Dấu hiệu nhận biết</th><th>Cách phòng tránh</th></tr></thead><tbody>'+
   '<tr><td>Hỗ trợ kĩ thuật</td><td>“Máy em nhiễm virus, gọi ngay tổng đài”</td><td>Cảnh báo bật trên trang web, số tổng đài lạ, đòi cài phần mềm điều khiển từ xa, đòi phí</td><td>Đóng trang, quét bằng phần mềm chính thống; không cài, không trả phí</td></tr>'+
   '<tr><td>Thông báo tin tốt</td><td>“Em trúng thưởng, nhận học bổng”</td><td>Không tham gia mà trúng; phải trả phí, nộp CCCD trước; hạn chót gấp</td><td>Hỏi qua kênh chính thức; không trả phí, không gửi giấy tờ</td></tr>'+
   '<tr><td>Thông báo tin xấu</td><td>“Em liên quan vụ án”, “tài khoản sắp bị khóa”</td><td>Xưng cơ quan nhà nước qua điện thoại; đe dọa; bắt giữ bí mật; đòi chuyển tiền</td><td>Cúp máy; báo bố mẹ, thầy cô; gọi 113</td></tr>'+
   '<tr><td>Mạo danh trang TMĐT</td><td>“Sale sốc 90%, chỉ hôm nay”</td><td>Giá phi lý; tên miền lạ; bắt chuyển khoản trước</td><td>Vào đúng ứng dụng, tên miền chính thức; thanh toán qua sàn hoặc khi nhận hàng</td></tr>'+
   '<tr><td>Mở rộng: Deepfake</td><td>Gọi video bằng mặt, giọng người quen</td><td>Cuộc gọi ngắn, hình mờ; xin tiền gấp vào tài khoản người khác</td><td>Gọi lại số đã lưu, hỏi “mật khẩu gia đình”</td></tr>'+
  '</tbody></table></div></div>'+
- noteBox('all')+'<div class="pledge-grid"><div class="card stack"><h3>Lời hứa an toàn số</h3><p class="muted">Chọn 1–2 việc em sẽ làm ngay tối nay, nhập tên rồi chụp màn hình thẻ thám tử.</p>'+
+ noteBox('all')+'<div class="pledge-grid"><div class="card stack" data-zoom="Lời hứa an toàn số" data-zw="620"><h3>Lời hứa an toàn số</h3><p class="muted">Chọn 1–2 việc em sẽ làm ngay tối nay, nhập tên rồi chụp màn hình thẻ thám tử.</p>'+
   '<form id="pform" class="stack" autocomplete="off"><label for="pname" class="small"><b>Tên của em</b></label><input id="pname" class="inp" maxlength="40" placeholder="vd: Nguyễn Minh Anh" value="'+esc(S.pledge.name)+'">'+
   '<fieldset><legend class="sr">Lời hứa</legend>'+PLEDGES.map(function(p,i){return '<label class="choice" for="pl-'+i+'"><input type="checkbox" id="pl-'+i+'" data-pl="'+i+'"'+(S.pledge.p.indexOf(i)>=0?' checked':'')+'><span>'+p+'</span></label>';}).join('')+'</fieldset></form></div>'+
-  '<div class="stack"><div id="pcard">'+pledgeCard()+'</div><div class="row"><button class="btn primary" data-act="pledge-send">Gửi lời hứa cho thầy cô</button><span class="small muted">'+(endpoint()?'Thầy cô sẽ thấy lời hứa của em trên bảng theo dõi.':'Máy này chưa kết nối bảng theo dõi, hãy chụp màn hình thẻ.')+'</span></div>'+
-  '<div class="card stack"><h3>Nhiệm vụ về nhà</h3><ol class="hw"><li>Thực hiện lời hứa trên thẻ, kể lại kết quả ở tiết sau.</li><li>Sưu tầm 1 tin nhắn hoặc cuộc gọi lừa đảo mà người thân từng nhận (che hết thông tin cá nhân) cho “triển lãm tin nhắn lừa đảo” đầu tiết 2.</li><li>Đọc trước mục 2 SGK: Giao tiếp và ứng xử trong môi trường số.</li></ol></div></div></div>'+
- '<div class="card stack gv-only"><h3>Nguồn tham khảo cho giáo viên</h3><ul class="src">'+SOURCES.map(function(s){return '<li><a href="'+s.u+'" target="_blank" rel="noopener">'+s.t+'</a></li>';}).join('')+'</ul></div>'+
+  '<div class="stack"><div id="pcard" data-zoom="Thẻ thám tử mạng" data-zw="500">'+pledgeCard()+'</div><div class="row"><button class="btn primary" data-act="pledge-send">Gửi lời hứa cho thầy cô</button><span class="small muted">'+(endpoint()?'Thầy cô sẽ thấy lời hứa của em trên bảng theo dõi.':'Máy này chưa kết nối bảng theo dõi, hãy chụp màn hình thẻ.')+'</span></div>'+
+  '<div class="card stack" data-zoom="Nhiệm vụ về nhà" data-zw="620"><h3>Nhiệm vụ về nhà</h3><ol class="hw"><li>Thực hiện lời hứa trên thẻ, kể lại kết quả ở tiết sau.</li><li>Sưu tầm 1 tin nhắn hoặc cuộc gọi lừa đảo mà người thân từng nhận (che hết thông tin cá nhân) cho “triển lãm tin nhắn lừa đảo” đầu tiết 2.</li><li>Đọc trước mục 2 SGK: Giao tiếp và ứng xử trong môi trường số.</li></ol></div></div></div>'+
+ 
  '</section>';
 };
 function pledgeCard(){
@@ -1638,11 +1715,13 @@ function parseHash(){var h=(location.hash||'').slice(1);var m=h.match(/^(gv|hs)(
 function render(){
  stopTimers();
  closeNote(true);
+ closeZoom();
  var tb=$('#toasts');if(tb)tb.innerHTML='';
  document.body.classList.toggle('mode-hs',S.mode==='hs');
  $('#bar').innerHTML=barHTML();
  $('#main').innerHTML=(VIEWS[S.view]||VIEWS.home)();
  if(AFTER[S.view])AFTER[S.view]();
+ zoomBtns();
  setHash();
 }
 function go(v,c){S.view=v||'home';S.caseId=(S.view==='case'&&c)?c:null;render();window.scrollTo(0,0);}
@@ -1660,6 +1739,10 @@ var ACT={
  'warm-intro':function(){S.warm.ph='intro';sFanfare();drawWarm();window.scrollTo(0,0);},
  'warm-back':function(){S.warm.ph='twist';drawWarm();},
  hd1:function(){S.warm.ph='hd1';sWhoosh();drawWarm();window.scrollTo(0,0);},
+ 'zoom':function(t){openZoom(+t.getAttribute('data-i'));},
+ 'zoom-nav':function(t){if(ZM.i<0)return;openZoom(ZM.i+(+t.getAttribute('data-d')));},
+ 'zoom-size':function(t){ZM.k=Math.max(.5,Math.min(2.5,ZM.k*(t.getAttribute('data-d')==='1'?1.15:1/1.15)));fitZoom();},
+ 'zoom-close':function(){closeZoom();},
  'hd1-ans':function(){S.warm.hdAns=true;sChime();var y=window.scrollY;drawWarm();window.scrollTo(0,y);},
  'hd1-timer':function(){
   if(hdTimer){clearInterval(hdTimer);hdTimer=null;var b0=$('#hdtbtn');if(b0)b0.textContent='Bấm giờ 1 phút';var c0=$('#hdclock');if(c0){c0.textContent='1:00';c0.classList.remove('hot');}return;}
@@ -1704,15 +1787,23 @@ document.addEventListener('change',function(e){
  else if(t.hasAttribute('data-rep')){var st=cst(S.caseId),kind=t.getAttribute('data-rep'),key=t.getAttribute('data-k');
   if(kind==='type')st.rep.type=key;
   else{var arr=st.rep[kind];var val=kind==='acts'?parseInt(key,10):key;var j=arr.indexOf(val);if(t.checked&&j<0)arr.push(val);if(!t.checked&&j>=0)arr.splice(j,1);}}
- else if(t.hasAttribute('data-pl')){var P=S.pledge,n=parseInt(t.getAttribute('data-pl'),10),q=P.p.indexOf(n);if(t.checked&&q<0)P.p.push(n);if(!t.checked&&q>=0)P.p.splice(q,1);P.p.sort();$('#pcard').innerHTML=pledgeCard();}
+ else if(t.hasAttribute('data-pl')){var P=S.pledge,n=parseInt(t.getAttribute('data-pl'),10),q=P.p.indexOf(n);if(t.checked&&q<0)P.p.push(n);if(!t.checked&&q>=0)P.p.splice(q,1);P.p.sort();$('#pcard').innerHTML=pledgeCard();zoomBtns();if(ZM.el)fitZoom();}
 });
-document.addEventListener('input',function(e){if(e.target.id==='pname'){S.pledge.name=e.target.value;$('#pcard').innerHTML=pledgeCard();}});
+document.addEventListener('input',function(e){if(e.target.id==='pname'){S.pledge.name=e.target.value;$('#pcard').innerHTML=pledgeCard();zoomBtns();if(ZM.el)fitZoom();}});
 document.addEventListener('toggle',function(e){if(e.target.id==='whybox')S.filter.why=e.target.open;},true);
 document.addEventListener('keydown',function(e){
  if((e.key==='Enter'||e.key===' ')&&e.target.getAttribute&&e.target.getAttribute('role')==='button'){e.preventDefault();e.target.click();return;}
  if(e.target.closest&&e.target.closest('input,textarea,select'))return;
  if(e.ctrlKey||e.metaKey||e.altKey)return;
  var k=e.key;
+ if($('#zoomover')){
+  if(k==='Escape'||k==='z'||k==='Z'){closeZoom();return;}
+  if(k==='ArrowRight'||k==='ArrowLeft'){e.preventDefault();ACT['zoom-nav']({getAttribute:function(){return k==='ArrowRight'?'1':'-1';}});return;}
+  if(k==='+'||k==='='||k==='-'){ACT['zoom-size']({getAttribute:function(){return k==='-'?'-1':'1';}});return;}
+  if(/^[1-9]$/.test(k)){openZoom(+k-1);return;}
+ }
+ if(S.mode==='gv'&&/^[1-9]$/.test(k)&&!$('#noteover')&&!$('#qrover')){var zl=zoomList();if(zl.length&&+k<=zl.length){openZoom(+k-1);return;}}
+ if(S.mode==='gv'&&(k==='z'||k==='Z')&&zoomList().length){openZoom(0);return;}
  if(k==='Escape'&&$('#qrover')){closeQR();return;}
  if(k==='q'||k==='Q'){if($('#qrover'))closeQR();else openQR();return;}
  if(k==='Escape'&&$('#noteover')){closeNote();return;}

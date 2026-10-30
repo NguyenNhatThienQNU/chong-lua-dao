@@ -1,10 +1,10 @@
-// API lưu kết quả cho "Trung tâm Chống lừa đảo" – chạy trên Vercel.
-// Hỗ trợ tự động chuyển tiếp về Google Apps Script của giáo viên.
+// API lưu kết quả cho "Trung tâm Chống lừa đảo" – chạy trên Vercel, lưu vào Upstash Redis.
+// Tự động chuyển tiếp dữ liệu về Google Apps Script nếu chưa gắn Redis.
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyNMckjMB_w2D2TWX8aAb8UtkzLp0d8FgIO277Lpp1m8f0toR1SYSRoJZjVxIRZQWy0cg/exec';
 
 const R_URL = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
 const R_TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
-const MAT_KHAU = process.env.MAT_KHAU || '123456';
+const MAT_KHAU = process.env.MAT_KHAU || ''; // không dùng mật khẩu
 
 async function redis(cmd) {
   const r = await fetch(R_URL, { method: 'POST', headers: { Authorization: 'Bearer ' + R_TOKEN }, body: JSON.stringify(cmd) });
@@ -20,7 +20,7 @@ module.exports = async (req, res) => {
   if (req.method === 'OPTIONS') { res.statusCode = 204; return res.end(); }
   const json = (o) => { res.setHeader('Content-Type', 'application/json'); res.end(JSON.stringify(o)); };
 
-  // Nếu không có Redis, tự động chuyển sang Google Apps Script
+  // Nếu chưa gắn Redis, tự động chuyển tiếp qua Google Apps Script
   if (!R_URL || !R_TOKEN) {
     try {
       if (req.method === 'POST') {
@@ -36,7 +36,6 @@ module.exports = async (req, res) => {
         return json(data);
       }
       const q = req.query || Object.fromEntries(new URL(req.url, 'http://x').searchParams);
-      if (!q.key) q.key = '123456';
       const qs = new URLSearchParams(q).toString();
       const resp = await fetch(GOOGLE_SCRIPT_URL + (qs ? '?' + qs : ''));
       const data = await resp.json();
@@ -64,7 +63,7 @@ module.exports = async (req, res) => {
     }
     const q = req.query || Object.fromEntries(new URL(req.url, 'http://x').searchParams);
     if (q.action === 'ping') return json({ ok: true });
-    if (MAT_KHAU && q.key && q.key !== MAT_KHAU && q.key !== '123456') return json({ ok: false, error: 'sai-mat-khau' });
+    if (MAT_KHAU && q.key !== MAT_KHAU) return json({ ok: false, error: 'sai-mat-khau' });
     const lop = String(q.lop || '').trim();
     const lops = lop ? [lop] : ((await redis(['SMEMBERS', 'kq:lops'])) || []);
     if (q.action === 'clear') {

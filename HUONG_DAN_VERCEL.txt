@@ -12,8 +12,8 @@ CÁCH 1: QUA GITHUB (không cần cài gì)
 3. Vào vercel.com > đăng nhập bằng GitHub > Add New... > Project > Import repo vừa tạo > Deploy.
 4. Trong project vừa tạo: tab Storage > Create Database > chọn Upstash (Redis) > gói Free >
    Connect to project (giữ tên biến mặc định).
-5. Settings > Environment Variables > thêm MAT_KHAU = mật khẩu của bạn > Save.
-6. Deployments > bấm "..." ở bản mới nhất > Redeploy (để nhận Redis và mật khẩu).
+5. (Bỏ qua) Không cần đặt mật khẩu.
+6. Deployments > bấm "..." ở bản mới nhất > Redeploy (để nhận Redis).
 
 CÁCH 2: DÒNG LỆNH (nếu máy có Node.js)
   Mở cmd trong thư mục này, chạy:  npx vercel --prod
