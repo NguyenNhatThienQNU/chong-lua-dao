@@ -315,6 +315,9 @@ details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 @media (max-width:980px){.case-grid{grid-template-columns:minmax(0,1fr)}}
 .device-col{display:flex;flex-direction:column;gap:12px;min-width:0}
 @media (min-width:981px){.device-col{position:sticky;top:96px}}
+.chipst.budget{background:var(--info-soft);color:var(--info)}
+.chipst.budget.out{background:var(--danger-soft);color:var(--danger)}
+.spent{opacity:.85}
 .chipst{display:inline-flex;gap:6px;align-items:center;padding:.35em .8em;border-radius:999px;background:var(--danger-soft);color:var(--danger);font-weight:700}
 .evlist{list-style:none;padding:0;display:grid;gap:8px}
 .ev{display:flex;gap:10px;padding:.55em .75em;border-radius:12px;border:1px dashed var(--line);font-size:.9rem;transition:background .3s}
@@ -549,8 +552,8 @@ var NOTES={
 var TASKS={
  warm:{hinh:'Cả lớp',tg:'6 phút',sp:'Lựa chọn của em trên thẻ màu',buoc:['Mỗi em cầm 1 thẻ: mặt xanh là THẬT (an toàn), mặt đỏ là LỪA ĐẢO.','Mỗi tin nhắn chỉ hiện 5 giây, đọc thật nhanh.','Hết giờ, khi màn hình hiện “Giơ thẻ!”, cả lớp giơ thẻ cùng lúc, không đổi thẻ sau khi đã giơ.','Nghe thầy cô lật đáp án và giải thích, rồi trả lời câu hỏi: em hoặc người thân đã từng gặp tình huống như vậy chưa?']},
  link:{hinh:'Cặp đôi, mỗi cặp 1 máy',tg:'9 phút (thử thách 3 phút)',sp:'Điểm thử thách x/8, tự gửi cho thầy cô',buoc:['Nhập họ tên và nhóm ở đầu trang (chỉ làm 1 lần).','Đọc khung “Mẹo đọc tên miền” bên trái.','Ở khung Thử thách, đọc đường link rồi bấm vào tên miền thật mà em chọn.','Đọc phần giải thích và hình “soi link”, rồi bấm “Link tiếp theo”.','Làm hết 8 link, giơ tay báo điểm, rồi ghi bài theo màn chiếu của thầy cô.']},
- 'case':{hinh:'4 nhóm, mỗi nhóm 2 bàn ghép lại, 1 máy',tg:'15 phút (điều tra 6 phút)',sp:'Báo cáo sự cố (điểm /100) và phần trình bày 1 phút',buoc:['Phân vai: 1 bạn điều khiển máy, 1 bạn thư kí ghi bằng chứng, 1 bạn trình bày; các bạn còn lại cùng soi màn hình tìm chi tiết đáng ngờ.','Mở đúng hồ sơ của nhóm: nhóm 1 hồ sơ 01, nhóm 2 hồ sơ 02, nhóm 3 hồ sơ 03, nhóm 4 hồ sơ 04.','Đọc bối cảnh, rồi chạm vào những chi tiết đáng ngờ trên màn hình. Chi tiết hiện số đỏ là đã thu thập được bằng chứng.','Bấm các công cụ kiểm chứng (Kiểm tra ngay!) để xem kết quả.','Điền 3 câu của Báo cáo sự cố và bấm “Nộp báo cáo sự cố”.','Bạn trình bày lên máy chiếu thao tác lại, giải thích cho cả lớp (1 phút); nghe nhóm khác bổ sung.']},
- casedetail:{hinh:'Nhóm',tg:'6 phút',sp:'Báo cáo sự cố',buoc:['Chạm vào chi tiết đáng ngờ để thu thập bằng chứng.','Dùng công cụ kiểm chứng ở cột bên phải.','Trả lời 3 câu của Báo cáo sự cố rồi bấm Nộp.','Thư kí chép các bằng chứng vào vở.']},
+ 'case':{hinh:'4 nhóm, mỗi nhóm 2 bàn ghép lại, 1 máy',tg:'15 phút (điều tra 6 phút)',sp:'Báo cáo sự cố (điểm /100) và phần trình bày 1 phút',buoc:['Phân vai: 1 bạn điều khiển máy, 1 bạn thư kí ghi bằng chứng, 1 bạn trình bày; các bạn còn lại cùng soi màn hình tìm chi tiết đáng ngờ.','Mở đúng hồ sơ của nhóm: nhóm 1 hồ sơ 01, nhóm 2 hồ sơ 02, nhóm 3 hồ sơ 03, nhóm 4 hồ sơ 04.','Đọc bối cảnh, rồi chạm vào những chi tiết đáng ngờ trên màn hình. Chi tiết hiện số đỏ là đã thu thập được bằng chứng. Chỉ có số lượt chạm bằng số bằng chứng cộng 1: được chạm sai 1 lần, nên thảo luận kĩ trước khi chạm.','Bấm các công cụ kiểm chứng (Kiểm tra ngay!) để xem kết quả.','Điền 3 câu của Báo cáo sự cố và bấm “Nộp báo cáo sự cố”.','Bạn trình bày lên máy chiếu thao tác lại, giải thích cho cả lớp (1 phút); nghe nhóm khác bổ sung.']},
+ casedetail:{hinh:'Nhóm',tg:'6 phút',sp:'Báo cáo sự cố',buoc:['Chạm vào chi tiết đáng ngờ để thu thập bằng chứng. Chỉ được chạm sai 1 lần, cả nhóm thống nhất rồi mới chạm.','Dùng công cụ kiểm chứng ở cột bên phải.','Trả lời 3 câu của Báo cáo sự cố rồi bấm Nộp.','Thư kí chép các bằng chứng vào vở.']},
  filter:{hinh:'Cặp đôi',tg:'8 phút',sp:'Độ chính xác cao nhất của bộ lọc (tự gửi cho thầy cô)',buoc:['Tích chọn những dấu hiệu em muốn máy dò.','Chọn ngưỡng: máy chặn tin khi có từ bao nhiêu dấu hiệu trở lên.','Bấm “Chạy bộ lọc”, xem các ô đỏ (lọt lưới) và cam (chặn nhầm). Chạm vào ô để xem vì sao.','Sửa lựa chọn, chạy lại để tăng độ chính xác. Ghi lại kết quả cao nhất.','Trả lời: vì sao không bộ lọc nào đạt 100%?']},
  wrap:{hinh:'Cá nhân',tg:'5 phút',sp:'Vở ghi và thẻ thám tử',buoc:['Ghi bài theo màn chiếu của thầy cô.','Chọn 1–2 lời hứa an toàn số, nhập tên.','Bấm “Gửi lời hứa cho thầy cô” và chụp màn hình thẻ thám tử.','Ghi nhiệm vụ về nhà.']}
 };
@@ -1393,10 +1396,10 @@ function caseDetail(id){
  var c=caseById(id),st=cst(id),h=hsMaker(c,st);
  return '<section class="wrap mod">'+
   '<div class="row"><button class="btn" data-act="go" data-v="case">'+icon('back')+'Tất cả hồ sơ</button></div>'+meBanner()+taskBox('casedetail')+
-  '<div class="mod-head"><div class="stack" style="gap:6px"><div class="eyebrow">Hồ sơ '+c.no+(c.special?' · Hồ sơ đặc biệt · Tích hợp AI':'')+'</div><h2>'+c.name+'</h2></div><span class="chipst">'+icon('search')+'Bằng chứng <b id="evcount">'+st.found.length+'/'+c.ev.length+'</b></span></div>'+
+  '<div class="mod-head"><div class="stack" style="gap:6px"><div class="eyebrow">Hồ sơ '+c.no+(c.special?' · Hồ sơ đặc biệt · Tích hợp AI':'')+'</div><h2>'+c.name+'</h2></div><span class="row" style="gap:8px"><span class="chipst">'+icon('search')+'Bằng chứng <b id="evcount">'+st.found.length+'/'+c.ev.length+'</b></span>'+(S.mode==='hs'?'<span class="chipst budget" id="budget">'+budgetHTML(c,st)+'</span>':'')+'</span></div>'+
   '<p class="brief">'+c.brief+'</p>'+
   '<div class="case-grid"><div class="device-col"><div id="device"'+(st.hint&&S.mode==='gv'?' class="hint"':'')+'>'+c.dev(h)+'</div>'+
-   '<div class="row"><button class="btn gv-only" data-act="hint" aria-pressed="'+st.hint+'">'+(st.hint?'Ẩn gợi ý':'Gợi ý chỗ cần soi')+'</button><span class="muted small">Chạm vào chi tiết đáng ngờ để thu thập bằng chứng.</span></div></div>'+
+   '<div class="row"><button class="btn gv-only" data-act="hint" aria-pressed="'+st.hint+'">'+(st.hint?'Ẩn gợi ý':'Gợi ý chỗ cần soi')+'</button><span class="muted small">Chạm vào chi tiết đáng ngờ để thu thập bằng chứng.'+(S.mode==='hs'?' Nhóm có '+(c.ev.length+1)+' lượt chạm: chỉ được chạm sai 1 lần.':'')+'</span></div></div>'+
    '<div class="stack">'+
     '<div class="card stack"><h3>Bảng bằng chứng</h3><ol class="evlist">'+c.ev.map(function(e,i){var g=st.found.indexOf(e.id)>=0;return '<li class="ev'+(g?' got':'')+'" id="ev-'+c.id+'-'+e.id+'">'+evInner(c,i,g)+'</li>';}).join('')+'</ol></div>'+
     '<div class="card stack"><h3>Công cụ kiểm chứng</h3><p class="muted small">Nguyên tắc 2 · Kiểm tra ngay! Kết quả trong bài là mô phỏng.</p><div class="toolbtns">'+c.tools.map(function(t){return toolHTML(c,t,st);}).join('')+'</div></div>'+
@@ -1411,9 +1414,22 @@ function startCountdowns(){
   timers.push(t);
  });
 }
-function findEv(eid){
+function budgetLeft(c,st){return c.ev.length+1-(st.clk||0)-(st.miss||0);}
+function budgetHTML(c,st){var l=Math.max(0,budgetLeft(c,st));return 'Lượt chạm còn <b>'+l+'/'+(c.ev.length+1)+'</b>';}
+function updBudget(c,st){var b=$('#budget');if(b){b.innerHTML=budgetHTML(c,st);b.classList.toggle('out',budgetLeft(c,st)<=0);}var d=$('#device');if(d)d.classList.toggle('spent',S.mode==='hs'&&budgetLeft(c,st)<=0);}
+function caseMiss(){
+ var c=caseById(S.caseId);if(!c)return;var st=cst(c.id);
+ if(budgetLeft(c,st)<=0){toast('Hết lượt chạm. Hãy dùng công cụ kiểm chứng và nộp báo cáo.');return;}
+ st.miss=(st.miss||0)+1;sBuzz();updBudget(c,st);
+ toast(budgetLeft(c,st)<=0?'Chạm sai! Hết lượt chạm, hãy dùng công cụ kiểm chứng và nộp báo cáo.':'Chạm sai! Chỗ này không phải bằng chứng. Còn '+budgetLeft(c,st)+' lượt.');
+}
+function findEv(eid,viaTool){
  var c=caseById(S.caseId);if(!c)return;var st=cst(c.id);
  var idx=-1;c.ev.forEach(function(e,k){if(e.id===eid)idx=k;});if(idx<0)return;
+ if(st.found.indexOf(eid)<0&&S.mode==='hs'&&!viaTool){
+  if(budgetLeft(c,st)<=0){toast('Hết lượt chạm. Hãy dùng công cụ kiểm chứng và nộp báo cáo.');sBuzz();return;}
+  st.clk=(st.clk||0)+1;updBudget(c,st);
+ }
  if(st.found.indexOf(eid)<0){
   st.found.push(eid);sPop();
   $$('.hs[data-ev="'+eid+'"]').forEach(function(b){b.classList.add('found');b.classList.remove('missed');b.setAttribute('data-n',idx+1);});
@@ -1430,7 +1446,7 @@ function useTool(tid){
  var t=c.tools.filter(function(x){return x.id===tid;})[0];if(!t)return;
  var i=st.tools.indexOf(tid);if(i>=0)st.tools.splice(i,1);else{st.tools.push(tid);sPop();}
  var w=$('#tw-'+tid);if(w)w.outerHTML=toolHTML(c,t,st);
- if(i<0&&t.ev)setTimeout(function(){findEv(t.ev);},250);
+ if(i<0&&t.ev)setTimeout(function(){findEv(t.ev,true);},250);
 }
 function submitReport(){
  var c=caseById(S.caseId);if(!c)return;var st=cst(c.id);
@@ -1572,6 +1588,7 @@ var ACT={
 function toggleSound(){S.sound=!S.sound;store.set('sound_'+S.mode,S.sound);if(S.sound)ac();$('#bar').innerHTML=barHTML();toast(S.sound?'Đã bật âm thanh':'Đã tắt âm thanh');}
 function toggleFull(){var d=document,el=d.documentElement;try{if(!d.fullscreenElement){var p=el.requestFullscreen&&el.requestFullscreen();if(p&&p.catch)p.catch(function(){toast('Trình duyệt không cho phép toàn màn hình ở đây.');});else if(!p)toast('Trình duyệt không cho phép toàn màn hình ở đây.');}else if(d.exitFullscreen){d.exitFullscreen();}}catch(e){toast('Trình duyệt không cho phép toàn màn hình ở đây.');}}
 
+document.addEventListener('click',function(e){if(S.view!=='case'||!S.caseId||S.mode!=='hs')return;if(!e.target.closest||!e.target.closest('#device'))return;if(e.target.closest('.hs'))return;var x=e.clientX,y=e.clientY,near=null;$$('#device .hs').forEach(function(h){if(near)return;Array.prototype.forEach.call(h.getClientRects(),function(r){if(x>=r.left-8&&x<=r.right+8&&y>=r.top-6&&y<=r.bottom+6)near=h;});});e.stopPropagation();if(near){findEv(near.getAttribute('data-ev'));return;}caseMiss();},true);
 document.addEventListener('click',function(e){var t=e.target.closest('[data-act]');if(!t)return;var f=ACT[t.getAttribute('data-act')];if(f){e.preventDefault();f(t,e);}});
 document.addEventListener('submit',function(e){var f=e.target;if(f.id==='xform'){e.preventDefault();var v=$('#xin').value;S.link.x=v;$('#xout').innerHTML=xrayHTML(analyze(v));}else if(f.id==='rep'){e.preventDefault();submitReport();}else if(f.id==='pform'){e.preventDefault();}else if(f.id==='meform'){e.preventDefault();saveMe();}else if(f.id==='trform'){e.preventDefault();saveTrack();}});
 document.addEventListener('change',function(e){
