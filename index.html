@@ -224,7 +224,7 @@ details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 @media (max-width:860px){.stage{grid-template-columns:minmax(0,1fr)}}
 .stage-phone{position:relative}
 .stage .phone .scr{min-height:min(430px,56vh)}
-@media (min-width:861px){.stage{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr)}}
+@media (min-width:861px){.stage{grid-template-columns:minmax(0,1.15fr) minmax(0,1.05fr);gap:clamp(20px,3vw,52px)}}
 .stage .phone.big{width:min(100%,760px);border-radius:48px;padding:12px}
 .stage .phone .scr{border-radius:38px;min-height:min(380px,50vh)}
 .stage .phone.big .bub,.stage .phone.big .mail-body{font-size:clamp(1.35rem,2.35vw,2.4rem);line-height:1.35}
@@ -272,8 +272,8 @@ details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 .stamp.lua{color:var(--danger)}
 .stamp.that{color:var(--safe)}
 @keyframes stamp{from{opacity:0;transform:scale(1.7) rotate(-5deg)}to{opacity:1;transform:scale(1) rotate(-5deg)}}
-.reasons{text-align:left;display:flex;flex-direction:column;gap:6px;max-width:40ch;padding-left:1.1rem}
-.real{border-left:4px solid var(--tape);padding:.55em .8em;background:var(--panel-2);border-radius:0 10px 10px 0;text-align:left;font-size:.9rem;max-width:46ch}
+.reasons{text-align:left;display:flex;flex-direction:column;gap:clamp(12px,1.5vw,22px);max-width:min(95vw,720px);padding-left:clamp(1.4rem,2vw,2.4rem);font-size:clamp(1.35rem,2.15vw,2.4rem);line-height:1.45;font-weight:600;color:var(--ink)}.reasons li{padding-left:.25em}.reasons li::marker{color:var(--tape-ink);font-weight:800;font-size:1.1em}
+.real{border-left:5px solid var(--tape);padding:clamp(.7em,1.3vw,1.15em) clamp(.9em,1.6vw,1.45em);background:var(--panel-2);border-radius:0 14px 14px 0;text-align:left;font-size:clamp(1.15rem,1.65vw,1.75rem);line-height:1.44;max-width:min(95vw,720px);margin-top:clamp(10px,1.4vw,20px)}.real .eyebrow{font-size:clamp(.85rem,1.15vw,1.15rem);font-weight:800;letter-spacing:.06em}
 .twist{display:flex;flex-direction:column;gap:16px;max-width:980px}
 .twist .lead{font-size:clamp(1.15rem,1.7vw,1.5rem);font-weight:500;max-width:52ch}
 .qbox{padding:.8em 1em;border-radius:12px;background:var(--panel-2);border:1px solid var(--line);font-size:1.05rem}
@@ -331,18 +331,19 @@ details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 .sg.reg code{background:var(--tape);color:var(--tape-ink);font-weight:700}
 .sg.reg small{color:var(--ink)}
 .puny{display:flex;flex-direction:column;gap:2px;font-size:.92rem;padding:.6em .8em;border-radius:10px;background:var(--panel-2);overflow-wrap:anywhere}
-.vpill{display:inline-flex;align-items:center;gap:8px;font-weight:800;padding:.42em .85em;border-radius:12px;align-self:flex-start}
+.vpill{display:inline-flex;align-items:center;gap:8px;font-weight:800;padding:.45em .9em;border-radius:12px;align-self:flex-start;font-size:clamp(1.08rem,1.35vw,1.3rem)}
 .vpill.safe{background:var(--safe-soft);color:var(--safe)}
 .vpill.danger{background:var(--danger-soft);color:var(--danger)}
 .vpill.warn{background:var(--warn-soft);color:var(--warn)}
 .vpill.neutral{background:var(--info-soft);color:var(--info)}
 .flags{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px}
-.flag{display:flex;gap:8px;align-items:flex-start;padding:.5em .7em;border-radius:10px;font-size:.9rem;background:var(--panel-2)}
+.flag{display:flex;gap:10px;align-items:flex-start;padding:.6em .85em;border-radius:10px;font-size:clamp(1.05rem,1.35vw,1.25rem);line-height:1.42;background:var(--panel-2)}
 .flag .ic{margin-top:.15em}
 .flag.danger .ic{color:var(--danger)}
 .flag.warn .ic{color:var(--warn)}
 .flag.info .ic{color:var(--info)}
 .tip{font-size:.9rem;padding:.75em .95em;border-radius:12px;background:var(--info-soft)}
+.chal-note{font-size:clamp(1.15rem,1.6vw,1.55rem);line-height:1.48;font-weight:600;color:var(--ink);margin:.8em 0;padding:.65em .95em;background:var(--panel-2);border-radius:12px;border-left:5px solid var(--info)}
 .chal-h{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
 .score{font-family:var(--f-mono);font-weight:700}
 .prog{height:6px;border-radius:99px;background:var(--panel-2);overflow:hidden}
@@ -387,7 +388,7 @@ details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 .tool:hover{border-color:var(--info)}
 .tool:focus-visible{outline:3px solid var(--info)}
 .tool[aria-expanded="true"]{border-color:var(--info);background:var(--info-soft)}
-.toolres{font-size:.9rem;padding:.6em .85em;border-radius:10px;border:1px solid var(--info);margin-top:6px}
+.toolres{font-size:clamp(1.05rem,1.35vw,1.25rem);line-height:1.42;padding:.7em .95em;border-radius:10px;border:1px solid var(--info);margin-top:8px}
 .toolres .sim{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--info)}
 fieldset{border:0;margin:0;padding:0;display:grid;gap:6px;min-width:0}
 legend{font-weight:700;margin-bottom:6px;padding:0}
@@ -1491,7 +1492,7 @@ function drawChal(){
  var fb='';
  if(answered){
   var ok=opts[L.picked].ok;
-  fb='<div class="vpill '+(ok?'safe':'danger')+'">'+icon(ok?'check':'x')+'<span>'+(ok?'Chính xác!':'Chưa đúng. Tên miền thật là '+esc(q.opts[q.ans]))+'</span></div><p>'+q.note+'</p><div class="card" style="background:var(--panel-2)">'+xrayHTML(analyze(q.url))+'</div><div class="row"><button class="btn primary" data-act="next">'+(L.i<LINKS.length-1?'Link tiếp theo':'Xem kết quả')+'</button></div>';
+  fb='<div class="vpill '+(ok?'safe':'danger')+'">'+icon(ok?'check':'x')+'<span>'+(ok?'Chính xác!':'Chưa đúng. Tên miền thật là '+esc(q.opts[q.ans]))+'</span></div><p class="chal-note">'+q.note+'</p><div class="card" style="background:var(--panel-2)">'+xrayHTML(analyze(q.url))+'</div><div class="row"><button class="btn primary" data-act="next">'+(L.i<LINKS.length-1?'Link tiếp theo':'Xem kết quả')+'</button></div>';
  }
  box.innerHTML='<div class="chal-h"><span class="eyebrow">Thử thách · Thám tử tên miền</span><span class="score">Điểm '+L.score+'/'+LINKS.length+'</span></div>'+
   '<div class="prog"><i style="width:'+(L.i/LINKS.length*100)+'%"></i></div>'+
