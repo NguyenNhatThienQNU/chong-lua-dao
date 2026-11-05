@@ -16,9 +16,9 @@ Thời gian thực hiện: 02 tiết
 
 Học xong bài này, em sẽ:
 
-Nêu được một số dạng lừa đảo phổ biến trên không gian số và những biện pháp phòng tránh.
+- Nêu được một số dạng lừa đảo phổ biến trên không gian số và những biện pháp phòng tránh.
 
-Biết giao tiếp một cách văn minh phù hợp với các quy tắc và văn hóa ứng xử trong môi trường số.
+- Biết giao tiếp một cách văn minh phù hợp với các quy tắc và văn hóa ứng xử trong môi trường số.
 
 ### 2. Năng lực tin học
 
@@ -26,31 +26,31 @@ Biết giao tiếp một cách văn minh phù hợp với các quy tắc và vă
 
 Thực hiện bài học này sẽ góp phần hình thành và phát triển một số thành tố năng lực chung của học sinh như sau:
 
-Năng lực tự chủ, tự học: Học sinh có khả năng tự đọc sách giáo khoa và kết hợp với gợi ý của giáo viên để trả lời các câu hỏi mà GV đưa ra
+- Năng lực tự chủ, tự học: Học sinh có khả năng tự đọc sách giáo khoa và kết hợp với gợi ý của giáo viên để trả lời các câu hỏi mà GV đưa ra
 
-Năng lực hợp tác và giao tiếp: Học sinh thảo luận nhóm để tìm ra các giải pháp giao tiếp an toàn trên mạng
+- Năng lực hợp tác và giao tiếp: Học sinh thảo luận nhóm để tìm ra các giải pháp giao tiếp an toàn trên mạng
 
-Năng lực giải quyết vấn đề và sáng tạo: Học sinh đưa ra được những biện pháp phòng tránh lừa đảo phổ biến trên không gian số
+- Năng lực giải quyết vấn đề và sáng tạo: Học sinh đưa ra được những biện pháp phòng tránh lừa đảo phổ biến trên không gian số
 
 ### Năng lực tin học:
 
 Hình thành, phát triển chủ yếu các năng lực:
 
-### NLc: Giải quyết vấn đề với sự hỗ trợ của công nghệ thông tin và truyền thông.
+- NLc: Giải quyết vấn đề với sự hỗ trợ của công nghệ thông tin và truyền thông.
 
-### NLe: Hợp tác trong môi trường số.
+- NLe: Hợp tác trong môi trường số.
 
 ### Năng lực số và Năng lực AI (Khung NLS - Mức độ NC1)
 
-### Năng lực đánh giá thông tin và an toàn số (1.2.NC1a, 4.1.NC1b, 4.2.NC1a):
+- Năng lực đánh giá thông tin và an toàn số (1.2.NC1a, 4.1.NC1b, 4.2.NC1a):
 
-Nhận diện và phân tích được các hình thức lừa đảo công nghệ cao sử dụng AI tạo sinh (như Deepfake video, giả mạo giọng nói Voice Cloning).
+- Nhận diện và phân tích được các hình thức lừa đảo công nghệ cao sử dụng AI tạo sinh (như Deepfake video, giả mạo giọng nói Voice Cloning).
 
-Cảnh giác không chia sẻ hình ảnh, video, mẫu giọng nói bừa bãi lên mạng để tránh bị kẻ xấu thu thập làm dữ liệu huấn luyện AI lừa đảo.
+- Cảnh giác không chia sẻ hình ảnh, video, mẫu giọng nói bừa bãi lên mạng để tránh bị kẻ xấu thu thập làm dữ liệu huấn luyện AI lừa đảo.
 
-Năng lực quy tắc ứng xử trên mạng (2.5.NC1a, 2.5.NC1b): Áp dụng các chuẩn mực hành vi văn minh, giao tiếp chuẩn mực, điều chỉnh câu từ tôn trọng người khác trong môi trường số.
+- Năng lực quy tắc ứng xử trên mạng (2.5.NC1a, 2.5.NC1b): Áp dụng các chuẩn mực hành vi văn minh, giao tiếp chuẩn mực, điều chỉnh câu từ tôn trọng người khác trong môi trường số.
 
-### Năng lực ứng dụng AI (6.2.NC1a - Tư duy lấy con người làm trung tâm):
+- Năng lực ứng dụng AI (6.2.NC1a - Tư duy lấy con người làm trung tâm):
 
 Năng lực AI (theo Khung nội dung giáo dục AI ban hành kèm Quyết định số 2422/QĐ-BGDĐT):
 
@@ -62,15 +62,15 @@ Năng lực AI (theo Khung nội dung giáo dục AI ban hành kèm Quyết đ�
 
 Hình thành và phát triển phẩm chất
 
-Nâng cao khả năng tự học và ý thức học tập để trở thành người công dân có trí thức trong thời đại công nghệ số.
+- Nâng cao khả năng tự học và ý thức học tập để trở thành người công dân có trí thức trong thời đại công nghệ số.
 
-Tự giải quyết vấn đề có sáng tạo.
+- Tự giải quyết vấn đề có sáng tạo.
 
 ### II. THIẾT BỊ DẠY HỌC VÀ HỌC LIỆU
 
-### Thiết bị dạy học: Máy chiếu, máy tính giáo viên
+- Thiết bị dạy học: Máy chiếu, máy tính giáo viên
 
-### Học liệu: Sách giáo khoa Tin học 11
+- Học liệu: Sách giáo khoa Tin học 11
 
 ### III. TIẾN TRÌNH DẠY HỌC
 
@@ -84,7 +84,7 @@ Tự giải quyết vấn đề có sáng tạo.
 
 ### d) Tổ chức thực hiện:
 
-GV đặt vấn đề: Mạng Internet mang lại nhiều lợi ích, tuy nhiên việc sử dụng không đúng cách sẽ ảnh hưởng xấu tới sức khỏe và tinh thần cùng nhiều rủi ro: Mất thông tin cá nhân, bị lừa đảo, quấy rối, đối với các đối mặt với các thông tin sai lệch, bị lôi kéo tham gia những thử thách nguy hại….Do vậy khi tham gia mạng nói riêng, không gian số nói chung, mỗi người cần chuẩn bị cho mình một số kỹ năng cơ bản như: kỹ năng giao tiếp, kỹ năng đối phó với dư luận và vượt qua khủng hoảng, kỹ năng nhận biết và phòng tránh lừa đảo. Vậy làm thế nào để giao tiếp một cách văn minh phù hợp trên môi trường số thì chúng ta sẽ tìm hiểu trong bài học hôm nay.
+- GV đặt vấn đề: Mạng Internet mang lại nhiều lợi ích, tuy nhiên việc sử dụng không đúng cách sẽ ảnh hưởng xấu tới sức khỏe và tinh thần cùng nhiều rủi ro: Mất thông tin cá nhân, bị lừa đảo, quấy rối, đối với các đối mặt với các thông tin sai lệch, bị lôi kéo tham gia những thử thách nguy hại….Do vậy khi tham gia mạng nói riêng, không gian số nói chung, mỗi người cần chuẩn bị cho mình một số kỹ năng cơ bản như: kỹ năng giao tiếp, kỹ năng đối phó với dư luận và vượt qua khủng hoảng, kỹ năng nhận biết và phòng tránh lừa đảo. Vậy làm thế nào để giao tiếp một cách văn minh phù hợp trên môi trường số thì chúng ta sẽ tìm hiểu trong bài học hôm nay.
 
 ### 2. Hoạt động 2: Hình thành kiến thức mới
 
@@ -326,19 +326,19 @@ Cần tuân thủ các quy tắc ứng xử trong môi trường số như: 1) t
 
 ### Bước 1: Chuyển giao nhiệm vụ
 
-Giáo viên yêu cầu học sinh hoạt động cặp đôi, thảo luận, hoàn thành bài tập sgk/48:
+- Giáo viên yêu cầu học sinh hoạt động cặp đôi, thảo luận, hoàn thành bài tập sgk/48:
 
 ### Bước 2: Thực hiện nhiệm vụ
 
-Học sinh tiếp nhận nhiệm vụ, thực hiện và thảo luận theo cặp đôi.
+- Học sinh tiếp nhận nhiệm vụ, thực hiện và thảo luận theo cặp đôi.
 
 ### Bước 3: Báo cáo, thảo luận
 
-Đại diện báo cáo kết quả thực hiện.
+- Đại diện báo cáo kết quả thực hiện.
 
 ### Bước 4: Kết luận, nhận định
 
-GV nhận xét kết quả thực hiện của HS, GV chuẩn kiến thức
+- GV nhận xét kết quả thực hiện của HS, GV chuẩn kiến thức
 
 ### 4. Hoạt động 4: Vận dụng
 
@@ -352,18 +352,18 @@ GV nhận xét kết quả thực hiện của HS, GV chuẩn kiến thức
 
 ### Bước 1: Chuyển giao nhiệm vụ
 
-GV yêu cầu HS bắt cặp, hoàn thành bài tập vận dụng trang 48 SGK
+- GV yêu cầu HS bắt cặp, hoàn thành bài tập vận dụng trang 48 SGK
 
 ### Bước 2: Thực hiện nhiệm vụ
 
-Học sinh tiếp nhận nhiệm vụ, thực hiện và thảo luận theo cặp đôi.
+- Học sinh tiếp nhận nhiệm vụ, thực hiện và thảo luận theo cặp đôi.
 
 ### Bước 3: Báo cáo, thảo luận
 
-Đại diện báo cáo kết quả thực hiện.
+- Đại diện báo cáo kết quả thực hiện.
 
 - GV nhận xét, chuẩn đáp án, nhắc nhở HS chuẩn bị nội dung cho bài học sau.
 
 ### Bước 4: Kết luận, nhận định
 
-GV nhận xét kết quả thực hiện của HS, GV chuẩn kiến thức
+- GV nhận xét kết quả thực hiện của HS, GV chuẩn kiến thức
