@@ -176,7 +176,7 @@ a) Mục tiêu: Nhận biết 4 dạng lừa đảo trực tuyến phổ biến 
 
 b) Nội dung: 4 nhóm HS điều tra 4 hồ sơ vụ án (Hồ sơ 01-04); GV thị phạm Hồ sơ 05 (Deepfake video mạo danh); các nhóm nộp Báo cáo sự cố số trên web app và hoàn thành Phiếu học tập số 1.
 
-c) Sản phẩm: Báo cáo điều tra sự cố số của 4 nhóm (điểm số /100 trên web app) và Phiếu học tập số 1.
+c) Sản phẩm: Báo cáo điều tra sự cố số của 4 nhóm (điểm số /100 và Phiếu báo cáo số xuất từ web app) và Phiếu học tập số 1.
 
 ### d) Tổ chức thực hiện:
 
@@ -200,9 +200,9 @@ c) Sản phẩm: Báo cáo điều tra sự cố số của 4 nhóm (điểm s�
 
 ### Bước 3: Báo cáo, thảo luận
 
-- GV mở Dashboard, chiếu điểm số nộp bài của 4 nhóm (đều đạt 90 - 100 điểm).
+- GV mở Dashboard chiếu điểm số, hoặc nhóm bấm 'Xuất Phiếu Báo Cáo Điều Tra' trên web app để phóng to toàn màn hình kết quả điều tra của nhóm.
 
-- Đại diện từng nhóm báo cáo nhanh trong 1 phút về dấu hiệu nhận diện và cách xử lý sự cố của nhóm mình.
+- Đại diện từng nhóm báo cáo nhanh trong 1 phút về bằng chứng số, dạng lừa đảo và bộ giáp 3 lớp phòng vệ; có thể in/lưu PDF làm hồ sơ học tập.
 
 ### Bước 4: Kết luận, nhận định
 
