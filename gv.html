@@ -550,6 +550,420 @@ kbd{font-family:var(--f-mono);font-size:.78em;padding:.05em .4em;border-radius:5
 .note-b ul{padding-left:1.2rem;display:grid;gap:2px}
 
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}}
+
+/* ==================== INVESTIGATION REPORT MODAL & PRINT STYLES ==================== */
+.rep-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  padding: 16px;
+  box-sizing: border-box;
+  animation: repFadeIn 0.2s ease-out;
+}
+@keyframes repFadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+.rep-modal-bar {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: #1e293b;
+  color: #f8fafc;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.rep-modal-title {
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #38bdf8;
+  letter-spacing: 0.3px;
+}
+.rep-modal-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.rep-sheet {
+  width: 100%;
+  max-width: 860px;
+  background: #ffffff;
+  color: #1e293b;
+  border-radius: 6px;
+  padding: 36px 44px;
+  box-sizing: border-box;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+  font-family: "Times New Roman", Times, "Be Vietnam Pro", serif;
+  line-height: 1.45;
+  border: 2px solid #0f172a;
+  position: relative;
+  margin-bottom: 40px;
+}
+.rep-sheet-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1.5px solid #cbd5e1;
+}
+.rep-sheet-header .inst {
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: #334155;
+  text-transform: uppercase;
+}
+.rep-sheet-header .nation {
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.35;
+  color: #0f172a;
+}
+.rep-sheet-title-block {
+  text-align: center;
+  margin: 20px 0 16px;
+}
+.rep-sheet-title-block .badge-label {
+  display: inline-block;
+  padding: 3px 12px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border-radius: 99px;
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+  margin-bottom: 6px;
+}
+.rep-sheet-title-block h1 {
+  font-size: 21px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #0f172a;
+  margin: 4px 0;
+  letter-spacing: 0.5px;
+}
+.rep-sheet-title-block .case-badge {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0369a1;
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+  margin: 4px 0;
+}
+.rep-sheet-title-block .brief {
+  font-size: 12px;
+  font-style: italic;
+  color: #64748b;
+  max-width: 680px;
+  margin: 4px auto 0;
+}
+.rep-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 190px;
+  gap: 16px;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.rep-info-list {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #1e293b;
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+}
+.rep-info-list b {
+  color: #0f172a;
+}
+.rep-seal-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.rep-seal {
+  width: 112px;
+  height: 112px;
+  border: 3px double #dc2626;
+  border-radius: 50%;
+  color: #dc2626;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4px;
+  box-sizing: border-box;
+  transform: rotate(-10deg);
+  opacity: 0.95;
+  box-shadow: 0 0 0 1px #dc2626, inset 0 0 0 1px #dc2626;
+  user-select: none;
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+}
+.rep-seal .s-sub {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+.rep-seal .s-star {
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 2px;
+  margin: 1px 0;
+}
+.rep-seal .s-main {
+  font-size: 10.5px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  line-height: 1.15;
+  border-top: 1px solid #dc2626;
+  border-bottom: 1px solid #dc2626;
+  padding: 1px 4px;
+  margin: 2px 0;
+}
+.rep-score-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+}
+.rep-score-box {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 8px 10px;
+  text-align: center;
+}
+.rep-score-box .s-num {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+}
+.rep-score-box .s-lbl {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+}
+.rep-section {
+  margin-bottom: 18px;
+  page-break-inside: avoid;
+}
+.rep-section-title {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #0f172a;
+  border-bottom: 1.5px solid #0f172a;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+}
+.rep-section-title .pts {
+  font-size: 12px;
+  font-weight: 700;
+  color: #059669;
+}
+.rep-ev-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+}
+.rep-ev-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+.rep-ev-item.found {
+  border-left: 4px solid #10b981;
+}
+.rep-ev-item.missed {
+  border-left: 4px solid #f59e0b;
+}
+.rep-ev-tag {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.rep-ev-tag.ok {
+  background: #d1fae5;
+  color: #065f46;
+}
+.rep-ev-tag.miss {
+  background: #fef3c7;
+  color: #92400e;
+}
+.rep-callout {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 13px;
+  line-height: 1.45;
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+}
+.rep-armor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+}
+.rep-armor-card {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.rep-armor-card .a-head {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #0f172a;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.rep-signatures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 28px;
+  padding-top: 14px;
+  text-align: center;
+  page-break-inside: avoid;
+}
+.rep-sign-col {
+  font-size: 13px;
+  line-height: 1.4;
+}
+.rep-sign-col .title {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #0f172a;
+}
+.rep-sign-col .note {
+  font-size: 11.5px;
+  font-style: italic;
+  color: #64748b;
+  margin-bottom: 48px;
+}
+.rep-sign-col .name {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Presentation Mode */
+.rep-modal-overlay.pres-mode .rep-sheet {
+  max-width: 96vw;
+  padding: 40px 60px;
+  border-width: 3px;
+}
+.rep-modal-overlay.pres-mode .rep-sheet-title-block h1 {
+  font-size: 28px;
+}
+.rep-modal-overlay.pres-mode .rep-info-list {
+  font-size: 16px;
+}
+.rep-modal-overlay.pres-mode .rep-section-title {
+  font-size: 18px;
+}
+.rep-modal-overlay.pres-mode .rep-ev-item {
+  font-size: 15px;
+  padding: 12px 16px;
+}
+.rep-modal-overlay.pres-mode .rep-callout {
+  font-size: 16px;
+}
+.rep-modal-overlay.pres-mode .rep-armor-card {
+  font-size: 14px;
+  padding: 14px;
+}
+.rep-modal-overlay.pres-mode .rep-score-box .s-num {
+  font-size: 26px;
+}
+
+/* Print Rules */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  body > * {
+    display: none !important;
+  }
+  .rep-modal-overlay {
+    position: static !important;
+    background: #ffffff !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+  .rep-modal-bar {
+    display: none !important;
+  }
+  .rep-sheet {
+    max-width: 100% !important;
+    width: 100% !important;
+    border: 1.5px solid #000000 !important;
+    box-shadow: none !important;
+    padding: 10mm 12mm !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+  .rep-info-grid, .rep-score-box, .rep-ev-item, .rep-callout, .rep-armor-card {
+    background: #ffffff !important;
+    border-color: #333333 !important;
+  }
+  @page {
+    size: A4 portrait;
+    margin: 8mm;
+  }
+}
+
 </style>
 
 <header class="bar" id="bar"></header>
@@ -1063,8 +1477,8 @@ function dashHTML(A){
  html+='<div class="grid2"><div class="card stack"><h3>Soi link: câu nào cả lớp sai nhiều?</h3><p class="small muted">Tính theo lần làm đầu tiên của mỗi em.</p>'+
   (worst>=0&&wp<75?'<div class="alertline">Cần chữa ngay: Link '+(worst+1)+' · '+LINK_SHORT[worst]+' (chỉ '+wp+'% làm đúng)</div>':'')+
   '<div class="bars">'+per.map(function(x,i){var p=x.n?Math.round(x.c/x.n*100):null;return '<div class="barrow"><span class="lab">'+(i+1)+'. '+LINK_SHORT[i]+'</span><span class="track"><i class="'+(p===null?'':pctClass(p))+'" style="width:'+(p||0)+'%"></i></span><span class="v">'+(p===null?'–':p+'%')+'</span></div>';}).join('')+'</div></div>';
- html+='<div class="card stack"><h3>Phòng điều tra: điểm báo cáo theo nhóm</h3><p class="small muted">Mời nhóm điểm thấp lên trình bày để cả lớp cùng sửa, nhóm điểm cao bổ sung.</p><div class="table-wrap"><table class="dt"><thead><tr><th>Hồ sơ</th><th>Số nhóm nộp</th><th>Trung bình</th><th>Cao nhất</th><th>Thấp nhất</th></tr></thead><tbody>'+
-  CASES.map(function(c){var g=groups[c.no]||{},ks=Object.keys(g);if(!ks.length)return '<tr><td>'+c.no+' · '+c.name+'</td><td>0</td><td>–</td><td>–</td><td>–</td></tr>';var vals=ks.map(function(k){return {g:k,v:g[k]};}).sort(function(a,b){return b.v-a.v;});var avg=Math.round(vals.reduce(function(x,y){return x+y.v;},0)/vals.length);return '<tr><td>'+c.no+' · '+c.name+'</td><td>'+vals.length+'</td><td>'+avg+'</td><td>Nhóm '+esc(vals[0].g)+' · '+vals[0].v+'</td><td>Nhóm '+esc(vals[vals.length-1].g)+' · '+vals[vals.length-1].v+'</td></tr>';}).join('')+
+ html+='<div class="card stack"><h3>Phòng điều tra: điểm báo cáo theo nhóm</h3><p class="small muted">Mời nhóm điểm thấp lên trình bày để cả lớp cùng sửa, nhóm điểm cao bổ sung.</p><div class="table-wrap"><table class="dt"><thead><tr><th>Hồ sơ</th><th>Số nhóm nộp</th><th>Trung bình</th><th>Cao nhất</th><th>Thấp nhất</th><th>Báo cáo</th></tr></thead><tbody>'+
+  CASES.map(function(c){var g=groups[c.no]||{},ks=Object.keys(g);if(!ks.length)return '<tr><td>'+c.no+' · '+c.name+'</td><td>0</td><td>–</td><td>–</td><td>–</td><td><button type="button" class="btn" style="padding:4px 8px;font-size:11px;font-weight:700" data-act="view-report" data-c="'+c.id+'">📄 Chiếu mẫu</button></td></tr>';var vals=ks.map(function(k){return {g:k,v:g[k]};}).sort(function(a,b){return b.v-a.v;});var avg=Math.round(vals.reduce(function(x,y){return x+y.v;},0)/vals.length);return '<tr><td>'+c.no+' · '+c.name+'</td><td>'+vals.length+'</td><td>'+avg+'</td><td>Nhóm '+esc(vals[0].g)+' · '+vals[0].v+'</td><td>Nhóm '+esc(vals[vals.length-1].g)+' · '+vals[vals.length-1].v+'</td><td><button type="button" class="btn" style="padding:4px 8px;font-size:11px;font-weight:700" data-act="view-report" data-c="'+c.id+'">📄 Chiếu báo cáo</button></td></tr>';}).join('')+
  '</tbody></table></div></div></div>';
  html+='<div class="grid2"><div class="card stack"><h3>Máy lọc: bảng xếp hạng</h3>'+(F.length?'<ol class="hw">'+F.slice(0,6).map(function(s){return '<li><b>'+s.filter+'%</b> · '+dispName(s)+(s.nhom?' · Nhóm '+esc(s.nhom):'')+'</li>';}).join('')+'</ol>':'<p class="muted small">Chưa có ai chạy bộ lọc.</p>')+'</div>'+
   '<div class="card stack"><h3>Lớp mình đã hứa gì?</h3><div class="bars">'+pc.map(function(n,i){var p=P.length?Math.round(n/P.length*100):0;return '<div class="barrow"><span class="lab">'+PLEDGE_SHORT[i]+'</span><span class="track"><i style="width:'+p+'%"></i></span><span class="v">'+n+'</span></div>';}).join('')+'</div></div></div>';
@@ -1548,6 +1962,219 @@ function scoreCase(c,st){
  var actPts=Math.max(0,Math.round((good-bad)*25/3));
  return {evPts:evPts,typePts:typePts,emoPts:emoPts,actPts:actPts,total:evPts+typePts+emoPts+actPts,typeOk:typeOk,emoFull:allReq&&noWrong,good:good,bad:bad};
 }
+
+/* ---------- report modal feature ---------- */
+function openReportModal(caseId, isModel) {
+  var c = caseById(caseId || S.caseId);
+  if (!c) {
+    if (typeof CASES !== 'undefined' && CASES.length) c = CASES[0];
+    else return;
+  }
+  var st = cst(c.id);
+  var isModelAns = !st.res || isModel === true;
+  var r = st.res || {
+    total: 100,
+    evPts: 40,
+    typePts: 20,
+    emoPts: 15,
+    actPts: 25,
+    typeOk: true,
+    emoFull: true,
+    good: 3,
+    bad: 0
+  };
+
+  var m = (typeof me === 'function') ? me() : { ten: '', nhom: '', lop: '' };
+  var gName = m.nhom ? ('Nhóm ' + m.nhom + (m.ten ? ' — ' + m.ten : '')) : (m.ten ? m.ten : (isModelAns ? 'TỔ ĐIỀU TRA MẪU (CHUẨN)' : 'Nhóm Điều tra viên'));
+  var gLop = m.lop || (typeof lopCode === 'function' ? lopCode() : '') || '11';
+
+  var now = new Date();
+  var dd = ('0' + now.getDate()).slice(-2);
+  var mm = ('0' + (now.getMonth() + 1)).slice(-2);
+  var yyyy = now.getFullYear();
+  var hh = ('0' + now.getHours()).slice(-2);
+  var min = ('0' + now.getMinutes()).slice(-2);
+  var dateStr = 'ngày ' + dd + ' tháng ' + mm + ' năm ' + yyyy;
+  var timeStr = hh + ':' + min;
+
+  var typeObj = TYPES.filter(function(t) { return t.k === c.type; })[0];
+  var typeL = typeObj ? typeObj.l : c.type;
+  var pickedTypeObj = TYPES.filter(function(t) { return t.k === st.rep.type; })[0];
+  var pickedTypeL = isModelAns ? typeL : (pickedTypeObj ? pickedTypeObj.l : 'Chưa chọn');
+
+  var emoReqL = c.emo.req.map(function(k) {
+    var e = EMOS.filter(function(x) { return x.k === k; })[0];
+    return e ? e.l : k;
+  }).join(', ');
+  var emoPickedL = isModelAns ? emoReqL : (st.rep.emo && st.rep.emo.length ? st.rep.emo.map(function(k) {
+    var e = EMOS.filter(function(x) { return x.k === k; })[0];
+    return e ? e.l : k;
+  }).join(', ') : 'Chưa chọn');
+
+  var actCham = c.acts.filter(function(a) { return a.ok === 'cham'; })[0];
+  var actKt = c.acts.filter(function(a) { return a.ok === 'kt'; })[0];
+  var actKg = c.acts.filter(function(a) { return a.ok === 'kg'; })[0];
+
+  var stars = r.total >= 90 ? 'Xuất sắc — Chuyên gia an ninh' : r.total >= 70 ? 'Tốt — Đạt chuẩn điều tra' : r.total >= 50 ? 'Đạt' : 'Cần bổ sung điều tra';
+
+  var evHtml = c.ev.map(function(e, i) {
+    var f = isModelAns || (st.found && st.found.indexOf(e.id) >= 0);
+    return '<li class="rep-ev-item ' + (f ? 'found' : 'missed') + '">' +
+      '<span class="rep-ev-tag ' + (f ? 'ok' : 'miss') + '">' + (f ? '✓ Đã phát hiện' : '⚠ Bỏ sót') + '</span>' +
+      '<div><b>Bằng chứng ' + (i + 1) + ': ' + esc(e.t) + '.</b> <span style="color:#475569">' + esc(e.d) + '</span></div>' +
+      '</li>';
+  }).join('');
+
+  var sealStatus = (r.total >= 70) ? 'ĐÃ BÓC TRẦN<br>THÀNH CÔNG' : 'HỒ SƠ ĐANG<br>ĐIỀU TRA';
+
+  var modal = $('#rep-modal-overlay');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'rep-modal-overlay';
+    modal.className = 'rep-modal-overlay';
+    document.body.appendChild(modal);
+  }
+
+  modal.innerHTML =
+    '<div class="rep-modal-bar">' +
+      '<div class="rep-modal-title"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> BÁO CÁO KẾT QUẢ ĐIỀU TRA SỰ CỐ SỐ</div>' +
+      '<div class="rep-modal-actions">' +
+        '<button type="button" class="btn primary" data-act="print-report" style="background:#2563eb;color:#fff">🖨️ In Phiếu / Lưu PDF (A4)</button>' +
+        '<button type="button" class="btn" data-act="toggle-pres-report" id="btn-pres-toggle" style="background:#334155;color:#fff;border-color:#475569">🖥️ Toàn màn hình</button>' +
+        '<button type="button" class="btn" data-act="close-report" style="background:#e2e8f0;color:#0f172a">✕ Đóng</button>' +
+      '</div>' +
+    '</div>' +
+    '<div class="rep-sheet" id="rep-sheet">' +
+      '<div class="rep-sheet-header">' +
+        '<div class="inst">' +
+          '<div>TRƯỜNG THPT ................................................</div>' +
+          '<div style="font-weight:800;color:#0f172a;margin-top:2px">BỘ MÔN TIN HỌC — TỔ ĐIỀU TRA SỐ 11</div>' +
+          '<div style="font-size:11px;color:#64748b">Khóa huấn luyện: Phòng chống lừa đảo trên không gian số</div>' +
+        '</div>' +
+        '<div class="nation">' +
+          '<div style="font-weight:800;letter-spacing:0.3px">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>' +
+          '<div style="font-weight:700">Độc lập – Tự do – Hạnh phúc</div>' +
+          '<div style="margin:2px auto 4px;width:110px;border-bottom:1.5px solid #0f172a"></div>' +
+          '<div style="font-size:11.5px;font-style:italic;color:#475569">' + dateStr + '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="rep-sheet-title-block">' +
+        '<span class="badge-label">Phiếu Báo Cáo Kết Quả Điều Tra Sự Cố An Ninh Mạng</span>' +
+        '<h1>HỒ SƠ ' + c.no + ': ' + esc(c.name.toUpperCase()) + '</h1>' +
+        '<div class="brief">“' + esc(c.brief) + '”</div>' +
+      '</div>' +
+      '<div class="rep-info-grid">' +
+        '<div class="rep-info-list">' +
+          '<div><b>• Đơn vị điều tra:</b> ' + esc(gName) + ' &nbsp;|&nbsp; <b>Lớp:</b> ' + esc(gLop) + '</div>' +
+          '<div><b>• Mã sự cố:</b> #CASE-' + c.no + '-' + c.id + ' &nbsp;|&nbsp; <b>Thời gian lập:</b> ' + timeStr + ' (' + dateStr + ')</div>' +
+          '<div><b>• Tình trạng hồ sơ:</b> <span style="font-weight:700;color:' + (r.total >= 70 ? '#059669' : '#d97706') + '">' + (isModelAns ? 'HỒ SƠ MẪU HƯỚNG DẪN ĐIỀU TRA' : (r.total >= 70 ? 'PHÁ ÁN THÀNH CÔNG (ĐÃ DUYỆT)' : 'ĐANG ĐIỀU TRA BỔ SUNG')) + '</span></div>' +
+          '<div><b>• Xếp loại nghiệp vụ:</b> <span style="font-weight:800;color:#0f172a">' + stars + '</span> (' + r.total + '/100 Điểm)</div>' +
+        '</div>' +
+        '<div class="rep-seal-col">' +
+          '<div class="rep-seal">' +
+            '<div class="s-sub">TRUNG TÂM ATTT</div>' +
+            '<div class="s-star">★ ★ ★</div>' +
+            '<div class="s-main">' + sealStatus + '</div>' +
+            '<div class="s-sub">NGHIỆP VỤ AN NINH SỐ</div>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="rep-score-summary">' +
+        '<div class="rep-score-box"><div class="s-num">' + (isModelAns ? c.ev.length + '/' + c.ev.length : (st.found ? st.found.length : 0) + '/' + c.ev.length) + '</div><div class="s-lbl">Bằng chứng (' + r.evPts + '/40đ)</div></div>' +
+        '<div class="rep-score-box"><div class="s-num">' + (r.typeOk ? '20' : '0') + '/20</div><div class="s-lbl">Dạng lừa đảo</div></div>' +
+        '<div class="rep-score-box"><div class="s-num">' + r.emoPts + '/15</div><div class="s-lbl">Tâm lý / Cảm xúc</div></div>' +
+        '<div class="rep-score-box"><div class="s-num">' + r.actPts + '/25</div><div class="s-lbl">Bộ giáp 3 lớp</div></div>' +
+      '</div>' +
+      '<div class="rep-section">' +
+        '<div class="rep-section-title"><span>I. Dấu hiệu & Bằng chứng số thu thập tại hiện trường</span><span class="pts">' + r.evPts + '/40 Điểm</span></div>' +
+        '<ul class="rep-ev-list">' + evHtml + '</ul>' +
+      '</div>' +
+      '<div class="rep-section">' +
+        '<div class="rep-section-title"><span>II. Kết quả xác minh dạng lừa đảo trực tuyến</span><span class="pts">' + r.typePts + '/20 Điểm</span></div>' +
+        '<div class="rep-callout">' +
+          '<div><b>• Kết luận của nhóm:</b> <span style="font-weight:700;color:' + (r.typeOk ? '#059669' : '#dc2626') + '">' + esc(pickedTypeL) + '</span> ' + (r.typeOk ? '✓ (Chính xác)' : '✗ (Chưa đúng — Đáp án chuẩn là: “' + esc(typeL) + '”)') + '</div>' +
+          '<div style="margin-top:4px;color:#475569">• <i>Đặc trưng thủ đoạn:</i> Kẻ gian sử dụng chiêu thức ' + esc(typeL.toLowerCase()) + ' để đánh lừa thị giác và thao túng tâm lý nạn nhân trên môi trường số.</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="rep-section">' +
+        '<div class="rep-section-title"><span>III. Tử huyệt cảm xúc bị đối tượng xấu thao túng</span><span class="pts">' + r.emoPts + '/15 Điểm</span></div>' +
+        '<div class="rep-callout">' +
+          '<div><b>• Cảm xúc bị khai thác:</b> <span style="font-weight:700;color:#0369a1">' + esc(isModelAns ? emoReqL : emoPickedL) + '</span></div>' +
+          '<div style="margin-top:4px;color:#475569">• <i>Phân tích tâm lý học số:</i> Kẻ lừa đảo cố tình đẩy nạn nhân vào trạng thái cảm xúc cực độ (' + esc(emoReqL) + ') nhằm vô hiệu hóa khả năng tư duy phản biện và ép buộc hành động vội vã.</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="rep-section">' +
+        '<div class="rep-section-title"><span>IV. Phương án phòng vệ: Chiến lược “Bộ giáp 3 lớp”</span><span class="pts">' + r.actPts + '/25 Điểm</span></div>' +
+        '<div class="rep-armor-grid">' +
+          '<div class="rep-armor-card">' +
+            '<div class="a-head"><span style="color:#2563eb">🛡️ LỚP 1: CHẬM LẠI</span></div>' +
+            '<div>' + (actCham ? esc(actCham.t) : 'Dừng lại 15 giây, không hoảng loạn hay hấp tấp làm theo yêu cầu.') + '</div>' +
+          '</div>' +
+          '<div class="rep-armor-card">' +
+            '<div class="a-head"><span style="color:#059669">🔍 LỚP 2: KIỂM TRA</span></div>' +
+            '<div>' + (actKt ? esc(actKt.t) : 'Dùng kênh độc lập xác minh, kiểm tra tên miền, gọi điện thoại đối chứng.') + '</div>' +
+          '</div>' +
+          '<div class="rep-armor-card">' +
+            '<div class="a-head"><span style="color:#dc2626">🚫 LỚP 3: KHÔNG GỬI</span></div>' +
+            '<div>' + (actKg ? esc(actKg.t) : 'Không chuyển tiền, không gửi OTP/CCCD, báo ngay cho người lớn hoặc cơ quan.') + '</div>' +
+          '</div>' +
+        '</div>' +
+        (r.bad ? '<div style="margin-top:8px;font-size:12px;color:#dc2626;background:#fef2f2;padding:6px 10px;border-radius:4px;border:1px solid #fecaca">• Cảnh báo: Nhóm đã chọn nhầm ' + r.bad + ' hành động sai lầm của kẻ gian. Cần ghi nhớ bộ giáp 3 lớp!</div>' : '') +
+      '</div>' +
+      '<div class="rep-section">' +
+        '<div class="rep-section-title"><span>V. Bài học kinh nghiệm & Thông điệp an toàn số</span></div>' +
+        '<div class="rep-callout" style="background:#ecfdf5;border-color:#a7f3d0">' +
+          '<div style="font-weight:700;color:#065f46">💡 Thông điệp cốt lõi:</div>' +
+          '<div style="margin-top:2px;color:#047857">' + esc(c.lesson) + '</div>' +
+          (c.real ? '<div style="margin-top:6px;padding-top:6px;border-top:1px dashed #6ee7b7;font-size:12px;color:#065f46"><b>Chuyện có thật:</b> ' + esc(c.real) + '</div>' : '') +
+        '</div>' +
+      '</div>' +
+      '<div class="rep-signatures">' +
+        '<div class="rep-sign-col">' +
+          '<div class="title">ĐẠI DIỆN ĐỘI ĐIỀU TRA VIÊN</div>' +
+          '<div class="note">(Ký và ghi rõ họ tên nhóm trưởng)</div>' +
+          '<div class="name">' + esc(gName) + '</div>' +
+        '</div>' +
+        '<div class="rep-sign-col">' +
+          '<div class="title">GIÁO VIÊN HƯỚNG DẪN / DUYỆT BÁO CÁO</div>' +
+          '<div class="note">(Ký tên và nhận xét đánh giá)</div>' +
+          '<div class="name">ĐÃ PHÊ DUYỆT HOÀN THÀNH</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeReportModal() {
+  var modal = $('#rep-modal-overlay');
+  if (modal) {
+    modal.style.display = 'none';
+    modal.classList.remove('pres-mode');
+  }
+  document.body.style.overflow = '';
+}
+
+function toggleReportFullscreen() {
+  var modal = $('#rep-modal-overlay');
+  if (!modal) return;
+  modal.classList.toggle('pres-mode');
+  var btn = $('#btn-pres-toggle');
+  if (modal.classList.contains('pres-mode')) {
+    if (btn) btn.textContent = '⛶ Thoát toàn màn hình';
+    if (!document.fullscreenElement) {
+      try { modal.requestFullscreen(); } catch(e){}
+    }
+  } else {
+    if (btn) btn.textContent = '🖥️ Toàn màn hình';
+    if (document.fullscreenElement) {
+      try { document.exitFullscreen(); } catch(e){}
+    }
+  }
+}
+
+
 function resultHTML(c,st){
  var r=st.res,miss=c.ev.length-st.found.length;
  var typeL=TYPES.filter(function(t){return t.k===c.type;})[0].l;
@@ -1562,12 +2189,12 @@ function resultHTML(c,st){
   li(r.good===3&&r.bad===0,'Bộ giáp 3 lớp: chọn đúng '+r.good+'/3'+(r.bad?', chọn nhầm '+r.bad:'')+' · '+r.actPts+'/25')+
   '</ul><div class="lesson">'+c.lesson+'</div>'+
   (c.real?'<div class="real" style="max-width:none"><div class="eyebrow">Chuyện có thật</div>'+c.real+'</div>':'')+
-  (miss?'<p class="small muted">Các chi tiết viền đỏ đứt nét trên màn hình là bằng chứng nhóm còn bỏ sót.</p>':'')+'</div>';
+  (miss?'<p class="small muted">Các chi tiết viền đỏ đứt nét trên màn hình là bằng chứng nhóm còn bỏ sót.</p>':'')+'<div class="rep-export-bar" style="margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);display:flex;gap:10px;flex-wrap:wrap;align-items:center">'+'<button type="button" class="btn primary big" data-act="view-report" data-c="'+c.id+'" style="background:linear-gradient(135deg,#059669,#10b981);box-shadow:0 4px 14px rgba(16,185,129,0.35);font-weight:700;letter-spacing:0.3px;width:100%;justify-content:center">'+'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>'+'📄 Xuất Phiếu Báo Cáo Điều Tra Sự Cố (Để báo cáo trước lớp)'+'</button>'+'</div></div>';
 }
 function caseDetail(id){
  var c=caseById(id),st=cst(id),h=hsMaker(c,st);
  return '<section class="wrap mod">'+
-  '<div class="row"><button class="btn" data-act="go" data-v="case">'+icon('back')+'Tất cả hồ sơ</button></div>'+meBanner()+taskBox('casedetail')+
+  '<div class="row" style="justify-content:space-between;align-items:center">'+'<button class="btn" data-act="go" data-v="case">'+icon('back')+'Tất cả hồ sơ</button>'+'<button type="button" class="btn" data-act="view-report" data-c="'+c.id+'" style="font-weight:700;border-color:var(--safe);color:var(--safe)">'+'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>'+(st.res?'📄 Xuất Phiếu Báo Cáo':(S.mode==='gv'?'📄 Xem Phiếu Báo Cáo Mẫu':'📄 Xem Mẫu Báo Cáo'))+'</button>'+'</div>'+meBanner()+taskBox('casedetail')+
   '<div class="mod-head"><div class="stack" style="gap:6px"><div class="eyebrow">Hồ sơ '+c.no+(c.special?' · Hồ sơ đặc biệt · Tích hợp AI':'')+'</div><h2>'+c.name+'</h2></div><span class="row" style="gap:8px"><span class="chipst">'+icon('search')+'Bằng chứng <b id="evcount">'+st.found.length+'/'+c.ev.length+'</b></span>'+(S.mode==='hs'?'<span class="chipst budget" id="budget">'+budgetHTML(c,st)+'</span>':'')+'</span></div>'+
   '<p class="brief">'+c.brief+'</p>'+
   '<div class="case-grid"><div class="device-col"><div id="device"'+(st.hint&&S.mode==='gv'?' class="hint"':'')+'>'+c.dev(h)+'</div>'+
@@ -1729,6 +2356,10 @@ function go(v,c){S.view=v||'home';S.caseId=(S.view==='case'&&c)?c:null;render();
 
 /* ---------- actions ---------- */
 var ACT={
+ 'view-report':function(t){var cId=t.getAttribute('data-c')||S.caseId;openReportModal(cId);},
+ 'close-report':function(){closeReportModal();},
+ 'print-report':function(){window.print();},
+ 'toggle-pres-report':function(){toggleReportFullscreen();},
  go:function(t){go(t.getAttribute('data-v'),t.getAttribute('data-c'));},
  mode:function(t){S.mode=t.getAttribute('data-m');store.set('mode',S.mode);S.sound=store.get('sound_'+S.mode,S.mode==='gv');if(S.mode==='hs'&&(S.view==='warm'||S.view==='track'))S.view='home';render();},
  sound:function(){toggleSound();},
@@ -1797,6 +2428,7 @@ document.addEventListener('keydown',function(e){
  if(e.target.closest&&e.target.closest('input,textarea,select'))return;
  if(e.ctrlKey||e.metaKey||e.altKey)return;
  var k=e.key;
+ if($('#rep-modal-overlay')&&$('#rep-modal-overlay').style.display!=='none'){if(k==='Escape'){closeReportModal();return;}}
  if($('#zoomover')){
   if(k==='Escape'||k==='z'||k==='Z'){closeZoom();return;}
   if(k==='ArrowRight'||k==='ArrowLeft'){e.preventDefault();ACT['zoom-nav']({getAttribute:function(){return k==='ArrowRight'?'1':'-1';}});return;}
