@@ -1,206 +1,472 @@
-SỞ GIÁO DỤC VÀ ĐÀO TẠO ...
-TRƯỜNG THPT ...
-TỔ CHUYÊN MÔN: TIN HỌC
+### TÊN BÀI DẠY
 
-KẾ HOẠCH BÀI DẠY (THEO CÔNG VĂN 5512/BGDĐT-GDTrH)
-BÀI 9: GIAO TIẾP AN TOÀN TRÊN INTERNET (TIẾT 1)
-Môn học: Tin học · Khối lớp: 11
-Chủ đề 3: Đạo đức, pháp luật và văn hóa trong môi trường số
-Thời gian thực hiện: 01 tiết (45 phút)
-Học liệu số tương tác: Ứng dụng 'Trung tâm Chống lừa đảo'
+### CHỦ ĐỀ 3: ĐẠO ĐỨC, PHÁP LUẬT VÀ VĂN HÓA
 
-I. MỤC TIÊU
+### TRONG MÔI TRƯỜNG SỐ
 
-1. Về kiến thức
+### BÀI 9: GIAO TIẾP AN TOÀN TRÊN MẠNG
 
-- - Trình bày và phân biệt được các dạng lừa đảo phổ biến trên không gian mạng theo Chương trình GDPT 2018: Lừa đảo hỗ trợ kĩ thuật, thông báo tin tốt, thông báo tin xấu, mạo danh trang thương mại điện tử, và dạng mở rộng mạo danh người quen bằng công nghệ AI (Deepfake).
-- - Nêu được nguyên tắc giải phẫu đường link URL; chỉ ra được các thủ thuật đánh lừa thị giác (tên miền con mạo danh, ký tự nhìn giống 'rn' và 'm', dấu '@', link rút gọn, chữ Kirin Unicode) để xác định chính xác tên miền thật.
-- - Thuộc và giải thích được ý nghĩa thực tiễn của 'Bộ giáp 3 lớp phòng vệ': Lớp 1 - Hãy chậm lại!; Lớp 2 - Kiểm tra ngay!; Lớp 3 - Dừng lại, không gửi!.
-- - Hiểu được nguyên lý hoạt động của các bộ lọc lừa đảo tự động (dựa trên tập đặc trưng Features và ngưỡng chặn Threshold); giải thích được vì sao không có bộ lọc công nghệ nào đạt độ chính xác 100%.
-2. Về năng lực
+Môn học: Tin học; lớp: 11 ANH 2, 11 ANH 1, 11 VĂN
 
-2.1. Năng lực chung:
+Thời gian thực hiện: 02 tiết (Tiết 1: Nhận diện và phòng tránh lừa đảo trên không gian số; Tiết 2: Giao tiếp và ứng xử trong môi trường số)
 
-- - Tự chủ và tự học: Tự giác sử dụng thiết bị số, độc lập thực hiện các thử thách giải phẫu đường link trên web app.
-- - Giao tiếp và hợp tác: Tích cực tương tác trong nhóm điều tra sự cố, phân vai rõ ràng (trưởng nhóm thao tác máy, thư ký ghi chép, người phát ngôn thuyết trình), tôn trọng và lắng nghe ý kiến phản biện của nhóm bạn.
-- - Giải quyết vấn đề và sáng tạo: Biết thu thập chứng cứ số, kết hợp các công cụ kiểm chứng để vạch trần thủ đoạn mạo danh và đưa ra biện pháp xử lý an toàn.
-2.2. Năng lực Tin học (theo Chương trình GDPT 2018):
+### I. MỤC TIÊU:
 
-- - NLa (Sử dụng và quản lý các phương tiện công nghệ thông tin và truyền thông an toàn): Nhận diện được hành vi lừa đảo qua tin nhắn, email, đường link; biết cách tự bảo vệ tài khoản số và dữ liệu cá nhân (bật 2FA, không cung cấp mã OTP, đặt mật khẩu an toàn).
-- - NLc (Giải quyết vấn đề với sự hỗ trợ của CNTT và truyền thông): Sử dụng thành thạo các công cụ trực tuyến (máy soi link X-ray, tra cứu SĐT, tra cứu tên miền Whois, hỏi Chatbot AI) để kiểm chứng tính xác thực của thông tin số.
-2.3. Năng lực số và Năng lực AI (Theo Quyết định số 2422/QĐ-BGDĐT):
+### 1. Kiến thức:
 
-- a) Năng lực số: Khung năng lực số: Đánh giá độ tin cậy của thông tin và các đường link trên Internet; quản lý danh tính số và an toàn giao dịch trên không gian mạng.
-- b) Năng lực AI - Mã 11.A2.1 (Nhận thức rủi ro mạo danh công nghệ cao): Nhận diện được nguy cơ lừa đảo sử dụng AI tạo sinh (Deepfake âm thanh và hình ảnh); biết quy trình xác minh danh tính chéo qua kênh thứ hai độc lập.
-- c) Năng lực AI - Mã 11.A1.1 (Sử dụng AI có phản biện): Biết cách truy vấn Chatbot AI để hỗ trợ kiểm chứng dấu hiệu lừa đảo nhưng không phụ thuộc hoàn toàn vào kết luận của AI; chỉ rõ được giới hạn mà AI không thể kiểm chứng thay con người.
-- d) Năng lực AI - Mã 11.C4.1 (Cơ chế thuật toán và dữ liệu): Hiểu cơ chế phân loại dữ liệu của các thuật toán máy học / bộ lọc tự động; phân tích được nguyên nhân dẫn đến hiện tượng lọt lưới (False Negative) và chặn nhầm (False Positive).
-3. Về phẩm chất
+Học xong bài này, em sẽ:
 
-- - Trách nhiệm: Có ý thức bảo vệ an toàn thông tin của cá nhân, gia đình và cộng đồng; có thái độ cảnh giác, không tiếp tay lan truyền các thông tin, đường link độc hại.
-- - Chăm chỉ: Tích cực tham gia các hoạt động thực hành, kiên trì phân tích các chi tiết tinh vi trong hồ sơ vụ án.
-- - Trung thực: Trung thực trong quá trình thực hành thử thách, ghi nhận chính xác dữ liệu kiểm chứng và báo cáo đúng sự thật khách quan.
-II. THIẾT BỊ DẠY HỌC VÀ HỌC LIỆU
+- Nêu được một số dạng lừa đảo phổ biến trên không gian số (mạo danh cơ quan công quyền, lừa đảo tuyển dụng, chiếm đoạt tài khoản - OTP, mạo danh người thân bằng AI Deepfake) và những biện pháp phòng tránh an toàn, hiệu quả.
+- Phân tích được cấu trúc URL (giao thức, tên miền thật, đường dẫn), nhận diện được tên miền chính thống vs tên miền giả mạo (subdomain lừa đảo, lừa thị giác lookalike domains, tên miền quốc gia .vn).
+- Hiểu cơ chế hoạt động, thế mạnh và giới hạn của các công cụ lọc lừa đảo tự động (AI/Machine Learning Spam Filters), phân tích hiện tượng chặn nhầm (False Positive) và lọt lưới (False Negative).
+- Biết giao tiếp một cách văn minh, phù hợp với các quy tắc và chuẩn mực văn hóa ứng xử trong môi trường số.
+### 2. Năng lực tin học
 
-1. Đối với giáo viên
+### Năng lực chung:
 
-- - Máy tính giáo viên kết nối mạng Internet và màn chiếu / Tivi thông minh sắc nét.
-- - Hệ thống loa âm thanh để phát hiệu ứng âm thanh kích thích tư duy (tiếng còi đếm ngược 5 giây, tiếng chuông đóng dấu, tiếng cảnh báo nguy hiểm).
-- - Ứng dụng web tương tác 'Trung tâm Chống lừa đảo' (Bản Giáo viên: https://chong-lua-dao-kappa.vercel.app/gv.html) tích hợp Bảng theo dõi kết quả thời gian thực kết nối Google Sheets.
-- - Hệ thống phím tắt điều khiển: Phím Q (phóng to mã QR), phím Space (bước tiếp theo khởi động), phím F (toàn màn hình), phím G (phóng to nội dung ghi bài), phím M (bật/tắt âm thanh).
-2. Đối với học sinh
+Thực hiện bài học này sẽ góp phần hình thành và phát triển một số thành tố năng lực chung của học sinh như sau:
 
-- - Máy tính phòng thực hành (hoặc điện thoại thông minh/máy tính bảng có kết nối mạng Internet) truy cập Bản Học sinh: https://chong-lua-dao-kappa.vercel.app/.
-- - Mỗi học sinh chuẩn bị 01 bộ thẻ màu 2 mặt: Mặt xanh = THẬT (An toàn), Mặt đỏ = LỪA (Nguy hiểm).
-- - Sách giáo khoa Tin học 11, vở ghi bài, bút viết.
-III. TIẾN TRÌNH DẠY HỌC
+Năng lực tự chủ, tự học: Năng lực tự chủ, tự học: Học sinh chủ động tìm hiểu nội dung bài học, độc lập thao tác trên môi trường số, có ý thức tự giác bảo vệ dữ liệu cá nhân trước các cạm bẫy mạng.
 
-A. HOẠT ĐỘNG 1: MỞ ĐẦU / KHỞI ĐỘNG (Khoảng 6 – 7 phút)
+Năng lực hợp tác và giao tiếp: Học sinh thảo luận cặp đôi và làm việc nhóm để điều tra hồ sơ sự cố mạng, phản biện và báo cáo rõ ràng kết quả điều tra.
 
-a) Mục tiêu:
+Năng lực giải quyết vấn đề và sáng tạo: Học sinh vận dụng nguyên tắc 3 lớp phòng vệ và quy tắc phân tích kỹ thuật để đưa ra quyết định ứng phó an toàn trước các tình huống lừa đảo phức tạp.
 
-- - Kích hoạt phản xạ nhận diện tin nhắn lừa đảo dưới áp lực thời gian thực.
-- - Nhận thức được cơ chế tâm lý cốt lõi: 'Kẻ lừa đảo không hack máy tính, chúng hack cảm xúc'.
-- - Hình thành nguyên tắc phòng vệ cơ bản qua 'Bộ giáp 3 lớp' (Hãy chậm lại! – Kiểm tra ngay! – Dừng lại, không gửi!).
-b) Nội dung:
+### Năng lực tin học:
 
-- - Học sinh tham gia trò chơi tương tác 'Hộp thư khẩn cấp': Đọc nhanh 5 tin nhắn giả định trên màn chiếu, mỗi tin chỉ xuất hiện 5 giây kèm đồng hồ đếm ngược; hết giờ đồng loạt giơ thẻ Xanh (THẬT) hoặc Đỏ (LỪA).
-- - Quan sát pha 'Lật bài' bất ngờ từ giáo viên; trả lời câu hỏi trọng tâm: 'Làm thế nào để không bị hack cảm xúc?'.
-- - Thảo luận cặp đôi Hoạt động 1 (SGK) về 2 tình huống bất thường và chọn phương án ứng phó tối ưu trên màn chiếu.
-c) Sản phẩm:
+Hình thành, phát triển chủ yếu các năng lực:
 
-- - Kết quả giơ thẻ xanh/đỏ của học sinh qua 5 tin nhắn (Tin 1: Đỏ, Tin 2: Đỏ, Tin 3: Xanh, Tin 4: Đỏ, Tin 5: Xanh).
-- - Câu trả lời của học sinh về cảm xúc bị kẻ lừa đảo khai thác và phương án xử lý Hoạt động 1 (B, C, D).
-- - Ghi nhớ 3 lớp phòng vệ của Bộ giáp.
-d) Tổ chức thực hiện:
+NLc: Giải quyết vấn đề với sự hỗ trợ của công nghệ thông tin và truyền thông (sử dụng công cụ soi link X-ray, tra cứu cơ sở dữ liệu số để nhận diện lừa đảo).
 
-- Bước 1 (Chuyển giao nhiệm vụ): GV mở phân hệ '01 Hộp thư' trên web app. Yêu cầu HS cầm sẵn thẻ 2 màu. Phổ biến luật: Mỗi tin nhắn chỉ hiện 5 giây, tiếng còi kêu và chữ 'GIƠ THẺ!' hiện lên thì đồng loạt giơ thẻ cùng lúc, giữ nguyên vị trí thẻ.
-- Bước 2 (Thực hiện nhiệm vụ): GV bấm phím Space. Màn hình đếm ngược 5 giây kèm tiếng tích tắc dồn dập. HS đọc cực nhanh. Hết 5 giây, cả lớp đồng loạt giơ thẻ. Lần lượt qua 5 tin nhắn:
--     •   + Tin 1 (SMS MayXanh Bank dọa khóa 24h đòi cập nhật link): HS giơ thẻ Đỏ (LỪA).
--     •   + Tin 2 (Zalo 'Mẹ' nick mới đòi chuyển tiền gấp, cấm gọi điện): HS giơ thẻ Đỏ (LỪA).
--     •   + Tin 3 (SMS OTP ngân hàng thật, dặn không đưa mã cho ai): HS giơ thẻ Xanh (THẬT).
--     •   + Tin 4 (Gmail học bổng du học Singapore đòi nộp phí xác nhận 1.5 triệu): HS giơ thẻ Đỏ (LỪA).
--     •   + Tin 5 (Zalo Lớp trưởng nhắc lịch kiểm tra 15 phút): HS giơ thẻ Xanh (THẬT).
-- Bước 3 (Báo cáo, thảo luận): GV bấm phím Space đóng dấu đáp án to rõ ('LỪA ĐẢO' màu đỏ / 'AN TOÀN' màu xanh) kèm dòng chữ giải thích phóng to.
-- GV hỏi nhanh: 'Vì sao ở Tin 1 và Tin 4, dù có bạn nghi ngờ nhưng vẫn có nhiều bạn chọn sai?'. HS trả lời: 'Vì thời gian gấp quá, sợ bị khóa tài khoản thật, sợ mất cơ hội học bổng...'.
-- Bước 4 (Kết luận, nhận định): GV bấm 'Lật bài' trên web app: Chiếu dòng chữ đúc kết: 'Chiếc đồng hồ 5 giây chính là chiêu số 1 của kẻ lừa đảo. Khi bị ép thời gian, ta phản ứng bằng cảm xúc thay vì suy nghĩ. Kẻ lừa đảo không cần hack máy tính của em. Chúng hack cảm xúc: Sợ hãi, tham lam, vội vàng, cả niềm tin vào người quen!'.
-- GV đặt câu hỏi lớn của bài học: 'Làm thế nào để không bị hack cảm xúc?'.
-- GV bấm 'Bắt đầu Hoạt động 1' (SGK): HS thảo luận cặp đôi 1 phút -> Cả lớp giơ tay chọn A, B, C, D (Phương án B, C, D đúng). GV bấm 'Chốt kiến thức' bung ra 'Bộ giáp 3 lớp phòng vệ' (Hãy chậm lại! - Kiểm tra ngay! - Dừng lại, không gửi!) và dẫn dắt vào bài mới.
-B. HOẠT ĐỘNG 2: HÌNH THÀNH KIẾN THỨC MỚI (Khoảng 23 – 24 phút)
+NLa: Sử dụng và quản lí các phương tiện công nghệ thông tin và truyền thông một cách an toàn, có trách nhiệm.
 
-Nhiệm vụ 1: Giải phẫu đường link và Nhận diện tên miền thật (Khoảng 8 – 9 phút)
+NLe: Hợp tác trong môi trường số (làm việc nhóm trên hệ thống ứng dụng số và bảng theo dõi trực tuyến Dashboard).
 
-a) Mục tiêu:
+### Năng lực số và Năng lực AI (Khung NLS - Mức độ NC1)
 
-- - Xác định được tên miền thật của một URL bất kỳ theo quy tắc giải phẫu đường link.
-- - Nhận diện các thủ thuật đánh lừa thị giác phổ biến của tin tặc (tên miền con mạo danh, chữ 'rn' giả 'm', dấu '@', link rút gọn, chữ Kirin Unicode).
-- - Hình thành thói quen kiểm chứng tên miền trước khi nhấp chuột (Năng lực NLa, NLc).
-b) Nội dung:
+### Năng lực đánh giá thông tin và an toàn số (1.2.NC1a, 4.1.NC1b, 4.2.NC1a):
 
-- - Học sinh tiếp thu khẩu quyết giải phẫu tên miền từ giáo viên qua công cụ 'Máy soi link (X-ray)'.
-- - Thực hành theo cặp đôi vượt qua 'Thử thách 8 link' trên web app của học sinh.
-- - Quan sát giáo viên phân tích 2 link có tỷ lệ sai nhiều nhất qua Bảng theo dõi và ghi chép quy tắc vào vở.
-c) Sản phẩm:
+- Nhận diện và phân tích được các hình thức lừa đảo công nghệ cao sử dụng AI tạo sinh (như Deepfake video, giả mạo giọng nói Voice Cloning), các kỹ thuật đánh lừa thị giác qua đường link lạ.
+- Cảnh giác không chia sẻ hình ảnh khuôn mặt, video, mẫu giọng nói bừa bãi lên mạng để tránh bị kẻ xấu thu thập làm dữ liệu huấn luyện AI lừa đảo; không cung cấp mã OTP, mật khẩu hay tài khoản ngân hàng.
+Năng lực quy tắc ứng xử trên mạng (2.5.NC1a, 2.5.NC1b): Áp dụng các chuẩn mực hành vi văn minh, giao tiếp chuẩn mực, điều chỉnh câu từ tôn trọng người khác trong môi trường số.
 
-- - Điểm số thực hành Thử thách 8 link của các cặp đôi (tự động đồng bộ lên Bảng theo dõi giáo viên).
-- - Quy tắc giải phẫu đường link ghi chép trong vở học sinh.
-d) Tổ chức thực hiện:
+### Năng lực ứng dụng AI (6.2.NC1a - Tư duy lấy con người làm trung tâm):
 
-- Bước 1 (Chuyển giao nhiệm vụ): GV mở phân hệ '02 Soi link' trên web app. GV giảng giải quy tắc vàng giải phẫu đường link: (1) Tìm dấu gạch chéo '/' đầu tiên sau https://; (2) Nhìn ngược từ dấu đó về bên trái lấy 2 cụm từ (hoặc 3 cụm nếu đuôi .com.vn, .gov.vn) -> Đó là TÊN MIỀN THẬT, phần phía trước chỉ là tên miền con (subdomain).
-- GV thao tác mẫu trên 'Máy soi link X-ray' trên màn chiếu với link: mayxanhbank.vn.xacthuc-taikhoan.top/dang-nhap để học sinh thấy các khối màu phân tách rõ ràng. Nhấn mạnh: Ổ khóa https:// chỉ mã hóa đường truyền, không chứng minh trang web an toàn!
-- Giao nhiệm vụ: Các cặp đôi mở khung 'Thử thách · Thám tử tên miền' trên máy tính/điện thoại, cùng làm 8 câu thử thách trong 3 phút.
-- Bước 2 (Thực hiện nhiệm vụ): Học sinh làm việc cặp đôi trên máy. Đọc kỹ từng URL, vận dụng quy tắc để chọn tên miền thật. Hệ thống chấm điểm tự động x/8 và phản hồi giải thích ngay lập tức.
-- GV quan sát lớp, đồng thời mở tab 'Theo dõi' trên máy chiếu để quan sát biểu đồ kết quả thời gian thực của cả lớp.
-- Bước 3 (Báo cáo, thảo luận): GV nhìn Dashboard, nhận diện 2 câu hỏi học sinh làm sai nhiều nhất (Link 3 chữ 'rn' và Link 4 có dấu '@').
-- GV mời đại diện 2 học sinh lên bục máy chiếu thao tác máy soi link và giải thích: (1) Bạn thứ nhất giải thích link http://rnayxanhbank.vn/login: Kẻ gian ghép 2 chữ 'r' và 'n' đứng cạnh nhau để đánh lừa mắt nhìn lướt qua trông giống chữ 'm'; (2) Bạn thứ hai giải thích link https://veoshop.vn@sale-veo.vip/giay: Có dấu '@', trình duyệt sẽ bỏ qua toàn bộ phần phía trước dấu '@', tên miền thực sự truy cập là sale-veo.vip.
-- Bước 4 (Kết luận, nhận định): GV nhận xét, chính xác hóa kiến thức. Bấm phím G để bung to khung 'Ghi vào vở' trên màn chiếu cho cả lớp chép bài vào vở:
--     ✏️   • Tên miền thật: cụm ngay trước dấu '/' đầu tiên (lấy 2 cụm cuối, 3 cụm nếu đuôi .com.vn, .gov.vn).
--     ✏️   • Link giả: dùng tên miền con mạo danh, chữ bị đánh tráo, dấu @, link rút gọn; có https chưa chắc an toàn.
-Nhiệm vụ 2: Phòng điều tra sự cố & Nhận biết các dạng lừa đảo (Khoảng 14 – 15 phút)
+- Nhận thức rõ vai trò của AI và bộ lọc máy học là công cụ hỗ trợ cảnh báo tiền tiêu, nhưng con người luôn là trung tâm làm chủ, chịu trách nhiệm và ra quyết định thẩm định cuối cùng.
+Năng lực AI (theo Khung nội dung giáo dục AI ban hành kèm Quyết định số 2422/QĐ-BGDĐT):
 
-a) Mục tiêu:
+- 11.B2.1: Nhận biết và phân loại được các rủi ro hoặc sự cố liên quan đến việc sử dụng AI có thể dẫn đến vi phạm quy định của nhà trường hoặc các văn bản pháp luật liên quan (đặc biệt là nguy cơ mạo danh bằng công nghệ Deepfake).
+- 11.A1.1: Xây dựng được quy trình sử dụng các sản phẩm AI và công nghệ số một cách thích hợp, có tư duy phản biện, nhận diện bẫy thao túng tâm lý (Social Engineering - Hack cảm xúc).
+- 11.C4.1: Hiểu cơ chế thuật toán và dữ liệu huấn luyện của AI trong các bộ lọc bảo vệ mạng (Machine Learning classifiers), hiện tượng lọt lưới (False Negative) và chặn nhầm (False Positive), lý giải tại sao độ chính xác thực tế không thể đạt tuyệt đối 100%.
+### 3. Phẩm chất:
 
-- - Phân tích, nhận diện và phân loại được 4 dạng lừa đảo trên không gian mạng theo SGK và dạng mở rộng Deepfake AI.
-- - Phát triển năng lực làm việc nhóm, thu thập chứng cứ số, sử dụng công cụ kiểm chứng đa kênh (NLa, NLc, Năng lực AI 11.A2.1, 11.A1.1).
-b) Nội dung:
+Hình thành và phát triển phẩm chất:
 
-- - Chia lớp thành 4 nhóm tương ứng tiếp nhận 4 Hồ sơ sự cố trong 'Phòng điều tra':
--     •   + Nhóm 1: Hồ sơ 01 – Cảnh báo đỏ (Lừa đảo hỗ trợ kỹ thuật qua còi báo động và cảnh báo virus giả).
--     •   + Nhóm 2: Hồ sơ 02 – Món quà 30 triệu (Lừa đảo thông báo tin tốt: trúng thưởng điện thoại đắt tiền, bắt nộp phí trước).
--     •   + Nhóm 3: Hồ sơ 03 – Cuộc gọi 72 giờ (Lừa đảo thông báo tin xấu: giả danh công an dọa bắt giữ, yêu cầu chuyển tiền).
--     •   + Nhóm 4: Hồ sơ 04 – Siêu sale 11.11 (Lừa đảo mạo danh sàn TMĐT VèoShop giảm giá 90% đòi chuyển khoản trước).
--     •   + Hồ sơ 05 (Đặc biệt): Cuộc gọi video 10 giây (Mạo danh người quen bằng Deepfake AI) do giáo viên trực tiếp thị phạm trên màn chiếu.
-- - Học sinh tương tác thu thập chứng cứ trên màn hình giả lập, dùng công cụ số kiểm chứng, hoàn thành Báo cáo sự cố.
-- - Đại diện các nhóm lên màn chiếu báo cáo theo quy tắc 'Thuyết trình tốc độ 60 giây'; các nhóm khác phản biện.
-c) Sản phẩm:
+- Phẩm chất Trách nhiệm: Nâng cao ý thức bảo vệ an toàn thông tin cho bản thân, gia đình và cộng đồng; có trách nhiệm cảnh báo và hỗ trợ người khác phòng chống lừa đảo số; tuân thủ pháp luật an ninh mạng.
+- Phẩm chất Chăm chỉ, Trung thực: Tích cực, tự giác tham gia các hoạt động điều tra số; trung thực trong quá trình giải quyết tình huống và cam kết hành vi chuẩn mực.
+### II. THIẾT BỊ DẠY HỌC VÀ HỌC LIỆU
 
-- - Báo cáo sự cố số của 4 nhóm (điểm số /100 tự động hiển thị trên Dashboard giáo viên).
-- - Bảng tổng hợp 4 dạng lừa đảo phổ biến trong SGK ghi chép trong vở.
-d) Tổ chức thực hiện:
+Thiết bị dạy học: Thiết bị dạy học: Máy chiếu/màn hình tương tác, máy tính giáo viên kết nối Internet, phòng máy tính kết nối mạng hoặc thiết bị di động thông minh của học sinh, bộ thẻ phản hồi 2 mặt (Mặt Xanh: AN TOÀN / Mặt Đỏ: LỪA ĐẢO).
 
-- Bước 1 (Chuyển giao nhiệm vụ): GV chuyển sang phân hệ '03 Điều tra'. Phân công: Nhóm 1 nhận Hồ sơ 01, Nhóm 2 nhận Hồ sơ 02, Nhóm 3 nhận Hồ sơ 03, Nhóm 4 nhận Hồ sơ 04. Quy định phân vai trong nhóm: 1 Trưởng nhóm điều khiển máy, 1 Thư ký ghi chép, 1 Người phát ngôn báo cáo.
-- Nêu rõ luật điều tra: Nhóm chạm vào các chi tiết đáng ngờ trên màn hình (lưu ý: số lượt chạm bằng số bằng chứng + 1, chỉ được chạm sai 1 lần); sử dụng các công cụ kiểm chứng ở cột phải (Tra cứu SĐT, Tra cứu tên miền Whois, Kiểm tra STK, Hỏi Chatbot AI); trả lời 3 câu hỏi của Báo cáo sự cố và bấm 'Nộp báo cáo'. Thời gian: 5 phút.
-- Bước 2 (Thực hiện nhiệm vụ): Các nhóm học sinh làm việc khẩn trương. Cùng quan sát hiện trường, thảo luận chỉ ra các chi tiết đáng ngờ, nhấp vào công cụ số để đọc kết quả kiểm chứng.
-- Thư ký ghi nhận các bằng chứng. Trưởng nhóm tích chọn câu trả lời: (1) Dạng lừa đảo; (2) Cảm xúc bị khai thác; (3) Hành động ứng phó. Bấm 'Nộp báo cáo sự cố'.
-- GV quan sát, nhắc nhở thời gian, hỗ trợ kỹ thuật.
-- Bước 3 (Báo cáo, thảo luận): GV mở Bảng theo dõi kết quả, chiếu bảng điểm nộp bài của 4 nhóm (đều đạt 85 - 100 điểm).
-- Áp dụng quy tắc 'Thuyết trình tốc độ 60 giây': Lần lượt đại diện 4 nhóm lên bục máy chiếu, chỉ vào màn hình và trả lời 3 câu hỏi sườn: (1) Tìm thấy chi tiết đáng ngờ nào? (2) Kẻ gian hack cảm xúc gì? (3) Nạn nhân cần làm gì ngay lập tức? Các nhóm khác nhận xét, bổ sung bằng chứng.
-- GV thị phạm Hồ sơ 05 (Deepfake AI): Bấm mở cuộc gọi video 10s mờ ảo, giả giọng anh họ mượn tiền. GV bấm nút 'Hỏi Chatbot AI' ngay trên màn chiếu: AI khuyên gọi lại số điện thoại cũ để kiểm tra. GV phân tích: AI hỗ trợ rất tốt, nhưng AI không thể tự nghe hay thẩm định được giọng của anh họ thật -> Quyết định cuối cùng phải là con người gọi điện trực tiếp hoặc đặt câu hỏi bí mật riêng của gia đình.
-- Bước 4 (Kết luận, nhận định): GV chốt Bảng tổng hợp 4 dạng lừa đảo chuẩn SGK (Phóng to trên màn chiếu để HS ghi vở):
--     📌   • Hỗ trợ kĩ thuật: Báo máy nhiễm virus, bắt gọi tổng đài, đòi cài phần mềm điều khiển từ xa.
--     📌   • Thông báo tin tốt: Trúng thưởng, học bổng nhưng bắt đóng lệ phí, nộp CCCD trước.
--     📌   • Thông báo tin xấu: Giả danh công an, đe dọa liên quan vụ án, bắt giữ bí mật, chuyển tiền tạm giữ.
--     📌   • Mạo danh sàn TMĐT: Giá rẻ bất thường (sale 90%), tên miền lạ, bắt chuyển khoản trước rồi biến mất.
--     📌   • Dạng mở rộng: Deepfake AI - Gọi video ngắn, hình mờ, giật, mượn tiền gấp -> Biện pháp: Gọi điện thoại thường thoại trực tiếp.
-C. HOẠT ĐỘNG 3: LUYỆN TẬP (Khoảng 7 – 8 phút)
+Học liệu: Học liệu: Sách giáo khoa Tin học 11, Web App tương tác 'Trung tâm Chống lừa đảo' (Địa chỉ GV: https://chong-lua-dao-kappa.vercel.app/gv.html, Địa chỉ HS: https://chong-lua-dao-kappa.vercel.app/#hs), Phiếu học tập số 1 (Báo cáo điều tra sự cố số), Bảng theo dõi số liệu trực tuyến thời gian thực (Dashboard).
 
-a) Mục tiêu:
+### III. TIẾN TRÌNH DẠY HỌC
 
-- - Khắc sâu nguyên lý hoạt động của các bộ lọc lừa đảo tự động (Năng lực AI 11.C4.1).
-- - Trải nghiệm thực tế hiện tượng lọt lưới và chặn nhầm của thuật toán học máy; giải thích được vì sao không bộ lọc nào đạt 100%.
-b) Nội dung:
+### TIẾT 1: NHẬN DIỆN VÀ PHÒNG TRÁNH LỪA ĐẢO TRÊN KHÔNG GIAN SỐ
 
-- - Học sinh thao tác phân hệ '04 Máy lọc' trên web app.
-- - Chọn tổ hợp các dấu hiệu nhận diện (Features) và điều chỉnh ngưỡng chặn (Threshold) để tìm độ chính xác tối ưu trên 20 tin nhắn mẫu.
-- - Thảo luận câu hỏi then chốt: 'Vì sao không có bộ lọc nào đạt độ chính xác 100%?'.
-c) Sản phẩm:
+### 1. Hoạt động 1: Mở đầu (Khởi động: Hộp thư khẩn cấp & Lật bài 'Hack cảm xúc')
 
-- - Cấu hình bộ lọc đạt độ chính xác cao nhất của học sinh (đạt mức tối đa 85% - 17/20 tin).
-- - Câu trả lời giải thích bản chất giới hạn của công nghệ lọc tự động.
-d) Tổ chức thực hiện:
+a) Mục tiêu: a) Mục tiêu: Tạo tâm thế hứng thú, đánh thức phản xạ nhận diện tín hiệu nguy hiểm trong các tình huống áp lực thời gian, nhận diện bẫy thao túng tâm lý (Social Engineering) và làm quen với nguyên tắc phòng vệ đầu tiên: 'Hãy chậm lại!'.
 
-- Bước 1 (Chuyển giao nhiệm vụ): GV chuyển sang phân hệ '04 Máy lọc'. Dẫn dắt: Tại sao hòm thư Gmail lọc được spam? Đó là nhờ máy học. GV chạy thử bộ lọc với 2 dấu hiệu, ngưỡng 1: Kết quả xuất hiện nhiều ô màu cam (chặn nhầm tin nhắn của Mẹ dặn mua thuốc). Giao nhiệm vụ: Trong 3 phút, các nhóm tự chọn dấu hiệu và chỉnh ngưỡng để bộ lọc đạt độ chính xác cao nhất!
-- Bước 2 (Thực hiện nhiệm vụ): Học sinh tích chọn các dấu hiệu (Từ khóa giật gân, Đòi OTP, Link lạ, Dọa nạt...) và bấm 'Chạy bộ lọc'. Quan sát các ô đỏ (lọt lưới) và cam (chặn nhầm), nhấp vào ô để đọc lý do máy nhầm lẫn.
-- Bước 3 (Báo cáo, thảo luận): GV hỏi nhóm đạt điểm cao nhất (85%): 'Nhóm em đã chọn những dấu hiệu nào?'.
-- GV nêu câu hỏi thảo luận: 'Vì sao không có nhóm nào đạt được 100%? Vì sao các công ty công nghệ hàng đầu thế giới vẫn để lọt tin nhắn rác?'. HS trả lời: Kẻ lừa đảo liên tục đổi từ ngữ, tiếng lóng; ngữ cảnh thực tế rất phức tạp...
-- Bước 4 (Kết luận, nhận định): GV nhận xét, chính xác hóa kiến thức: Bộ lọc công nghệ dù hiện đại đến đâu cũng chỉ hỗ trợ một phần. Kẻ lừa đảo luôn tiến hóa chiêu thức để lách qua các quy tắc của máy. BỘ LỌC THÔNG MINH NHẤT VÀ QUYẾT ĐỊNH CUỐI CÙNG NẰM Ở CHÍNH SỰ TỈNH TÁO CỦA CON NGƯỜI!
-D. HOẠT ĐỘNG 4: VẬN DỤNG (Khoảng 4 – 5 phút)
+b) Nội dung: b) Nội dung: Giáo viên kích hoạt phân hệ '01 Hộp thư' trên web app, chiếu 5 tin nhắn khẩn cấp (mỗi tin đếm ngược 5 giây kèm âm thanh dồn dập). Cả lớp dùng thẻ 2 màu phản hồi tức thì. Giáo viên bấm 'Lật bài' bóc trần thủ đoạn 'Hack cảm xúc', học sinh thảo luận cặp đôi Hoạt động 1 trong SGK.
 
-a) Mục tiêu:
+c) Sản phẩm: c) Sản phẩm: Thao tác giơ thẻ phản hồi dứt khoát của học sinh; câu trả lời giải thích cơ chế bẫy tâm lý và phương án xử lý tình huống Hoạt động 1 SGK.
 
-- - Chuyển hóa nhận thức an toàn số thành cam kết hành vi cụ thể trong đời sống hàng ngày (Phẩm chất Trách nhiệm).
-- - Xây dựng văn hóa bảo vệ an ninh mạng trong gia đình và trường học.
-b) Nội dung:
+### d) Tổ chức thực hiện: d) Tổ chức thực hiện: 
 
-- - Học sinh mở phân hệ '05 Tổng kết' trên web app, ký 'Thẻ thám tử mạng' với 1-2 lời hứa an toàn số cụ thể.
-- - Quan sát biểu đồ tổng hợp cam kết của toàn lớp học nhảy số trực tiếp trên màn chiếu.
-- - Tiếp nhận nhiệm vụ về nhà cho Tiết 2.
-c) Sản phẩm:
+### Bước 1: Chuyển giao nhiệm vụ
 
-- - Thẻ thám tử mạng cá nhân có họ tên và lời hứa số (học sinh chụp màn hình lưu máy).
-- - Biểu đồ cam kết an toàn số của cả lớp trên Dashboard giáo viên.
-d) Tổ chức thực hiện:
+- GV mở phân hệ '01 Hộp thư' trên web app, yêu cầu HS cầm sẵn thẻ 2 màu. Phổ biến luật: Mỗi tin nhắn chỉ hiển thị đúng 5 giây kèm đồng hồ đếm ngược tích tắc dồn dập. Khi hết giờ, cả lớp đồng loạt giơ thẻ.
+- GV truyền cảm hứng: 'Kẻ lừa đảo không cần hack máy tính của các em, chúng hack cảm xúc. Hôm nay các em sẽ là những chuyên viên an ninh mạng: soi đường link, gom bằng chứng và huấn luyện máy lọc.'
+### [Tích hợp NLS & AI]
 
-- Bước 1 (Chuyển giao nhiệm vụ): GV hướng dẫn học sinh mở phân hệ '05 Tổng kết', nhập Họ tên và chọn 1–2 lời hứa an toàn số thiết thực nhất: Bật 2FA; Đặt mật khẩu an toàn gia đình; Cài nTrust cho bố mẹ; Không đọc mã OTP; Kể lại chiêu lừa cho người thân; Ẩn thông tin cá nhân. Bấm 'Gửi lời hứa cho thầy cô' và chụp màn hình thẻ.
-- Bước 2 (Thực hiện nhiệm vụ): Học sinh đọc các lời hứa, suy nghĩ nghiêm túc, tích chọn và bấm gửi.
-- Bước 3 (Báo cáo, thảo luận): GV bấm mở Bảng theo dõi kết quả trên màn chiếu: Biểu đồ cột thể hiện các lời hứa của lớp tăng lên thời gian thực. GV đọc to những cam kết phổ biến nhất của lớp (ví dụ: 100% học sinh cam kết không bao giờ đọc OTP cho người lạ).
-- Bước 4 (Kết luận, nhận định & Dặn dò): GV đúc kết tiết học: 'Hôm nay các em đã được trang bị đầy đủ Bộ giáp 3 lớp. Hãy đem chiếc áo giáp này về bảo vệ chính mình và người thân trong gia đình'.
-- Giao nhiệm vụ về nhà: (1) Thực hiện nghiêm túc lời hứa đã chọn; (2) Sưu tầm 01 tin nhắn/email/cuộc gọi lừa đảo thực tế mà em hoặc người thân từng gặp để chuẩn bị tham gia 'Triển lãm tin nhắn lừa đảo' vào Tiết 2.
-IV. PHỤ LỤC & HỒ SƠ DẠY HỌC
+● NLS: (NLS 1.2 – Đánh giá dữ liệu, thông tin và nội dung số – Bậc 3; NLS 4.1 – An toàn thiết bị và dữ liệu)
+● AI: (NLa – Tư duy lấy con người làm trung tâm: Nhận diện bẫy thao túng tâm lý Social Engineering) → YCCĐ Khung AI: 11.A1.1
+● Biểu hiện: Học sinh phân tích phản xạ cảm xúc (Sợ hãi, Tham lam, Tò mò) trước các thông điệp gấp gáp; nhận thức được việc kẻ gian tạo áp lực thời gian để làm tê liệt tư duy phản biện logic của nạn nhân.
+### [Giáo viên hướng dẫn]
 
-1. Phiếu học tập số 1 – Báo cáo điều tra sự cố số (Hoạt động 2)
+● Giáo viên giao nhiệm vụ cụ thể: 'Quan sát thật kỹ câu từ tin nhắn trong 5 giây. Xác định xem tin nhắn đang kích hoạt cảm xúc gì ở em và dứt khoát giơ thẻ: ĐỎ là Lừa đảo, XANH là Thật/An toàn.'
+● Giáo viên hướng dẫn dùng công cụ số hoặc AI: Hướng dẫn quan sát giao diện mô phỏng hộp thư SMS/Chatbot, nhận diện các từ khóa tạo áp lực: 'Khóa tài khoản sau 24h', 'Trúng thưởng độc đắc', 'Clip nhạy cảm của bạn'.
+● Giáo viên nhắc học sinh không nhập thông tin cá nhân vào AI / mạng: Nhấn mạnh thông điệp từ tin số 5 (Tin OTP thật): Tuyệt đối không nhập mã OTP hay mật khẩu vào bất kỳ đường link nào gửi qua tin nhắn.
+● Giáo viên yêu cầu học sinh kiểm chứng kết quả AI: Bấm nút 'Lật bài' trên màn hình: Chiếu thông điệp 'Kẻ lừa đảo không hack máy tính - Chúng hack cảm xúc!' để đối chiếu với các nguyên tắc phòng vệ SGK.
+● Giáo viên nhận xét sản phẩm và điều chỉnh sai lệch: Giải thích vì sao tin số 5 (báo mã OTP ngân hàng) là tin nhắn THẬT từ ngân hàng, nhưng người dùng phải cảnh giác nếu bản thân không hề thực hiện giao dịch.
+### Bước 2: Thực hiện nhiệm vụ
 
-2. Bảng tiêu chí đánh giá hoạt động nhóm (Rubric đánh giá theo thang điểm 100)
+- HS quan sát màn hình, lắng nghe tiếng đếm ngược 5 giây, dứt khoát giơ thẻ màu khi có hiệu lệnh.
+- HS thảo luận cặp đôi 1 phút về tình huống Hoạt động 1 SGK (nhận tin nhắn nhờ nạp thẻ điện thoại từ bạn thân).
+### [Học sinh thực hiện]
 
-Ngày ..... tháng ..... năm 2026
-GIÁO VIÊN SOẠN THẢO
-(Ký và ghi rõ họ tên)
+● Học sinh thực hiện từng bước: Đọc lướt nội dung tin nhắn trong 5 giây -> Phân tích dấu hiệu áp lực -> Giơ thẻ màu -> Quan sát dấu mộc kết quả của GV.
+● Học sinh dùng thiết bị, học liệu số hoặc AI: Sử dụng bộ thẻ màu phản hồi trực tiếp kết hợp quan sát màn hình web app tương tác.
+● Học sinh ghi lại kết quả: Ghi nhận 3 trạng thái cảm xúc nguy hiểm kẻ gian hay lợi dụng: 1) Sợ hãi (bị phạt, khóa tài khoản); 2) Tham lam (tiền thưởng, quà tặng); 3) Tò mò (tin đồn, xem video).
+● Học sinh so sánh, kiểm tra, chỉnh sửa kết quả: So sánh quyết định vội vàng khi bị thúc ép với quyết định sau khi được 'Chậm lại 5 giây' suy ngẫm.
+● Học sinh trình bày rõ phần tự làm và phần có công cụ hỗ trợ: Phát biểu: 'Khi bị đếm ngược 5 giây, em rất dễ bị phân tâm và tin ngay vào lời hối thúc. Nhờ dừng lại quan sát, em thấy kẻ lừa đảo luôn đánh vào nỗi sợ để người nhận không kịp suy xét.'
+### Bước 3: Báo cáo, thảo luận
+
+- GV bấm phím Space đóng dấu kết quả to rõ (LỪA ĐẢO màu đỏ / AN TOÀN màu xanh).
+- GV gọi 1-2 HS giải thích lý do chọn thẻ. GV bấm 'Bắt đầu Hoạt động 1' (SGK), cả lớp giơ tay chọn phương án ứng phó tối ưu.
+### [Sản phẩm số hoặc sản phẩm AI]
+
+● Nêu rõ sản phẩm cụ thể: Tỷ lệ nhận diện đúng của cả lớp qua 5 tin nhắn (thống kê đạt trên 90%); câu trả lời lựa chọn giải pháp trong Hoạt động 1 SGK.
+● Sản phẩm phải gắn trực tiếp với mục tiêu bài học: Nhận thức bẫy tâm lý và kích hoạt nguyên tắc 'Hãy chậm lại'.
+### Bước 4: Kết luận, nhận định
+
+- GV nhận xét tinh thần phản xạ của lớp, bấm mở 'Bộ giáp 3 lớp':
+  1. Hãy chậm lại! (Chiếc đồng hồ 5 giây giúp lấy lại bình tĩnh).
+
+  2. Kiểm tra ngay! (Xác thực nguồn tin qua kênh độc lập).
+
+  3. Dừng lại, không gửi! (Không chuyển tiền, không cung cấp thông tin cá nhân).
+
+### [Đánh giá]
+
+● Nêu tiêu chí đánh giá ngắn gọn: Phản xạ đúng trong thời gian ngắn; chỉ ra được thủ đoạn đánh vào tâm lý.
+● Chỉ rõ học sinh đạt năng lực số nào: Đạt NLS 1.2, NLS 4.1.
+● Chỉ rõ học sinh đạt năng lực AI nào nếu có: Đạt NLa, Khung AI 11.A1.1.
+● Đánh giá bằng hành vi cụ thể: HS hình thành thói quen 'Dừng lại 5 giây' trước mọi tin nhắn khẩn cấp thay vì bấm ngay vào liên kết.
+### Sản phẩm dự kiến:
+
+Ba nguyên tắc nhận biết và phòng tránh lừa đảo trong không gian số:
+
+- Hãy chậm lại!
+- Kiểm tra ngay!
+- Dừng lại, không gửi!
+### 2. Hoạt động 2: Hình thành kiến thức mới (Khoảng 23 – 24 phút)
+
+Hoạt động 2.1: Giải phẫu đường link và Nhận diện tên miền thật (Khoảng 8 – 9 phút)
+
+a) Mục tiêu: a) Mục tiêu: Phân tích cấu trúc kỹ thuật của URL (Giao thức, Tên miền gốc, Đường dẫn chi tiết); nhận diện các thủ thuật lừa thị giác (Lookalike domains, Subdomain đánh lừa, ký tự thay thế 0 vs O, l vs 1, tên miền quốc gia .vn).
+
+b) Nội dung: b) Nội dung: GV hướng dẫn 'Quy tắc vàng 3 ngón tay' bằng Máy soi X-ray trên web app; HS thực hành theo cặp đôi làm 8 thử thách đường link; phân tích kết quả trên Dashboard.
+
+c) Sản phẩm: c) Sản phẩm: Kết quả phân loại 8/8 đường link trên thiết bị học sinh; tỷ lệ chính xác của lớp hiển thị trên Dashboard.
+
+### d) Tổ chức thực hiện: d) Tổ chức thực hiện: 
+
+### Bước 1: Chuyển giao nhiệm vụ
+
+- GV mở phân hệ '02 Soi link' trên web app. Giới thiệu công cụ 'Máy soi X-ray': Tách nhỏ URL thành các khối màu trực quan.
+- GV truyền đạt 'Quy tắc vàng đọc ngược từ dấu gạch chéo đầu tiên /': Tên miền thực sự quyết định trang web thuộc về ai luôn nằm ngay sát trước dấu / đầu tiên sau https://.
+- Yêu cầu HS cặp đôi mở phân hệ 02 trên máy/điện thoại, cùng nhau soi 8 link thử thách.
+### [Tích hợp NLS & AI]
+
+● NLS: (NLS 1.2 – Đánh giá nguồn thông tin; NLS 4.1 – Bảo vệ dữ liệu cá nhân)
+● AI: (NLb – Đạo đức và nhận thức rủi ro AI: Nhận diện website giả mạo thu thập dữ liệu trái phép) → YCCĐ Khung AI: 11.B2.1
+● Biểu hiện: Học sinh bóc tách cấu trúc URL, phát hiện ra các chiêu trò đánh lừa thị giác người dùng (Subdomain lừa đảo như moet-gov.vn.online-portal.cc có tên miền thật là online-portal.cc).
+### [Giáo viên hướng dẫn]
+
+● Giáo viên giao nhiệm vụ cụ thể: 'Làm việc theo cặp đôi, phân tích 8 đường link trên màn hình. Dùng công cụ Soi chi tiết (X-ray) để tìm ra Tên miền thật và quyết định bấm THẬT hay LỪA ĐẢO.'
+● Giáo viên hướng dẫn dùng công cụ số hoặc AI: Hướng dẫn bấm nút 'Soi chi tiết (X-ray)' để xem màu phân tích: Màu vàng là giao thức, Màu xanh dương đậm là Tên miền thật, Màu xám là đường dẫn phía sau.
+● Giáo viên nhắc học sinh không nhập thông tin cá nhân vào AI / mạng: Nhấn mạnh tuyệt đối không điền tên đăng nhập, mật khẩu vào các trang web có tên miền lạ, đuôi tên miền miễn phí (.tk, .xyz, .cc, .top).
+● Giáo viên yêu cầu học sinh kiểm chứng kết quả AI: Đọc lời giải thích chi tiết sau mỗi câu, đối chiếu với danh bạ tên miền quốc gia (.gov.vn cho cơ quan nhà nước, .edu.vn cho giáo dục).
+● Giáo viên nhận xét sản phẩm và điều chỉnh sai lệch: Chú ý uốn nắn lỗi phổ biến: học sinh nhìn thấy chữ 'vietcombank' hoặc 'moet-gov.vn' ở đầu là tưởng thật mà quên nhìn đuôi chính.
+### Bước 2: Thực hiện nhiệm vụ
+
+- HS làm việc cặp đôi trên thiết bị. Lần lượt đọc URL, soi cấu trúc, thảo luận và bấm chọn.
+### [Học sinh thực hiện]
+
+● Học sinh thực hiện từng bước: Đọc URL -> Tìm dấu gạch chéo đơn đầu tiên -> Đọc ngược về trước -> Xác định tên miền thật -> Bấm chọn kết quả.
+● Học sinh dùng thiết bị, học liệu số hoặc AI: Thao tác trên giao diện phân hệ 02 Soi link.
+● Học sinh ghi lại kết quả: Ghi nhận 2 dấu hiệu giả mạo tinh vi nhất: 1) Kẹp tên miền thật làm tên miền con (subdomain); 2) Thay thế ký tự gần giống (paypal1.com, faceb00k.com).
+● Học sinh so sánh, kiểm tra, chỉnh sửa kết quả: So sánh kết quả của nhóm mình với lời giải thích của Máy soi X-ray.
+● Học sinh trình bày rõ phần tự làm và phần có công cụ hỗ trợ: Trình bày: 'Khi dùng X-ray, chúng em thấy ngay kẻ gian đã che giấu tên miền độc hại phía sau một subdomain dài có chứa từ khóa uy tín.'
+### Bước 3: Báo cáo, thảo luận
+
+- GV mở Dashboard theo dõi, chỉ ra 2 câu học sinh làm sai nhiều nhất (Link 03 và Link 07).
+- Mời đại diện 1 cặp đôi giải thích cách phân tích Link 03 (moet-gov.vn.online-portal.cc).
+### [Sản phẩm số hoặc sản phẩm AI]
+
+● Nêu rõ sản phẩm cụ thể: Kết quả hoàn thành 8 link của các nhóm (điểm số trung bình cả lớp hiển thị trên Dashboard).
+● Sản phẩm phải gắn trực tiếp với mục tiêu bài học: Phân biệt được tên miền thật và tên miền lừa đảo giả mạo.
+### Bước 4: Kết luận, nhận định
+
+- GV nhận xét, chính xác hóa kiến thức. Bấm phím G bật khung 'Ghi nhớ Soi link' để học sinh chốt vào vở: 'Tên miền thật đứng ngay trước dấu gạch chéo / đầu tiên sau https://'.
+### [Đánh giá]
+
+● Nêu tiêu chí đánh giá ngắn gọn: Nhận diện đúng ít nhất 7/8 link; giải thích được cơ chế lừa thị giác của tên miền con.
+● Chỉ rõ học sinh đạt năng lực số nào: Đạt NLS 1.2, NLS 4.1.
+● Chỉ rõ học sinh đạt năng lực AI nào nếu có: Đạt NLb, Khung AI 11.B2.1.
+● Đánh giá bằng hành vi cụ thể: HS luôn kiểm tra thanh địa chỉ trình duyệt (Address bar) trước khi tương tác.
+### Sản phẩm dự kiến:
+
+Cấu trúc URL chuẩn: [Giao thức https://] + [Tên miền con] + [TÊN MIỀN THẬT] + [/Đường dẫn chi tiết]
+
+Quy tắc nhận diện tên miền chính thống: Đuôi .gov.vn (cơ quan nhà nước), đuôi .edu.vn (giáo dục).
+
+Hoạt động 2.2: Phòng điều tra sự cố & Nhận biết các dạng lừa đảo trên không gian số (Khoảng 14 – 15 phút)
+
+a) Mục tiêu: a) Mục tiêu: Phân loại và nhận biết 4 dạng lừa đảo trực tuyến phổ biến (mạo danh cơ quan nhà nước, tuyển CTV việc làm online, chiếm đoạt tài khoản bằng OTP, mạo danh người thân bằng AI Deepfake); thuần thục quy trình điều tra số và ứng xử chuẩn mực.
+
+b) Nội dung: b) Nội dung: 4 nhóm HS mở phân hệ '03 Điều tra', xử lý 4 hồ sơ sự cố (Hồ sơ 01-04); GV thị phạm phân tích Hồ sơ 05 (Deepfake video call mạo danh người thân); các nhóm nộp Báo cáo sự cố số và báo cáo kết quả.
+
+c) Sản phẩm: c) Sản phẩm: Báo cáo điều tra sự cố số của 4 nhóm (Phiếu học tập số 1 và báo cáo trực tuyến /100 điểm trên web app).
+
+### d) Tổ chức thực hiện: d) Tổ chức thực hiện: 
+
+### Bước 1: Chuyển giao nhiệm vụ
+
+- GV chuyển sang phân hệ '03 Điều tra'. Phân công 4 nhóm:
+  + Nhóm 1: Hồ sơ 01 - 'Công an gọi video thông báo dính líu đường dây rửa tiền, yêu cầu chuyển tiền vào tài khoản an toàn'.
+
+  + Nhóm 2: Hồ sơ 02 - 'Ngân hàng gửi SMS cảnh báo khóa thẻ, yêu cầu đăng nhập nhập mã OTP'.
+
+  + Nhóm 3: Hồ sơ 03 - 'Tuyển cộng tác viên chốt đơn online trên sàn TMĐT nhận hoa hồng 20%'.
+
+  + Nhóm 4: Hồ sơ 04 - 'Mượn tiền khẩn cấp qua Messenger của bạn thân bị hack'.
+
+- GV làm mẫu Hồ sơ 05 (Hồ sơ đặc biệt Deepfake AI):
+  + Chiếu clip cuộc gọi video 10 giây: Khuôn mặt người thân nhưng ánh mắt đờ đẫn, chuyển động miệng giật lag không khớp lời, hình ảnh chập chờn rồi ngắt máy với lý do mạng yếu, sau đó nhắn tin hối chuyển tiền vào tài khoản ngân hàng tên lạ.
+
+  + GV thị phạm bấm các công cụ kiểm chứng số: Tra cứu đầu số tổng đài, kiểm tra số tài khoản trên Cổng Cục An toàn thông tin, hướng dẫn phương pháp 'Xác minh ngoại tuyến' (Offline Verification).
+
+### [Tích hợp NLS & AI]
+
+● NLS: (NLS 1.2 – Đánh giá dữ liệu; NLS 2.2 – Chia sẻ an toàn; NLS 4.2 – Bảo vệ dữ liệu cá nhân)
+● AI: (NLb – Đạo đức AI & Nhận thức rủi ro công nghệ cao) → YCCĐ Khung AI: 11.B2.1, 11.A2.1
+● Biểu hiện: Nhận thức nguy cơ mạo danh bằng công nghệ Deepfake Video / Voice Cloning; thành thạo quy trình dùng công cụ số để kiểm tra chứng cứ và chọn phương án xử lý theo pháp luật.
+### [Giáo viên hướng dẫn]
+
+● Giáo viên giao nhiệm vụ cụ thể: 'Mỗi nhóm đọc kỹ hồ sơ vụ việc, sử dụng các công cụ kiểm chứng có sẵn trong phòng điều tra để tìm đủ 3 chứng cứ đáng ngờ, lựa chọn phương án xử lý an toàn và nộp Báo cáo điều tra sự cố.'
+● Giáo viên hướng dẫn dùng công cụ số hoặc AI: Hướng dẫn bấm các nút kiểm chứng: 'Tra cứu số điện thoại', 'Kiểm tra số tài khoản ngân hàng', 'Tra cứu cổng canhbao.ncsc.gov.vn'.
+● Giáo viên nhắc học sinh không nhập thông tin cá nhân vào AI / mạng: Nhấn mạnh cơ quan công an, viện kiểm sát không bao giờ làm việc qua điện thoại/Zalo hoặc yêu cầu công dân chuyển tiền.
+● Giáo viên yêu cầu học sinh kiểm chứng kết quả AI: Khi gặp cuộc gọi video mạo danh AI Deepfake, nguyên tắc tối thượng là: Dừng lại -> Tắt máy -> Gọi điện thoại viễn thông trực tiếp hoặc hỏi câu hỏi bí mật.
+● Giáo viên nhận xét sản phẩm và điều chỉnh sai lệch: Chỉnh sửa các sai sót khi xử lý sự cố (ví dụ: một số HS định chuyển thử một số tiền nhỏ để thử lòng, hoặc chia sẻ công khai số điện thoại nạn nhân lên mạng).
+### Bước 2: Thực hiện nhiệm vụ
+
+- 4 nhóm HS tích cực thảo luận, kiểm tra chứng cứ, điền Báo cáo sự cố và bấm nút 'Nộp báo cáo'.
+### [Học sinh thực hiện]
+
+● Học sinh thực hiện từng bước: Nghiên cứu hồ sơ sự cố -> Bấm công cụ kiểm chứng số -> Thu thập 3 bằng chứng -> Chọn phương án ứng phó chuẩn -> Bấm gửi báo cáo.
+● Học sinh dùng thiết bị, học liệu số hoặc AI: Phòng máy tính/điện thoại thông minh kết nối phân hệ 03 Điều tra.
+● Học sinh ghi lại kết quả: Ghi nhận vào Phiếu học tập số 1: Tên dạng lừa đảo, Các bằng chứng lừa đảo, Hậu quả nếu làm theo, Cách phòng tránh triệt để.
+● Học sinh so sánh, kiểm tra, chỉnh sửa kết quả: Đối chiếu điểm số tự động chấm trên web app (thang 100 điểm) để hoàn thiện báo cáo.
+● Học sinh trình bày rõ phần tự làm và phần có công cụ hỗ trợ: Báo cáo: 'Nhờ các công cụ tra cứu số tài khoản và cổng cảnh báo lừa đảo quốc gia, nhóm em phát hiện ngay tài khoản này đã từng bị nhiều nạn nhân tố giác.'
+### Bước 3: Báo cáo, thảo luận
+
+- GV mở Bảng theo dõi kết quả, chiếu điểm số nộp bài của 4 nhóm (đều đạt 90 - 100 điểm).
+- Đại diện từng nhóm đứng tại chỗ báo cáo trong 1 phút về dạng lừa đảo của nhóm mình.
+### [Sản phẩm số hoặc sản phẩm AI]
+
+● Nêu rõ sản phẩm cụ thể: 4 Báo cáo điều tra sự cố số hoàn chỉnh của 4 nhóm nộp trên hệ thống và Phiếu học tập số 1.
+● Sản phẩm phải gắn trực tiếp với mục tiêu bài học: Nêu được 4 dạng lừa đảo phổ biến và biện pháp phòng tránh.
+### Bước 4: Kết luận, nhận định
+
+- GV nhận xét, chính xác hóa kiến thức, chiếu Bảng tổng kết 4 dạng lừa đảo chuẩn SGK (kèm dạng lừa đảo Deepfake AI thời đại mới).
+### [Đánh giá]
+
+● Nêu tiêu chí đánh giá ngắn gọn: Điểm số Báo cáo sự cố trên app; độ chính xác của chứng cứ; khả năng thuyết trình mạch lạc.
+● Chỉ rõ học sinh đạt năng lực số nào: Đạt NLS 1.2, NLS 2.2, NLS 4.2.
+● Chỉ rõ học sinh đạt năng lực AI nào nếu có: Đạt NLb (Mã 11.B2.1, Mã 11.A2.1).
+● Đánh giá bằng hành vi cụ thể: HS biết bình tĩnh bảo vệ mình và người thân trước các chiêu trò hăm dọa và mạo danh công nghệ cao.
+### Sản phẩm dự kiến:
+
+Bảng tổng hợp 4 dạng lừa đảo phổ biến và biện pháp phòng ngừa:
+
+1. Mạo danh cơ quan công quyền / ngân hàng (Dọa dẫm, yêu cầu chuyển tiền). Biện pháp: Không làm việc qua điện thoại, liên hệ trực tiếp trụ sở.
+
+2. Lừa đảo tuyển dụng / làm nhiệm vụ online (Mồi nhử hoa hồng cao). Biện pháp: Tuyệt đối không nạp tiền đặt cọc làm nhiệm vụ.
+
+3. Chiếm đoạt tài khoản mạng xã hội / lấy mã OTP. Biện pháp: Không nhập OTP vào link lạ, cài đặt bảo mật 2 lớp.
+
+4. Mạo danh người thân bằng AI Deepfake (Giả video, giả giọng nói mượn tiền). Biện pháp: Xác minh ngoại tuyến bằng cuộc gọi viễn thông thông thường.
+
+### 3. Hoạt động 3: Luyện tập (Khoảng 7 – 8 phút)
+
+(Máy lọc lừa đảo - Huấn luyện mô hình AI, lọt lưới vs chặn nhầm)
+
+a) Mục tiêu: a) Mục tiêu: Hiểu cơ chế phân loại dữ liệu tự động của các thuật toán AI / Machine Learning; phân tích hiện tượng Lọt lưới (False Negative) và Chặn nhầm (False Positive); giải thích lý do vì sao không có bộ lọc công nghệ nào đạt 100% hoàn hảo.
+
+b) Nội dung: b) Nội dung: HS mở phân hệ '04 Máy lọc' trên web app, tích chọn các bộ trọng số dấu hiệu nhận diện để huấn luyện bộ lọc; quan sát số ca lọt lưới và chặn nhầm; thảo luận câu hỏi giới hạn công nghệ của GV.
+
+c) Sản phẩm: c) Sản phẩm: Điểm số huấn luyện bộ lọc của học sinh đạt trên 80% (tối ưu độ chính xác cân bằng); câu trả lời giải thích giới hạn công nghệ.
+
+### d) Tổ chức thực hiện: d) Tổ chức thực hiện: 
+
+### Bước 1: Chuyển giao nhiệm vụ
+
+- GV mở phân hệ '04 Máy lọc' trên web app. Đặt vấn đề: 'Tại sao Gmail, tin nhắn điện thoại hay Facebook có thể tự động chuyển tin nhắn xấu vào hòm thư rác? Đó là nhờ các mô hình phân loại AI. Nhưng làm sao để huấn luyện cỗ máy này hoạt động tối ưu?'
+- GV giao nhiệm vụ cặp đôi: Bật/tắt các đặc trưng nhận diện (Từ khóa giật gân, Đòi OTP, Link lạ, Dọa khóa tài khoản...) để tối ưu hóa bộ lọc đạt điểm cao nhất mà không chặn nhầm tin nhắn quan trọng.
+### [Tích hợp NLS & AI]
+
+● NLS: (NLS 1.2 – Đánh giá dữ liệu; NLS 5.1 – Giải quyết vấn đề kỹ thuật)
+● AI: (NLd – Hiểu biết cơ chế thuật toán và dữ liệu AI; NLa – Tư duy lấy con người làm trung tâm) → YCCĐ Khung AI: 11.C4.1
+● Biểu hiện: Học sinh hiểu nguyên lý thuật toán học từ dữ liệu đặc trưng (Features) để phân loại; nhận thức được sự đánh đổi (Trade-off) giữa việc siết chặt bộ lọc (dẫn đến chặn nhầm) và nới lỏng bộ lọc (dẫn đến lọt lưới).
+### [Giáo viên hướng dẫn]
+
+● Giáo viên giao nhiệm vụ cụ thể: 'Thao tác trên phân hệ Máy lọc, tìm bộ dấu hiệu tối ưu nhất để bộ lọc đạt điểm trên 80%. Quan sát kỹ điều gì xảy ra nếu em chọn quá nhiều hoặc quá ít tiêu chí.'
+● Giáo viên hướng dẫn dùng công cụ số hoặc AI: Giải thích hai chỉ số trên giao diện: 1) Lọt lưới (Tin lừa đảo đi qua được); 2) Chặn nhầm (Tin nhắn của trường học, bạn bè, OTP bị chặn).
+● Giáo viên nhắc học sinh không nhập thông tin cá nhân vào AI / mạng.
+● Giáo viên yêu cầu học sinh kiểm chứng kết quả AI: Đặt câu hỏi: 'Nếu bộ lọc chặn nhầm tin nhắn OTP chuyển viện cấp cứu của người thân thì hậu quả nghiêm trọng thế nào?'
+● Giáo viên nhận xét sản phẩm và điều chỉnh sai lệch: Đúc kết: Thuật toán AI cần dữ liệu lớn và liên tục cập nhật, nhưng kẻ xấu cũng liên tục biến tướng ngôn từ để vượt tường lửa.
+### Bước 2: Thực hiện nhiệm vụ
+
+- HS thao tác thử nghiệm trên máy, quan sát số ca 'Lọt lưới' và 'Chặn nhầm' biến thiên theo thời gian thực.
+### [Học sinh thực hiện]
+
+● Học sinh thực hiện từng bước: Tích chọn các đặc trưng -> Bấm 'Chạy thử nghiệm bộ lọc' -> Xem điểm số -> Tinh chỉnh lại bộ trọng số để đạt điểm cao nhất.
+● Học sinh dùng thiết bị, học liệu số hoặc AI: Giao diện mô phỏng Machine Learning Classifier tại phân hệ 04.
+● Học sinh ghi lại kết quả: Ghi nhận mức điểm tối ưu (khoảng 80 - 85%) và kết luận không thể đạt điểm 100% tuyệt đối.
+● Học sinh so sánh, kiểm tra, chỉnh sửa kết quả: So sánh rủi ro giữa việc lọt lưới tin lừa đảo với việc chặn nhầm tin nhắn công việc quan trọng.
+● Học sinh trình bày rõ phần tự làm và phần có công cụ hỗ trợ: Trình bày: 'Nếu siết quá chặt, bộ lọc chặn nhầm cả tin nhắn của cô giáo chủ nhiệm. Nếu thả lỏng thì tin lừa đảo lọt vào. Do đó AI không thể đạt 100% và con người phải luôn tự bảo vệ mình.'
+### Bước 3: Báo cáo, thảo luận
+
+- GV hỏi nhóm có điểm số cao nhất (85%): 'Nhóm em chọn những tiêu chí nào? Tại sao không có nhóm nào đạt 100%?'
+- Đại diện 1 HS phát biểu trả lời xuất sắc câu hỏi bản chất thuật toán.
+### [Sản phẩm số hoặc sản phẩm AI]
+
+● Nêu rõ sản phẩm cụ thể: Điểm số huấn luyện bộ lọc AI của các nhóm gửi về hệ thống; câu phát biểu phân tích giới hạn của máy học.
+● Sản phẩm phải gắn trực tiếp với mục tiêu bài học: Nắm vững cơ chế thuật toán và không phó thác an toàn mạng hoàn toàn cho công nghệ.
+### Bước 4: Kết luận, nhận định
+
+- GV nhận xét, chính xác hóa kiến thức: 'Bộ lọc công nghệ chỉ là tấm khiên hỗ trợ. Kẻ xấu liên tục cập nhật chiêu trò mới. Do đó, tư duy phản biện và sự tỉnh táo của chính các em mới là bức tường lửa an toàn nhất!'
+### [Đánh giá]
+
+● Nêu tiêu chí đánh giá ngắn gọn: Đạt điểm tối ưu trên app; giải thích đúng bản chất hiện tượng chặn nhầm và lọt lưới.
+● Chỉ rõ học sinh đạt năng lực số nào: Đạt NLS 5.1.
+● Chỉ rõ học sinh đạt năng lực AI nào nếu có: Đạt NLd (Khung AI: Mã 11.C4.1).
+● Đánh giá bằng hành vi cụ thể: HS biết chủ động kiểm tra mục Thư rác (Spam/Junk) khi bị thất lạc thông báo quan trọng.
+### Sản phẩm dự kiến:
+
+Cơ chế phân loại của máy lọc AI: Hoạt động dựa trên tập dữ liệu đặc trưng; luôn có sự đánh đổi giữa Lọt lưới (False Negative) và Chặn nhầm (False Positive).
+
+### 4. Hoạt động 4: Vận dụng (Khoảng 4 – 5 phút)
+
+(Bộ giáp số & Lời hứa an toàn số - Dashboard thống kê cam kết trực tuyến)
+
+a) Mục tiêu: a) Mục tiêu: Chuyển hóa kiến thức nhận thức thành hành vi cam kết cụ thể của công dân số gương mẫu; lan tỏa kiến thức phòng chống lừa đảo số tới gia đình và cộng đồng.
+
+b) Nội dung: b) Nội dung: HS mở phân hệ '05 Tổng kết', hoàn thành 'Lời hứa an toàn số' mang tên mình; quan sát biểu đồ cam kết của toàn trường/lớp nhảy số trực tiếp trên máy chiếu; tiếp nhận nhiệm vụ về nhà.
+
+c) Sản phẩm: c) Sản phẩm: Cam kết an toàn số của học sinh gửi về cơ sở dữ liệu Dashboard; bài viết/infographic tuyên truyền nhỏ cho người thân ở nhà.
+
+### d) Tổ chức thực hiện: d) Tổ chức thực hiện: 
+
+### Bước 1: Chuyển giao nhiệm vụ
+
+- GV hướng dẫn HS mở phân hệ '05 Tổng kết', nhập Họ tên và chọn cam kết an toàn số:
+  1. Luôn chậm lại 5 giây trước mọi thông điệp dồn dập, giật gân.
+
+  2. Kiểm tra tên miền thật trước khi đăng nhập bất kỳ tài khoản nào.
+
+  3. Tuyệt đối không cung cấp mã OTP và mật khẩu cho người khác.
+
+  4. Xác minh ngoại tuyến ngay khi nhận cuộc gọi video hỏi mượn tiền.
+
+  5. Chủ động báo cáo và chia sẻ kiến thức an toàn mạng cho bố mẹ, người thân.
+
+- GV giao nhiệm vụ về nhà: Hướng dẫn người thân trong gia đình cách kiểm tra tên miền và nhận biết Deepfake.
+### [Tích hợp NLS & AI]
+
+● NLS: (NLS 2.5 – Ứng xử trong môi trường số; NLS 4.1 – Bảo vệ dữ liệu cá nhân)
+● AI: (NLa – Tư duy lấy con người làm trung tâm; NLb – Đạo đức AI) → YCCĐ Khung AI: 11.A1.1
+● Biểu hiện: Học sinh tự giác cam kết thực hiện trách nhiệm công dân số, có ý thức phòng vệ chủ động và lan tỏa giá trị an toàn trong cộng đồng.
+### [Giáo viên hướng dẫn]
+
+● Giáo viên giao nhiệm vụ cụ thể: 'Mỗi em hãy chọn những lời hứa an toàn số mà bản thân quyết tâm thực hiện từ ngày hôm nay và bấm Gửi cam kết.'
+● Giáo viên hướng dẫn dùng công cụ số hoặc AI: Hướng dẫn quan sát Dashboard hiển thị trực tiếp số lượng cam kết của từng nội dung.
+● Giáo viên nhắc học sinh không nhập thông tin cá nhân vào AI / mạng.
+● Giáo viên yêu cầu học sinh kiểm chứng kết quả: Đọc số liệu thống kê của cả lớp, tự hào vì đã trang bị cho mình 'Bộ giáp an toàn số'.
+● Giáo viên nhận xét và dặn dò: Nhắc nhở lưu lại các đường dây nóng: 156 (Tổng đài tiếp nhận phản ánh cuộc gọi rác, lừa đảo), website canhbao.ncsc.gov.vn.
+### Bước 2: Thực hiện nhiệm vụ
+
+- HS nghiêm túc đọc lời hứa, tích chọn các cam kết và bấm gửi.
+### [Học sinh thực hiện]
+
+● Học sinh thực hiện từng bước: Nhập họ tên -> Chọn các lời hứa -> Bấm Gửi -> Quan sát kết quả của lớp trên máy chiếu.
+● Học sinh dùng thiết bị, học liệu số hoặc AI: Phân hệ 05 Tổng kết trên điện thoại/máy tính.
+● Học sinh ghi lại kết quả: Ghi nhớ 3 số điện thoại và địa chỉ website hỗ trợ khẩn cấp của Cục An toàn thông tin.
+● Học sinh so sánh, kiểm tra, chỉnh sửa kết quả: Tự đánh giá mức độ an toàn của bản thân trước và sau tiết học.
+● Học sinh trình bày rõ phần tự làm và phần có công cụ hỗ trợ: Phát biểu: 'Sau tiết học, em tự tin có thể hướng dẫn bố mẹ không bị kẻ xấu lừa qua các cuộc gọi mạo danh.'
+### Bước 3: Báo cáo, thảo luận
+
+- GV chiếu biểu đồ Dashboard thời gian thực: Cả lớp 100% đã hoàn thành cam kết an toàn số.
+### [Sản phẩm số hoặc sản phẩm AI]
+
+● Nêu rõ sản phẩm cụ thể: Biểu đồ cột tổng hợp cam kết số của cả lớp trên Dashboard; Phiếu cam kết cá nhân.
+● Sản phẩm phải gắn trực tiếp với mục tiêu bài học: Nâng cao năng lực tự bảo vệ và trách nhiệm văn hóa số.
+### Bước 4: Kết luận, nhận định & Dặn dò
+
+- GV đúc kết tiết học: 'Hôm nay các em đã vượt qua cả 5 thử thách, giải phẫu đường link, bóc trần mưu mô Deepfake và làm chủ công nghệ máy lọc. Hãy luôn khoác lên mình Bộ giáp 3 lớp để trở thành những công dân số thông thái, an toàn và có trách nhiệm!'
+### [Đánh giá]
+
+● Nêu tiêu chí đánh giá ngắn gọn: Mức độ nghiêm túc trong cam kết; kế hoạch cụ thể về việc tuyên truyền cho gia đình.
+● Chỉ rõ học sinh đạt năng lực số nào: Đạt NLS 2.5, NLS 4.1.
+● Chỉ rõ học sinh đạt năng lực AI nào nếu có: Đạt NLb, 11.A1.1.
+● Đánh giá bằng hành vi cụ thể: HS thể hiện hành vi có trách nhiệm, chủ động chia sẻ cảnh báo an toàn số.
+### Sản phẩm dự kiến:
+
+Bảng ghi nhớ bài học: Bộ giáp 3 lớp (Chậm lại - Kiểm tra ngay - Dừng lại không gửi) + Quy tắc tên miền thật + 4 dạng lừa đảo phổ biến.
+
+### TIẾT 2: GIAO TIẾP VÀ ỨNG XỬ TRONG MÔI TRƯỜNG SỐ
+
+### Hoạt động 2.3: Giao tiếp và ứng xử văn minh trong môi trường số
+
+a) Mục tiêu: a) Mục tiêu: Biết được các quy tắc và chuẩn mực văn hóa ứng xử trên mạng xã hội; biết sử dụng ngôn từ văn minh, lịch sự; biết khai thác công cụ AI hỗ trợ gọt giũa ngôn từ giao tiếp tích cực.
+
+b) Nội dung: b) Nội dung: Giáo viên hướng dẫn, học sinh lắng nghe, thảo luận các tình huống giao tiếp trên mạng xã hội; thực hành dùng AI chuyển đổi câu bình luận tiêu cực thành lời góp ý văn minh.
+
+c) Sản phẩm: c) Sản phẩm: Câu trả lời của học sinh; phiếu ghi câu bình luận đã được AI hỗ trợ tinh chỉnh ngôn từ văn minh.
+
+### d) Tổ chức thực hiện: d) Tổ chức thực hiện: 
+
+### Bước 1: Chuyển giao nhiệm vụ
+
+- GV dẫn dắt: Môi trường văn hóa mạng xã hội phụ thuộc vào hành vi ứng xử của mỗi cá nhân.
+- GV yêu cầu HS thảo luận: 1) Trình bày nội hàm các quy tắc ứng xử trên mạng xã hội; 2) Những điều nên và không nên làm khi tham gia mạng xã hội.
+### [Tích hợp NLS & AI]
+
+● NLS: (NLS 2.5 – Ứng xử trong môi trường số – Bậc 3)
+● AI: (NLa – Tư duy lấy con người làm trung tâm: Điều khiển AI hỗ trợ giao tiếp tích cực) → YCCĐ Khung AI: 11.A1.1
+● Biểu hiện: Học sinh sử dụng AI để 'làm mềm' một câu bình luận tiêu cực, từ đó nhận thức việc sử dụng từ ngữ chuẩn mực, tôn trọng người khác trên không gian mạng.
+### [Giáo viên hướng dẫn]
+
+● Giáo viên giao nhiệm vụ cụ thể: 'Đôi khi chúng ta nóng giận và định đăng một bình luận tiêu cực. Các em hãy thử dùng AI biên tập lại một lời chê bai gay gắt thành một câu góp ý mang tính xây dựng, lịch sự.'
+● Giáo viên hướng dẫn dùng công cụ số hoặc AI: Cung cấp câu lệnh ví dụ: 'Hãy viết lại câu: Bài viết này quá tệ, chả có ý nghĩa gì, rác rưởi thành một lời nhận xét lịch sự, văn minh nhưng vẫn thể hiện ý không đồng tình.'
+● Giáo viên nhắc học sinh không nhập thông tin cá nhân vào AI.
+● Giáo viên yêu cầu học sinh kiểm chứng kết quả AI: Đọc kết quả AI trả về và đối chiếu xem nó đã đáp ứng quy tắc 'Lành mạnh, Tôn trọng' trong SGK chưa.
+● Giáo viên nhận xét sản phẩm và điều chỉnh sai lệch: Nhấn mạnh AI chỉ giúp gọt giũa từ ngữ, nhưng thái độ và quyết định gửi đi vẫn thuộc về đạo đức của chính con người.
+### Bước 2: Thực hiện nhiệm vụ
+
+- HS trả lời câu hỏi, lắng nghe, tiếp thu kiến thức.
+### [Học sinh thực hiện]
+
+● Học sinh thực hiện từng bước: Nhập câu bình luận gay gắt vào AI, yêu cầu viết lại.
+● Học sinh dùng thiết bị, học liệu số hoặc AI: Máy tính/Điện thoại có kết nối chatbot AI.
+● Học sinh ghi lại kết quả: Ghi nhận câu góp ý văn minh do AI đề xuất.
+● Học sinh so sánh, kiểm tra, chỉnh sửa kết quả: So sánh hai sắc thái cảm xúc trước và sau khi chỉnh sửa, đánh giá mức độ phù hợp với tiêu chuẩn văn hóa mạng.
+● Học sinh trình bày rõ phần tự làm và phần có công cụ hỗ trợ: Phát biểu: 'Nhờ AI cấu trúc lại ngôn từ, em thấy việc phản biện trên mạng vẫn có thể diễn ra rất lịch sự, không vi phạm quy tắc ứng xử.'
+### Bước 3: Báo cáo, thảo luận
+
+- HS ghi chép nội dung chính vào vở, nhắc lại các quy tắc ứng xử văn minh.
+### [Sản phẩm số hoặc sản phẩm AI]
+
+● Nêu rõ sản phẩm cụ thể: Phiếu ghi chứa 1 câu bình luận tiêu cực gốc và 1 câu góp ý văn minh đã được AI hỗ trợ chỉnh sửa.
+● Sản phẩm phải gắn trực tiếp với mục tiêu bài học: Giao tiếp một cách văn minh phù hợp với văn hóa ứng xử trong môi trường số.
+### Bước 4: Kết luận, nhận định
+
+- GV chuẩn hóa kiến thức, tổng kết nội dung Tiết 2.
+### [Đánh giá]
+
+● Nêu tiêu chí đánh giá ngắn gọn: Mức độ thay đổi từ ngữ từ công kích sang góp ý lịch sự; hiểu ý nghĩa của việc quản trị cảm xúc khi gõ phím.
+● Chỉ rõ học sinh đạt năng lực số nào: Đạt NLS 2.5.
+● Chỉ rõ học sinh đạt năng lực AI nào nếu có: Đạt NLa.
+● Đánh giá bằng hành vi cụ thể: HS biết cân nhắc, rà soát lại ngôn từ trước khi quyết định đăng tải thông tin trên mạng xã hội.
+### Sản phẩm dự kiến:
+
+Bốn quy tắc ứng xử cốt lõi trong môi trường số: 1) Tôn trọng, tuân thủ pháp luật; 2) Lành mạnh; 3) An toàn, bảo mật thông tin; 4) Trách nhiệm.
+
+### IV. PHỤ LỤC & HỒ SƠ DẠY HỌC
+
+### 1. Phiếu học tập số 1 – Báo cáo điều tra sự cố số (Hoạt động 2)
+
+### 2. Bảng tiêu chí đánh giá hoạt động nhóm (Rubric đánh giá theo thang điểm 100)
