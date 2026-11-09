@@ -52,23 +52,23 @@
   --shadow:0 1px 2px rgba(0,0,0,.45),0 10px 28px rgba(0,0,0,.4);color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{font-size:clamp(15px,.42vw + 11px,20px);-webkit-text-size-adjust:100%}
+html{font-size:clamp(18px,.58vw + 13px,24px);-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);line-height:1.5;-webkit-font-smoothing:antialiased}
 button,input{font:inherit;color:inherit}
 button{-webkit-tap-highlight-color:transparent}
 a{color:var(--info)}
 :focus-visible{outline:3px solid var(--info);outline-offset:2px}
 .ic{width:1.2em;height:1.2em;flex:none}
-.wrap{max-width:1380px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1480px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .muted{color:var(--muted)}
-.small{font-size:.86rem}
+.small{font-size:.94rem}
 .mono{font-family:var(--f-mono)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.eyebrow{font-family:var(--f-display);font-weight:700;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.eyebrow{font-family:var(--f-display);font-weight:800;font-size:1.05rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
 h1,h2,h3{font-family:var(--f-display);font-weight:800;line-height:1.04;margin:0;text-wrap:balance}
-h1{font-size:clamp(2.6rem,5.6vw,5rem);text-transform:uppercase;letter-spacing:.01em}
-h2{font-size:clamp(1.9rem,3.3vw,2.9rem)}
-h3{font-size:clamp(1.3rem,1.7vw,1.6rem)}
+h1{font-size:clamp(2.4rem,4.8vw,4.3rem);text-transform:uppercase;letter-spacing:.01em}
+h2{font-size:clamp(1.85rem,3vw,2.75rem)}
+h3{font-size:clamp(1.38rem,1.85vw,1.72rem)}
 p{margin:0}
 ul,ol{margin:0}
 .stack{display:flex;flex-direction:column;gap:12px;min-width:0}
@@ -86,11 +86,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .brand-s{font-size:.72rem;color:var(--muted);line-height:1.25}
 .nav{display:flex;gap:4px;overflow-x:auto;min-width:0;flex:1 1 380px;scrollbar-width:none;padding-block:2px}
 .nav::-webkit-scrollbar{display:none}
-.nav button{all:unset;cursor:pointer;white-space:nowrap;display:inline-flex;align-items:center;gap:7px;padding:.42em .8em;border-radius:999px;font-weight:600;font-size:.9rem;color:var(--muted)}
+.nav button{all:unset;cursor:pointer;white-space:nowrap;display:inline-flex;align-items:center;gap:7px;padding:.45em .88em;border-radius:999px;font-weight:700;font-size:.98rem;color:var(--muted)}
 .nav button:hover{color:var(--ink);background:var(--panel-2)}
 .nav button[aria-current="page"]{background:var(--ink);color:var(--panel)}
 .nav button:focus-visible{outline:3px solid var(--info)}
-.nav .num{font-family:var(--f-mono);font-size:.76rem;opacity:.75}
+.nav .num{font-family:var(--f-mono);font-size:.86rem;opacity:.85}
 .tools{display:flex;gap:6px;align-items:center;margin-left:auto}
 .seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .seg button{all:unset;cursor:pointer;padding:.42em .75em;font-weight:800;font-size:.82rem;color:var(--muted);letter-spacing:.03em}
@@ -107,17 +107,17 @@ main{padding-block:clamp(18px,2.6vw,34px) 56px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:clamp(14px,1.8vw,22px);min-width:0}
 .grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(14px,2vw,24px);align-items:start}
 @media (max-width:900px){.grid2{grid-template-columns:minmax(0,1fr)}}
-.brief{font-size:1.04rem;max-width:72ch}
-details.gv{border:1px dashed var(--line);border-radius:12px;background:var(--panel-2);padding:.55rem .9rem;font-size:.92rem}
+.brief{font-size:1.15rem;font-weight:500;max-width:76ch}
+details.gv{border:1px dashed var(--line);border-radius:12px;background:var(--panel-2);padding:.6rem 1rem;font-size:.98rem}
 details.gv summary{cursor:pointer;font-weight:700}
 details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 .mode-hs .gv-only{display:none!important}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:.62em 1.05em;border-radius:12px;border:1px solid var(--line);background:var(--panel);font-weight:700;cursor:pointer;line-height:1.2;text-align:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:.62em 1.08em;border-radius:12px;border:1px solid var(--line);background:var(--panel);font-weight:700;font-size:1.02rem;cursor:pointer;line-height:1.2;text-align:center}
 .btn:hover{border-color:var(--muted)}
 .btn.primary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
 .btn.tapebtn{background:var(--tape);border-color:var(--tape);color:var(--tape-ink)}
-.btn.big{font-size:1.12rem;padding:.75em 1.35em;border-radius:14px}
+.btn.big{font-size:1.18rem;padding:.75em 1.35em;border-radius:14px}
 .btn:disabled{opacity:.45;cursor:not-allowed}
 .inp{width:100%;min-width:0;padding:.65em .85em;border-radius:12px;border:1px solid var(--line);background:var(--panel-2)}
 
@@ -130,10 +130,10 @@ details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 .modcard{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px;min-height:150px;transition:transform .15s,border-color .15s}
 .modcard:hover{transform:translateY(-2px);border-color:var(--ink)}
 .modcard:focus-visible{outline:3px solid var(--info);outline-offset:2px}
-.modcard .n{font-family:var(--f-mono);font-weight:700;font-size:.86rem;color:var(--muted)}
-.modcard .t{font-family:var(--f-display);font-weight:800;font-size:1.6rem;line-height:1.02}
-.modcard .s{font-size:.8rem;font-weight:700;color:var(--warn)}
-.modcard .d{font-size:.9rem;color:var(--muted)}
+.modcard .n{font-family:var(--f-mono);font-weight:700;font-size:.94rem;color:var(--muted)}
+.modcard .t{font-family:var(--f-display);font-weight:800;font-size:1.72rem;line-height:1.04}
+.modcard .s{font-size:.92rem;font-weight:700;color:var(--warn)}
+.modcard .d{font-size:1rem;color:var(--muted)}
 .qrover{position:fixed;inset:0;z-index:80;background:#fff;color:#0f172a;display:grid;place-items:center;padding:3vmin;cursor:zoom-out}
 .qo-wrap{display:flex;flex-direction:column;align-items:center;gap:2.4vmin;text-align:center}
 .qrover.wide .qo-wrap{flex-direction:row;gap:5vw;text-align:left}
@@ -154,53 +154,53 @@ details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 .qrempty{width:168px;height:168px;border-radius:12px;border:2px dashed var(--line);display:grid;place-items:center;text-align:center;font-size:.78rem;color:var(--muted);padding:10px;flex:none}
 
 /* device mockups */
-.phone{width:min(100%,360px);margin-inline:auto;background:var(--screen);border-radius:40px;padding:10px;box-shadow:var(--shadow)}
-.phone.big{width:min(100%,410px)}
+.phone{width:min(100%,415px);margin-inline:auto;background:var(--screen);border-radius:40px;padding:10px;box-shadow:var(--shadow)}
+.phone.big{width:min(100%,450px)}
 .phone .scr{background:var(--screen-bg);border-radius:31px;overflow:hidden;display:flex;flex-direction:column;min-height:min(540px,68vh)}
 .phone.big .bub,.phone.big .mail-body{font-size:clamp(1.05rem,1.45vw,1.3rem)}
-.status{display:flex;justify-content:space-between;align-items:center;padding:12px 22px 6px;font-size:.76rem;font-weight:700;color:var(--muted)}
+.status{display:flex;justify-content:space-between;align-items:center;padding:12px 22px 6px;font-size:.88rem;font-weight:700;color:var(--muted)}
 .sig{display:inline-flex;align-items:flex-end;gap:2px;height:10px}
 .sig i{display:block;width:3px;background:currentColor;border-radius:1px}
 .sig i:nth-child(1){height:3px}.sig i:nth-child(2){height:5px}.sig i:nth-child(3){height:7px}.sig i:nth-child(4){height:10px}
 .ahead{display:flex;align-items:center;gap:10px;padding:8px 14px 12px;border-bottom:1px solid var(--line)}
 .who{min-width:0}
-.nm{font-weight:700;line-height:1.25}
-.sub{font-size:.76rem;color:var(--muted);line-height:1.3}
+.nm{font-weight:800;font-size:1.08rem;line-height:1.25}
+.sub{font-size:.88rem;color:var(--muted);line-height:1.3}
 .avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:.85rem;background:var(--info);color:var(--panel);flex:none}
 .avatar.big{width:68px;height:68px;font-size:1.5rem}
 .av-warn{background:var(--warn)}.av-danger{background:var(--danger)}.av-muted{background:var(--muted)}.av-safe{background:var(--safe)}
 .abody{padding:14px;display:flex;flex-direction:column;gap:10px;flex:1}
-.daytag{align-self:center;font-size:.72rem;color:var(--muted);font-weight:600}
-.bub{background:var(--bubble);color:var(--bubble-ink);border-radius:18px 18px 18px 6px;padding:10px 13px;max-width:94%;line-height:1.45;overflow-wrap:anywhere}
+.daytag{align-self:center;font-size:.86rem;color:var(--muted);font-weight:700}
+.bub{background:var(--bubble);color:var(--bubble-ink);border-radius:18px 18px 18px 6px;padding:11px 14px;max-width:96%;font-size:1.08rem;font-weight:500;line-height:1.45;overflow-wrap:anywhere}
 .lnk{color:var(--info);text-decoration:underline;text-underline-offset:2px}
 .mail{display:flex;flex-direction:column;gap:10px}
 .mail-from{display:flex;gap:10px;align-items:center}
-.mail-sub{font-weight:800;font-size:1.05rem;line-height:1.3}
-.mail-body{line-height:1.5}
+.mail-sub{font-weight:800;font-size:1.15rem;line-height:1.3}
+.mail-body{font-size:1.08rem;line-height:1.48}
 .callhead{display:flex;flex-direction:column;align-items:center;gap:6px;padding:16px 14px;border-bottom:1px solid var(--line);text-align:center}
-.callnum{font-family:var(--f-mono);font-weight:700;font-size:1.05rem}
+.callnum{font-family:var(--f-mono);font-weight:800;font-size:1.18rem}
 .video{position:relative;margin:10px 14px 0;border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:linear-gradient(160deg,var(--muted),var(--screen));display:grid;place-items:center}
 .vid-face{display:grid;place-items:center;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle at 50% 38%,var(--panel-2),var(--muted));filter:blur(5px);font-weight:800;font-size:1.6rem;color:var(--ink)}
-.vid-cap{position:absolute;left:10px;right:10px;bottom:10px;font-size:.78rem;font-weight:600;color:var(--alarm-ink);text-align:center}
+.vid-cap{position:absolute;left:10px;right:10px;bottom:10px;font-size:.92rem;font-weight:700;color:var(--alarm-ink);text-align:center}
 .feedhead{padding:4px 14px 10px;font-weight:800;border-bottom:1px solid var(--line)}
 .post{padding:12px 14px;display:flex;flex-direction:column;gap:9px}
 .post-h{display:flex;gap:10px;align-items:center}
 .post-img{aspect-ratio:16/9;border-radius:12px;background:repeating-linear-gradient(45deg,var(--panel-2) 0 10px,var(--bubble) 10px 20px);display:grid;place-items:center;font-family:var(--f-display);font-weight:800;color:var(--muted);letter-spacing:.06em}
-.post-link{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;background:var(--panel-2);font-family:var(--f-mono);font-size:.85rem;flex-wrap:wrap}
+.post-link{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 12px;border-radius:10px;background:var(--panel-2);font-family:var(--f-mono);font-size:.96rem;font-weight:700;flex-wrap:wrap}
 .cta{font-family:var(--f-body);font-weight:800;background:var(--info);color:var(--panel);padding:.3em .7em;border-radius:8px;white-space:nowrap}
 .cert{display:block;border:3px double var(--danger);padding:10px;border-radius:6px;text-align:center;font-family:var(--f-display);font-weight:800;letter-spacing:.04em;color:var(--danger);background:var(--panel)}
 .cert small{display:block;font-family:var(--f-body);font-weight:600;letter-spacing:0;color:var(--muted)}
-.laptop{width:min(100%,620px);margin-inline:auto}
+.laptop{width:min(100%,660px);margin-inline:auto}
 .lap-scr{background:var(--screen);border-radius:18px 18px 4px 4px;padding:12px 12px 14px;box-shadow:var(--shadow)}
 .browser{background:var(--screen-bg);border-radius:8px;overflow:hidden}
 .tabbar{display:flex;padding:6px 8px 0;background:var(--panel-2)}
-.tabx{font-size:.75rem;font-weight:600;padding:6px 12px;border-radius:8px 8px 0 0;background:var(--screen-bg)}
-.urlbar{display:flex;align-items:center;gap:8px;padding:7px 10px;border-bottom:1px solid var(--line);font-size:.82rem;flex-wrap:wrap}
-.nosec{font-size:.72rem;font-weight:700;color:var(--danger)}
+.tabx{font-size:.88rem;font-weight:700;padding:6px 12px;border-radius:8px 8px 0 0;background:var(--screen-bg)}
+.urlbar{display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid var(--line);font-size:.98rem;font-weight:700;flex-wrap:wrap}
+.nosec{font-size:.86rem;font-weight:800;color:var(--danger)}
 .alarm{background:var(--alarm);color:var(--alarm-ink);padding:18px;display:flex;flex-direction:column;gap:10px;text-align:center}
-.alarm-h{font-family:var(--f-display);font-weight:800;font-size:1.7rem;letter-spacing:.04em}
-.alarm-big{font-size:1.15rem;font-weight:800}
-.alarm-small{font-size:.86rem;font-weight:700}
+.alarm-h{font-family:var(--f-display);font-weight:800;font-size:1.85rem;letter-spacing:.04em}
+.alarm-big{font-size:1.28rem;font-weight:800}
+.alarm-small{font-size:.98rem;font-weight:700}
 .lap-base{height:14px;background:var(--muted);opacity:.55;border-radius:0 0 16px 16px}
 .followup{margin:14px auto 0;display:flex;flex-direction:column;gap:8px;max-width:620px}
 
@@ -309,22 +309,23 @@ details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 .arm.cham .arm-ic{background:var(--warn-soft);color:var(--warn)}
 .arm.kt .arm-ic{background:var(--info-soft);color:var(--info)}
 .arm.kg .arm-ic{background:var(--danger-soft);color:var(--danger)}
-.arm h3{font-size:1.75rem}
-.arm ul{padding-left:1.1rem;display:grid;gap:3px;font-size:.92rem}
-.gold{font-size:.92rem;color:var(--muted)}
+.arm h3{font-size:1.78rem}
+.arm p{font-size:1.05rem;font-weight:600}
+.arm ul{padding-left:1.1rem;display:grid;gap:4px;font-size:1rem}
+.gold{font-size:1rem;color:var(--muted)}
 .gold i{font-style:normal;font-weight:700;color:var(--ink)}
 
 /* link x-ray */
 .xform{display:flex;gap:8px;flex-wrap:wrap}
-.xform input{flex:1 1 240px;min-width:0;padding:.68em .85em;border-radius:12px;border:1px solid var(--line);background:var(--panel-2);font-family:var(--f-mono);font-size:.92rem}
-.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.84rem}
-.chip{all:unset;cursor:pointer;font-family:var(--f-mono);font-size:.78rem;padding:.3em .6em;border-radius:8px;border:1px dashed var(--line);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.xform input{flex:1 1 240px;min-width:0;padding:.68em .85em;border-radius:12px;border:1px solid var(--line);background:var(--panel-2);font-family:var(--f-mono);font-size:1rem;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.94rem}
+.chip{all:unset;cursor:pointer;font-family:var(--f-mono);font-size:.88rem;font-weight:600;padding:.35em .65em;border-radius:8px;border:1px dashed var(--line);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .chip:hover{border-color:var(--ink)}
 .chip:focus-visible{outline:3px solid var(--info)}
-.seglist{display:flex;flex-wrap:wrap;gap:8px 2px;align-items:flex-start;font-family:var(--f-mono);font-size:clamp(.92rem,1.25vw,1.12rem)}
+.seglist{display:flex;flex-wrap:wrap;gap:8px 3px;align-items:flex-start;font-family:var(--f-mono);font-size:clamp(1.02rem,1.35vw,1.22rem)}
 .sg{display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:0;max-width:100%}
 .sg code{font-family:inherit;padding:.22em .35em;border-radius:6px;overflow-wrap:anywhere;word-break:break-all}
-.sg small{font-family:var(--f-body);font-size:.66rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:800}
+.sg small{font-family:var(--f-body);font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:800}
 .sg.scheme code,.sg.path code{color:var(--muted)}
 .sg.user code{background:var(--danger-soft);color:var(--danger);text-decoration:line-through}
 .sg.sub code{background:var(--panel-2);color:var(--muted);border:1px dashed var(--line)}
@@ -342,7 +343,7 @@ details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 .flag.danger .ic{color:var(--danger)}
 .flag.warn .ic{color:var(--warn)}
 .flag.info .ic{color:var(--info)}
-.tip{font-size:.9rem;padding:.75em .95em;border-radius:12px;background:var(--info-soft)}
+.tip{font-size:1.02rem;padding:.75em .95em;border-radius:12px;background:var(--info-soft);line-height:1.45}
 .chal-note{font-size:clamp(1.15rem,1.6vw,1.55rem);line-height:1.48;font-weight:600;color:var(--ink);margin:.8em 0;padding:.65em .95em;background:var(--panel-2);border-radius:12px;border-left:5px solid var(--info)}
 .chal-h{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
 .score{font-family:var(--f-mono);font-weight:700}
@@ -365,10 +366,10 @@ details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 .file:focus-visible{outline:3px solid var(--info);outline-offset:2px}
 .file::before{content:attr(data-no);position:absolute;top:-15px;left:-1px;background:var(--tape);color:var(--tape-ink);font-family:var(--f-display);font-weight:800;font-size:.95rem;padding:.12em .7em;border-radius:6px 6px 0 0;letter-spacing:.07em}
 .file.special{border-style:dashed;border-width:2px}
-.file-n{font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-.file-t{font-family:var(--f-display);font-weight:800;font-size:1.6rem;line-height:1.02}
-.file-d{font-size:.9rem;color:var(--muted);flex:1}
-.file-st{font-size:.8rem;font-weight:700}
+.file-n{font-size:.86rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.file-t{font-family:var(--f-display);font-weight:800;font-size:1.72rem;line-height:1.04}
+.file-d{font-size:1rem;color:var(--muted);flex:1}
+.file-st{font-size:.92rem;font-weight:800}
 .case-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(14px,2.2vw,28px);align-items:start}
 @media (max-width:980px){.case-grid{grid-template-columns:minmax(0,1fr)}}
 .device-col{display:flex;flex-direction:column;gap:12px;min-width:0}
@@ -378,21 +379,21 @@ details.gv ol{padding-left:1.2rem;margin-top:.5rem;display:grid;gap:4px}
 .spent{opacity:.85}
 .chipst{display:inline-flex;gap:6px;align-items:center;padding:.35em .8em;border-radius:999px;background:var(--danger-soft);color:var(--danger);font-weight:700}
 .evlist{list-style:none;padding:0;display:grid;gap:8px}
-.ev{display:flex;gap:10px;padding:.55em .75em;border-radius:12px;border:1px dashed var(--line);font-size:.9rem;transition:background .3s}
-.ev .n{flex:none;width:1.6em;height:1.6em;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:.78rem;background:var(--panel-2);color:var(--muted)}
+.ev{display:flex;gap:10px;padding:.62em .82em;border-radius:12px;border:1px dashed var(--line);font-size:1.02rem;transition:background .3s}
+.ev .n{flex:none;width:1.65em;height:1.65em;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:.88rem;background:var(--panel-2);color:var(--muted)}
 .ev.got{border-style:solid;border-color:var(--danger);background:var(--danger-soft)}
 .ev.got .n{background:var(--danger);color:var(--panel)}
 .ev.flash{background:var(--warn-soft)}
 .toolbtns{display:grid;gap:8px}
-.tool{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;padding:.6em .75em;border-radius:12px;border:1px solid var(--line);background:var(--panel-2);font-weight:600;font-size:.92rem;width:100%;box-sizing:border-box}
+.tool{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;padding:.65em .85em;border-radius:12px;border:1px solid var(--line);background:var(--panel-2);font-weight:700;font-size:1.02rem;width:100%;box-sizing:border-box}
 .tool:hover{border-color:var(--info)}
 .tool:focus-visible{outline:3px solid var(--info)}
 .tool[aria-expanded="true"]{border-color:var(--info);background:var(--info-soft)}
 .toolres{font-size:clamp(1.05rem,1.35vw,1.25rem);line-height:1.42;padding:.7em .95em;border-radius:10px;border:1px solid var(--info);margin-top:8px}
 .toolres .sim{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--info)}
 fieldset{border:0;margin:0;padding:0;display:grid;gap:6px;min-width:0}
-legend{font-weight:700;margin-bottom:6px;padding:0}
-.choice{display:flex;gap:10px;align-items:flex-start;padding:.5em .7em;border-radius:10px;border:1px solid var(--line);cursor:pointer;font-size:.92rem}
+legend{font-weight:800;font-size:1.08rem;margin-bottom:6px;padding:0}
+.choice{display:flex;gap:10px;align-items:flex-start;padding:.58em .82em;border-radius:10px;border:1px solid var(--line);cursor:pointer;font-size:1.02rem;font-weight:500}
 .choice input{margin:.2em 0 0;accent-color:var(--ink);width:1.05em;height:1.05em;flex:none}
 .choice:has(input:checked){border-color:var(--ink);background:var(--panel-2)}
 .choice.right{border-color:var(--safe);background:var(--safe-soft)}
@@ -401,7 +402,7 @@ legend{font-weight:700;margin-bottom:6px;padding:0}
 .result{display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:12px;border:2px solid var(--ink)}
 .scorebig{font-family:var(--f-display);font-weight:800;font-size:3.2rem;line-height:1}
 .scorebig small{font-size:1.3rem;color:var(--muted)}
-.rlist{list-style:none;padding:0;display:grid;gap:5px;font-size:.92rem}
+.rlist{list-style:none;padding:0;display:grid;gap:6px;font-size:1.02rem}
 .rlist li{display:flex;gap:8px;align-items:flex-start}
 .rlist .ok .ic{color:var(--safe)}
 .rlist .no .ic{color:var(--danger)}
@@ -425,12 +426,12 @@ legend{font-weight:700;margin-bottom:6px;padding:0}
 .met.fn b{color:var(--danger)}
 .met.fp b{color:var(--warn)}
 .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px}
-.tile{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:3px;padding:.55em .7em;border-radius:10px;border:1px solid var(--line);background:var(--panel);font-size:.84rem;min-height:66px;box-sizing:border-box}
+.tile{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:4px;padding:.6em .75em;border-radius:10px;border:1px solid var(--line);background:var(--panel);font-size:.94rem;min-height:72px;box-sizing:border-box}
 .tile:hover{border-color:var(--ink)}
 .tile:focus-visible{outline:3px solid var(--info)}
-.tile .tn{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
-.tile .tl{font-weight:600;line-height:1.25}
-.tile .tb{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.tile .tn{font-family:var(--f-mono);font-size:.8rem;color:var(--muted)}
+.tile .tl{font-weight:700;line-height:1.25}
+.tile .tb{font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
 .tile.o-tp{border-color:var(--safe)}.tile.o-tp .tb{color:var(--safe)}
 .tile.o-tn .tb{color:var(--safe)}
 .tile.o-fn{border-color:var(--danger);background:var(--danger-soft)}.tile.o-fn .tb{color:var(--danger)}
@@ -457,9 +458,9 @@ details.why ul{padding-left:1.1rem;display:grid;gap:5px;margin-top:.6rem}
 
 /* wrap-up */
 .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
-table{border-collapse:collapse;width:100%;min-width:760px;font-size:.92rem}
-th,td{padding:.6em .8em;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
-th{font-family:var(--f-display);font-size:1.08rem;letter-spacing:.03em;background:var(--panel-2)}
+table{border-collapse:collapse;width:100%;min-width:720px;font-size:1.02rem}
+th,td{padding:.65em .85em;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{font-family:var(--f-display);font-size:1.2rem;letter-spacing:.03em;background:var(--panel-2)}
 tr:last-child td{border-bottom:0}
 td:first-child{font-weight:700}
 .pledge-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(14px,2vw,24px);align-items:start}
@@ -519,7 +520,7 @@ table.dt{min-width:640px}
 .task-h .eyebrow{color:var(--ink)}
 .task-m{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.84rem;font-weight:600;color:var(--muted)}
 .task-m span{display:inline-flex;align-items:center;gap:5px}
-.task ol{padding-left:1.3rem;display:grid;gap:4px;font-size:1rem}
+.task ol{padding-left:1.3rem;display:grid;gap:5px;font-size:1.06rem;font-weight:500}
 .note{border-radius:var(--r);border:1px solid var(--line);background:var(--panel);overflow:hidden}
 .note-h{display:flex;align-items:center;gap:8px;padding:10px 16px;background:var(--tape);color:var(--tape-ink);font-family:var(--f-display);font-weight:800;font-size:1.2rem;letter-spacing:.04em;text-transform:uppercase}
 .note-h{justify-content:flex-start}
@@ -1016,37 +1017,37 @@ function icon(n,cls){return '<svg class="ic '+(cls||'')+'" viewBox="0 0 24 24" f
 
 /* ---------- content ---------- */
 var MODS=[
- {k:'warm',n:1,sh:'Hộp thư',t:'Hộp thư khẩn cấp',s:'Khởi động · 6 phút',d:'5 tin nhắn, mỗi tin chỉ hiện 5 giây. Cả lớp giơ thẻ THẬT hay LỪA.',gv:true},
- {k:'link',n:2,sh:'Soi link',t:'Giải phẫu đường link',s:'Hình thành kiến thức · 9 phút',d:'Soi tên miền thật, thử thách 8 đường link đánh lừa thị giác.'},
- {k:'case',n:3,sh:'Điều tra',t:'Phòng điều tra',s:'Hình thành kiến thức · 15 phút',d:'5 hồ sơ sự cố: gom bằng chứng, kiểm chứng, nộp báo cáo.'},
- {k:'filter',n:4,sh:'Máy lọc',t:'Máy lọc lừa đảo',s:'Luyện tập · 8 phút',d:'Chọn dấu hiệu, chạy bộ lọc trên 20 tin nhắn, đo độ chính xác.'},
- {k:'wrap',n:5,sh:'Tổng kết',t:'Bộ giáp và lời hứa',s:'Tổng kết, vận dụng · 5 phút',d:'Chốt 3 nguyên tắc, nhận thẻ thám tử, nhiệm vụ về nhà.'},
- {k:'track',n:0,sh:'Theo dõi',t:'Bảng theo dõi kết quả',s:'Dành cho giáo viên',d:'Xem từng học sinh đã làm phần nào, đúng hay chưa, câu nào cả lớp sai nhiều.',gv:true,tool:true}
+ {k:'warm',n:1,sh:'Hộp thư',t:'Hộp thư khẩn cấp',s:'Khởi động & HĐ 1 · 8 phút',d:'5 tin nhắn 5 giây · Lật bài · Bộ giáp 3 lớp.',gv:true},
+ {k:'case',n:2,sh:'Điều tra & Soi link',t:'Phòng điều tra & Soi link',s:'Hình thành kiến thức · 16 phút',d:'Soi tên miền thật + Điều tra 5 hồ sơ sự cố.'},
+ {k:'filter',n:3,sh:'Máy lọc',t:'Máy lọc lừa đảo',s:'Luyện tập · 9 phút',d:'Chọn dấu hiệu, chạy bộ lọc 20 tin nhắn.'},
+ {k:'wrap',n:4,sh:'Tổng kết',t:'Bộ giáp và lời hứa',s:'Vận dụng · 7 phút',d:'Chốt 4 dạng lừa đảo, nhận thẻ thám tử.'},
+ {k:'track',n:0,sh:'Theo dõi',t:'Bảng theo dõi kết quả',s:'Dành cho giáo viên',d:'Xem điểm soi link, báo cáo nhóm, máy lọc và lời hứa của cả lớp.',gv:true,tool:true}
 ];
 var NOTES={
- warm:['Phát mỗi HS một thẻ 2 mặt (xanh = THẬT, đỏ = LỪA) hoặc cho giơ tay trái/phải.','Bấm Bắt đầu (hoặc phím Space): tin nhắn hiện 5 giây kèm đồng hồ đếm ngược. Hết giờ, cả lớp giơ thẻ cùng lúc.','Bấm Đáp án, đọc nhanh 1–2 dấu hiệu rồi bấm Tiếp.','Sau tin thứ 5, bấm Tiếp để “lật bài”. Hỏi nhanh: vì sao nhiều bạn chọn sai dù chỉ có 5 giây?','Đặt câu hỏi “Làm thế nào để không bị hack cảm xúc?”, gom ý HS rồi bấm Vào bài học: giới thiệu Bài 9 và nội dung tiết học. Bấm Bắt đầu Hoạt động 1 (SGK): HS đọc 2 tình huống, trao đổi cặp đôi 1 phút, mời 2–3 HS kể; cho cả lớp giơ tay chọn A/B/C/D rồi bấm Hiện đáp án (B, C, D); cuối cùng bấm Chốt kiến thức để hiện bộ giáp 3 lớp.'],
- link:['GV soi 2 link mẫu trên màn chiếu (các nút Thử nhanh). Nhấn mạnh cách đọc tên miền từ dấu “/” đầu tiên ngược về trái.','HS làm thử thách 8 link theo cặp trên máy (khoảng 3 phút), giơ tay báo điểm.','Chốt: tên miền thật là thứ kẻ gian không giả được; ổ khóa https không có nghĩa là an toàn.','Mở mục Theo dõi (thanh trên cùng) để xem link nào nhiều HS sai, rồi chữa ngay link đó bằng máy soi.'],
- 'case':['Chia lớp 4 nhóm, mỗi nhóm 2 bàn ghép lại, 1 máy. Nhóm 1–4 lần lượt nhận hồ sơ 01–04. Hồ sơ 05 (Deepfake) GV làm mẫu.','6 phút: nhóm chạm vào chi tiết đáng ngờ để gom bằng chứng, dùng công cụ kiểm chứng, nộp Báo cáo sự cố.','Lần lượt 4 nhóm lên thao tác trên màn chiếu (mỗi nhóm 1 phút), các nhóm khác phản biện, bổ sung bằng chứng bị sót.','Hồ sơ 05: GV hỏi chatbot AI ngay trên màn chiếu, cả lớp đối chiếu với bằng chứng và chỉ ra điều AI không kiểm chứng được.','Chốt bảng 4 dạng lừa đảo ở phần 5.','Mục Theo dõi cho biết điểm báo cáo của từng nhóm ở từng hồ sơ: mời nhóm điểm thấp lên trình bày để cả lớp cùng sửa, nhóm điểm cao bổ sung.'],
- filter:['GV chạy bộ lọc mẫu (2 dấu hiệu, ngưỡng 1) để cả lớp thấy nhiều tin thật bị chặn nhầm.','Các nhóm cải tiến bộ lọc trong 4 phút, ghi lại độ chính xác cao nhất.','Mời nhóm cao nhất giải thích lựa chọn, rồi mở mục “Vì sao không bộ lọc nào đạt 100%?”.','Mức cao nhất đạt được với 8 dấu hiệu này là 85% (17/20 tin).','Mục Theo dõi tự xếp hạng độ chính xác cao nhất của từng em.'],
- wrap:['Chiếu bảng chốt kiến thức 4 dạng lừa đảo trong SGK.','HS chọn 1–2 lời hứa, nhập tên, chụp màn hình thẻ thám tử.','Giao nhiệm vụ về nhà, chuẩn bị “triển lãm tin nhắn lừa đảo” cho tiết 2.','Chiếu biểu đồ lời hứa ở mục Theo dõi (bật Ẩn tên nhóm) để kết thúc tiết bằng dữ liệu của chính lớp.']
+ warm:['HS cầm thẻ 2 mặt (Xanh = THẬT, Đỏ = LỪA). Bấm Space: mỗi tin hiện 5 giây, hết giờ cả lớp giơ thẻ cùng lúc.','Sau tin 5, bấm Lật bài → giới thiệu Bài 9 → bấm Bắt đầu Hoạt động 1: HS đọc nhanh 2 tình huống, chọn A/B/C/D → Chốt Bộ giáp 3 lớp.'],
+ 'case':['Bước 1 (3 phút): GV chiếu Máy soi đường link, chỉ quy tắc đọc tên miền từ dấu “/” đầu tiên ngược về trái. HS làm nhanh 4 câu soi link.','Bước 2 (7 phút): 4 nhóm mở Hồ sơ 01–04 trên cùng trang, chạm 4 bằng chứng, bấm công cụ kiểm chứng và nộp Báo cáo.','Báo cáo (6 phút): Đại diện nhóm bấm “Xuất Phiếu Báo Cáo” trình bày 1 phút. Hồ sơ 05 (Deepfake AI) GV làm mẫu nhanh.'],
+ filter:['Các nhóm chọn dấu hiệu + ngưỡng chặn và bấm Chạy bộ lọc (4 phút) để đạt kỉ lục 85% (17/20 tin).','Mời nhóm điểm cao giải thích, mở mục “Vì sao không bộ lọc nào đạt 100%?”.'],
+ wrap:['Chiếu bảng chốt 4 dạng lừa đảo + Ghi bài.', 'HS chọn lời hứa an toàn số, nhập tên, gửi lời hứa và chụp Thẻ thám tử.']
 };
+NOTES.link=NOTES['case'];
 
 var TASKS={
- warm:{hinh:'Cả lớp',tg:'6 phút',sp:'Lựa chọn của em trên thẻ màu',buoc:['Mỗi em cầm 1 thẻ: mặt xanh là THẬT (an toàn), mặt đỏ là LỪA ĐẢO.','Mỗi tin nhắn chỉ hiện 5 giây, đọc thật nhanh.','Hết giờ, khi màn hình hiện “Giơ thẻ!”, cả lớp giơ thẻ cùng lúc, không đổi thẻ sau khi đã giơ.','Nghe thầy cô lật đáp án và giải thích vì sao tin đó là thật hay lừa đảo.']},
- link:{hinh:'Cặp đôi, mỗi cặp 1 máy',tg:'9 phút (thử thách 3 phút)',sp:'Điểm thử thách x/8, tự gửi cho thầy cô',buoc:['Nhập tên nhóm và chọn số nhóm ở đầu trang (chỉ làm 1 lần).','Đọc khung “Mẹo đọc tên miền” bên trái.','Ở khung Thử thách, đọc đường link rồi bấm vào tên miền thật mà em chọn.','Đọc phần giải thích và hình “soi link”, rồi bấm “Link tiếp theo”.','Làm hết 8 link, giơ tay báo điểm, rồi ghi bài theo màn chiếu của thầy cô.']},
- 'case':{hinh:'4 nhóm, mỗi nhóm 2 bàn ghép lại, 1 máy',tg:'15 phút (điều tra 6 phút)',sp:'Báo cáo sự cố (điểm /100) và phần trình bày 1 phút',buoc:['Phân vai: 1 bạn điều khiển máy, 1 bạn thư kí ghi bằng chứng, 1 bạn trình bày; các bạn còn lại cùng soi màn hình tìm chi tiết đáng ngờ.','Mở đúng hồ sơ của nhóm: nhóm 1 hồ sơ 01, nhóm 2 hồ sơ 02, nhóm 3 hồ sơ 03, nhóm 4 hồ sơ 04.','Đọc bối cảnh, rồi chạm vào những chi tiết đáng ngờ trên màn hình. Chi tiết hiện số đỏ là đã thu thập được bằng chứng. Chỉ có số lượt chạm bằng số bằng chứng cộng 1: được chạm sai 1 lần, nên thảo luận kĩ trước khi chạm.','Bấm các công cụ kiểm chứng (Kiểm tra ngay!) để xem kết quả.','Điền 3 câu của Báo cáo sự cố và bấm “Nộp báo cáo sự cố”.','Bạn trình bày lên máy chiếu thao tác lại, giải thích cho cả lớp (1 phút); nghe nhóm khác bổ sung.']},
- casedetail:{hinh:'Nhóm',tg:'6 phút',sp:'Báo cáo sự cố',buoc:['Chạm vào chi tiết đáng ngờ để thu thập bằng chứng. Chỉ được chạm sai 1 lần, cả nhóm thống nhất rồi mới chạm.','Dùng công cụ kiểm chứng ở cột bên phải.','Trả lời 3 câu của Báo cáo sự cố rồi bấm Nộp.','Thư kí chép các bằng chứng vào vở.']},
- filter:{hinh:'Cặp đôi',tg:'8 phút',sp:'Độ chính xác cao nhất của bộ lọc (tự gửi cho thầy cô)',buoc:['Tích chọn những dấu hiệu em muốn máy dò.','Chọn ngưỡng: máy chặn tin khi có từ bao nhiêu dấu hiệu trở lên.','Bấm “Chạy bộ lọc”, xem các ô đỏ (lọt lưới) và cam (chặn nhầm). Chạm vào ô để xem vì sao.','Sửa lựa chọn, chạy lại để tăng độ chính xác. Ghi lại kết quả cao nhất.','Trả lời: vì sao không bộ lọc nào đạt 100%?']},
- wrap:{hinh:'Cá nhân',tg:'5 phút',sp:'Vở ghi và thẻ thám tử',buoc:['Ghi bài theo màn chiếu của thầy cô.','Chọn 1–2 lời hứa an toàn số, nhập tên.','Bấm “Gửi lời hứa cho thầy cô” và chụp màn hình thẻ thám tử.','Ghi nhiệm vụ về nhà.']}
+ warm:{hinh:'Cả lớp',tg:'8 phút',sp:'Giơ thẻ THẬT/LỪA & chốt Bộ giáp 3 lớp',buoc:['Đọc tin nhắn trong 5 giây; khi hiện “Giơ thẻ!”, giơ thẻ XANH (Thật) hoặc ĐỎ (Lừa).','Trả lời câu hỏi Hoạt động 1 và rút ra nguyên tắc Bộ giáp 3 lớp.']},
+ 'case':{hinh:'4 nhóm (Nhóm 1–4: Hồ sơ 01–04)',tg:'16 phút',sp:'Điểm soi 4 link + Phiếu báo cáo điều tra (/100)',buoc:['Bước 1 (Soi link): Đọc mẹo tên miền thật và hoàn thành nhanh 4 câu thử thách đường link.','Bước 2 (Điều tra): Mở Hồ sơ của nhóm (01–04), chạm vào 4 bằng chứng đáng ngờ, dùng công cụ kiểm chứng và nộp Báo cáo.','Bước 3: Bấm “Xuất Phiếu Báo Cáo” để đại diện nhóm trình bày 1 phút trước lớp.']},
+ casedetail:{hinh:'Nhóm',tg:'5 phút',sp:'Phiếu Báo cáo sự cố (/100)',buoc:['Chạm vào 4 chi tiết đáng ngờ trên màn hình (chỉ được chạm sai 1 lần).','Bấm các công cụ kiểm chứng bên phải, trả lời 3 câu hỏi và bấm Nộp báo cáo.']},
+ filter:{hinh:'Cặp đôi / Nhóm',tg:'9 phút',sp:'Độ chính xác cao nhất của bộ lọc',buoc:['Tích chọn dấu hiệu đáng ngờ và ngưỡng chặn → bấm “Chạy bộ lọc”.','Điều chỉnh dấu hiệu để đạt độ chính xác cao nhất (kỉ lục 85%) và giải thích vì sao máy không đạt 100%.']},
+ wrap:{hinh:'Cá nhân',tg:'7 phút',sp:'Vở ghi & Thẻ thám tử mạng',buoc:['Ghi tóm tắt bài học vào vở.','Chọn 1–2 lời hứa an toàn số, nhập tên và bấm “Gửi lời hứa cho thầy cô”.']}
 };
+TASKS.link=TASKS['case'];
+
 var GHI={
- warm:'<p><b>Bài 9. GIAO TIẾP AN TOÀN TRÊN INTERNET</b></p><p><b>1. Nhận biết và phòng tránh lừa đảo trên không gian số</b></p><p><b>a) Nguyên tắc phòng tránh</b></p><ul><li>Kẻ lừa đảo nhắm vào tiền, thông tin, tài khoản; đánh vào tâm lí sợ hãi, tham lam, vội vàng.</li><li>3 nguyên tắc: <b>Hãy chậm lại!</b> (bình tĩnh) – <b>Kiểm tra ngay!</b> (xác minh qua kênh chính thống) – <b>Dừng lại, không gửi!</b> (không chuyển tiền, không gửi thông tin).</li></ul>',
- link:'<ul><li>Tên miền thật: cụm ngay trước dấu “/” đầu tiên (lấy 2 cụm cuối, 3 cụm nếu đuôi .com.vn, .gov.vn).</li><li>Link giả: tên miền con mạo danh, chữ bị đánh tráo, có dấu @, link rút gọn; có https chưa chắc an toàn.</li></ul>',
- 'case':'<p><b>b) Một số dạng lừa đảo</b></p><ul><li>Hỗ trợ kĩ thuật: báo máy nhiễm virus, bắt gọi tổng đài, cài phần mềm điều khiển từ xa.</li><li>Thông báo tin tốt: trúng thưởng, học bổng nhưng phải nộp phí, gửi CCCD.</li><li>Thông báo tin xấu: giả danh công an, dọa liên quan vụ án, bắt giữ bí mật.</li><li>Mạo danh trang mua sắm: giá rẻ bất thường, tên miền lạ, bắt chuyển khoản trước.</li></ul><p>→ Gặp các dấu hiệu trên: áp dụng 3 nguyên tắc, báo ngay bố mẹ, thầy cô.</p>',
+ warm:'<p><b>Bài 9. GIAO TIẾP AN TOÀN TRÊN INTERNET</b></p><p><b>1. Nhận biết và phòng tránh lừa đảo trên không gian số</b></p><p><b>a) Nguyên tắc “Bộ giáp 3 lớp”:</b></p><ul><li><b>Lớp 1 – Hãy chậm lại!</b> Bình tĩnh trước áp lực đếm ngược, dọa nạt, giục giã.</li><li><b>Lớp 2 – Kiểm tra ngay!</b> Soi tên miền thật, xác minh qua kênh chính thống.</li><li><b>Lớp 3 – Dừng lại, không gửi!</b> Không chuyển tiền, không gửi OTP/CCCD, không bấm link lạ.</li></ul>',
+ 'case':'<p><b>b) Cách soi link & 4 dạng lừa đảo phổ biến:</b></p><ul><li><b>Tên miền thật:</b> Lấy 2 cụm ngay trước dấu “/” đầu tiên sau “//” (3 cụm nếu đuôi .gov.vn, .com.vn). Có https chưa chắc an toàn.</li><li><b>4 dạng lừa đảo:</b> (1) Hỗ trợ kĩ thuật giả; (2) Thông báo tin tốt (trúng thưởng, học bổng đòi phí); (3) Thông báo tin xấu (giả công an, khóa TK); (4) Mạo danh TMĐT (sale 90%, chuyển khoản trước) & Deepfake AI.</li></ul>',
+ link:'',
  filter:''
 };
 var NZ={k:null,sc:store.get('notefs',1)};
-function noteContent(k){return k==='all'?GHI.warm+GHI.link+GHI['case']+GHI.filter:(k==='link'?GHI.warm+GHI.link:(GHI[k]||''));}
+function noteContent(k){return k==='all'?GHI.warm+GHI['case']:(GHI[k]||'');}
 function openNote(k){
  if(S.mode!=='gv')return;
  closeNote(true);NZ.k=k;
@@ -1058,31 +1059,27 @@ function openNote(k){
 function applyNoteSize(){var o=$('#noteover');if(o)o.style.setProperty('--nz',NZ.sc);}
 function closeNote(silent){var o=$('#noteover');if(!o)return;try{if(document.fullscreenElement===o)document.exitFullscreen();}catch(e){}o.parentNode.removeChild(o);NZ.k=null;}
 function taskBox(k){var t=TASKS[k];if(!t)return '';return '<div class="task"><div class="task-h"><span class="eyebrow">Nhiệm vụ của em</span><span class="task-m"><span>'+icon('people')+t.hinh+'</span><span>'+icon('pause')+t.tg+'</span><span>'+icon('check')+'Sản phẩm: '+t.sp+'</span></span></div><ol>'+t.buoc.map(function(b){return '<li>'+b+'</li>';}).join('')+'</ol></div>';}
-function noteBox(k){if(S.mode!=='gv')return '';var c=k==='all'?GHI.warm+GHI.link+GHI['case']+GHI.filter:(k==='link'?GHI.warm+GHI.link:GHI[k]);if(!c)return '';return '<div class="note"><div class="note-h">'+icon('task')+'<span>'+(k==='all'?'Ghi vào vở · cả tiết 1':'Ghi vào vở')+'</span><button type="button" class="note-zoom" data-act="note-zoom" data-k="'+k+'" title="Phóng to toàn màn hình (phím G)">'+icon('full')+'Phóng to <kbd>G</kbd></button></div><div class="note-b">'+c+'</div></div>';}
+function noteBox(k){if(S.mode!=='gv')return '';var c=noteContent(k);if(!c)return '';return '<div class="note"><div class="note-h">'+icon('task')+'<span>'+(k==='all'?'Ghi vào vở · cả tiết 1':'Ghi vào vở')+'</span><button type="button" class="note-zoom" data-act="note-zoom" data-k="'+k+'" title="Phóng to toàn màn hình (phím G)">'+icon('full')+'Phóng to <kbd>G</kbd></button></div><div class="note-b">'+c+'</div></div>';}
 
 var WARM=[
- {kind:'sms',from:'MAYXANH BANK',time:'21:04',text:'MAYXANH BANK: Tai khoan cua Quy khach se bi TAM KHOA sau 24h do chua cap nhat sinh trac hoc. Cap nhat ngay tai: mayxanhbank-xacthuc.top',ans:'lua',why:['Ngân hàng không gửi đường link yêu cầu “cập nhật” qua tin nhắn.','Tên miền thật là mayxanhbank-xacthuc.top, không phải mayxanhbank.vn.','Dọa khóa tài khoản để em hoảng.']},
- {kind:'chat',from:'Mẹ',sub:'Tài khoản mới · chưa có trong danh bạ',av:'M',time:'21:05',text:'Con ơi, mẹ làm rơi điện thoại nên nhắn bằng nick mới. Con chuyển gấp cho mẹ 2.000.000đ vào STK 123 456 789 để mẹ đóng tiền viện cho bà nhé. Mẹ đang họp, đừng gọi mẹ!',ans:'lua',why:['Một tài khoản lạ xưng là người thân.','Đòi chuyển tiền gấp vào số tài khoản lạ.','Cấm gọi lại để em không kiểm tra được.']},
- {kind:'sms',from:'MAYXANH BANK',time:'21:06',text:'MAYXANH BANK: Ma OTP cua Quy khach la 482913, hieu luc trong 2 phut. Tuyet doi KHONG cung cap ma nay cho bat ky ai, ke ca nhan vien ngan hang.',ans:'that',why:['Không có đường link, không yêu cầu em làm gì.','Còn dặn không đưa mã cho bất kì ai.','Nhưng nếu em không hề giao dịch mà vẫn nhận OTP: có người đang cố vào tài khoản của em. Không đưa mã, báo bố mẹ và ngân hàng.']},
- {kind:'email',from:'Global Future Scholarship',addr:'globalfuture.scholarship2026@gmail.com',time:'21:08',subject:'CHÚC MỪNG! Em đã trúng tuyển học bổng du học hè 100%',text:'Chào em, hồ sơ của em đã được chọn nhận học bổng 100% chương trình hè tại Singapore. Để giữ suất, vui lòng chuyển phí xác nhận hồ sơ 1.500.000đ trước 23:59 hôm nay. Quá hạn, suất học bổng sẽ chuyển cho ứng viên khác.',ans:'lua',why:['Em chưa từng nộp hồ sơ.','“Học bổng” mà đòi nộp phí trước.','Gửi từ địa chỉ Gmail miễn phí, hạn chót gấp.'],real:'Cuối tháng 10/2025, một nữ sinh lớp 12 ở TP.HCM bị dụ vào chương trình “học bổng du học Anh”. Gia đình chuyển 30 triệu đồng “phí hoàn thiện hồ sơ” rồi bị chặn liên lạc. (Báo Nhân Dân, 6/11/2025)'},
- {kind:'chat',from:'Lớp 11A · Lớp trưởng',sub:'Nhóm lớp',av:'11A',time:'21:10',text:'📢 Thứ Sáu này kiểm tra 15 phút môn Tin (Bài 7–8). Các bạn nhớ mang SGK nhé!',ans:'that',why:['Không đòi tiền, mã OTP hay thông tin cá nhân.','Không có đường link lạ.','Nội dung khớp với kế hoạch học tập của lớp.']}
+ {kind:'sms',from:'MAYXANH BANK',time:'21:04',text:'MAYXANH BANK: Tai khoan se bi TAM KHOA sau 24h do chua cap nhat sinh trac hoc. Cap nhat ngay: mayxanhbank-xacthuc.top',ans:'lua',why:['Tên miền lạ: mayxanhbank-xacthuc.top (không phải mayxanhbank.vn).','Ngân hàng không gửi link cập nhật qua SMS.']},
+ {kind:'chat',from:'Mẹ',sub:'Tài khoản mới · chưa có trong danh bạ',av:'M',time:'21:05',text:'Con ơi, mẹ rơi điện thoại nên nhắn nick mới. Chuyển gấp 2.000.000đ vào STK 123 456 789 đóng viện phí cho bà. Mẹ đang họp, đừng gọi!',ans:'lua',why:['Nick mới lạ xưng người thân, đòi chuyển tiền gấp.','Cấm gọi lại để chặn kiểm chứng.']},
+ {kind:'sms',from:'MAYXANH BANK',time:'21:06',text:'MAYXANH BANK: Ma OTP la 482913 (hieu luc 2 phut). Tuyet doi KHONG cung cap ma nay cho bat ky ai.',ans:'that',why:['Không có link lạ, cảnh báo rõ không đưa mã cho ai.','Lưu ý: Nếu không giao dịch mà nhận OTP → báo ngân hàng ngay.']},
+ {kind:'email',from:'Global Future Scholarship',addr:'globalfuture.scholarship2026@gmail.com',time:'21:08',subject:'CHÚC MỪNG! Em trúng học bổng du học hè 100%',text:'Hồ sơ của em được chọn nhận học bổng 100% tại Singapore. Vui lòng chuyển phí giữ suất 1.500.000đ trước 23:59 hôm nay.',ans:'lua',why:['Chưa nộp hồ sơ mà trúng; học bổng lại đòi phí trước.','Gửi từ Gmail miễn phí, ép hạn chót 23:59.']},
+ {kind:'chat',from:'Lớp 11A · Lớp trưởng',sub:'Nhóm lớp',av:'11A',time:'21:10',text:'📢 Thứ Sáu kiểm tra 15 phút môn Tin (Bài 7–8). Các bạn nhớ mang SGK nhé!',ans:'that',why:['Không đòi tiền, không hỏi OTP, không có link lạ.']}
 ];
 
 var ARMOR=[
- {k:'cham',ic:'pause',t:'Hãy chậm lại!',d:'Kẻ gian luôn tạo áp lực thời gian. Dừng lại trước mọi yêu cầu chuyển tiền, gửi mã, bấm link.',tin:['Tự hỏi: vì sao phải gấp như vậy?','Không trả lời, không bấm gì trong lúc đang hoảng.']},
- {k:'kt',ic:'search',t:'Kiểm tra ngay!',d:'Xác minh qua một kênh khác do chính em chọn, không dùng số hay link người lạ đưa.',tin:['Soi tên miền thật của đường link.','Tra số điện thoại, số tài khoản trên ứng dụng kiểm tra lừa đảo (vd. nTrust).','Tìm kiếm ngược hình ảnh (Google Lens).','Gọi lại số đã lưu sẵn, hỏi bố mẹ, thầy cô.']},
- {k:'kg',ic:'stop',t:'Dừng lại, không gửi!',d:'Không chuyển tiền, không gửi thông tin khi chưa xác minh.',tin:['Không đọc mã OTP, mật khẩu cho bất kì ai.','Không gửi ảnh CCCD, không cài ứng dụng từ link lạ.']}
+ {k:'cham',ic:'pause',t:'Hãy chậm lại!',d:'Bình tĩnh trước mọi yêu cầu gấp gáp, dọa nạt hay trúng thưởng.',tin:['Tự hỏi: Vì sao phải gấp như vậy?','Không bấm link hay chuyển tiền khi đang hoảng.']},
+ {k:'kt',ic:'search',t:'Kiểm tra ngay!',d:'Xác minh qua kênh chính thống độc lập, không dùng số/link trong tin nhắn.',tin:['Soi tên miền thật ngay trước dấu “/” đầu tiên.','Gọi số đã lưu sẵn; hỏi bố mẹ, thầy cô; tra cứu trên nTrust / Google Lens.']},
+ {k:'kg',ic:'stop',t:'Dừng lại, không gửi!',d:'Tuyệt đối giữ kín tiền bạc và dữ liệu cá nhân khi chưa xác minh.',tin:['Không đọc mã OTP, mật khẩu cho bất kì ai.','Không gửi ảnh CCCD, không cài app lạ (.apk) hay phần mềm điều khiển từ xa.']}
 ];
 
 var LINKS=[
- {url:'https://mayxanhbank.vn/uu-dai',opts:['mayxanhbank.vn','uu-dai','https'],ans:0,note:'Tên miền thật trùng khớp tên miền chính thức của ngân hàng (giả định trong bài).'},
- {url:'https://mayxanhbank.vn.xacthuc-taikhoan.top/dang-nhap',opts:['mayxanhbank.vn','xacthuc-taikhoan.top','dang-nhap'],ans:1,note:'Cụm “mayxanhbank.vn” ở đầu chỉ là tên miền con do kẻ gian tự đặt. Tên miền thật là xacthuc-taikhoan.top.'},
- {url:'http://rnayxanhbank.vn/login',opts:['mayxanhbank.vn','rnayxanhbank.vn','login'],ans:1,note:'Hai chữ “r” và “n” đứng cạnh nhau trông giống chữ “m”. Trang còn dùng http, không mã hóa.'},
- {url:'https://veoshop.vn@sale-veo.vip/giay',opts:['veoshop.vn','sale-veo.vip','giay'],ans:1,note:'Trình duyệt bỏ qua mọi thứ đứng trước dấu @. Trang thật được mở là sale-veo.vip.'},
- {url:'https://bit.ly/3xYz9Qk',opts:['bit.ly','3xYz9Qk','Không có tên miền'],ans:0,note:'Đây là link rút gọn. bit.ly chỉ là dịch vụ chuyển hướng, đích đến thật bị che. Hãy xem trước đích đến hoặc hỏi lại người gửi qua kênh khác.'},
- {url:'https://dichvucong.gov.vn',opts:['gov.vn','dichvucong.gov.vn','dichvucong'],ans:1,note:'Đuôi .gov.vn chỉ cấp cho cơ quan nhà nước. Với đuôi 2 cấp như .gov.vn, .com.vn, tên miền thật gồm 3 cụm.'},
- {url:'https://dichvucong.gov.vn.cap-nhat-dinh-danh.com/vneid',opts:['dichvucong.gov.vn','cap-nhat-dinh-danh.com','vneid'],ans:1,note:'Mạo danh Cổng Dịch vụ công bằng tên miền con. Tên miền thật là cap-nhat-dinh-danh.com.'},
- {url:'https://mаyxanhbank.vn/dang-nhap',opts:['mayxanhbank.vn','xn--myxanhbank-zqi.vn','dang-nhap'],ans:1,bonus:true,note:'Chữ “а” thứ hai là chữ Kirin (tiếng Nga), trông giống hệt chữ a Latinh. Máy tính đọc ra một tên miền khác hẳn: xn--myxanhbank-zqi.vn.'}
+ {url:'https://mayxanhbank.vn/uu-dai',opts:['mayxanhbank.vn','uu-dai','https'],ans:0,note:'An toàn: Tên miền thật ngay trước dấu “/” là mayxanhbank.vn (trùng khớp tên miền chính thức).'},
+ {url:'https://mayxanhbank.vn.xacthuc-taikhoan.top/dang-nhap',opts:['mayxanhbank.vn','xacthuc-taikhoan.top','dang-nhap'],ans:1,note:'Lừa đảo: “mayxanhbank.vn” ở đầu chỉ là tên miền con. Tên miền thật ngay trước dấu “/” là xacthuc-taikhoan.top.'},
+ {url:'https://veoshop.vn@sale-veo.vip/giay',opts:['veoshop.vn','sale-veo.vip','giay'],ans:1,note:'Lừa đảo: Trình duyệt bỏ qua mọi chữ trước dấu “@”. Trang thật được mở là sale-veo.vip.'},
+ {url:'https://dichvucong.gov.vn.cap-nhat-dinh-danh.com/vneid',opts:['dichvucong.gov.vn','cap-nhat-dinh-danh.com','vneid'],ans:1,note:'Lừa đảo: Giả mạo Cổng Dịch vụ công bằng tên miền con. Tên miền thật là cap-nhat-dinh-danh.com.'}
 ];
 var XEX=['mayxanhbank.vn.xacthuc-taikhoan.top/dang-nhap','http://rnayxanhbank.vn/login','veoshop.vn@sale-veo.vip/giay','dichvucong.gov.vn'];
 
@@ -1091,7 +1088,7 @@ var TYPES=[
  {k:'tot',l:'Lừa đảo dưới dạng thông báo tin tốt'},
  {k:'xau',l:'Lừa đảo dưới dạng thông báo tin xấu'},
  {k:'tmdt',l:'Lừa đảo mạo danh trang thương mại điện tử'},
- {k:'quen',l:'Mạo danh người quen bằng AI (giả mặt, giả giọng)'}
+ {k:'quen',l:'Mạo danh người quen bằng AI (Deepfake)'}
 ];
 var EMOS=[
  {k:'so',l:'Sợ hãi, lo lắng'},
@@ -1102,223 +1099,189 @@ var EMOS=[
 var PTAG={cham:'Chậm lại',kt:'Kiểm tra',kg:'Không gửi'};
 
 var CASES=[
- {id:'c1',no:'01',name:'Cảnh báo đỏ',teaser:'Màn hình máy tính bỗng hiện cảnh báo virus kèm tiếng còi liên tục.',type:'ht',emo:{req:['so','voi'],ok:['tin']},
-  brief:'Tối thứ Bảy, Minh tìm phần mềm chỉnh ảnh miễn phí. Vừa bấm vào một kết quả tìm kiếm thì màn hình hiện cảnh báo dưới đây, kèm tiếng còi liên tục. Minh gọi thử số tổng đài và được “kĩ thuật viên” nhắn tin hướng dẫn.',
+ {id:'c1',no:'01',name:'Cảnh báo đỏ',teaser:'Màn hình bật cảnh báo nhiễm 5 virus kèm còi hú và số tổng đài lạ.',type:'ht',emo:{req:['so','voi'],ok:['tin']},
+  brief:'Minh đang tìm phần mềm miễn phí thì trình duyệt bật cảnh báo đỏ kèm còi hú. Minh gọi số trên màn hình thì được bảo cài phần mềm điều khiển từ xa và nộp phí.',
   ev:[
-   {id:'a',t:'Tên miền lạ, không mã hóa',d:'Cảnh báo nằm trên trang baove-maytinh-247.xyz (http), một trang web lạ, không phải phần mềm diệt virus trên máy.'},
-   {id:'b',t:'Lời đe dọa không có căn cứ',d:'Một trang web không thể “quét” máy tính của em. Phần mềm diệt virus thật báo trong chính ứng dụng của nó.'},
-   {id:'c',t:'Đồng hồ đếm ngược',d:'Tạo áp lực thời gian để em hoảng và làm theo ngay.'},
-   {id:'d',t:'Số tổng đài lạ',d:'Hãng phần mềm không bắt em gọi số điện thoại hiện trên một trang web bật lên.'},
-   {id:'e',t:'Cấm tắt trình duyệt',d:'Kẻ gian muốn giữ em lại. Thực tế chỉ cần đóng tab; nếu bị khóa, nhấn Ctrl + Shift + Esc mở Task Manager để tắt trình duyệt.'},
-   {id:'f',t:'Đòi cài phần mềm điều khiển từ xa và trả phí',d:'Cài phần mềm điều khiển từ xa theo lời người lạ là trao toàn quyền máy tính và tài khoản cho kẻ gian.'}
+   {id:'a',t:'Tên miền lạ, không bảo mật (http)',d:'Cảnh báo nằm trên web lạ baove-maytinh-247.xyz, không phải phần mềm diệt virus của máy.'},
+   {id:'b',t:'Dọa nhiễm 5 virus & đếm ngược 5 phút',d:'Web trình duyệt không thể tự quét ổ cứng; đồng hồ đếm ngược chỉ để gây hoảng loạn.'},
+   {id:'c',t:'Bắt gọi tổng đài lạ & cấm tắt máy',d:'Giữ nạn nhân ở lại màn hình giả để dẫn dụ gọi cho kẻ lừa đảo.'},
+   {id:'d',t:'Đòi cài phần mềm điều khiển từ xa & thu phí',d:'Trao quyền điều khiển máy và tài khoản ngân hàng cho kẻ gian.'}
   ],
   tools:[
-   {id:'t1',ic:'task',l:'Đóng trình duyệt bằng Task Manager',r:'Trang cảnh báo biến mất. Mở lại máy: ảnh và tài liệu vẫn còn nguyên.'},
-   {id:'t2',ic:'shield',l:'Quét máy bằng phần mềm diệt virus có sẵn',r:'Không phát hiện mối đe dọa nào.'},
-   {id:'t3',ic:'people',l:'Hỏi thầy cô hoặc người hiểu biết',r:'“Đây là lừa đảo hỗ trợ kĩ thuật. Đừng gọi số đó, đừng cài phần mềm điều khiển từ xa.”'}
+   {id:'t1',ic:'link',l:'Soi đường link trang cảnh báo (Máy X-Ray)',r:'Tên miền thật là baove-maytinh-247.xyz (đuôi .xyz rủi ro cao, giao thức http không bảo mật).',ev:'a'},
+   {id:'t2',ic:'task',l:'Đóng trình duyệt bằng Task Manager & quét virus',r:'Cảnh báo biến mất ngay. Quét bằng Windows Security: máy an toàn, không có virus.'}
   ],
   acts:[
-   {t:'Không gọi số tổng đài trên màn hình, bình tĩnh đóng trang.',ok:'cham'},
-   {t:'Quét máy bằng phần mềm diệt virus chính thống, hỏi thầy cô hoặc người hiểu biết.',ok:'kt'},
-   {t:'Không cài phần mềm điều khiển từ xa, không trả bất kì khoản phí nào.',ok:'kg'},
-   {t:'Gọi ngay tổng đài vì đó là số miễn phí.'},
-   {t:'Cho “kĩ thuật viên” điều khiển máy nhưng ngồi theo dõi.'},
-   {t:'Chuyển trước một nửa phí, khi nào máy sạch virus thì chuyển nốt.'}
+   {t:'Bình tĩnh đóng tab trình duyệt, không gọi số trên màn hình.',ok:'cham'},
+   {t:'Soi tên miền web lạ và quét máy bằng phần mềm diệt virus chính thống.',ok:'kt'},
+   {t:'Không cài phần mềm điều khiển từ xa, không chuyển phí.',ok:'kg'},
+   {t:'Cho kĩ thuật viên điều khiển máy từ xa và nộp 990.000đ phí diệt virus.'}
   ],
-  lesson:'Không phần mềm thật nào bắt em gọi số trên một trang web. Đóng trang, đừng gọi, đừng cài.',
+  lesson:'Web trình duyệt không thể quét virus trên máy. Đóng trang ngay, đừng gọi số lạ, đừng cài phần mềm điều khiển từ xa!',
   dev:function(h){return '<div class="laptop"><div class="lap-scr"><div class="browser">'+
    '<div class="tabbar"><span class="tabx">Cảnh báo bảo mật</span></div>'+
    '<div class="urlbar"><span class="nosec">Không bảo mật</span><span class="mono">'+h('a','http://baove-maytinh-247.xyz/canh-bao')+'</span></div>'+
    '<div class="alarm"><div class="alarm-h">⚠ CẢNH BÁO BẢO MẬT</div>'+
-   '<p>'+h('b','Máy tính của bạn đã bị nhiễm 5 virus nguy hiểm! Mật khẩu, ảnh và tài khoản ngân hàng đang bị đánh cắp.')+'</p>'+
-   '<p class="alarm-big">Dữ liệu sẽ bị XÓA sau '+h('c','<span class="cd" data-cd="299">04:59</span>')+'</p>'+
-   '<p>Gọi ngay Trung tâm hỗ trợ kỹ thuật: '+h('d','<b>1900 xxxx</b> (miễn phí)')+'</p>'+
-   '<p class="alarm-small">'+h('e','⛔ KHÔNG tắt trình duyệt hoặc khởi động lại máy, nếu không toàn bộ dữ liệu sẽ mất.')+'</p>'+
+   '<p>'+h('b','Máy tính nhiễm 5 virus nguy hiểm! Dữ liệu sẽ bị XÓA sau <span class="cd" data-cd="299">04:59</span>')+'</p>'+
+   '<p>'+h('c','Gọi ngay tổng đài <b>1900 xxxx</b> · ⛔ KHÔNG tắt trình duyệt!')+'</p>'+
    '</div></div></div><div class="lap-base"></div></div>'+
-   '<div class="followup"><div class="eyebrow">Sau khi Minh gọi tổng đài, “kĩ thuật viên” nhắn:</div><div class="bub">'+h('f','Em cài giúp anh phần mềm điều khiển máy tính từ xa, anh vào diệt virus cho. Xong em chuyển 990.000đ phí bản quyền nhé.')+'</div></div>';}
+   '<div class="followup"><div class="eyebrow">Tin nhắn từ “kĩ thuật viên”:</div><div class="bub">'+h('d','Em cài phần mềm điều khiển từ xa để anh diệt virus và chuyển 990.000đ phí bản quyền nhé.')+'</div></div>';}
  },
- {id:'c2',no:'02',name:'Món quà 30 triệu',teaser:'Một tài khoản xưng là cửa hàng báo Lan trúng điện thoại đắt tiền.',type:'tot',emo:{req:['tham'],ok:['voi','tin']},
-  brief:'Lan nhận được các tin nhắn dưới đây qua ứng dụng chat. Lan nhớ tháng trước mình có mua một chiếc ốp lưng trên sàn VèoShop.',
+ {id:'c2',no:'02',name:'Món quà 30 triệu',teaser:'Tài khoản lạ báo Lan trúng iPhone 17 Pro Max trị giá 30 triệu đồng.',type:'tot',emo:{req:['tham'],ok:['voi','tin']},
+  brief:'Lan nhận tin nhắn báo trúng iPhone 17 Pro Max từ một tài khoản tên “VèoShop Tri Ân” kèm yêu cầu chuyển phí và gửi ảnh CCCD trước 20:00.',
   ev:[
-   {id:'a',t:'Tài khoản không chính thức',d:'Chạm vào tên: tài khoản mới tạo 3 ngày, chưa xác minh. VèoShop thật chỉ thông báo trong ứng dụng hoặc trên veoshop.vn.'},
-   {id:'b',t:'Quà quá lớn dù không tham gia',d:'Lan chưa từng tham gia quay thưởng. Quà giá trị lớn bất ngờ là mồi nhử.'},
-   {id:'c',t:'Nhận quà mà phải trả phí trước',d:'Quà tặng thật không bắt khách chuyển khoản trước vào tài khoản cá nhân.'},
-   {id:'d',t:'Đòi ảnh CCCD',d:'Ảnh CCCD có thể bị dùng để mở tài khoản ngân hàng, vay tiền, đăng kí SIM đứng tên Lan.'},
-   {id:'e',t:'Hạn chót gấp',d:'Hối thúc để Lan không kịp hỏi ai.'},
-   {id:'f',t:'Giấy chứng nhận là ảnh ghép',d:'Tìm kiếm ngược cho thấy ảnh này xuất hiện ở nhiều trang khác, mỗi nơi ghi tên một cửa hàng khác.'}
+   {id:'a',t:'Tài khoản chat mới tạo, không chính thức',d:'Tài khoản mới lập 3 ngày, không có tích xác minh của sàn VèoShop.'},
+   {id:'b',t:'Trúng thưởng lớn dù không tham gia',d:'Mồi nhử đánh vào tâm lí ham quà giá trị cao.'},
+   {id:'c',t:'Đòi chuyển phí 299.000đ trước',d:'Quà trúng thưởng thật không bắt chuyển khoản vào STK cá nhân.'},
+   {id:'d',t:'Đòi ảnh 2 mặt CCCD & ép hạn chót 20:00',d:'Kẻ gian lấy CCCD để vay tiền/mở TK ngân hàng và ép thời gian để không kịp hỏi ai.'}
   ],
   tools:[
-   {id:'t1',ic:'search',l:'Tra số tài khoản nhận tiền trên ứng dụng kiểm tra lừa đảo (vd. nTrust)',r:'Tài khoản 123 456 789 đã bị nhiều người báo cáo lừa đảo.'},
-   {id:'t2',ic:'image',l:'Tìm kiếm ngược ảnh giấy chứng nhận (Google Lens)',r:'Ảnh xuất hiện trên nhiều trang khác, mỗi nơi ghi tên một cửa hàng khác: ảnh ghép.',ev:'f'},
-   {id:'t3',ic:'phone',l:'Gọi tổng đài in trên website chính thức veoshop.vn',r:'VèoShop xác nhận: không có chương trình trúng thưởng nào như vậy.'}
+   {id:'t1',ic:'search',l:'Tra số tài khoản nhận tiền trên app nTrust',r:'STK 123 456 789 là tài khoản cá nhân đã bị nhiều người báo cáo lừa đảo.'},
+   {id:'t2',ic:'phone',l:'Kiểm tra trên app/website chính thức veoshop.vn',r:'VèoShop xác nhận không có chương trình quay thưởng nào như vậy.',ev:'a'}
   ],
   acts:[
-   {t:'Tự hỏi: quà miễn phí sao lại phải trả tiền? Không trả lời vội.',ok:'cham'},
-   {t:'Gọi tổng đài hoặc xem website chính thức của VèoShop, tra cứu số tài khoản nhận tiền.',ok:'kt'},
-   {t:'Không chuyển phí, không gửi ảnh CCCD.',ok:'kg'},
-   {t:'Chuyển 299.000đ vì số tiền nhỏ so với giá trị món quà.'},
-   {t:'Gửi ảnh CCCD nhưng che bớt một góc cho an toàn.'},
-   {t:'Chia sẻ tin vui lên mạng xã hội để bạn bè cùng nhận quà.'}
+   {t:'Tự hỏi: Quà miễn phí sao phải nộp tiền? Không làm theo vội.',ok:'cham'},
+   {t:'Kiểm tra trên app chính thức veoshop.vn và tra cứu STK nhận tiền.',ok:'kt'},
+   {t:'Không chuyển phí 299.000đ, tuyệt đối không gửi ảnh CCCD.',ok:'kg'},
+   {t:'Chuyển thử 299.000đ và gửi ảnh CCCD vì tiếc chiếc iPhone 30 triệu.'}
   ],
-  lesson:'Quà thật không bắt em trả tiền hay nộp CCCD để nhận.',
+  lesson:'Quà tặng thật không bắt chuyển phí trước hay nộp ảnh CCCD.',
   dev:function(h){return '<div class="phone"><div class="scr">'+statusBar('19:42')+
-   '<div class="ahead"><div class="avatar av-warn">V</div><div class="who">'+h('a','<span class="nm">VèoShop Tri Ân 🎁</span>')+'<div class="sub">Đang hoạt động</div></div></div>'+
+   '<div class="ahead"><div class="avatar av-warn">V</div><div class="who">'+h('a','<span class="nm">VèoShop Tri Ân 🎁</span>')+'<div class="sub">Tài khoản mới tạo</div></div></div>'+
    '<div class="abody">'+
-   '<div class="bub">🎉 CHÚC MỪNG Lan! Bạn là 1 trong 10 khách hàng may mắn trúng '+h('b','<b>iPhone 17 Pro Max</b> trị giá 30 triệu đồng')+' trong chương trình tri ân của VèoShop!</div>'+
-   '<div class="bub">Để nhận quà, bạn chỉ cần:<br>1. '+h('c','Chuyển 299.000đ phí vận chuyển và bảo hiểm')+' vào STK 123 456 789<br>2. '+h('d','Gửi ảnh 2 mặt CCCD')+' để xác minh chủ nhân giải thưởng</div>'+
-   '<div class="bub">'+h('e','⏰ Chương trình kết thúc lúc 20:00 hôm nay!')+'</div>'+
-   '<div class="bub">'+h('f','<span class="cert">GIẤY CHỨNG NHẬN TRÚNG THƯỞNG<small>có dấu đỏ, chữ kí giám đốc</small></span>','block')+'</div>'+
+   '<div class="bub">🎉 CHÚC MỪNG Lan trúng '+h('b','<b>iPhone 17 Pro Max</b> trị giá 30 triệu đồng')+'!</div>'+
+   '<div class="bub">Để nhận quà, bạn cần:<br>1. '+h('c','Chuyển 299.000đ phí vận chuyển vào STK 123 456 789')+'<br>2. '+h('d','Gửi ảnh 2 mặt CCCD trước 20:00 hôm nay!')+'</div>'+
    '</div></div></div>';}
  },
- {id:'c3',no:'03',name:'Cuộc gọi 72 giờ',teaser:'22 giờ đêm, một người xưng là cán bộ điều tra gọi cho Nam.',type:'xau',emo:{req:['so'],ok:['tin','voi']},
-  brief:'22 giờ tối, Nam (lớp 11) nhận cuộc gọi từ một số lạ. Sau đó Nam được kết bạn qua ứng dụng chat để “làm việc” bằng cuộc gọi video, người kia mặc cảnh phục.',
+ {id:'c3',no:'03',name:'Cuộc gọi 72 giờ',teaser:'22 giờ đêm, người xưng cán bộ điều tra dọa Nam liên quan vụ án.',type:'xau',emo:{req:['so'],ok:['tin','voi']},
+  brief:'22h đêm, số lạ gọi cho Nam (lớp 11) xưng là Đại úy Công an, đọc đúng tên và lớp, dọa Nam liên quan đường dây rửa tiền và cấm nói với bố mẹ.',
   ev:[
-   {id:'a',t:'Số lạ, làm việc qua điện thoại',d:'Công an không làm việc, điều tra qua điện thoại hay ứng dụng chat. Khi cần sẽ mời làm việc trực tiếp tại trụ sở.'},
-   {id:'b',t:'Biết thông tin cá nhân chưa chứng minh là thật',d:'Họ tên, năm sinh, lớp học có thể bị lộ trên mạng xã hội. Hình người mặc cảnh phục có thể lấy từ video cũ trên mạng.'},
-   {id:'c',t:'Đe dọa gây sợ hãi',d:'Gán tội nặng (rửa tiền, ma túy) để em hoảng loạn, mất bình tĩnh.'},
-   {id:'d',t:'Bắt giữ bí mật, cô lập em',d:'Dấu hiệu nguy hiểm nhất. Không có cơ quan nào cấm em nói với bố mẹ.'},
-   {id:'e',t:'Dụ đến nơi vắng, tắt định vị',d:'Đây là kịch bản “bắt cóc online”: cô lập nạn nhân rồi tống tiền gia đình.'},
-   {id:'f',t:'“Tài khoản tạm giữ” không tồn tại',d:'Không có thủ tục nào bắt chuyển tiền để “chứng minh trong sạch”.'}
+   {id:'a',t:'Số lạ gọi làm việc qua điện thoại/chat',d:'Công an chỉ mời làm việc trực tiếp tại trụ sở bằng giấy mời, không điều tra qua mạng.'},
+   {id:'b',t:'Gán tội nặng (rửa tiền, tạm giam) gây hoảng sợ',d:'Đánh thẳng vào nỗi sợ hãi để nạn nhân mất khả năng suy xét.'},
+   {id:'c',t:'Cấm nói với bố mẹ trong 72 giờ & bắt ra khách sạn',d:'Chiêu “bắt cóc online”: cô lập nạn nhân khỏi gia đình để tống tiền.'},
+   {id:'d',t:'Đòi chuyển tiền vào “tài khoản tạm giữ”',d:'Không cơ quan nhà nước nào yêu cầu chuyển tiền để chứng minh trong sạch.'}
   ],
   tools:[
-   {id:'t1',ic:'people',l:'Kể ngay với bố mẹ, thầy cô',r:'Bố mẹ trấn an Nam và cùng Nam đến công an phường.'},
-   {id:'t2',ic:'phone',l:'Gọi 113 hoặc đến công an phường nơi cư trú',r:'Công an xác nhận: không có vụ án nào liên quan đến Nam. Đây là lừa đảo.'},
-   {id:'t3',ic:'image',l:'Tìm kiếm ngược ảnh “cán bộ” trong cuộc gọi video',r:'Hình ảnh lấy từ một video cũ trên mạng, người trong video không phải “Đại úy Trần Hùng”.',ev:'b'}
+   {id:'t1',ic:'people',l:'Báo ngay cho bố mẹ và GVCN',r:'Bố mẹ trấn an Nam đây là kịch bản lừa đảo “bắt cóc online” đang bị Bộ Công an cảnh báo.'},
+   {id:'t2',ic:'phone',l:'Gọi 113 hoặc Công an phường xác minh',r:'Công an xác nhận không có vụ án nào; hình ảnh cảnh phục là video cắt ghép.',ev:'a'}
   ],
   acts:[
-   {t:'Cúp máy, không làm theo bất kì yêu cầu nào.',ok:'cham'},
-   {t:'Kể ngay với bố mẹ, thầy cô; gọi 113 hoặc đến công an phường để xác minh.',ok:'kt'},
-   {t:'Không chuyển tiền, không gửi ảnh, video cá nhân, không đi đến nơi lạ một mình.',ok:'kg'},
-   {t:'Giữ bí mật để không bị liên lụy, tự giải quyết.'},
-   {t:'Làm theo nhưng bật định vị để gia đình biết mình ở đâu.'},
-   {t:'Chuyển một ít tiền để thể hiện thiện chí hợp tác.'}
+   {t:'Cúp máy ngay, giữ bình tĩnh, không làm theo mệnh lệnh.',ok:'cham'},
+   {t:'Kể ngay với bố mẹ, thầy cô và gọi Công an phường / 113 xác minh.',ok:'kt'},
+   {t:'Không chuyển tiền, không tự nhốt mình hay đi đến nơi lạ.',ok:'kg'},
+   {t:'Giữ bí mật với bố mẹ và chuyển tiền để chứng minh trong sạch.'}
   ],
-  lesson:'Công an không làm việc qua điện thoại hay ứng dụng chat, không bao giờ bắt em giữ bí mật với bố mẹ hay chuyển tiền để chứng minh trong sạch.',
-  real:'Tháng 10/2025, Công an tỉnh Gia Lai tiếp nhận trình báo của một nam sinh viên năm 2 thuê trọ ở phường Quy Nhơn. Kẻ gian giả danh công an, dọa phải giữ bí mật 72 giờ; mẹ nam sinh đã chuyển 4 lần, tổng cộng khoảng 1,3 tỉ đồng. (Tuyển Sinh Số, 7/10/2025)<br>Theo Bộ Công an, từ giữa năm 2024 đến tháng 8/2025 đã giải cứu 50 nạn nhân “bắt cóc online”, đều từ 18 đến 22 tuổi, phần lớn là sinh viên. (Báo Nhân Dân, 6/11/2025)',
+  lesson:'Công an không làm việc qua điện thoại/video, không bao giờ cấm báo cho bố mẹ hay đòi chuyển tiền!',
+  real:'Từ 2024–8/2025, Bộ Công an đã giải cứu 50 nạn nhân học sinh, sinh viên bị lừa theo kịch bản “bắt cóc online” giữ bí mật 72 giờ. (Báo Nhân Dân, 2025)',
   dev:function(h){return '<div class="phone"><div class="scr">'+statusBar('22:07')+
-   '<div class="callhead"><div class="avatar big av-muted">?</div><div class="callnum">'+h('a','+84 69 xxx xxxx')+'</div><div class="sub">Cuộc gọi đến · không có trong danh bạ</div></div>'+
+   '<div class="callhead"><div class="avatar big av-muted">?</div><div class="callnum">'+h('a','+84 69 xxx xxxx · Gọi qua mạng')+'</div><div class="sub">Số lạ ngoài danh bạ</div></div>'+
    '<div class="abody">'+
-   '<div class="bub">Alo, có phải em Nguyễn Văn Nam, sinh năm 2010, đang học lớp 11 không? '+h('b','Tôi là Đại úy Trần Hùng, cán bộ điều tra.')+'</div>'+
-   '<div class="bub">'+h('c','Số căn cước của em liên quan đến một đường dây rửa tiền.')+' Em có thể bị tạm giam.</div>'+
-   '<div class="bub">Đây là bí mật điều tra. '+h('d','Trong 72 giờ, em không được nói với bố mẹ, thầy cô.')+' Nếu nói, em sẽ bị truy cứu trách nhiệm hình sự.</div>'+
-   '<div class="bub">'+h('e','Em ra một khách sạn, ở một mình, tắt định vị')+' và chỉ liên lạc với tôi qua cuộc gọi video.</div>'+
-   '<div class="bub">Gia đình em phải chuyển tiền vào '+h('f','“tài khoản tạm giữ”')+' để chứng minh em trong sạch. Xong vụ án sẽ hoàn trả.</div>'+
+   '<div class="bub">Tôi là Đại úy Trần Hùng. '+h('b','CCCD của em Nguyễn Văn Nam liên quan đường dây rửa tiền, sắp có lệnh tạm giam!')+'</div>'+
+   '<div class="bub">'+h('c','Bí mật điều tra 72 giờ: CẤM nói với bố mẹ, tự thuê khách sạn ở một mình và tắt định vị.')+'</div>'+
+   '<div class="bub">Gia đình phải chuyển tiền vào '+h('d','“tài khoản tạm giữ” để chứng minh trong sạch.')+'</div>'+
    '</div></div></div>';}
  },
- {id:'c4',no:'04',name:'Siêu sale 11.11',teaser:'Giày chính hãng giảm 90%, chỉ còn vài đôi cuối cùng.',type:'tmdt',emo:{req:['tham'],ok:['voi','tin']},
-  brief:'Hà lướt mạng xã hội và thấy quảng cáo dưới đây. Trang bán hàng có logo, ảnh sản phẩm và hàng trăm bình luận khen.',
+ {id:'c4',no:'04',name:'Siêu sale 11.11',teaser:'Giày chính hãng giảm 90% còn 159.000đ, bắt chuyển khoản trước.',type:'tmdt',emo:{req:['tham'],ok:['voi','tin']},
+  brief:'Hà thấy bài quảng cáo giày chính hãng giảm 90% kèm đồng hồ đếm ngược 15 phút và đường link lạ bắt chuyển khoản trước 100%.',
   ev:[
-   {id:'a',t:'Trang mạo danh',d:'“VèoShop Official Sale” không phải trang chính thức. Trang thật có dấu xác minh và dẫn về veoshop.vn.'},
-   {id:'b',t:'Giá phi lý',d:'Giảm 90% cho hàng chính hãng là mồi nhử.'},
-   {id:'c',t:'Khan hiếm và đếm ngược',d:'Tạo cảm giác sợ lỡ cơ hội để Hà quyết định vội.'},
-   {id:'d',t:'Tên miền giả',d:'Tên miền thật là veoshop-sale11.vip, không phải veoshop.vn.'},
-   {id:'e',t:'Bắt chuyển khoản trước, không cho trả khi nhận hàng',d:'Cửa hàng thật cho thanh toán qua sàn hoặc khi nhận hàng.'},
-   {id:'f',t:'Bình luận ảo',d:'Nhiều bình luận giống hệt nhau, đến từ tài khoản ảo.'}
+   {id:'a',t:'Trang mạo danh chạy quảng cáo',d:'Tên trang gần giống sàn thật nhưng không có tích xác minh chính chủ.'},
+   {id:'b',t:'Giá giảm 90% phi lý & đếm ngược 15 phút',d:'Đánh vào lòng tham hàng rẻ và tâm lí sợ lỡ cơ hội.'},
+   {id:'c',t:'Tên miền giả: veoshop-sale11.vip',d:'Không phải tên miền chính thức veoshop.vn (đuôi .vip rất hay dùng lừa đảo).'},
+   {id:'d',t:'Bắt chuyển khoản trước 100%, bình luận ảo',d:'Chuyển tiền xong sẽ bị chặn liên lạc ngay.'}
   ],
   tools:[
-   {id:'t1',ic:'link',l:'Soi đường link',r:'Tên miền thật: veoshop-sale11.vip. Không khớp tên miền chính thức veoshop.vn.',ev:'d'},
-   {id:'t2',ic:'globe',l:'Tra cứu thông tin tên miền (WHOIS)',r:'Tên miền được đăng kí 4 ngày trước, chủ sở hữu ẩn danh.'},
-   {id:'t3',ic:'image',l:'Tìm kiếm ngược ảnh sản phẩm',r:'Ảnh lấy từ website của một hãng giày khác.'}
+   {id:'t1',ic:'link',l:'Soi đường link veoshop-sale11.vip (Máy X-Ray)',r:'Tên miền thật là veoshop-sale11.vip (mới tạo 4 ngày trước), giả mạo veoshop.vn.',ev:'c'},
+   {id:'t2',ic:'image',l:'Tìm kiếm ngược ảnh sản phẩm (Google Lens)',r:'Ảnh lấy cắp từ một cửa hàng khác; 512 bình luận khen đều là tài khoản ảo.'}
   ],
   acts:[
-   {t:'Giá quá hời là dấu hiệu cảnh báo, không đặt vội.',ok:'cham'},
-   {t:'Tự gõ địa chỉ veoshop.vn hoặc mở ứng dụng chính thức để đối chiếu, kiểm tra tên miền.',ok:'kt'},
-   {t:'Không chuyển khoản trước cho trang lạ; chỉ thanh toán qua sàn hoặc khi nhận hàng.',ok:'kg'},
-   {t:'Đặt thử 1 đôi vì giá rẻ, mất cũng không nhiều.'},
-   {t:'Tin tưởng vì trang có rất nhiều bình luận khen.'},
-   {t:'Nhắn tin xin shop gửi thêm ảnh thật rồi chuyển khoản.'}
+   {t:'Cảnh giác trước mức giá giảm 90% phi lý, không đặt vội.',ok:'cham'},
+   {t:'Soi tên miền thật và mở trực tiếp ứng dụng veoshop.vn để kiểm tra.',ok:'kt'},
+   {t:'Không chuyển khoản trước cho web lạ; chỉ thanh toán qua sàn/COD.',ok:'kg'},
+   {t:'Chuyển khoản ngay 159.000đ kẻo hết giờ khuyến mãi.'}
   ],
-  lesson:'Giá quá hời là dấu hiệu cảnh báo. Đối chiếu tên miền, chỉ thanh toán qua sàn hoặc khi nhận hàng.',
+  lesson:'Giá rẻ phi lý + tên miền lạ + bắt chuyển khoản trước 100% = Lừa đảo!',
   dev:function(h){return '<div class="phone"><div class="scr">'+statusBar('20:15')+
    '<div class="feedhead">Bảng tin</div><div class="post">'+
    '<div class="post-h"><div class="avatar av-danger">V</div><div class="who">'+h('a','<span class="nm">VèoShop Official Sale</span>')+'<div class="sub">Được tài trợ</div></div></div>'+
-   '<p>🔥 SIÊU SALE 11.11: giày thể thao chính hãng '+h('b','<b>GIẢM 90%</b>, chỉ còn 159.000đ')+'!</p>'+
-   '<p>'+h('c','Chỉ còn 7 đôi cuối cùng · kết thúc sau <span class="cd" data-cd="899">00:14:59</span>')+'</p>'+
-   '<div class="post-img" aria-hidden="true">ẢNH SẢN PHẨM</div>'+
-   '<div class="post-link">'+h('d','veoshop-sale11.vip')+'<span class="cta">Mua ngay</span></div>'+
-   '<p class="small">'+h('e','Chuyển khoản trước 100% để giữ hàng. Không hỗ trợ thanh toán khi nhận hàng.')+'</p>'+
-   '<p class="small">'+h('f','512 bình luận: “Shop uy tín!”, “Đã nhận, giày đẹp lắm!”, “Shop uy tín!”')+'</p>'+
+   '<p>🔥 SIÊU SALE 11.11: Giày chính hãng '+h('b','<b>GIẢM 90%</b> còn 159k · Kết thúc sau <span class="cd" data-cd="899">00:14:59</span>')+'</p>'+
+   '<div class="post-link">'+h('c','veoshop-sale11.vip')+'<span class="cta">Mua ngay</span></div>'+
+   '<p class="small">'+h('d','Bắt buộc chuyển khoản trước 100% · 512 bình luận: “Shop uy tín!”')+'</p>'+
    '</div></div></div>';}
  },
- {id:'c5',no:'05',special:true,name:'Cuộc gọi video 10 giây',teaser:'Đúng mặt, đúng giọng người anh họ. Nhưng có thật là anh ấy?',type:'quen',emo:{req:['tin'],ok:['voi','so']},
-  brief:'Anh Tuấn, anh họ của Mai đang du học, gọi video. Hình hơi mờ nhưng đúng mặt, đúng giọng anh Tuấn: “Mai ơi, anh đang kẹt ở sân bay…”. Được 10 giây thì cuộc gọi tắt. Ngay sau đó anh nhắn tin.',
+ {id:'c5',no:'05',special:true,name:'Cuộc gọi video 10 giây',teaser:'Đúng mặt, đúng giọng người anh họ nhờ chuyển gấp 5 triệu.',type:'quen',emo:{req:['tin'],ok:['voi','so']},
+  brief:'Anh Tuấn (anh họ của Mai) gọi video 10 giây: hình hơi mờ nhưng đúng mặt, đúng giọng anh rồi tắt máy, nhắn tin bảo chuyển gấp 5 triệu vào STK người lạ.',
   ev:[
-   {id:'a',t:'Cuộc gọi rất ngắn, viện cớ mạng yếu',d:'Né việc nói chuyện lâu. Hình giả bằng AI dễ lộ khi quay nghiêng, che mặt hoặc nói chuyện dài.'},
-   {id:'b',t:'Chuyển tiền gấp vào tài khoản người khác',d:'Tên chủ tài khoản không phải người đang nhờ.'},
-   {id:'c',t:'Bắt giữ bí mật với bố mẹ',d:'Cô lập để Mai không hỏi người lớn.'},
-   {id:'d',t:'Mặt và giọng có thể do AI tạo',d:'AI có thể nhân bản giọng nói từ vài giây ghi âm và ghép khuôn mặt từ ảnh, video đăng công khai trên mạng xã hội.'}
+   {id:'a',t:'Cuộc gọi video rất ngắn (10 giây), lấy cớ mạng yếu',d:'Video Deepfake AI dễ lộ nếu nói chuyện dài nên kẻ gian cúp máy nhanh.'},
+   {id:'b',t:'Mặt và giọng bị làm giả bằng AI (Deepfake)',d:'AI ghép mặt và nhại giọng từ video công khai trên mạng xã hội.'},
+   {id:'c',t:'Nhờ chuyển 5 triệu vào STK mang tên người lạ',d:'Dấu hiệu rõ nhất: người thân thật không bảo chuyển vào TK người lạ mà không gọi xác nhận.'},
+   {id:'d',t:'Dặn “Đừng nói với bố mẹ nhé!”',d:'Chặn Mai kiểm chứng với người lớn trong gia đình.'}
   ],
   tools:[
-   {id:'t1',ic:'phone',l:'Gọi lại vào số điện thoại cũ đã lưu của anh Tuấn',r:'Anh Tuấn bắt máy, đang ở nhà, không hề gọi video cho Mai. Tài khoản chat của anh đã bị chiếm.'},
-   {id:'t2',ic:'key',l:'Hỏi “mật khẩu gia đình”',r:'Mai nhắn: “Con mèo nhà bà nội tên gì?”. Bên kia không trả lời được rồi chặn Mai.'},
-   {id:'t3',ic:'bot',l:'Hỏi chatbot AI: dấu hiệu nhận biết cuộc gọi video Deepfake?',r:'AI gợi ý: khẩu hình không khớp tiếng, ánh sáng trên mặt lạ, ít chớp mắt, viền mặt nhòe. Lưu ý: AI tạo ảnh ngày càng giỏi nên dấu hiệu hình ảnh khó thấy dần. Cách chắc chắn vẫn là kiểm tra qua kênh khác.',ev:'d'}
+   {id:'t1',ic:'phone',l:'Gọi lại vào số điện thoại di động đã lưu của anh Tuấn',r:'Anh Tuấn bắt máy: anh đang ở nhà, tài khoản mạng xã hội của anh vừa bị hack!'},
+   {id:'t2',ic:'bot',l:'Hỏi mật khẩu gia đình & đối chiếu dấu hiệu Deepfake AI',r:'Bên nhắn tin không biết mật khẩu gia đình và lập tức chặn Mai.',ev:'b'}
   ],
   acts:[
-   {t:'Không chuyển ngay dù thấy đúng mặt, nghe đúng giọng.',ok:'cham'},
-   {t:'Gọi lại số cũ đã lưu, hỏi “mật khẩu gia đình”, hỏi bố mẹ.',ok:'kt'},
-   {t:'Không chuyển tiền vào tài khoản lạ.',ok:'kg'},
-   {t:'Chuyển luôn vì đã nhìn thấy mặt anh qua video.'},
-   {t:'Gọi video lại vào chính tài khoản vừa gọi để hỏi cho chắc.'},
-   {t:'Chuyển trước một nửa, chờ anh trả rồi tính tiếp.'}
+   {t:'Chậm lại! Thấy mặt, nghe giọng qua video ngắn vẫn có thể là AI.',ok:'cham'},
+   {t:'Gọi điện thoại thông thường vào số đã lưu hoặc hỏi “mật khẩu gia đình”.',ok:'kt'},
+   {t:'Không chuyển tiền vào tài khoản lạ khi chưa xác minh trực tiếp.',ok:'kg'},
+   {t:'Chuyển ngay 5 triệu vì đã nhìn thấy mặt anh họ trên video.'}
   ],
-  lesson:'Thấy mặt, nghe giọng chưa đủ để tin. Gọi lại số cũ, hỏi mật khẩu gia đình. AI hỗ trợ, con người quyết định.',
+  lesson:'Thời đại AI Deepfake: Thấy mặt, nghe giọng chưa chắc là thật! Hãy gọi lại số di động đã lưu.',
   dev:function(h){return '<div class="phone"><div class="scr">'+statusBar('23:12')+
-   '<div class="video">'+h('d','<span class="vid-face">AT</span>','face')+'<div class="vid-cap">'+h('a','Anh Tuấn · cuộc gọi video · 0:10 · “Mạng yếu…”')+'</div></div>'+
+   '<div class="video">'+h('b','<span class="vid-face">AT</span>','face')+'<div class="vid-cap">'+h('a','Video 0:10 · Hình mờ · “Mạng yếu quá…”')+'</div></div>'+
    '<div class="ahead"><div class="avatar">AT</div><div class="who"><div class="nm">Anh Tuấn (anh họ)</div><div class="sub">Vừa xong</div></div></div>'+
    '<div class="abody">'+
-   '<div class="bub">Mạng chỗ anh yếu quá. '+h('b','Em chuyển gấp cho anh 5 triệu vào STK 123 456 789, tên chủ tài khoản là bạn anh')+', tối anh gửi lại.</div>'+
-   '<div class="bub">'+h('c','Đừng nói với bố mẹ kẻo các cụ lo nhé!')+'</div>'+
+   '<div class="bub">Mạng yếu quá. '+h('c','Chuyển gấp giúp anh 5 triệu vào STK 123 456 789 (tên bạn anh)')+' nhé!</div>'+
+   '<div class="bub">'+h('d','Đừng nói với bố mẹ kẻo các cụ lo nhé!')+'</div>'+
    '</div></div></div>';}
  }
 ];
 
 var FEATS=[
- {k:'L',t:'Có đường link hoặc tệp đính kèm'},
+ {k:'L',t:'Có đường link hoặc tệp lạ (.apk)'},
  {k:'M',t:'Nhắc đến tiền, phí, chuyển khoản'},
- {k:'U',t:'Hối thúc, đặt hạn chót, đếm ngược'},
- {k:'S',t:'Nhắc đến OTP, mật khẩu, đăng nhập, CCCD'},
- {k:'O',t:'Xưng danh tổ chức (ngân hàng, công an, cửa hàng, trường…)'},
- {k:'G',t:'Quà, trúng thưởng, giảm giá sốc, thu nhập cao'},
- {k:'K',t:'Dặn giữ bí mật, đừng gọi lại, đừng nói với ai'},
+ {k:'U',t:'Hối thúc, hạn chót gấp, đếm ngược'},
+ {k:'S',t:'Đòi mã OTP, mật khẩu, ảnh CCCD'},
+ {k:'O',t:'Xưng danh ngân hàng, công an, sàn TMĐT'},
+ {k:'G',t:'Trúng thưởng, học bổng, giảm giá 90%'},
+ {k:'K',t:'Dặn giữ bí mật, cấm gọi lại'},
  {k:'N',t:'Người gửi lạ hoặc tài khoản mới'}
 ];
 var MSGS=[
- {l:'Mã OTP',s:'MAYXANH BANK',x:'Ma OTP cua Quy khach la 482913, hieu luc 2 phut. Tuyet doi KHONG cung cap ma nay cho bat ky ai.',y:0,f:'USOK',note:'Tin thật nếu chính em vừa giao dịch. Máy thấy “OTP”, “2 phút”, “không cung cấp cho ai” nên dễ chặn nhầm.'},
- {l:'Ngân hàng dọa khóa tài khoản',s:'MAYXANH BANK',x:'Tai khoan cua Quy khach se bi TAM KHOA sau 24h do chua cap nhat sinh trac hoc. Cap nhat ngay: mayxanhbank-xacthuc.top',y:1,f:'LUO',note:'Ngân hàng không gửi link yêu cầu cập nhật. Tên miền thật là mayxanhbank-xacthuc.top.'},
- {l:'Lớp trưởng báo lịch kiểm tra',s:'Lớp trưởng',x:'Thứ Sáu kiểm tra 15 phút môn Tin (Bài 7–8), các bạn mang SGK nhé.',y:0,f:'',note:'Không có dấu hiệu nào.'},
- {l:'“Mẹ” nhắn bằng nick mới',s:'Mẹ (tài khoản mới)',x:'Con ơi mẹ rơi điện thoại, đây là nick mới. Chuyển gấp cho mẹ 2 triệu vào STK 123 456 789, mẹ đang họp đừng gọi nhé.',y:1,f:'MUKN',note:''},
- {l:'Biến động số dư',s:'MAYXANH BANK',x:'TK 1234xxx789 -35.000VND. SD 1.250.000VND. ND: thanh toan tra sua',y:0,f:'MO',note:'Thông báo thật, không yêu cầu em làm gì.'},
- {l:'Trúng iPhone',s:'VèoShop Tri Ân (tài khoản mới)',x:'Chúc mừng bạn trúng iPhone 17 Pro Max! Chuyển 299.000đ phí vận chuyển và gửi ảnh 2 mặt CCCD trước 20h hôm nay để nhận quà.',y:1,f:'MUSOGN',note:''},
- {l:'Link họp nhóm',s:'Nhóm Tin 11',x:'Tối nay 20h họp nhóm làm slide trên Google Meet: meet.google.com/abc-defg-hij',y:0,f:'L',note:'Link thật của bạn trong nhóm.'},
- {l:'Cuộc gọi “công an”',s:'Số lạ',x:'Tôi là cán bộ điều tra. CCCD của em liên quan đường dây rửa tiền. Giữ bí mật với bố mẹ, gia đình chuyển tiền vào tài khoản tạm giữ để chứng minh em trong sạch.',y:1,f:'MSOKN',note:''},
- {l:'Mã giảm giá trong app',s:'VèoShop (ứng dụng chính thức)',x:'Mã giảm 20% cho đơn từ 200.000đ, dùng trong ứng dụng VèoShop đến hết Chủ nhật.',y:0,f:'OGU',note:'Thông báo trong ứng dụng chính thức, không đòi tiền hay thông tin.'},
- {l:'Tuyển CTV thả tim',s:'Tuyển CTV Online',x:'Tuyển CTV thả tim video, 15.000đ/lượt, thu nhập 500k/ngày. Nạp 200.000đ kích hoạt tài khoản, hoàn lại 130%.',y:1,f:'MGN',note:'Chiêu “việc nhẹ lương cao”: trả thưởng nhỏ lúc đầu để dụ nạp tiền lớn.'},
- {l:'Bạn thân hỏi mượn tiền',s:'Minh Anh (bạn thân)',x:'Cho tớ mượn 500k với, mai tớ trả. Chuyển vào STK mới của tớ nha, đừng nói với ai nhé.',y:1,f:'MK',note:'Tài khoản của bạn đã bị chiếm. Ít dấu hiệu nên máy dễ bỏ lọt.'},
- {l:'Shipper giao hàng',s:'Số lạ',x:'Chào bạn, mình giao đơn VèoShop lúc 17h, thanh toán khi nhận 185.000đ nhé.',y:0,f:'MNO',note:'Thật nếu em có đặt hàng và trả tiền khi nhận.'},
- {l:'Nhờ bình chọn',s:'Hoàng Long (bạn cùng lớp)',x:'Bình chọn giúp tớ cuộc thi ảnh với! Vào binhchon-guongmat.site đăng nhập Facebook rồi bấm vote là được.',y:1,f:'LS',note:'Trang “bình chọn” bắt đăng nhập để lấy mật khẩu. Tài khoản của bạn đã bị chiếm.'},
- {l:'Nhà trường báo học phí',s:'Trường THPT (tài khoản chính thức)',x:'Phụ huynh nộp học phí học kì I trước ngày 15/11 qua cổng thanh toán của trường tại đường link trên website trường.',y:0,f:'LMUO',note:'Tin thật nhưng có link, có tiền, có hạn chót. Chỉ con người mới đối chiếu được với thông báo của GVCN.'},
- {l:'Cảnh báo virus',s:'Trang web lạ',x:'CẢNH BÁO: Máy tính nhiễm 5 virus! Gọi ngay Trung tâm hỗ trợ 1900 xxxx, dữ liệu sẽ bị xóa sau 5 phút.',y:1,f:'UON',note:''},
- {l:'CLB Tin học',s:'CLB Tin học',x:'Danh sách đội tuyển đã dán ở bảng tin và đăng trên website trường. CLB không thu bất kì khoản phí nào.',y:0,f:'MO',note:'Máy thấy chữ “phí” nên đánh dấu “nhắc đến tiền”, dù tin này đang dặn không nộp phí.'},
- {l:'Sale 90%',s:'VèoShop Official Sale',x:'SIÊU SALE 11.11 giày chính hãng giảm 90%, chỉ hôm nay! Đặt tại veoshop-sale11.vip, chuyển khoản trước 100%.',y:1,f:'LMUOG',note:''},
- {l:'Học bổng du học',s:'Global Future Scholarship',x:'Chúc mừng em nhận học bổng du học hè 100%! Nộp phí xác nhận 1.500.000đ trước 23:59 hôm nay để giữ suất.',y:1,f:'MUGON',note:''},
- {l:'Anh họ sau cuộc gọi video',s:'Anh Tuấn (anh họ)',x:'Em chuyển gấp anh 5 triệu vào STK của bạn anh, tối anh trả. Đừng nói với bố mẹ nhé!',y:1,f:'MUK',note:'Cuộc gọi video 10 giây trước đó có thể là Deepfake.'},
- {l:'Cập nhật định danh',s:'Số lạ',x:'Tài khoản định danh điện tử của bạn chưa đồng bộ. Tải ứng dụng cập nhật tại dichvucong-capnhat.com/app.apk trước ngày 30.',y:1,f:'LUON',note:'Ứng dụng giả (.apk) có thể chiếm quyền điều khiển điện thoại, đọc trộm OTP.'}
+ {l:'Mã OTP',s:'MAYXANH BANK',x:'Ma OTP cua Quy khach la 482913, hieu luc 2 phut. Tuyet doi KHONG cung cap ma nay cho bat ky ai.',y:0,f:'USOK',note:'Tin thật: Máy thấy chữ “OTP”, “2 phút” nên dễ chặn nhầm.'},
+ {l:'Ngân hàng dọa khóa TK',s:'MAYXANH BANK',x:'Tai khoan se bi TAM KHOA sau 24h. Cap nhat sinh trac hoc ngay: mayxanhbank-xacthuc.top',y:1,f:'LUO',note:'Tin lừa: Ngân hàng không gửi link cập nhật.'},
+ {l:'Lịch kiểm tra 15p',s:'Lớp trưởng',x:'Thứ Sáu kiểm tra 15 phút môn Tin (Bài 7–8), các bạn mang SGK nhé.',y:0,f:'',note:'Tin thật: Không có dấu hiệu rủi ro nào.'},
+ {l:'“Mẹ” nhắn nick mới',s:'Mẹ (tài khoản mới)',x:'Con ơi mẹ rơi ĐT, chuyển gấp 2 triệu vào STK 123 456 789, mẹ đang họp đừng gọi nhé.',y:1,f:'MUKN',note:''},
+ {l:'Biến động số dư',s:'MAYXANH BANK',x:'TK 1234xxx789 -35.000VND. SD 1.250.000VND. ND: thanh toan tra sua',y:0,f:'MO',note:'Tin thật: Chỉ báo số dư, không yêu cầu làm gì.'},
+ {l:'Trúng iPhone',s:'VèoShop Tri Ân',x:'Chúc mừng trúng iPhone 17 Pro Max! Chuyển 299.000đ phí ship và gửi ảnh CCCD trước 20h.',y:1,f:'MUSOGN',note:''},
+ {l:'Link họp nhóm',s:'Nhóm Tin 11',x:'Tối nay 20h họp nhóm làm slide trên Google Meet: meet.google.com/abc-defg-hij',y:0,f:'L',note:'Tin thật: Link Google Meet chính thống.'},
+ {l:'Cuộc gọi “công an”',s:'Số lạ',x:'Tôi là cán bộ điều tra. CCCD của em liên quan rửa tiền. Giữ bí mật, chuyển tiền vào TK tạm giữ.',y:1,f:'MSOKN',note:''},
+ {l:'Mã giảm giá trong app',s:'VèoShop App',x:'Mã giảm 20% cho đơn từ 200.000đ, dùng ngay trong ứng dụng VèoShop đến hết Chủ nhật.',y:0,f:'OGU',note:'Tin thật trong app chính thức.'},
+ {l:'Tuyển CTV thả tim',s:'Tuyển CTV Online',x:'CTV thả tim video 500k/ngày. Nạp 200.000đ kích hoạt tài khoản, hoàn lại 130%.',y:1,f:'MGN',note:'Chiêu “việc nhẹ lương cao” dụ nạp tiền.'},
+ {l:'Bạn thân mượn tiền',s:'Minh Anh (bạn thân)',x:'Cho tớ mượn 500k vào STK mới này nha, đừng nói với ai nhé.',y:1,f:'MK',note:'Nick bạn bị hack; ít dấu hiệu nên máy dễ bỏ lọt.'},
+ {l:'Shipper giao hàng',s:'Số lạ',x:'Mình giao đơn VèoShop lúc 17h, nhận hàng kiểm tra rồi thanh toán 185.000đ nhé.',y:0,f:'MNO',note:'Tin thật: Nhận hàng mới trả tiền (COD).'},
+ {l:'Nhờ bình chọn',s:'Bạn cùng lớp',x:'Bình chọn giúp tớ tại binhchon-guongmat.site, đăng nhập Facebook rồi bấm vote nhé!',y:1,f:'LS',note:'Web giả mạo lấy cắp mật khẩu Facebook.'},
+ {l:'Trường báo học phí',s:'Trường THPT',x:'Phụ huynh nộp học phí HK1 trước 15/11 qua cổng thanh toán trên website trường.',y:0,f:'LMUO',note:'Tin thật nhưng có link, tiền, hạn chót → máy dễ chặn nhầm.'},
+ {l:'Cảnh báo virus',s:'Trang web lạ',x:'CẢNH BÁO: Máy nhiễm 5 virus! Gọi ngay 1900 xxxx, dữ liệu sẽ xóa sau 5 phút.',y:1,f:'UON',note:''},
+ {l:'CLB Tin học',s:'CLB Tin học',x:'Danh sách đội tuyển đã đăng trên web trường. CLB không thu bất kì khoản phí nào.',y:0,f:'MO',note:'Tin thật: Máy thấy chữ “phí” nên dễ nhầm.'},
+ {l:'Sale 90%',s:'VèoShop Sale',x:'SIÊU SALE 11.11 giày chính hãng giảm 90%! Đặt tại veoshop-sale11.vip, chuyển khoản trước 100%.',y:1,f:'LMUOG',note:''},
+ {l:'Học bổng du học',s:'Global Scholarship',x:'Chúc mừng nhận học bổng 100%! Nộp phí giữ suất 1.500.000đ trước 23:59 hôm nay.',y:1,f:'MUGON',note:''},
+ {l:'Anh họ gọi video 10s',s:'Anh Tuấn',x:'Chuyển gấp anh 5 triệu vào STK bạn anh, tối anh trả. Đừng nói với bố mẹ nhé!',y:1,f:'MUK',note:'Deepfake AI giả mặt và giọng người thân.'},
+ {l:'Cập nhật VNeID giả',s:'Số lạ',x:'Tài khoản định danh chưa đồng bộ. Tải file dichvucong-capnhat.com/app.apk trước ngày 30.',y:1,f:'LUON',note:'File .apk giả chiếm quyền điều khiển điện thoại.'}
 ];
 var NSCAM=MSGS.filter(function(m){return m.y;}).length;
 
 var PLEDGES=[
- 'Bật xác thực 2 lớp cho tài khoản mạng xã hội và email.',
- 'Cùng bố mẹ đặt một “mật khẩu gia đình” để xác minh khi có cuộc gọi bất thường.',
- 'Cài và hướng dẫn bố mẹ dùng ứng dụng kiểm tra lừa đảo (vd. nTrust).',
- 'Kể cho ông bà, bố mẹ nghe chiêu giả danh công an, “bắt cóc online”.',
- 'Không bao giờ đọc mã OTP cho bất kì ai.',
- 'Ẩn ngày sinh, số điện thoại, trường lớp trên mạng xã hội.'
+ 'Bật xác thực 2 lớp (2FA) cho tài khoản mạng xã hội và email.',
+ 'Đặt “mật khẩu gia đình” với bố mẹ để xác minh khi có cuộc gọi khẩn.',
+ 'Không bao giờ đọc mã OTP, mật khẩu hay gửi ảnh CCCD qua mạng.',
+ 'Luôn soi tên miền thật ngay trước dấu “/” đầu tiên trước khi bấm link.',
+ 'Hướng dẫn ông bà, bố mẹ cảnh giác chiêu giả danh công an, trúng thưởng.',
+ 'Ẩn số điện thoại, ngày sinh, trường lớp ở chế độ riêng tư.'
 ];
 var SOURCES=[
- {t:'Bộ GD&ĐT cảnh báo về tình hình và thủ đoạn lừa đảo, “bắt cóc online” (Báo Nhân Dân, 12/8/2025)',u:'https://nhandan.vn/ocop/bo-giao-duc-va-dao-tao-canh-bao-ve-tinh-hinh-va-thu-doan-lua-dao-bat-coc-online-post900296.html'},
- {t:'Tái diễn tình trạng lừa đảo, chiếm đoạt tài sản dưới hình thức “bắt cóc online” (Báo Nhân Dân, 6/11/2025)',u:'https://nhandan.vn/ocop/tai-dien-tinh-trang-lua-dao-chiem-doat-tai-san-duoi-hinh-thuc-bat-coc-online-post920991.html'},
- {t:'Nam sinh viên 2k6 bị lừa đảo chiếm đoạt gần 1,3 tỷ đồng (Tuyển Sinh Số, 7/10/2025)',u:'https://tuyensinhso.vn/tin-moi/nam-sinh-vien-2k6-bi-lua-dao-chiem-doat-gan-13-ty-dong-c418394.html'},
- {t:'Google: Golden rules – Slow it down, Spot check, Stop! Don’t send',u:'https://support.google.com/faqs/answer/10122896?hl=en'}
+ {t:'Bộ GD&ĐT cảnh báo thủ đoạn lừa đảo “bắt cóc online” (Báo Nhân Dân, 2025)',u:'https://nhandan.vn/ocop/bo-giao-duc-va-dao-tao-canh-bao-ve-tinh-hinh-va-thu-doan-lua-dao-bat-coc-online-post900296.html'},
+ {t:'Google Safety: 3 quy tắc vàng (Slow it down · Spot check · Stop! Don’t send)',u:'https://support.google.com/faqs/answer/10122896?hl=en'}
 ];
 
 /* ---------- state ---------- */
@@ -1378,7 +1341,7 @@ function saveMe(){
 }
 
 var TR={rows:[],sample:false,last:0,err:'',anon:store.get('anon',false),arm:0,cache:null};
-var LINK_SHORT=['Tên miền chính thức','Tên miền con giả danh','“rn” giả chữ “m”','Dấu @ đánh lừa','Link rút gọn','Đuôi .gov.vn','Giả Cổng Dịch vụ công','Chữ Kirin (câu thưởng)'];
+var LINK_SHORT=['Tên miền chính thức','Tên miền con giả danh','Dấu @ đánh lừa','Giả Cổng Dịch vụ công'];
 var PLEDGE_SHORT=['Bật xác thực 2 lớp','Đặt mật khẩu gia đình','Cài nTrust cho bố mẹ','Kể chiêu giả công an','Không đọc mã OTP','Ẩn thông tin cá nhân'];
 function hhmmss(t){var d=new Date(t);function p(n){return (n<10?'0':'')+n;}return p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds());}
 function trUrl(action){var ep=endpoint(),k=store.get('key','')||'123456';return ep+(ep.indexOf('?')>=0?'&':'?')+'action='+action+'&lop='+encodeURIComponent(lopCode())+'&key='+encodeURIComponent(k);}
@@ -1429,11 +1392,11 @@ function agg(rows){
 function sampleRows(){
  if(TR.cache)return TR.cache;
  var seed=11;function rnd(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646;}
- var rows=[],t0=Date.now()-25*60000,pr=[.96,.8,.68,.42,.74,.86,.62,.3];
+ var rows=[],t0=Date.now()-25*60000,pr=[.94,.78,.64,.72];
  for(var i=1;i<=24;i++){
   var g=String(Math.ceil(i/6)),ten='HS '+(i<10?'0':'')+i,may='mau'+i,kq='',sc=0;
-  for(var j=0;j<8;j++){var ok=rnd()<pr[j];kq+=ok?'1':'0';if(ok)sc++;}
-  rows.push({t:t0+i*20000,lop:'MẪU',nhom:g,ten:ten,may:may,hd:'soi-link',diem:sc,toida:8,ct:{kq:kq},id:may+'-l'});
+  for(var j=0;j<LINKS.length;j++){var ok=rnd()<pr[j];kq+=ok?'1':'0';if(ok)sc++;}
+  rows.push({t:t0+i*20000,lop:'MẪU',nhom:g,ten:ten,may:may,hd:'soi-link',diem:sc,toida:LINKS.length,ct:{kq:kq},id:may+'-l'});
   if(i%6===1){var no=['01','02','03','04'][(Number(g)-1)%4];rows.push({t:t0+600000+i*15000,lop:'MẪU',nhom:g,ten:ten,may:may,hd:'ho-so-'+no,diem:Math.round(52+rnd()*48),toida:100,ct:{},id:may+'-c'});}
   if(rnd()<.75)rows.push({t:t0+1100000+i*10000,lop:'MẪU',nhom:g,ten:ten,may:may,hd:'may-loc',diem:[65,70,75,80,85][Math.floor(rnd()*5)],toida:100,ct:{},id:may+'-f'});
   if(rnd()<.7){var a=Math.floor(rnd()*6),b=Math.floor(rnd()*6);rows.push({t:t0+1400000+i*8000,lop:'MẪU',nhom:g,ten:ten,may:may,hd:'loi-hua',diem:a===b?1:2,toida:6,ct:{p:a===b?String(a):Math.min(a,b)+','+Math.max(a,b)},id:may+'-p'});}
@@ -1456,7 +1419,7 @@ function dashHTML(A){
  list.sort(function(a,b){return ((Number(a.nhom)||99)-(Number(b.nhom)||99))||String(a.ten).localeCompare(String(b.ten),'vi');});
  var L=list.filter(function(s){return s.link!==null;});
  var lAvg=L.length?L.reduce(function(x,s){return x+s.link;},0)/L.length:0;
- var lOk=L.filter(function(s){return s.link>=5;}).length;
+ var lOk=L.filter(function(s){return s.link>=3;}).length;
  var per=LINKS.map(function(){return {c:0,n:0};});
  L.forEach(function(s){var kq=s.linkFirst?s.linkFirst.kq:'';for(var i=0;i<LINKS.length;i++){var ch=kq.charAt(i);if(ch==='1'||ch==='0'){per[i].n++;if(ch==='1')per[i].c++;}}});
  var groups={};list.forEach(function(s){Object.keys(s.cases).forEach(function(no){var g=s.nhom||'?';groups[no]=groups[no]||{};if(groups[no][g]===undefined||s.cases[no]>groups[no][g])groups[no][g]=s.cases[no];});});
@@ -1468,7 +1431,7 @@ function dashHTML(A){
  var html='<div class="row" style="justify-content:space-between"><label class="sw" for="tr-anon"><input type="checkbox" id="tr-anon"'+(TR.anon?' checked':'')+'>Ẩn tên nhóm khi chiếu lên màn hình</label><span class="small muted">'+list.length+' học sinh · '+(TR.sample?'dữ liệu mẫu':'tự cập nhật mỗi 5 giây')+'</span></div>';
  html+='<div class="kpis">'+
   kpi(list.length,'Học sinh đã gửi kết quả')+
-  kpi(L.length?lAvg.toFixed(1)+'/8':'–','Soi link: điểm trung bình'+(L.length?' · '+lOk+'/'+L.length+' em đạt từ 5/8':''))+
+  kpi(L.length?lAvg.toFixed(1)+'/'+LINKS.length:'–','Soi link: điểm TB'+(L.length?' · '+lOk+'/'+L.length+' em đạt ≥3/'+LINKS.length:''))+
   kpi(nRep?Math.round(sumRep/nRep)+'/100':'–','Phòng điều tra: điểm trung bình '+nRep+' báo cáo nhóm')+
   kpi(F.length?F[0].filter+'%':'–','Máy lọc: cao nhất'+(F.length?' · '+dispName(F[0])+(F[0].nhom?' (Nhóm '+esc(F[0].nhom)+')':''):''))+
   kpi(P.length,'Học sinh đã gửi lời hứa')+
@@ -1482,14 +1445,14 @@ function dashHTML(A){
  '</tbody></table></div></div></div>';
  html+='<div class="grid2"><div class="card stack"><h3>Máy lọc: bảng xếp hạng</h3>'+(F.length?'<ol class="hw">'+F.slice(0,6).map(function(s){return '<li><b>'+s.filter+'%</b> · '+dispName(s)+(s.nhom?' · Nhóm '+esc(s.nhom):'')+'</li>';}).join('')+'</ol>':'<p class="muted small">Chưa có ai chạy bộ lọc.</p>')+'</div>'+
   '<div class="card stack"><h3>Lớp mình đã hứa gì?</h3><div class="bars">'+pc.map(function(n,i){var p=P.length?Math.round(n/P.length*100):0;return '<div class="barrow"><span class="lab">'+PLEDGE_SHORT[i]+'</span><span class="track"><i style="width:'+p+'%"></i></span><span class="v">'+n+'</span></div>';}).join('')+'</div></div></div>';
- html+='<div class="card stack"><h3>Từng học sinh</h3><p class="small muted">Đạt: soi link từ 5/8, báo cáo nhóm từ 70/100, máy lọc từ 75%. Cột hồ sơ lấy điểm báo cáo của cả nhóm.</p><div class="table-wrap"><table class="dt"><thead><tr><th>Nhóm</th><th>Học sinh</th><th>Soi link</th><th>Hồ sơ của nhóm</th><th>Máy lọc</th><th>Lời hứa</th><th>Tình trạng</th></tr></thead><tbody>'+
+ html+='<div class="card stack"><h3>Từng học sinh</h3><p class="small muted">Đạt: soi link từ 3/4, báo cáo nhóm từ 70/100, máy lọc từ 75%.</p><div class="table-wrap"><table class="dt"><thead><tr><th>Nhóm</th><th>Học sinh</th><th>Soi link</th><th>Hồ sơ của nhóm</th><th>Máy lọc</th><th>Lời hứa</th><th>Tình trạng</th></tr></thead><tbody>'+
   list.map(function(s){
    var g=s.nhom||'?',gc=[];Object.keys(groups).sort().forEach(function(no){if(groups[no][g]!==undefined)gc.push({no:no,v:groups[no][g]});});
-   var link=s.link===null?'<span class="st no">Chưa làm</span>':'<span class="st '+(s.link>=5?'ok':'low')+'">'+s.link+'/8</span>'+(s.linkTries>1?' <span class="small muted">('+s.linkTries+' lần)</span>':'');
+   var link=s.link===null?'<span class="st no">Chưa làm</span>':'<span class="st '+(s.link>=3?'ok':'low')+'">'+s.link+'/'+LINKS.length+'</span>'+(s.linkTries>1?' <span class="small muted">('+s.linkTries+' lần)</span>':'');
    var cs=gc.length?gc.map(function(x){return '<span class="st '+(x.v>=70?'ok':'low')+'">'+x.no+': '+x.v+'</span>';}).join(' '):'<span class="st no">Chưa nộp</span>';
    var fl=s.filter===null?'<span class="st no">Chưa chạy</span>':'<span class="st '+(s.filter>=75?'ok':'low')+'">'+s.filter+'%</span>';
    var pl=s.pledge?'<span class="st ok">'+String(s.pledge).split(',').length+' lời hứa</span>':'<span class="st no">–</span>';
-   var need=(s.link!==null&&s.link<5)||gc.some(function(x){return x.v<70;})||(s.filter!==null&&s.filter<75);
+   var need=(s.link!==null&&s.link<3)||gc.some(function(x){return x.v<70;})||(s.filter!==null&&s.filter<75);
    var none=s.link===null&&!gc.length&&s.filter===null;
    var stt=none?'<span class="st no">Chưa làm</span>':(need?'<span class="st low">Cần hỗ trợ</span>':'<span class="st ok">Ổn</span>');
    return '<tr><td>'+esc(g)+'</td><td>'+dispName(s)+'</td><td>'+link+'</td><td>'+cs+'</td><td>'+fl+'</td><td>'+pl+'</td><td>'+stt+'</td></tr>';
@@ -1651,16 +1614,16 @@ var VIEWS={},AFTER={};
 
 VIEWS.home=function(){
  var mods=MODS.filter(function(m){return !m.tool&&(S.mode==='gv'||!m.gv);});
- var side=S.mode==='gv'?qrPanel():'<div class="card stack"><div class="eyebrow">Thẻ thám tử của em</div>'+meForm(false)+'<p class="small muted">'+meStatus()+'</p><ol class="hw small"><li>Phần 2: soi tên miền thật của 8 đường link.</li><li>Phần 3: điều tra hồ sơ nhóm được giao.</li><li>Phần 4: huấn luyện máy lọc lừa đảo.</li><li>Phần 5: gửi lời hứa an toàn số.</li></ol></div>';
+ var side=S.mode==='gv'?qrPanel():'<div class="card stack"><div class="eyebrow">Thẻ thám tử của em</div>'+meForm(false)+'<p class="small muted">'+meStatus()+'</p><ol class="hw"><li><b>Phần 2:</b> Soi nhanh 4 đường link & Điều tra hồ sơ của nhóm.</li><li><b>Phần 3:</b> Huấn luyện máy lọc lừa đảo.</li><li><b>Phần 4:</b> Gửi lời hứa an toàn số.</li></ol></div>';
  return '<section class="wrap mod">'+
   '<div class="hero"><div class="stack" style="gap:16px">'+
-   '<div class="eyebrow">Tin học 11 · Bài 9 Giao tiếp an toàn trên Internet · Tiết 1</div>'+
+   '<div class="eyebrow">Tin học 11 · Bài 9: Giao tiếp an toàn trên Internet · Tiết 1</div>'+
    '<h1>Trung tâm<br>Chống lừa đảo</h1>'+
-   '<p class="tag">Kẻ lừa đảo không cần hack máy tính. Chúng hack cảm xúc. Hôm nay các em là <b>chuyên viên an ninh mạng</b>: soi đường link, gom bằng chứng, huấn luyện máy lọc.</p>'+
-   '<div class="row"><button class="btn primary big" data-act="go" data-v="'+(S.mode==='gv'?'warm':'link')+'">'+(S.mode==='gv'?'Bắt đầu tiết học':'Vào nhiệm vụ đầu tiên')+'</button></div>'+
+   '<p class="tag">Kẻ lừa đảo không hack máy tính, chúng <b>hack cảm xúc</b>. Hôm nay các em là <b>điều tra viên số</b>: soi tên miền thật, phá án 5 hồ sơ và huấn luyện máy lọc.</p>'+
+   '<div class="row"><button class="btn primary big" data-act="go" data-v="'+(S.mode==='gv'?'warm':'case')+'">'+(S.mode==='gv'?'Bắt đầu tiết học':'Vào Phòng điều tra & Soi link')+'</button></div>'+
   '</div>'+side+'</div>'+
   '<div class="mods">'+mods.map(function(m){return '<button class="modcard" data-act="go" data-v="'+m.k+'"><span class="n">PHẦN 0'+m.n+'</span><span class="t">'+m.t+'</span><span class="s">'+m.s+'</span><span class="d">'+m.d+'</span></button>';}).join('')+'</div>'+
-  '<p class="muted small gv-only">Ngân hàng Mây Xanh, sàn VèoShop và các tên miền trong bài đều là giả định. Các đường link chỉ để đọc, không bấm được. Phím tắt: Space (bước tiếp theo ở phần 1), F (toàn màn hình), G (phóng to ghi bài), M (bật/tắt âm thanh).</p>'+
+  '<p class="muted small gv-only">Phím tắt: Space (bước tiếp theo ở Phần 1), F (toàn màn hình), G (phóng to ghi bài), Q (mã QR), M (âm thanh).</p>'+
  '</section>';
 };
 function studentLink(){
@@ -1835,86 +1798,67 @@ function warmMain(){
  else if(w.ph==='reveal'){if(w.i<WARM.length-1){w.i++;w.ph='ready';}else{w.ph='twist';sWhoosh();}drawWarm();window.scrollTo(0,0);}
 }
 function twistHTML(){
- return '<div class="stack" style="gap:22px"><div class="twist">'+
-  '<div class="eyebrow">Lật bài</div>'+
-  '<h2>Chiếc đồng hồ 5 giây chính là chiêu số 1 của kẻ lừa đảo</h2>'+
-  '<p class="lead">Khi bị ép thời gian, ta phản ứng bằng cảm xúc thay vì suy nghĩ. Kẻ lừa đảo không cần hack máy tính của em. Chúng hack cảm xúc của em: sợ hãi, tham lam, vội vàng, cả niềm tin vào người quen.</p>'+
-  '<div class="qbox"><b>Câu hỏi của tiết học.</b> Làm thế nào để không bị “hack cảm xúc”?</div>'+
-  '<div class="row"><button class="btn tapebtn big" data-act="warm-intro">Vào bài học</button><button class="btn" data-act="warm-restart">Chơi lại từ đầu</button></div>'+
+ return '<div class="stack" style="gap:20px"><div class="intro">'+
+  '<div class="intro-topic">Lật bài · Chủ đề 3 · Bài 9 (Tiết 1)</div>'+
+  '<h1 class="intro-title">Giao tiếp an toàn<br>trên Internet</h1>'+
+  '<p class="lead"><b>Chiếc đồng hồ 5 giây chính là vũ khí số 1 của kẻ lừa đảo!</b> Khi bị ép thời gian, ta phản ứng bằng cảm xúc (sợ hãi, tham lam, vội vàng) thay vì suy nghĩ. Hôm nay chúng ta trang bị <b>Bộ giáp 3 lớp</b> và <b>Kĩ năng điều tra số</b> để không bao giờ sập bẫy.</p>'+
+  '<div class="intro-plan"><div class="eyebrow">Lộ trình tiết học (45 phút)</div><ol><li><ul>'+
+   '<li><b>Phần 01 (8 phút):</b> Hộp thư khẩn cấp & Nguyên tắc “Bộ giáp 3 lớp” (Mục 1a)</li>'+
+   '<li><b>Phần 02 (16 phút):</b> Phòng điều tra & Soi link – Bóc trần 4 dạng lừa đảo & Deepfake AI (Mục 1b)</li>'+
+   '<li><b>Phần 03 (9 phút):</b> Luyện tập huấn luyện Máy lọc lừa đảo</li>'+
+   '<li><b>Phần 04 (7 phút):</b> Tổng kết & Lời hứa an toàn số</li>'+
+  '</ul></li></ol></div>'+
+  '<div class="row"><button class="btn tapebtn big" data-act="hd1">Bắt đầu Hoạt động 1: Bộ giáp 3 lớp</button><button class="btn" data-act="warm-restart">Chơi lại 5 tin nhắn</button></div>'+
  '</div></div>';
 }
-function introHTML(){
- return '<div class="stack" style="gap:22px"><div class="intro">'+
-  '<div class="intro-topic">Chủ đề 3 · Đạo đức, pháp luật và văn hóa trong môi trường số</div>'+
-  '<h1 class="intro-title">Bài 9<br>Giao tiếp an toàn<br>trên Internet</h1>'+
-  '<p class="lead">Mỗi ngày các em nhận hàng chục tin nhắn, cuộc gọi, đường link. Đa số là thật, nhưng chỉ cần tin nhầm một lần là có thể mất tiền, mất tài khoản, thậm chí gặp nguy hiểm. Kẻ lừa đảo luôn đánh vào cảm xúc. Muốn không bị lừa, các em cần biết <b>nhận ra</b> chiêu trò và biết <b>cách xử lí</b>.</p>'+
-  '<div class="intro-plan"><div class="eyebrow">Tiết học hôm nay</div><ol><li><b>1. Nhận biết và phòng tránh một số dạng lừa đảo trên không gian số</b><ul><li><b>Hoạt động 1:</b> Trao đổi về cách xử lí những tình huống bất thường, rút ra nguyên tắc “bộ giáp 3 lớp” (mục 1a)</li><li><b>Hoạt động 2:</b> Giải phẫu đường link, soi tên miền thật</li><li><b>Hoạt động 3:</b> Phòng điều tra, vận dụng vào 4 dạng lừa đảo (mục 1b)</li><li><b>Luyện tập:</b> Huấn luyện máy lọc lừa đảo</li></ul></li></ol></div>'+
-  '<div class="row"><button class="btn tapebtn big" data-act="hd1">Bắt đầu Hoạt động 1</button><button class="btn" data-act="warm-back">Quay lại phần lật bài</button></div>'+
- '</div></div>';
-}
+function introHTML(){return twistHTML();}
 var HD1T=[
- {t:'Tình huống 1',ic:'phone',d:'Nhận được tin nhắn (qua thư điện tử, điện thoại, mạng xã hội Facebook, Zalo, Tiktok,...) yêu cầu <b>chuyển tiền ngay</b> vào tài khoản số 123 456 789 nếu không muốn gặp những rắc rối liên quan tới bản thân hay với cơ quan luật pháp.'},
- {t:'Tình huống 2',ic:'link',d:'Nhận được thư điện tử từ <b>địa chỉ lạ</b> yêu cầu mở một tài liệu hoặc một đường link đính kèm và thực hiện theo hướng dẫn đó.'}
+ {t:'Tình huống 1 · Đe dọa chuyển tiền',ic:'phone',d:'Nhận tin nhắn/cuộc gọi yêu cầu <b>chuyển tiền ngay</b> vào STK lạ nếu không muốn gặp rắc rối pháp luật.'},
+ {t:'Tình huống 2 · Đường link lạ',ic:'link',d:'Nhận email/tin nhắn từ <b>địa chỉ lạ</b> giục mở đường link hoặc tệp đính kèm ngay lập tức.'}
 ];
 var HD1O=[
- {k:'A',t:'Thực hiện các yêu cầu để đề phòng câu chuyện trở nên phức tạp.',ok:false,g:'Sai. Làm theo yêu cầu chính là mắc bẫy → trái với Lớp 3: Dừng lại, không gửi!'},
- {k:'B',t:'Hãy dành thời gian và đặt câu hỏi để tránh bị dồn vào tình huống xấu.',ok:true,g:'Đúng → Lớp 1: Hãy chậm lại!'},
- {k:'C',t:'Trao đổi với thầy cô giáo, người thân, bạn bè,… để được nghe ý kiến tư vấn.',ok:true,g:'Đúng → Lớp 2: Kiểm tra ngay!'},
- {k:'D',t:'Tìm cách liên hệ trực tiếp với người gửi để làm rõ.',ok:true,g:'Đúng → Lớp 2: Kiểm tra ngay! (liên hệ qua số, kênh em đã biết, không dùng số trong tin nhắn)'}
+ {k:'A',t:'Làm theo yêu cầu ngay để tránh rắc rối.',ok:false,g:'Sai → Sập bẫy kẻ gian (trái với Lớp 3: Dừng lại, không gửi!).'},
+ {k:'B',t:'Dừng lại, bình tĩnh đặt câu hỏi kiểm chứng.',ok:true,g:'Đúng → Lớp 1: Hãy chậm lại!'},
+ {k:'C',t:'Hỏi ý kiến thầy cô, bố mẹ, người thân.',ok:true,g:'Đúng → Lớp 2: Kiểm tra ngay!'},
+ {k:'D',t:'Liên hệ xác minh qua số/kênh chính thức đã biết.',ok:true,g:'Đúng → Lớp 2: Kiểm tra ngay!'}
 ];
 var hdTimer=null,hdLeft=60;
 function hd1HTML(){
  var shown=!!S.warm.hdAns;
- return '<div class="stack" style="gap:22px"><div class="intro">'+
-  '<div class="intro-topic">Hoạt động 1 (SGK) · Cặp đôi · 3 phút</div>'+
-  '<h2 class="intro-title" style="font-size:clamp(1.9rem,4.2vw,3.4rem)">Trao đổi về cách xử lí những tình huống bất thường</h2>'+
-  '<div class="task"><div class="task-h"><span class="eyebrow">Nhiệm vụ của em</span></div><ol class="hw"><li>Đọc 2 tình huống dưới đây cùng bạn cùng bàn.</li><li>Trao đổi trong 1 phút: em hoặc người quen đã gặp tình huống tương tự chưa? Đã xử lí như thế nào?</li><li>Trả lời câu hỏi trắc nghiệm: chọn <b>tất cả</b> các cách ứng xử cần thiết, giơ tay theo phương án em chọn.</li><li>Nghe thầy cô chốt đáp án, rồi rút ra nguyên tắc phòng tránh lừa đảo.</li></ol></div>'+
-  '<div class="qbox">Em hoặc người quen đã có khi nào gặp những tình huống tương tự như sau chưa?</div>'+
+ return '<div class="stack" style="gap:18px"><div class="intro">'+
+  '<div class="intro-topic">Hoạt động 1 (SGK) · Thảo luận nhanh · 3 phút</div>'+
+  '<h2 style="font-size:clamp(1.85rem,3.6vw,3rem)">Ứng xử thế nào trước tin nhắn bất thường?</h2>'+
   '<div class="hdq">'+HD1T.map(function(x){return '<div class="hdq-c"><span class="hdt-h">'+icon(x.ic)+x.t+'</span><p>'+x.d+'</p></div>';}).join('')+'</div>'+
-  '<div class="qbox">Trong những tình huống ấy, em hoặc người quen đã xử lí như thế nào?</div>'+
-  '<div class="row" style="align-items:center"><span class="hd-clock mono" id="hdclock">'+(hdTimer?Math.floor(hdLeft/60)+':'+('0'+hdLeft%60).slice(-2):'1:00')+'</span><button class="btn" data-act="hd1-timer" id="hdtbtn">'+(hdTimer?'Dừng bấm giờ':'Bấm giờ 1 phút')+'</button></div>'+
-  '<div class="qbox"><b>Câu hỏi.</b> Với các tình huống nêu trong Hoạt động 1, những cách nào sau đây là ứng xử cần thiết để phòng tránh những rủi ro?</div>'+
+  '<div class="qbox"><b>Câu hỏi:</b> Chọn <b>tất cả</b> các cách ứng xử đúng khi gặp 2 tình huống trên:</div>'+
   '<div class="hdo">'+HD1O.map(function(o){return '<div class="hdo-c'+(shown?(o.ok?' ok':' no'):'')+'"><span class="hdo-k">'+o.k+'</span><div><p>'+o.t+'</p>'+(shown?'<div class="hdo-g">'+o.g+'</div>':'')+'</div></div>';}).join('')+'</div>'+
-  '<div class="row">'+(shown?'':'<button class="btn" data-act="hd1-ans">Hiện đáp án</button>')+(S.warm.armor?'':'<button class="btn tapebtn big" data-act="armor">Chốt kiến thức: bộ giáp 3 lớp</button>')+'<button class="btn" data-act="warm-intro">Quay lại phần giới thiệu bài</button></div>'+
- '</div>'+(S.warm.armor?armorHTML()+'<div class="row"><button class="btn primary big" data-act="go" data-v="link">Sang Hoạt động 2: Giải phẫu đường link</button></div>':'')+'</div>';
+  '<div class="row">'+(shown?'':'<button class="btn primary big" data-act="hd1-ans">Hiện đáp án (B, C, D)</button>')+(S.warm.armor?'':'<button class="btn tapebtn big" data-act="armor">Chốt kiến thức: Bộ giáp 3 lớp</button>')+'<button class="btn" data-act="warm-back">Quay lại</button></div>'+
+ '</div>'+(S.warm.armor?armorHTML()+noteBox('warm')+'<div class="row"><button class="btn primary big" data-act="go" data-v="case">Sang Phần 2: Phòng điều tra & Soi link →</button></div>':'')+'</div>';
 }
 
 function armorHTML(){
- return '<div class="stack" data-zoom="Bộ giáp 3 lớp" data-zw="1250"><div class="eyebrow">Bộ giáp 3 lớp (SGK mục 1a)</div><div class="armor">'+ARMOR.map(function(a,i){return '<div class="arm '+a.k+'"><div class="arm-ic">'+icon(a.ic)+'</div><span class="mono muted small">Lớp '+(i+1)+'</span><h3>'+a.t+'</h3><p>'+a.d+'</p><div class="small"><b>Thao tác của dân Tin:</b></div><ul>'+a.tin.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul></div>';}).join('')+'</div>'+
- '<p class="gold">Google gọi đây là 3 quy tắc vàng: <i>Slow it down</i> (chậm lại) · <i>Spot check</i> (kiểm tra) · <i>Stop! Don’t send</i> (dừng lại, đừng gửi).</p></div>';
+ return '<div class="stack" data-zoom="Bộ giáp 3 lớp" data-zw="1250"><div class="eyebrow">Chốt kiến thức Mục 1a · Bộ giáp 3 lớp</div><div class="armor">'+ARMOR.map(function(a,i){return '<div class="arm '+a.k+'"><div class="arm-ic">'+icon(a.ic)+'</div><span class="mono muted small">Lớp '+(i+1)+'</span><h3>'+a.t+'</h3><p>'+a.d+'</p><ul>'+a.tin.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul></div>';}).join('')+'</div>'+
+ '<p class="gold">Quy tắc vàng của Google: <i>Slow it down</i> (Chậm lại) · <i>Spot check</i> (Kiểm tra) · <i>Stop! Don’t send</i> (Không gửi).</p></div>';
 }
 
-/* link module */
-VIEWS.link=function(){
- return '<section class="wrap mod">'+modHead('link','<span class="eyebrow" style="color:var(--info)">Nguyên tắc 2 · Kiểm tra ngay!</span>')+gvNote('link')+meBanner()+taskBox('link')+
- '<div class="grid2"><div class="card stack">'+
-  '<div class="stack" style="gap:4px"><h3>Máy soi đường link</h3><p class="muted">Gõ hoặc dán một đường link. Máy tách từng phần và chỉ ra tên miền thật.</p></div>'+
-  '<form id="xform" class="xform" autocomplete="off"><label class="sr" for="xin">Đường link cần soi</label><input id="xin" type="text" inputmode="url" spellcheck="false" placeholder="vd: mayxanhbank.vn.xacthuc-taikhoan.top/dang-nhap" value="'+esc(S.link.x)+'"><button class="btn primary" type="submit">'+icon('search')+'Soi link</button></form>'+
-  '<div class="chips"><span class="muted">Thử nhanh:</span>'+XEX.map(function(u){return '<button type="button" class="chip" data-act="xchip" data-u="'+esc(u)+'">'+esc(u)+'</button>';}).join('')+'</div>'+
-  '<div id="xout" aria-live="polite">'+(S.link.x?xrayHTML(analyze(S.link.x)):'')+'</div>'+
-  '<div class="tip"><b>Mẹo đọc tên miền.</b> Tìm dấu “/” đầu tiên sau “//”. Nếu có dấu “@”, bỏ hết phần đứng trước nó. Trong phần còn lại, lấy 2 cụm cuối (3 cụm nếu đuôi là .com.vn, .gov.vn, .edu.vn…): đó là tên miền thật. Mọi thứ phía trước chỉ là tên miền con do chủ trang tự đặt.</div>'+
- '</div><div class="card stack" id="chal"></div></div>'+noteBox('link')+'</section>';
-};
-AFTER.link=function(){drawChal();};
+/* merged module 02: link x-ray + investigation cases */
 function drawChal(){
  var L=S.link,box=$('#chal');if(!box)return;
- if(!L.order)L.order=LINKS.map(function(q){return shuffle(q.opts.map(function(o,j){return {o:o,ok:j===q.ans};}));});
+ if(!L.order||L.order.length!==LINKS.length)L.order=LINKS.map(function(q){return shuffle(q.opts.map(function(o,j){return {o:o,ok:j===q.ans};}));});
  if(L.done){
-  var sc=L.score,rank=sc>=7?'Thám tử bậc thầy':sc>=5?'Thám tử':'Thám tử tập sự';
-  box.innerHTML='<div class="eyebrow">Thử thách · Thám tử tên miền</div><div class="bignum">'+sc+'/'+LINKS.length+'</div><h3>'+rank+'</h3><p>'+(sc>=7?'Em đọc tên miền như dân chuyên nghiệp. Hãy dạy lại mẹo này cho bố mẹ.':'Xem lại mẹo đọc tên miền bên cạnh rồi thử lần nữa.')+'</p><div class="row"><button class="btn" data-act="link-reset">Làm lại</button><button class="btn primary" data-act="go" data-v="case">Sang phần 3: Phòng điều tra</button></div>';
+  var sc=L.score,rank=sc>=4?'Thám tử bậc thầy':sc>=3?'Thám tử tinh mắt':'Thám tử tập sự';
+  box.innerHTML='<div class="eyebrow">Hoàn thành Bước 1 · Soi link</div><div class="bignum">'+sc+'/'+LINKS.length+'</div><h3>'+rank+'</h3><p>Kéo xuống <b>Bước 2</b> ngay bên dưới để mở Hồ sơ điều tra của nhóm!</p><div class="row"><button class="btn" data-act="link-reset">Làm lại 4 link</button><a class="btn primary" href="#case-files">Xuống Bước 2: Mở Hồ sơ nhóm ↓</a></div>';
   return;
  }
  var q=LINKS[L.i],opts=L.order[L.i],answered=L.picked!==null;
  var fb='';
  if(answered){
   var ok=opts[L.picked].ok;
-  fb='<div class="vpill '+(ok?'safe':'danger')+'">'+icon(ok?'check':'x')+'<span>'+(ok?'Chính xác!':'Chưa đúng. Tên miền thật là '+esc(q.opts[q.ans]))+'</span></div><p class="chal-note">'+q.note+'</p><div class="card" style="background:var(--panel-2)">'+xrayHTML(analyze(q.url))+'</div><div class="row"><button class="btn primary" data-act="next">'+(L.i<LINKS.length-1?'Link tiếp theo':'Xem kết quả')+'</button></div>';
+  fb='<div class="vpill '+(ok?'safe':'danger')+'">'+icon(ok?'check':'x')+'<span>'+(ok?'Chính xác!':'Chưa đúng! Tên miền thật là '+esc(q.opts[q.ans]))+'</span></div><p class="chal-note">'+q.note+'</p><div class="row"><button class="btn primary big" data-act="next">'+(L.i<LINKS.length-1?'Link tiếp theo →':'Hoàn thành Bước 1')+'</button></div>';
  }
- box.innerHTML='<div class="chal-h"><span class="eyebrow">Thử thách · Thám tử tên miền</span><span class="score">Điểm '+L.score+'/'+LINKS.length+'</span></div>'+
+ box.innerHTML='<div class="chal-h"><span class="eyebrow">Thử nhanh 4 đường link</span><span class="score">Điểm '+L.score+'/'+LINKS.length+'</span></div>'+
   '<div class="prog"><i style="width:'+(L.i/LINKS.length*100)+'%"></i></div>'+
-  '<div class="muted small">Link '+(L.i+1)+'/'+LINKS.length+(q.bonus?' · Câu thưởng siêu khó':'')+'</div>'+
+  '<div class="muted small">Câu '+(L.i+1)+'/'+LINKS.length+' · Bấm chọn <b>tên miền thật</b> của link sau:</div>'+
   '<div class="url-big">'+esc(q.url)+'</div>'+
-  '<p><b>Tên miền thật của đường link này là gì?</b></p>'+
   '<div class="opts">'+opts.map(function(o,j){var cls=answered?(o.ok?'right':(L.picked===j?'wrong':'')):'';return '<button type="button" class="opt '+cls+'" data-act="pick" data-j="'+j+'"'+(answered?' aria-disabled="true"':'')+'>'+esc(o.o)+'</button>';}).join('')+'</div>'+fb;
 }
 
@@ -1925,11 +1869,22 @@ function cst(id){
 }
 function caseById(id){return CASES.filter(function(c){return c.id===id;})[0];}
 VIEWS['case']=function(){return S.caseId&&caseById(S.caseId)?caseDetail(S.caseId):caseList();};
+VIEWS.link=VIEWS['case'];
 function caseList(){
- return '<section class="wrap mod">'+modHead('case')+gvNote('case')+meBanner()+taskBox('case')+
- '<p class="brief">Mỗi hồ sơ dựng lại một vụ lừa đảo. Hãy chạm vào những chi tiết đáng ngờ trên màn hình để thu thập bằng chứng, dùng công cụ kiểm chứng, rồi nộp báo cáo sự cố.</p>'+
- '<div class="files">'+CASES.map(function(c){var st=S.cases[c.id];var status=st&&st.res?'Đã nộp báo cáo · '+st.res.total+'/100':st&&st.found.length?'Đang điều tra · '+st.found.length+'/'+c.ev.length+' bằng chứng':'Chưa mở';
-  return '<button type="button" class="file'+(c.special?' special':'')+'" data-act="go" data-v="case" data-c="'+c.id+'" data-no="HỒ SƠ '+c.no+'"><span class="file-n">'+(c.special?'Hồ sơ đặc biệt · AI':'Sự cố')+'</span><span class="file-t">'+c.name+'</span><span class="file-d">'+c.teaser+'</span><span class="file-st">'+status+'</span></button>';}).join('')+'</div>'+noteBox('case')+'</section>';
+ return '<section class="wrap mod">'+modHead('case','<span class="eyebrow" style="color:var(--info)">Gộp Soi tên miền thật & Điều tra 5 hồ sơ sự cố</span>')+gvNote('case')+meBanner()+taskBox('case')+
+ '<div class="grid2" data-zoom="Bước 1: Máy soi đường link" data-zw="1200"><div class="card stack">'+
+  '<div class="eyebrow" style="color:var(--info)">Bước 1 · Kỹ năng đọc tên miền thật (X-Ray)</div>'+
+  '<h3>Máy soi đường link</h3>'+
+  '<div class="tip"><b>Quy tắc 3 giây:</b> Tìm dấu <b>“/”</b> đầu tiên sau <b>“//”</b> (bỏ phần trước <b>“@”</b> nếu có) → lấy <b>2 cụm ngay trước nó</b> (3 cụm nếu đuôi <code>.gov.vn</code>, <code>.com.vn</code>). Mọi chữ đứng trước chỉ là tên miền con giả mạo!</div>'+
+  '<form id="xform" class="xform" autocomplete="off"><label class="sr" for="xin">Đường link cần soi</label><input id="xin" type="text" inputmode="url" spellcheck="false" placeholder="Dán hoặc chọn link mẫu bên dưới…" value="'+esc(S.link.x)+'"><button class="btn primary" type="submit">'+icon('search')+'Soi link</button></form>'+
+  '<div class="chips"><span class="muted">Mẫu thử nhanh:</span>'+XEX.map(function(u){return '<button type="button" class="chip" data-act="xchip" data-u="'+esc(u)+'">'+esc(u)+'</button>';}).join('')+'</div>'+
+  '<div id="xout" aria-live="polite">'+(S.link.x?xrayHTML(analyze(S.link.x)):'')+'</div>'+
+ '</div><div class="card stack" id="chal"></div></div>'+
+ '<div class="card stack" id="case-files" data-zoom="Bước 2: 5 Hồ sơ điều tra" data-zw="1250">'+
+  '<div class="mod-head"><div class="stack" style="gap:4px"><div class="eyebrow" style="color:var(--danger)">Bước 2 · Hoạt động nhóm (Nhóm 1–4 mở Hồ sơ 01–04 · Hồ sơ 05 Deepfake AI)</div><h3>Phòng điều tra: Chọn hồ sơ sự cố của nhóm</h3></div><span class="small muted">Mỗi hồ sơ có <b>4 bằng chứng</b> · Nộp xong bấm <b>Xuất Phiếu Báo Cáo</b> để trình bày</span></div>'+
+  '<div class="files">'+CASES.map(function(c){var st=S.cases[c.id];var status=st&&st.res?'✅ Đã nộp · '+st.res.total+'/100đ':st&&st.found.length?'🔍 Đang điều tra · '+st.found.length+'/'+c.ev.length+' bằng chứng':'Bấm để điều tra →';
+   return '<button type="button" class="file'+(c.special?' special':'')+'" data-act="go" data-v="case" data-c="'+c.id+'" data-no="HỒ SƠ '+c.no+'"><span class="file-n">'+(c.special?'Mở rộng · AI Deepfake':'Nhóm '+parseInt(c.no,10))+'</span><span class="file-t">'+c.name+'</span><span class="file-d">'+c.teaser+'</span><span class="file-st">'+status+'</span></button>';}).join('')+'</div>'+
+ '</div>'+noteBox('case')+'</section>';
 }
 function hsMaker(c,st){
  return function(id,html,cls){var i=-1;c.ev.forEach(function(e,k){if(e.id===id)i=k;});var f=st.found.indexOf(id)>=0;var miss=st.res&&!f;
@@ -2205,7 +2160,8 @@ function caseDetail(id){
     '<div class="card stack"><h3>Báo cáo sự cố</h3><div id="repwrap">'+reportHTML(c,st)+'</div></div>'+
    '</div></div></section>';
 }
-AFTER['case']=function(){startCountdowns();};
+AFTER['case']=function(){drawChal();startCountdowns();};
+AFTER.link=AFTER['case'];
 function startCountdowns(){
  $$('.cd').forEach(function(el){
   var s=parseInt(el.getAttribute('data-cd'),10),long=el.textContent.split(':').length===3;
@@ -2263,7 +2219,7 @@ function submitReport(){
 VIEWS.filter=function(){
  var F=S.filter;
  return '<section class="wrap mod">'+modHead('filter')+gvNote('filter')+meBanner()+taskBox('filter')+
- '<p class="brief">Bộ lọc tin nhắn rác trên điện thoại làm việc bằng cách dò dấu hiệu. Hãy chọn những dấu hiệu máy cần dò và ngưỡng cảnh báo, rồi chạy bộ lọc trên 20 tin nhắn thật, giả lẫn lộn ('+NSCAM+' tin lừa đảo, '+(MSGS.length-NSCAM)+' tin thật).</p>'+
+ '<p class="brief">Chọn các dấu hiệu đáng ngờ và ngưỡng chặn để máy quét 20 tin nhắn ('+NSCAM+' tin lừa đảo, '+(MSGS.length-NSCAM)+' tin thật). Mục tiêu: Đạt kỉ lục <b>85%</b>!</p>'+
  '<div class="fgrid"><div class="card stack"><h3>Cài đặt bộ lọc</h3>'+
   '<fieldset><legend>Máy cần dò những dấu hiệu nào?</legend>'+FEATS.map(function(f){return '<label class="choice" for="f-'+f.k+'"><input type="checkbox" id="f-'+f.k+'" data-feat="'+f.k+'"'+(F.f.indexOf(f.k)>=0?' checked':'')+'><span>'+f.t+'</span></label>';}).join('')+'</fieldset>'+
   '<div class="thr"><span>Chặn tin khi có từ</span><span class="stepper"><button type="button" data-act="th" data-d="-1" aria-label="Giảm ngưỡng">−</button><output id="thv" aria-live="polite">'+F.th+'</output><button type="button" data-act="th" data-d="1" aria-label="Tăng ngưỡng">+</button></span><span>dấu hiệu trở lên</span></div>'+
@@ -2294,11 +2250,10 @@ function filterOut(anim){
  var tiles='<div class="tiles">'+MSGS.map(function(m,i){var r=R?R.res[i]:null;var o=r?r.o:'';return '<button type="button" class="tile'+(o?' o-'+o:'')+(anim?' scan':'')+(F.sel===i?' sel':'')+'"'+(anim?' style="animation-delay:'+(i*45)+'ms"':'')+' data-act="tile" data-i="'+i+'"><span class="tn">#'+(i+1)+'</span><span class="tl">'+m.l+'</span><span class="tb">'+(r?LAB[o]:'Chưa quét')+'</span></button>';}).join('')+'</div>';
  var leg='<div class="tleg"><span class="o-tp">Chặn đúng</span><span class="o-tn">Cho qua đúng</span><span class="o-fn">Lọt lưới</span><span class="o-fp">Chặn nhầm</span></div>';
  var det=F.sel!==null?tileDetail(F.sel):'<p class="muted small">Chạm vào một ô để xem nội dung tin nhắn và những dấu hiệu máy dò được.</p>';
- var why='<details class="why"'+(F.why?' open':'')+' id="whybox"><summary>Vì sao không bộ lọc nào đạt 100%?</summary><ul>'+
-  '<li>Máy chỉ đếm dấu hiệu bề mặt, không hiểu ngữ cảnh. Tin OTP thật cũng có “OTP”, “2 phút”, “không cung cấp cho ai”.</li>'+
-  '<li>Tin nhắn mượn tiền từ tài khoản bị chiếm của bạn thân có rất ít dấu hiệu, nên dễ lọt lưới.</li>'+
-  '<li>Bộ lọc của ngân hàng, nhà mạng dùng AI học từ hàng triệu tin nhắn nên giỏi hơn nhiều, nhưng kẻ gian luôn nghĩ ra chiêu mới.</li>'+
-  '<li>Vì vậy công nghệ chỉ là một lớp bảo vệ. Lớp cuối cùng vẫn là em: <b>Chậm lại · Kiểm tra · Không gửi</b>.</li></ul></details>';
+ var why='<details class="why"'+(F.why?' open':'')+' id="whybox"><summary>💡 Vì sao không bộ lọc tự động nào đạt 100%?</summary><ul>'+
+  '<li><b>Chặn nhầm tin thật:</b> Tin OTP ngân hàng hay thông báo học phí thật cũng có chữ “OTP”, “hạn chót”, “link”.</li>'+
+  '<li><b>Lọt lưới tin tinh vi:</b> Nick bạn thân bị hack nhắn mượn tiền rất ngắn gọn nên máy khó phát hiện.</li>'+
+  '<li><b>Kết luận:</b> AI/Máy lọc chỉ hỗ trợ cảnh báo. Lá chắn quyết định vẫn là con người: <b>Chậm lại · Kiểm tra · Không gửi!</b></li></ul></details>';
  return '<div class="card stack">'+met+verdict+'</div><div class="card stack">'+leg+tiles+'<div id="tdetail">'+det+'</div></div>'+why;
 }
 function tileDetail(i){
@@ -2312,20 +2267,19 @@ function tileDetail(i){
 
 /* wrap-up */
 VIEWS.wrap=function(){
- return '<section class="wrap mod">'+modHead('wrap')+gvNote('wrap')+meBanner()+taskBox('wrap')+'<p class="small muted gv-only">Phóng to từng khung cho cả lớp xem: phím <b>1</b> bộ giáp · <b>2</b> bảng 4 dạng lừa đảo · <b>3</b> lời hứa · <b>4</b> thẻ thám tử · <b>5</b> nhiệm vụ về nhà (hoặc bấm nút ⛶ ở góc mỗi khung). Trong khi phóng to: ← → chuyển khung, + − đổi cỡ, Esc đóng.</p>'+armorHTML()+
- '<div class="stack" data-zoom="4 dạng lừa đảo" data-zw="1150"><div class="eyebrow">Chốt kiến thức · 4 dạng lừa đảo trong SGK</div><div class="table-wrap"><table><thead><tr><th>Dạng lừa đảo</th><th>Kẻ gian nói gì</th><th>Dấu hiệu nhận biết</th><th>Cách phòng tránh</th></tr></thead><tbody>'+
-  '<tr><td>Hỗ trợ kĩ thuật</td><td>“Máy em nhiễm virus, gọi ngay tổng đài”</td><td>Cảnh báo bật trên trang web, số tổng đài lạ, đòi cài phần mềm điều khiển từ xa, đòi phí</td><td>Đóng trang, quét bằng phần mềm chính thống; không cài, không trả phí</td></tr>'+
-  '<tr><td>Thông báo tin tốt</td><td>“Em trúng thưởng, nhận học bổng”</td><td>Không tham gia mà trúng; phải trả phí, nộp CCCD trước; hạn chót gấp</td><td>Hỏi qua kênh chính thức; không trả phí, không gửi giấy tờ</td></tr>'+
-  '<tr><td>Thông báo tin xấu</td><td>“Em liên quan vụ án”, “tài khoản sắp bị khóa”</td><td>Xưng cơ quan nhà nước qua điện thoại; đe dọa; bắt giữ bí mật; đòi chuyển tiền</td><td>Cúp máy; báo bố mẹ, thầy cô; gọi 113</td></tr>'+
-  '<tr><td>Mạo danh trang TMĐT</td><td>“Sale sốc 90%, chỉ hôm nay”</td><td>Giá phi lý; tên miền lạ; bắt chuyển khoản trước</td><td>Vào đúng ứng dụng, tên miền chính thức; thanh toán qua sàn hoặc khi nhận hàng</td></tr>'+
-  '<tr><td>Mở rộng: Deepfake</td><td>Gọi video bằng mặt, giọng người quen</td><td>Cuộc gọi ngắn, hình mờ; xin tiền gấp vào tài khoản người khác</td><td>Gọi lại số đã lưu, hỏi “mật khẩu gia đình”</td></tr>'+
+ return '<section class="wrap mod">'+modHead('wrap')+gvNote('wrap')+meBanner()+taskBox('wrap')+armorHTML()+
+ '<div class="stack" data-zoom="Bảng 4 dạng lừa đảo" data-zw="1150"><div class="eyebrow">Chốt kiến thức · Bảng tổng hợp 4 dạng lừa đảo & Deepfake AI</div><div class="table-wrap"><table><thead><tr><th>Dạng lừa đảo</th><th>Mồi nhử / Đe dọa</th><th>Dấu hiệu nhận biết nhanh</th><th>Cách xử lí (Bộ giáp 3 lớp)</th></tr></thead><tbody>'+
+  '<tr><td>1. Hỗ trợ kĩ thuật</td><td>“Máy nhiễm virus, gọi ngay tổng đài”</td><td>Cảnh báo bật trên trình duyệt, đòi cài app điều khiển từ xa</td><td>Đóng tab trình duyệt; không gọi, không cài app lạ</td></tr>'+
+  '<tr><td>2. Thông báo tin tốt</td><td>“Trúng iPhone, học bổng 100%”</td><td>Đòi chuyển phí vận chuyển / giữ suất trước, đòi ảnh CCCD</td><td>Kiểm tra kênh chính thức; không chuyển phí, không gửi CCCD</td></tr>'+
+  '<tr><td>3. Thông báo tin xấu</td><td>“Liên quan vụ án, khóa tài khoản”</td><td>Gọi qua mạng, cấm nói với bố mẹ, đòi chuyển tiền tạm giữ</td><td>Cúp máy; báo ngay bố mẹ, thầy cô, Công an (113)</td></tr>'+
+  '<tr><td>4. Mạo danh TMĐT</td><td>“Siêu sale giảm 90% chỉ hôm nay”</td><td>Tên miền lạ (.vip, .top), bắt chuyển khoản trước 100%</td><td>Soi tên miền thật; chỉ mua trên app chính thức / COD</td></tr>'+
+  '<tr><td>5. Deepfake AI</td><td>Video call mặt & giọng người quen</td><td>Gọi 5–10 giây hình mờ rồi tắt, bảo chuyển tiền vào STK lạ</td><td>Gọi lại số di động đã lưu; hỏi “mật khẩu gia đình”</td></tr>'+
  '</tbody></table></div></div>'+
- noteBox('all')+'<div class="pledge-grid"><div class="card stack" data-zoom="Lời hứa an toàn số" data-zw="620"><h3>Lời hứa an toàn số</h3><p class="muted">Chọn 1–2 việc em sẽ làm ngay tối nay, nhập tên rồi chụp màn hình thẻ thám tử.</p>'+
-  '<form id="pform" class="stack" autocomplete="off"><label for="pname" class="small"><b>Tên của em</b></label><input id="pname" class="inp" maxlength="40" placeholder="vd: Nguyễn Minh Anh" value="'+esc(S.pledge.name)+'">'+
+ noteBox('all')+'<div class="pledge-grid"><div class="card stack" data-zoom="Lời hứa an toàn số" data-zw="620"><h3>Lời hứa an toàn số</h3><p class="muted">Chọn 1–2 cam kết thực hiện ngay hôm nay và nhập tên của em:</p>'+
+  '<form id="pform" class="stack" autocomplete="off"><label for="pname" class="small"><b>Tên của em / Nhóm</b></label><input id="pname" class="inp" maxlength="40" placeholder="vd: Nguyễn Minh Anh" value="'+esc(S.pledge.name)+'">'+
   '<fieldset><legend class="sr">Lời hứa</legend>'+PLEDGES.map(function(p,i){return '<label class="choice" for="pl-'+i+'"><input type="checkbox" id="pl-'+i+'" data-pl="'+i+'"'+(S.pledge.p.indexOf(i)>=0?' checked':'')+'><span>'+p+'</span></label>';}).join('')+'</fieldset></form></div>'+
-  '<div class="stack"><div id="pcard" data-zoom="Thẻ thám tử mạng" data-zw="500">'+pledgeCard()+'</div><div class="row"><button class="btn primary" data-act="pledge-send">Gửi lời hứa cho thầy cô</button><span class="small muted">'+(endpoint()?'Thầy cô sẽ thấy lời hứa của em trên bảng theo dõi.':'Máy này chưa kết nối bảng theo dõi, hãy chụp màn hình thẻ.')+'</span></div>'+
-  '<div class="card stack" data-zoom="Nhiệm vụ về nhà" data-zw="620"><h3>Nhiệm vụ về nhà</h3><ol class="hw"><li>Thực hiện lời hứa trên thẻ, kể lại kết quả ở tiết sau.</li><li>Sưu tầm 1 tin nhắn hoặc cuộc gọi lừa đảo mà người thân từng nhận (che hết thông tin cá nhân) cho “triển lãm tin nhắn lừa đảo” đầu tiết 2.</li><li>Đọc trước mục 2 SGK: Giao tiếp và ứng xử trong môi trường số.</li></ol></div></div></div>'+
- 
+  '<div class="stack"><div id="pcard" data-zoom="Thẻ thám tử mạng" data-zw="500">'+pledgeCard()+'</div><div class="row"><button class="btn primary big" data-act="pledge-send">Gửi lời hứa cho thầy cô</button></div>'+
+  '<div class="card stack" data-zoom="Nhiệm vụ về nhà" data-zw="620"><h3>Nhiệm vụ về nhà</h3><ol class="hw"><li>Thực hiện lời hứa trên thẻ cùng người thân.</li><li>Sưu tầm 1 tình huống tin nhắn lừa đảo (che thông tin cá nhân) và đọc trước Mục 2 SGK cho Tiết 2.</li></ol></div></div></div>'+
  '</section>';
 };
 function pledgeCard(){
@@ -2339,7 +2293,7 @@ function pledgeCard(){
 /* ---------- render ---------- */
 function stopTimers(){if(S.warm.raf){cancelAnimationFrame(S.warm.raf);S.warm.raf=0;if(S.warm.ph==='count')S.warm.ph='ready';}timers.forEach(function(t){clearInterval(t);});timers=[];}
 function setHash(){var h='#'+S.mode+(S.view!=='home'?'-'+S.view:'')+(S.view==='case'&&S.caseId?'-'+S.caseId:'');if(location.hash!==h){try{history.replaceState(null,'',h);}catch(e){}}}
-function parseHash(){var h=(location.hash||'').slice(1);var m=h.match(/^(gv|hs)(?:-(home|warm|link|case|filter|wrap|track))?(?:-(c[1-5]))?$/);if(m){S.mode=m[1];S.view=m[2]||'home';S.caseId=m[3]||null;S.sound=store.get('sound_'+S.mode,S.mode==='gv');}if(S.mode==='hs'&&(S.view==='warm'||S.view==='track'))S.view='home';}
+function parseHash(){var h=(location.hash||'').slice(1);var m=h.match(/^(gv|hs)(?:-(home|warm|link|case|filter|wrap|track))?(?:-(c[1-5]))?$/);if(m){S.mode=m[1];S.view=(m[2]==='link'?'case':(m[2]||'home'));S.caseId=m[3]||null;S.sound=store.get('sound_'+S.mode,S.mode==='gv');}if(S.mode==='hs'&&(S.view==='warm'||S.view==='track'))S.view='home';}
 function render(){
  stopTimers();
  closeNote(true);
@@ -2352,7 +2306,7 @@ function render(){
  zoomBtns();
  setHash();
 }
-function go(v,c){S.view=v||'home';S.caseId=(S.view==='case'&&c)?c:null;render();window.scrollTo(0,0);}
+function go(v,c){if(v==='link')v='case';S.view=v||'home';S.caseId=(S.view==='case'&&c)?c:null;render();window.scrollTo(0,0);}
 
 /* ---------- actions ---------- */
 var ACT={
