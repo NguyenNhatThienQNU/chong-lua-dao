@@ -574,20 +574,20 @@ kbd{font-family:var(--f-mono);font-size:.78em;padding:.05em .4em;border-radius:5
 }
 .rep-modal-bar {
   width: 100%;
-  max-width: 900px;
+  max-width: 860px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  padding: 10px 16px;
+  padding: 10px 18px;
   background: #1e293b;
   color: #f8fafc;
   border-radius: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 10;
+  flex-shrink: 0;
 }
 .rep-modal-title {
   font-size: 14px;
@@ -898,10 +898,41 @@ kbd{font-family:var(--f-mono);font-size:.78em;padding:.05em .4em;border-radius:5
 }
 
 /* Presentation Mode */
+.rep-modal-overlay.pres-mode {
+  padding: 16px;
+}
+.rep-modal-overlay.pres-mode .rep-modal-bar {
+  position: fixed;
+  top: 14px;
+  right: 20px;
+  width: auto;
+  max-width: none;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  z-index: 10002;
+}
+.rep-modal-overlay.pres-mode .rep-modal-title {
+  display: none;
+}
+.rep-modal-overlay.pres-mode .rep-modal-actions button {
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 999px;
+}
 .rep-modal-overlay.pres-mode .rep-sheet {
+  margin-top: 56px;
   max-width: 96vw;
-  padding: 40px 60px;
+  padding: 36px 50px;
   border-width: 3px;
+}
+.rep-modal-overlay.pres-mode .rep-modal-bottom-bar {
+  display: none !important;
 }
 .rep-modal-overlay.pres-mode .rep-sheet-title-block h1 {
   font-size: 28px;
@@ -943,7 +974,7 @@ kbd{font-family:var(--f-mono);font-size:.78em;padding:.05em .4em;border-radius:5
     overflow: visible !important;
     display: block !important;
   }
-  .rep-modal-bar {
+  .rep-modal-bar, .rep-modal-bottom-bar {
     display: none !important;
   }
   .rep-sheet {
@@ -1987,6 +2018,9 @@ function openReportModal(caseId, isModel) {
     modal = document.createElement('div');
     modal.id = 'rep-modal-overlay';
     modal.className = 'rep-modal-overlay';
+    modal.onclick = function(e) {
+      if (e.target === modal) closeReportModal();
+    };
     document.body.appendChild(modal);
   }
 
@@ -2096,6 +2130,10 @@ function openReportModal(caseId, isModel) {
           '<div class="name">ĐÃ PHÊ DUYỆT HOÀN THÀNH</div>' +
         '</div>' +
       '</div>' +
+    '</div>' +
+    '<div class="rep-modal-bottom-bar" style="margin-top:20px;margin-bottom:30px;display:flex;gap:12px;justify-content:center;flex-shrink:0">' +
+      '<button type="button" class="btn primary" data-act="print-report" style="background:#2563eb;color:#fff;padding:8px 18px;border-radius:8px">🖨️ In Phiếu / Lưu PDF (A4)</button>' +
+      '<button type="button" class="btn" data-act="close-report" style="background:#e2e8f0;color:#0f172a;padding:8px 18px;border-radius:8px">✕ Đóng Báo Cáo</button>' +
     '</div>';
 
   modal.style.display = 'flex';
